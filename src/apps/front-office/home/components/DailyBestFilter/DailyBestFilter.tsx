@@ -4,7 +4,7 @@ import { useState } from "react";
 export type BestSellsFilterProps = {
   // props go here
 };
-export default function BestSellsFilter(props: BestSellsFilterProps) {
+export default function DailyBestFilter(props: BestSellsFilterProps) {
   const [filterItem, setFilterItem] = useState<string>("Featured");
   return (
     <div className="best-sells-filter">
