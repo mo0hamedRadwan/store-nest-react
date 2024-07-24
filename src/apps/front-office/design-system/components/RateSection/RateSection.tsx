@@ -1,11 +1,7 @@
 import { useState } from "react";
 import RateStar from "./RateStar";
 
-export type RateSectionProps = {
-  // props go here
-};
-
-export default function RateSection(props: RateSectionProps) {
+export default function RateSection() {
   const [mode, setMode] = useState<string>("hover");
   const [hovers, setHovers] = useState<number>(-1);
   const [actives, setActives] = useState<number>(-1);

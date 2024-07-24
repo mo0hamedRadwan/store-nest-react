@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
@@ -216,6 +218,28 @@ const CarouselPrevious = React.forwardRef<
     </Button>
   );
 });
+
+CarouselPrevious.propTypes = {
+  className: PropTypes.string,
+  variant: PropTypes.oneOf([
+    'link', 
+    'default', 
+    'destructive', 
+    'outline', 
+    'secondary', 
+    'ghost', 
+    null, 
+    undefined
+  ]),
+  size: PropTypes.oneOf([
+    "default",
+    "sm",
+    "lg",
+    "icon",
+    null,
+    undefined,
+  ]),
+};
 CarouselPrevious.displayName = "CarouselPrevious";
 
 const CarouselNext = React.forwardRef<
@@ -244,6 +268,28 @@ const CarouselNext = React.forwardRef<
     </Button>
   );
 });
+
+CarouselNext.propTypes = {
+  className: PropTypes.string,
+  variant: PropTypes.oneOf([
+    'link', 
+    'default', 
+    'destructive', 
+    'outline', 
+    'secondary', 
+    'ghost', 
+    null, 
+    undefined
+  ]),
+  size: PropTypes.oneOf([
+    "default",
+    "sm",
+    "lg",
+    "icon",
+    null,
+    undefined,
+  ]),
+};
 CarouselNext.displayName = "CarouselNext";
 
 export {

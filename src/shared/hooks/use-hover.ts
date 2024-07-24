@@ -8,15 +8,17 @@ const useHover = <T extends HTMLElement>() => {
   const onMouseLeft = () => setHover(false);
 
   useEffect(() => {
-    if (!ref.current)
+    const element = ref.current;
+
+    if (!element)
       throw new Error("useHover hook didn't hold `ref` for element!");
 
-    ref.current.addEventListener("mouseover", onMouseOver);
-    ref.current.addEventListener("mouseleave", onMouseLeft);
+    element.addEventListener("mouseover", onMouseOver);
+    element.addEventListener("mouseleave", onMouseLeft);
 
     return () => {
-      ref.current!.removeEventListener("mouseover", onMouseOver);
-      ref.current!.removeEventListener("mouseleave", onMouseLeft);
+      if (element) element.removeEventListener("mouseover", onMouseOver);
+      element.removeEventListener("mouseleave", onMouseLeft);
     };
   }, [hover]);
 

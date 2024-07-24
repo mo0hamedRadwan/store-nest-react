@@ -7,6 +7,7 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   prefix: "",
   theme: {
     container: {
@@ -61,6 +62,17 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        primary: {
+          default: "#3BB77E",
+          light: "#DEF9EC",
+          dark: "#29A56C",
+        },
+        font: {
+          default: "#253D4E",
+        },
+      },
+      fontFamily: {
+        custom: ["Quicksand", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

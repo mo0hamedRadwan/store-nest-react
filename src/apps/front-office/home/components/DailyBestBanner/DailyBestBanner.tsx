@@ -1,11 +1,7 @@
 import { cn } from "@utils";
 import { ArrowRightFromLine } from "lucide-react";
 
-export type DailyBestBannerProps = {
-  // props go here
-};
-
-export default function DailyBestBanner(props: DailyBestBannerProps) {
+export default function DailyBestBanner() {
   return (
     <div
       className="daily-best-banner__cover relative md:max-w-64 lg:max-w-72 w-full h-full bg-cover bg-center rounded-3xl"

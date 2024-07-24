@@ -35,5 +35,10 @@
     ],
     "react/react-in-jsx-scope": "off",
     "unused-imports/no-unused-imports": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect the React version
+    }
   }
 }

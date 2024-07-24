@@ -1,16 +1,14 @@
 import { cn } from "@utils";
 import { useState } from "react";
 
-export type BestSellsFilterProps = {
-  // props go here
-};
-export default function DailyBestFilter(props: BestSellsFilterProps) {
+export default function DailyBestFilter() {
   const [filterItem, setFilterItem] = useState<string>("Featured");
   return (
     <div className="best-sells-filter">
       <div className="best-sells-filter__accordion flex items-center gap-2 py-4">
         {["Featured", "Popular", "New added"].map(text => (
           <button
+            key={text}
             onClick={() => setFilterItem(text)}
             className={cn([
               "best-sells-filter__item",
