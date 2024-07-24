@@ -12,7 +12,7 @@
     "start": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prepare": "npx huskier-init",
+    "prepare": "npx huskier-init && husky install",
     "tsc": "npx tsc --noEmit"
   },
   "dependencies": {
