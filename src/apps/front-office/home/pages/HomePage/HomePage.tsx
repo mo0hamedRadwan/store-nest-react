@@ -8,13 +8,10 @@ export default function HomePage() {
   return (
     <>
       <Helmet title={trans("home")} appendAppName={false} />
-      <Button className="bg-primary-default hover:bg-primary-dark font-custom">
-        Welcome Home
-      </Button>
-
       <div className="App">
         <DailyBestSellsSection />
       </div>
+      <Button className="bg-primary-default hover:bg-primary-dark font-custom">Welcome Home</Button>
     </>
   );
 }
