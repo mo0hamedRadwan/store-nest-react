@@ -6,5 +6,9 @@ export type PopularProductsProps = {
 export default function PopularProducts() {
   const product = products;
 
-  return <ProductsGrid products={product} />;
+  return (
+    <div className="container mx-auto py-20">
+      <ProductsGrid products={product} />;
+    </div>
+  );
 }

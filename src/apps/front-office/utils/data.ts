@@ -3,7 +3,7 @@ import { Product } from "./types";
 export const products: Product[] = [
   {
     id: 1,
-    name: "Organic Honey",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "BeeNatural",
     shortDescription: "Pure organic honey.",
     description:
@@ -28,7 +28,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Natural Shampoo",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "EcoHair",
     shortDescription: "Gentle, natural ingredients.",
     description:
@@ -52,7 +52,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Herbal Tea",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "Nature's Brew",
     shortDescription: "Calming herbal blend.",
     description:
@@ -76,7 +76,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Reusable Water Bottle",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "EcoDrink",
     shortDescription: "Eco-friendly bottle.",
     description:
@@ -101,7 +101,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "Vegan Protein Powder",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "PlantPower",
     shortDescription: "Plant-based protein.",
     description:
@@ -125,7 +125,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: "Eco-friendly Toothbrush",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "GreenBrush",
     shortDescription: "Biodegradable brush.",
     description:
@@ -149,7 +149,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: "Handmade Soap",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "PureSoap",
     shortDescription: "Natural and fragrant.",
     description:
@@ -173,7 +173,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: "Organic Granola",
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     brand: "HealthyCrunch",
     shortDescription: "Crunchy and healthy.",
     description:
@@ -195,54 +195,5 @@ export const products: Product[] = [
     reviews: 110,
     totalReviews: 120,
     maxAmountPerOrder: 5,
-  },
-  {
-    id: 9,
-    name: "Essential Oil Diffuser",
-    brand: "AromaLife",
-    shortDescription: "Aromatherapy diffuser.",
-    description:
-      "An essential oil diffuser for creating a calming and aromatic environment.",
-    image: {
-      hash: "yza567",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
-      name: "essential-oil-diffuser.jpg",
-    },
-    price: 25.99,
-    totalPrice: 25.99,
-    category: {
-      id: 5,
-      name: "Home & Garden",
-    },
-    isFavorite: false,
-    rating: 4.8,
-    reviews: 180,
-    totalReviews: 190,
-    maxAmountPerOrder: 2,
-  },
-  {
-    id: 10,
-    name: "Yoga Mat",
-    brand: "FlexYoga",
-    shortDescription: "Non-slip, durable.",
-    description:
-      "A high-quality yoga mat with a non-slip surface, perfect for all types of yoga.",
-    image: {
-      hash: "bcd890",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
-      name: "yoga-mat.jpg",
-    },
-    price: 22.99,
-    totalPrice: 22.99,
-    salePrice: 19.99,
-    category: {
-      id: 3,
-      name: "Outdoor & Sports",
-    },
-    isFavorite: true,
-    rating: 4.7,
-    reviews: 140,
-    totalReviews: 150,
-    maxAmountPerOrder: 3,
   },
 ];
