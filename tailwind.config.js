@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -13,18 +17,8 @@ module.exports = {
       },
     },
     extend: {
-      colors : {
-        primary:  {
-          default: "#3BB77E",
-          light: "#DEF9EC",
-          dark: "#29A56C"
-        },
-        font: {
-          default: "#253D4E",
-        }
-      },
-      fontFamily: {
-        'custom': ['Quicksand', 'sans-serif'],
+      colors: {
+        customGreen: "#3BB77E",
       },
       keyframes: {
         "accordion-down": {
@@ -43,4 +37,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
