@@ -32,7 +32,7 @@ export default function ProductContent(/**props: IProductContent */) {
       </div>
 
       <div className="product-sold py-2 space-y-2">
-        <ProgressBar />
+        <ProgressBar activeColor="bg-primary-soft" />
 
         <div className="product-sold-text text-sm">Sold: 90/120</div>
       </div>

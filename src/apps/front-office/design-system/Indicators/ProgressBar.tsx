@@ -1,11 +1,25 @@
 /**
  * Progress bar is used for lazy loading for modules
  */
-export default function ProgressBar() {
+
+type ProgressBarProps = {
+  bgColor?: string;
+  activeColor?: string;
+  height?: string;
+  fill?: string;
+};
+
+export default function ProgressBar({
+  bgColor = "bg-slate-200",
+  activeColor = "bg-slate-700",
+  height = "h-2",
+  fill = "w-1/2",
+}: ProgressBarProps) {
   return (
     <>
-      <div className="progress-bar w-full h-3 bg-slate-400">
-        <div className="progress-bar-active w-1/2 h-full bg-slate-700"></div>
+      <div className={`progress-bar w-full ${height} ${bgColor}`}>
+        <div
+          className={`progress-bar-active ${fill} h-full ${activeColor}`}></div>
       </div>
     </>
   );
