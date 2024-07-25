@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -17,18 +16,18 @@ module.exports = {
       },
     },
     extend: {
-      colors : {
-        primary:  {
+      colors: {
+        primary: {
           default: "#3BB77E",
           light: "#DEF9EC",
-          dark: "#29A56C"
+          dark: "#29A56C",
         },
         font: {
           default: "#253D4E",
-        }
+        },
       },
       fontFamily: {
-        'custom': ['Quicksand', 'sans-serif'],
+        custom: ["Quicksand", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -50,4 +49,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

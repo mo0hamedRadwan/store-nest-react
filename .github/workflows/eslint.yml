@@ -25,4 +25,7 @@ jobs:
       run: yarn install # Or use npm install if you're using npm
 
     - name: Run ESLint
-      run: yarn lint # Or specify the path to your ESLint script
+      run: yarn fix --max-warnings 0
+
+    - name: Typescript check
+      run: yarn tsc
