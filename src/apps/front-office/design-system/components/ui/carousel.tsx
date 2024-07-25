@@ -222,23 +222,16 @@ const CarouselPrevious = React.forwardRef<
 CarouselPrevious.propTypes = {
   className: PropTypes.string,
   variant: PropTypes.oneOf([
-    'link', 
-    'default', 
-    'destructive', 
-    'outline', 
-    'secondary', 
-    'ghost', 
-    null, 
-    undefined
-  ]),
-  size: PropTypes.oneOf([
+    "link",
     "default",
-    "sm",
-    "lg",
-    "icon",
+    "destructive",
+    "outline",
+    "secondary",
+    "ghost",
     null,
     undefined,
   ]),
+  size: PropTypes.oneOf(["default", "sm", "lg", "icon", null, undefined]),
 };
 CarouselPrevious.displayName = "CarouselPrevious";
 
@@ -272,23 +265,16 @@ const CarouselNext = React.forwardRef<
 CarouselNext.propTypes = {
   className: PropTypes.string,
   variant: PropTypes.oneOf([
-    'link', 
-    'default', 
-    'destructive', 
-    'outline', 
-    'secondary', 
-    'ghost', 
-    null, 
-    undefined
-  ]),
-  size: PropTypes.oneOf([
+    "link",
     "default",
-    "sm",
-    "lg",
-    "icon",
+    "destructive",
+    "outline",
+    "secondary",
+    "ghost",
     null,
     undefined,
   ]),
+  size: PropTypes.oneOf(["default", "sm", "lg", "icon", null, undefined]),
 };
 CarouselNext.displayName = "CarouselNext";
 

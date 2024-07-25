@@ -11,7 +11,9 @@ export default function HomePage() {
       <div className="App">
         <DailyBestSellsSection />
       </div>
-      <Button className="bg-primary-default hover:bg-primary-dark font-custom">Welcome Home</Button>
+      <Button className="bg-primary-default hover:bg-primary-dark font-custom">
+        Welcome Home
+      </Button>
     </>
   );
 }
