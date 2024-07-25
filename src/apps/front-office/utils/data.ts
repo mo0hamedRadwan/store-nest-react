@@ -18,7 +18,7 @@ export const products: Product[] = [
     salePrice: 8.99,
     category: {
       id: 1,
-      name: "Food & Beverage",
+      name: "Milks & Dairies",
     },
     isFavorite: true,
     rating: 3,
@@ -42,7 +42,7 @@ export const products: Product[] = [
     totalPrice: 15.49,
     category: {
       id: 2,
-      name: "Personal Care",
+      name: "Coffes & Teas",
     },
     isFavorite: false,
     rating: 4.3,
@@ -66,7 +66,7 @@ export const products: Product[] = [
     totalPrice: 5.99,
     category: {
       id: 1,
-      name: "Food & Beverage",
+      name: "Pet Foods",
     },
     isFavorite: true,
     rating: 4.5,
@@ -91,7 +91,7 @@ export const products: Product[] = [
     salePrice: 10.99,
     category: {
       id: 3,
-      name: "Outdoor & Sports",
+      name: "Pet Foods",
     },
     isFavorite: true,
     rating: 4.8,
@@ -115,7 +115,7 @@ export const products: Product[] = [
     totalPrice: 20.99,
     category: {
       id: 4,
-      name: "Health & Wellness",
+      name: "Pet Foods",
     },
     isFavorite: false,
     rating: 4.6,
@@ -139,7 +139,7 @@ export const products: Product[] = [
     totalPrice: 3.99,
     category: {
       id: 2,
-      name: "Personal Care",
+      name: "Meats",
     },
     isFavorite: true,
     rating: 4.2,
@@ -188,7 +188,7 @@ export const products: Product[] = [
     salePrice: 7.49,
     category: {
       id: 1,
-      name: "Food & Beverage",
+      name: "Vegetables",
     },
     isFavorite: true,
     rating: 4.4,

@@ -24,9 +24,6 @@ export default function ProductCard({ product }: ProductCardProps) {
             height={200}
             className="group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
           />
-          <span className="absolute bottom-0 left-0 w-full h-1/2 bg-primary-main rounded-3xl group-hover:bg-opacity-100 group-hover:h-full transition-all duration-300 bg-opacity-10">
-            22
-          </span>
         </Link>
         <div className="mt-6 space-y-2 m-3">
           {/* Starts */}
