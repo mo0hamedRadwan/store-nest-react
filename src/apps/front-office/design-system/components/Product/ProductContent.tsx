@@ -1,5 +1,3 @@
-import { cn } from "@utils";
-
 import { trans } from "@mongez/localization";
 import { ShoppingCart } from "lucide-react";
 import ProgressBar from "../../Indicators/ProgressBar";
@@ -37,14 +35,7 @@ export default function ProductContent(/**props: IProductContent */) {
         <div className="product-sold-text text-sm">Sold: 90/120</div>
       </div>
 
-      <div
-        className={cn([
-          "product-add-to-cart-btn transition-all",
-          ["bg-primary text-white"],
-          ["px-6 py-3 mt-3"],
-          ["grid place-content-center rounded-md"],
-          ["hover:bg-[#FDC040] hover:-translate-y-1"],
-        ])}>
+      <div className="product-add-to-cart-btn transition-all bg-primary text-white px-6 py-3 mt-3 grid place-content-center rounded-md hover:bg-[#FDC040] hover:-translate-y-1">
         <button className="flex items-center gap-2">
           <span className="w-4 h-4">
             <ShoppingCart className="w-full h-full" />
