@@ -1,5 +1,8 @@
 import { Link } from "@mongez/react-router";
+import Stars from "apps/front-office/design-system/components/Stars";
+import { Button } from "apps/front-office/design-system/components/ui/button";
 import { Product } from "apps/front-office/utils/types";
+import { ShoppingCart } from "lucide-react";
 export type ProductCardProps = {
   product: Product;
 };
@@ -7,8 +10,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   const isOnSale = product.salePrice ? true : false;
   return (
     <>
-      <div className="p-3 group rounded-[2rem] border relative">
-        <div className="absolute z-10 top-0 left-0 font-bold bg-[#3BB77E] text-[#fff] rounded-tl-lg rounded-br-lg py-2 px-5 text-[13px] leading-none">
+      <div className="p-3 group rounded-[1rem] border relative hover:border-primary-default transition duration-500">
+        <div className="absolute z-10 top-0 left-0 font-bold bg-primary-default text-[#fff] rounded-tl-lg rounded-br-lg py-2 px-5 text-[13px] leading-none">
           New
         </div>
         <Link
@@ -30,31 +33,34 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span className="text-[#adadad] text-[12px] ">
             {product.category.name}
           </span>
+          <Stars ratings={product.rating} />
           <Link
             to={"/"}
-            className="font-bold text-base inline-block group-hover:text-[#3BB77E] transition-all duration-500">
+            className="font-bold text-base inline-block hover:text-primary-default transition duration-500">
             {product.name}
           </Link>
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center justify-center gap-2">
-              <span className="inline-block self-start text-[#3BB77E] font-bold text-lg">
-                ${product.price}
-              </span>
+              {isOnSale && (
+                <span className="inline-block self-start text-primary-default font-bold text-lg">
+                  ${product.salePrice}
+                </span>
+              )}
               <span
                 className={`font-bold ${
                   isOnSale
-                    ? "text-[#adadad]  line-through text-sm"
-                    : "text-[#3BB77E] text-xl"
+                    ? "text-[#adadad] line-through text-sm"
+                    : "text-primary-default text-xl"
                 }`}>
-                ${product.salePrice}
+                ${product.totalPrice}
               </span>
             </div>
-            <button
+            <Button
               title="Add"
-              className="bg-primary-main p-2 rounded-2xl hover:bg-primary-hover transition-colors">
-              {/* <TbShoppingBag color="#000"></TbShoppingBag> */}
+              className="bg-primary-light flex justify-center items-baseline gap-2 hover:bg-primary-default scale-y-105">
+              <ShoppingCart size={15}></ShoppingCart>
               Add
-            </button>
+            </Button>
           </div>
         </div>
       </div>

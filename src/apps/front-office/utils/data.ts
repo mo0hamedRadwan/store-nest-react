@@ -21,7 +21,7 @@ export const products: Product[] = [
       name: "Food & Beverage",
     },
     isFavorite: true,
-    rating: 4.7,
+    rating: 3,
     reviews: 120,
     totalReviews: 150,
     maxAmountPerOrder: 5,

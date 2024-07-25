@@ -8,7 +8,7 @@ export default function PopularProducts() {
 
   return (
     <div className="container mx-auto py-20">
-      <ProductsGrid products={product} />;
+      <ProductsGrid products={product} />
     </div>
   );
 }
