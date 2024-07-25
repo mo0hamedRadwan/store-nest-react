@@ -6,11 +6,15 @@ export type ProductProps = {
   discount?: string;
 } & React.HTMLProps<HTMLDivElement>;
 
-export default function Product({ discount, ...rest }: ProductProps) {
+export default function Product({
+  discount,
+  className = "",
+  ...htmlProps
+}: ProductProps) {
   return (
     <div
-      className={`product relative w-full max-w-56 ${rest.className || ""}`}
-      {...rest}>
+      className={`product relative w-full max-w-56 ${className}`}
+      {...htmlProps}>
       {discount && <ProductDiscount discount={discount} />}
       <ProductImage />
       <ProductContent />
