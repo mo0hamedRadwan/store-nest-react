@@ -12,7 +12,7 @@
     "start": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prepare": "npx huskier-init",
+    "prepare": "npx huskier-init && husky install",
     "tsc": "npx tsc --noEmit"
   },
   "dependencies": {
@@ -40,6 +40,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.66.1",
+    "swiper": "^11.1.7",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -59,6 +60,7 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unused-imports": "^3.1.0",
+    "husky": "^8.0.0",
     "npm-check-updates": "^16.14.20",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
@@ -66,8 +68,7 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5",
     "vite": "^5.3.1",
-    "vite-plugin-svgr": "^4.2.0",
-    "husky": "^8.0.0"
+    "vite-plugin-svgr": "^4.2.0"
   },
   "huskier": {
     "hooks": {
