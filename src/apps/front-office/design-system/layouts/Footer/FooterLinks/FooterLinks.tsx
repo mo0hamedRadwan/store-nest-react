@@ -16,7 +16,7 @@ export default function FooterLinks() {
         {companyLinks.map(link => (
           <li
             key={link}
-            className="py-3 hover:translate-x-3 hover:text-customGreen hover:duration-300 transition-all">
+            className="py-3 hover:translate-x-3 hover:text-primary-default hover:duration-300 transition-all">
             <Link>{link}</Link>
           </li>
         ))}

@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="flex flex-col lg:flex-row justify-between items-center py-5 text-[#7E7E7E] px-4">
         <div className="mb-4 lg:mb-0">
           <p className="pl-4 text-center lg:text-start ">
-            © {currentYear} <strong>Nest</strong> {trans("legalNotice")}
+            © {currentYear} <strong>Nest</strong> {trans("templateName")}
             <br />
             {trans("copyRight")}
           </p>
@@ -35,7 +35,7 @@ export default function Footer() {
             <div key={index} className="min-w-[200px] flex items-center gap-2">
               <img src={phoneCall} alt="phone-call" className="w-[30px]" />
               <p className="flex flex-col">
-                <span className="text-[26px] font-bold leading-6 text-customGreen">
+                <span className="text-[26px] font-bold leading-6 text-primary-default">
                   {phone}
                 </span>
                 <span>

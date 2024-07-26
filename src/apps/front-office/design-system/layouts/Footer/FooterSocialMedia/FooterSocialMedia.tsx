@@ -18,13 +18,13 @@ export default function FooterSocialMedia() {
   return (
     <div className="text-center lg:text-left">
       <div className="flex justify-center lg:justify-start gap-2 mb-2">
-        <h6 className="text-[#253D4E] font-bold leading-7">Follow Us</h6>
+        <h6 className="text-font-default font-bold leading-7">Follow Us</h6>
         {socialIcons.map(({ src, alt }) => (
           <img
             key={alt}
             src={src}
             alt={alt}
-            className="w-[25px] bg-customGreen rounded-full cursor-pointer"
+            className="w-[25px] bg-primary-default rounded-full cursor-pointer"
           />
         ))}
       </div>

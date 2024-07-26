@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   prefix: "",
   theme: {
     container: {
@@ -18,7 +12,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        customGreen: "#3BB77E",
+        primary: {
+          default: "#3BB77E",
+          light: "#DEF9EC",
+          dark: "#29A56C",
+        },
+        font: {
+          default: "#253D4E",
+        },
+      },
+      fontFamily: {
+        custom: ["Quicksand", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
