@@ -1,4 +1,4 @@
-import { Product } from "./types";
+import { Product, ProductCategory } from "./types";
 
 export const products: Product[] = [
   {
@@ -35,7 +35,7 @@ export const products: Product[] = [
       "A shampoo made from natural ingredients, suitable for all hair types.",
     image: {
       hash: "def456",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
+      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-9-2.jpg",
       name: "natural-shampoo.jpg",
     },
     price: 15.49,
@@ -59,13 +59,13 @@ export const products: Product[] = [
       "A soothing blend of natural herbs for a relaxing tea experience.",
     image: {
       hash: "ghi789",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
+      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-5-1.jpg",
       name: "herbal-tea.jpg",
     },
     price: 5.99,
     totalPrice: 5.99,
     category: {
-      id: 1,
+      id: 3,
       name: "Pet Foods",
     },
     isFavorite: true,
@@ -83,7 +83,7 @@ export const products: Product[] = [
       "A durable, eco-friendly water bottle made from stainless steel.",
     image: {
       hash: "jkl012",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
+      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-5-1.jpg",
       name: "reusable-water-bottle.jpg",
     },
     price: 12.99,
@@ -108,13 +108,13 @@ export const products: Product[] = [
       "A high-quality protein powder made from natural plant sources.",
     image: {
       hash: "mno345",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
+      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-5-1.jpg",
       name: "vegan-protein-powder.jpg",
     },
     price: 20.99,
     totalPrice: 20.99,
     category: {
-      id: 4,
+      id: 3,
       name: "Pet Foods",
     },
     isFavorite: false,
@@ -132,13 +132,13 @@ export const products: Product[] = [
       "A toothbrush made from bamboo, eco-friendly and biodegradable.",
     image: {
       hash: "pqr678",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
+      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-7-1.jpg",
       name: "eco-friendly-toothbrush.jpg",
     },
     price: 3.99,
     totalPrice: 3.99,
     category: {
-      id: 2,
+      id: 4,
       name: "Meats",
     },
     isFavorite: true,
@@ -156,14 +156,14 @@ export const products: Product[] = [
       "A handmade soap bar made from natural ingredients with a pleasant fragrance.",
     image: {
       hash: "stu901",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
+      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-4-2.jpg",
       name: "handmade-soap.jpg",
     },
     price: 6.99,
     totalPrice: 6.99,
     category: {
-      id: 2,
-      name: "Personal Care",
+      id: 5,
+      name: "Vegetables",
     },
     isFavorite: false,
     rating: 4.9,
@@ -180,20 +180,47 @@ export const products: Product[] = [
       "A delicious and healthy granola mix made from organic ingredients.",
     image: {
       hash: "vwx234",
-      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg",
+      url: "https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-3-1.jpg",
       name: "organic-granola.jpg",
     },
     price: 8.99,
     totalPrice: 8.99,
     salePrice: 7.49,
     category: {
-      id: 1,
-      name: "Vegetables",
+      id: 6,
+      name: "Fruits",
     },
     isFavorite: true,
     rating: 4.4,
     reviews: 110,
     totalReviews: 120,
     maxAmountPerOrder: 5,
+  },
+];
+
+export const categoryTabs: ProductCategory[] = [
+  {
+    id: 1,
+    name: "Milks & Dairies",
+  },
+  {
+    id: 2,
+    name: "Coffes & Teas",
+  },
+  {
+    id: 3,
+    name: "Pet Foods",
+  },
+  {
+    id: 4,
+    name: "Meats",
+  },
+  {
+    id: 5,
+    name: "Vegetables",
+  },
+  {
+    id: 6,
+    name: "Fruits",
   },
 ];

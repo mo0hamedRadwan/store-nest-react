@@ -1,7 +1,7 @@
 import { useEvent } from "@mongez/react-hooks";
 import { popularProductsAtom } from "apps/front-office/home/atoms/popular-products-atom";
-import { products } from "apps/front-office/utils/data";
-import { Product, ProductCategory } from "apps/front-office/utils/types";
+import { categoryTabs, products } from "apps/front-office/utils/data";
+import { Product } from "apps/front-office/utils/types";
 import { useState } from "react";
 
 export type PopularProductsTabsProps = {
@@ -9,61 +9,22 @@ export type PopularProductsTabsProps = {
 };
 
 export default function PopularProductsTabs() {
-  const categoryTabs: ProductCategory[] = [
-    {
-      id: 1,
-      name: "Milks & Dairies",
-    },
-    {
-      id: 2,
-      name: "Coffes & Teas",
-    },
-    {
-      id: 34,
-      name: "Pet Foods",
-    },
-    {
-      id: 4,
-      name: "Meats",
-    },
-    {
-      id: 5,
-      name: "Vegetables",
-    },
-    {
-      id: 6,
-      name: "Fruits",
-    },
-  ];
-
-  const tabs = categoryTabs.map(tab => ({
-    id: tab.id,
-    name: tab.name,
-    products: products.filter(product => product.category.id === tab.id),
+  const tabs = categoryTabs.map(({ id, name }) => ({
+    id,
+    name,
+    products: products.filter(({ category }) => category.id === id),
   }));
+
   return (
-    <>
-      <div className="container py-3 px-0 flex items-center justify-between">
-        <div>
-          <h3 className="font-bold text-3xl text-[#253D4E]">
-            Popular Products
-          </h3>
-        </div>
-        <div>
-          <ul className="flex items-center gap-3">
-            <Tab
-              tab={{
-                id: 0,
-                name: "All",
-              }}
-            />
-            {tabs.map(tab => (
-              <Tab key={tab.id} tab={tab} />
-            ))}
-          </ul>
-        </div>
-      </div>
-    </>
+    <div className="container py-3 px-0 flex flex-col md:flex-row items-center justify-between">
+      <h3 className="font-bold text-3xl text-[#253D4E]">Popular Products</h3>
+      <ul className="flex flex-wrap items-center gap-3 md:gap-3">
+        <Tab tab={{ id: 0, name: "All" }} />
+        {tabs.map(tab => (
+          <Tab key={tab.id} tab={tab} />
+        ))}
+      </ul>
+    </div>
   );
 }
 type TabProps = {
