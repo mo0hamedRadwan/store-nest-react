@@ -1,18 +1,13 @@
-import { cn } from "@utils";
-
 type ProductDiscountProps = {
-  discount?: string;
+  discount: number;
 };
 
 const ProductDiscount = ({ discount }: ProductDiscountProps) => {
+  const discountBadge = `Save ${discount}%`;
+
   return (
-    <div
-      className={cn(
-        ["absolute top-0 left-0"],
-        ["p-1 px-4 text-xs"],
-        ["rounded-ss-lg rounded-ee-lg", ["bg-primary text-white"]],
-      )}>
-      {discount}
+    <div className="absolute top-0 left-0 p-1 px-4 text-xs rounded-ss-lg rounded-ee-lg bg-primary text-white">
+      {discountBadge}
     </div>
   );
 };

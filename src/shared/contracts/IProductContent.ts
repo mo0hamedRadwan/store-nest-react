@@ -1,10 +1,13 @@
 export interface IProductContent {
   name: string;
-  brandName?: string;
+  brandName: string;
 
-  rate: number;
-  rateLimit: number;
+  rate?: number;
 
   price: number;
+  discount?: number;
+
+  sold?: number;
+
   buttonFullWidth?: boolean;
 }

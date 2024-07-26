@@ -1,10 +1,14 @@
 import { useState } from "react";
 import RateStar from "./RateStar";
 
-export default function RateSection() {
+type RateSectionProps = {
+  rate: number;
+};
+
+export default function RateSection({ rate }: RateSectionProps) {
   const [mode, setMode] = useState<string>("hover");
   const [hovers, setHovers] = useState<number>(-1);
-  const [actives, setActives] = useState<number>(-1);
+  const [actives, setActives] = useState<number>(rate || -1);
 
   const accumulateActive = (rank: number) => _ => {
     setActives(rank);

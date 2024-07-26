@@ -1,32 +1,49 @@
 import { trans } from "@mongez/localization";
 import { ShoppingCart } from "lucide-react";
+import { IProductContent } from "shared/contracts/IProductContent";
 import ProgressBar from "../../Indicators/ProgressBar";
 import RateSection from "../RateSection";
-export default function ProductContent(/**props: IProductContent */) {
+
+export default function ProductContent({
+  name,
+  rate,
+  price,
+  discount,
+  brandName,
+  sold,
+}: IProductContent) {
+  const priceAfterDiscount = discount ? price - (price * discount) / 100 : null;
+
   return (
     <section className="product-content">
       <div className="product-category">
         <a
           href="/category/brand"
           className="text-slate-400 block text-xs font-normal my-1">
-          Egypt Food
+          {brandName}
         </a>
       </div>
+
       <div className="product-name">
         <a href="/products/:id" className="font-bold">
-          Seeds of Change Organic Quinoa, Brown
+          {name}
         </a>
       </div>
+
       <div className="product-rate flex">
-        <RateSection />
+        <RateSection rate={rate} />
       </div>
+
       <div className="product-price flex gap-2 py-2">
         <span className="product-actual-price text-primary-soft font-bold text-lg">
-          $238.85
+          ${price}
         </span>
-        <span className="product-discount-price text-slate-500 font-medium line-through">
-          $245.8
-        </span>
+
+        {discount && (
+          <span className="product-discount-price text-slate-500 font-medium line-through">
+            ${priceAfterDiscount}
+          </span>
+        )}
       </div>
 
       <div className="product-sold py-2 space-y-2">
