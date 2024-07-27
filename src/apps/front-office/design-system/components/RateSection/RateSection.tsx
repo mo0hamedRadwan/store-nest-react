@@ -6,9 +6,12 @@ type RateSectionProps = {
 };
 
 export default function RateSection({ rate }: RateSectionProps) {
-  const [mode, setMode] = useState<string>("hover");
+  const [mode, setMode] = useState<string>(() =>
+    rate > -1 ? "actives" : "hover",
+  );
+
   const [hovers, setHovers] = useState<number>(-1);
-  const [actives, setActives] = useState<number>(rate || -1);
+  const [actives, setActives] = useState<number>(-1);
 
   const accumulateActive = (rank: number) => _ => {
     setActives(rank);

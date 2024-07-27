@@ -13,10 +13,10 @@ export default function DailyBestFilter() {
             className={cn([
               "best-sells-filter__item",
               "text-sm font-semibold py-1 px-2 rounded-ee-md rounded-ss-md",
-              "hover:text-white hover:bg-primary-soft hover:translate-y-1",
+              "hover:text-white hover:bg-primary hover:translate-y-1",
               "transition-all",
               {
-                "bg-primary-soft text-white": filterItem === text,
+                "bg-primary text-white": filterItem === text,
                 "translate-y-1": filterItem === text,
               },
             ])}>

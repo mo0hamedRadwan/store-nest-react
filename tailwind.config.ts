@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -13,18 +14,19 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
+      screens: {
+        xs: "375px",
+        "2xl": "1400px",
+      },
       colors: {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
-        "primary-soft": {
-          DEFAULT: "#3EB880",
+        "black-soft-foreground": {
+          DEFAULT: "hsl(var(--black-soft-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -39,19 +41,24 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        primary: {
-          default: "#3BB77E",
-          light: "#DEF9EC",
-          dark: "#29A56C",
-        },
-        font: {
-          default: "#253D4E",
-        },
       },
       fontFamily: {
         custom: ["Quicksand", "sans-serif"],
       },
+      keyframes: {
+        "bounce-up": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-5px)",
+          },
+        },
+      },
+      animation: {
+        "bounce-up": "bounce-up 0.5s cubic-bezier(0.71, 1.7, 0.77, 1.24)",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 } satisfies Config;

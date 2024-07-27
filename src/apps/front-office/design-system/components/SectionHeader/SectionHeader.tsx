@@ -12,7 +12,7 @@ export default function SectionHeader({
   return (
     <>
       <h2
-        className={`${sectionName}__header-text text-3xl lg:text-4xl font-bold text-[#253D4E]`}>
+        className={`${sectionName}__header-text text-3xl lg:text-4xl font-bold text-black-soft-foreground`}>
         {headerText}
       </h2>
 

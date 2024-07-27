@@ -1,5 +1,7 @@
 import { trans } from "@mongez/localization";
+import { Link } from "@mongez/react-router";
 import { ShoppingCart } from "lucide-react";
+import { URLS } from "shared/constants";
 import { IProductContent } from "shared/contracts/IProductContent";
 import ProgressBar from "../../Indicators/ProgressBar";
 import RateSection from "../RateSection";
@@ -10,38 +12,41 @@ export default function ProductContent({
   price,
   discount,
   brandName,
+  total,
   sold,
 }: IProductContent) {
-  const priceAfterDiscount = discount ? price - (price * discount) / 100 : null;
+  const priceAfterDiscount = discount
+    ? price - (price * discount) / 100
+    : price;
 
   return (
     <section className="product-content">
       <div className="product-category">
-        <a
-          href="/category/brand"
+        <Link
+          href={URLS.BRAND_DETAILS}
           className="text-slate-400 block text-xs font-normal my-1">
           {brandName}
-        </a>
+        </Link>
       </div>
 
       <div className="product-name">
-        <a href="/products/:id" className="font-bold">
+        <Link href={URLS.PRODUCT_DETAILs} className="font-bold">
           {name}
-        </a>
+        </Link>
       </div>
 
       <div className="product-rate flex">
-        <RateSection rate={rate} />
+        <RateSection rate={rate || -1} />
       </div>
 
       <div className="product-price flex gap-2 py-2">
-        <span className="product-actual-price text-primary-soft font-bold text-lg">
-          ${price}
+        <span className="product-actual-price text-primary font-bold text-lg">
+          ${priceAfterDiscount?.toFixed(2) || price.toFixed(2)}
         </span>
 
         {discount && (
           <span className="product-discount-price text-slate-500 font-medium line-through">
-            ${priceAfterDiscount}
+            ${price}
           </span>
         )}
       </div>
@@ -49,7 +54,9 @@ export default function ProductContent({
       <div className="product-sold py-2 space-y-2">
         <ProgressBar />
 
-        <div className="product-sold-text text-sm">Sold: 90/120</div>
+        <div className="product-sold-text text-sm">
+          {trans("sold")}: {sold}/{total}
+        </div>
       </div>
 
       <div className="product-add-to-cart-btn transition-all bg-primary text-white px-6 py-3 mt-3 grid place-content-center rounded-md hover:bg-[#FDC040] hover:-translate-y-1">

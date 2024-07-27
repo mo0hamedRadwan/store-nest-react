@@ -6,28 +6,23 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "apps/front-office/design-system/components/ui/carousel";
-import emblaCarouselAutoplay from "embla-carousel-autoplay";
 
 import products from "app/mocks/daily-best-sells-products";
 
 export default function DailyBestProducts() {
   return (
-    <Carousel
-      plugins={[
-        emblaCarouselAutoplay({
-          delay: 1500,
-        }),
-      ]}>
+    <Carousel>
       <CarouselContent className="ml-4">
         {products.map((product, index) => (
           <CarouselItem
             key={index}
-            className="w-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 me-2">
+            className="w-full xs:basis-1/2 flex-wrap md:basis-1/3 xl:basis-1/4 me-2">
             <Product
               key={index}
-              image={product.image}
-              body={product.content}
-              className="w-full"
+              images={product.images}
+              status={product.status}
+              body={product.body}
+              className="w-full group/product"
             />
           </CarouselItem>
         ))}

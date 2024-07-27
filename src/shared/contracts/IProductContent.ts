@@ -7,6 +7,7 @@ export interface IProductContent {
   price: number;
   discount?: number;
 
+  total: number;
   sold?: number;
 
   buttonFullWidth?: boolean;
