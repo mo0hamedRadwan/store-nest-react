@@ -17,7 +17,6 @@ type popularProductsAtomOptions = {
 
 const collectTabsData = (products: Product[]) => {
   const categories: GenericObject = {};
-
   for (const product of products) {
     if (!categories[product.category.id]) {
       categories[product.category.id] = {
