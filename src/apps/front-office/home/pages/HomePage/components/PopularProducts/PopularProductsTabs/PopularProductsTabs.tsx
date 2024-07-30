@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import { useEvent } from "@mongez/react-hooks";
 import { popularProductsAtom } from "apps/front-office/home/atoms/popular-products-atom";
 import { categoryTabs, products } from "apps/front-office/utils/data";
@@ -17,7 +18,9 @@ export default function PopularProductsTabs() {
 
   return (
     <div className="container py-3 px-0 flex flex-col md:flex-row items-center justify-between">
-      <h3 className="font-bold text-3xl text-[#253D4E]">Popular Products</h3>
+      <h3 className="font-bold text-3xl text-[#253D4E]">
+        {trans("PopularProducts")}
+      </h3>
       <ul className="flex flex-wrap items-center gap-3 md:gap-3">
         <Tab tab={{ id: 0, name: "All" }} />
         {tabs.map(tab => (
