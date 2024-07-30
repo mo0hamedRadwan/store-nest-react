@@ -19,11 +19,11 @@ groupedTranslations({
     en: "Contact Us",
     ar: "اتصل بنا",
   },
-  PopularProducts: {
+  popularProducts: {
     en: "Popular Products",
     ar: "المنتجات الشائعة",
   },
-  AllProducts: {
+  allProducts: {
     en: "all products",
     ar: "جميع المنتجات ",
   },

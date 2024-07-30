@@ -19,7 +19,7 @@ export default function PopularProductsTabs() {
   return (
     <div className="container py-3 px-0 flex flex-col md:flex-row items-center justify-between">
       <h3 className="font-bold text-3xl text-[#253D4E]">
-        {trans("PopularProducts")}
+        {trans("popularProducts")}
       </h3>
       <ul className="flex flex-wrap items-center gap-3 md:gap-3">
         <Tab tab={{ id: 0, name: "All" }} />
