@@ -1,5 +1,6 @@
 import { groupedTranslations, trans } from "@mongez/localization";
 import mainTranslation from "shared/localization/index.json";
+import productsTranslation from "shared/localization/products.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -35,4 +36,5 @@ groupedTranslations({
     en: "Add",
     ar: "اضافة للسلة",
   },
+  ...productsTranslation,
 });
