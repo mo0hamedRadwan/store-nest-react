@@ -4,7 +4,7 @@ import { ShoppingCart } from "lucide-react";
 import { URLS } from "shared/constants";
 import { IProductContent } from "shared/contracts/IProductContent";
 import ProgressBar from "../../Indicators/ProgressBar";
-import RateSection from "../RateSection";
+import Rating from "../Rating";
 
 export default function ProductContent({
   name,
@@ -36,7 +36,7 @@ export default function ProductContent({
       </div>
 
       <div className="product-rate flex">
-        <RateSection rate={rate || -1} />
+        <Rating rate={rate || -1} />
       </div>
 
       <div className="product-price flex gap-2 py-2">
