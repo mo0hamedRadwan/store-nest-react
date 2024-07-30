@@ -2,9 +2,5 @@
   "sold": {
     "ar": "تم بيع",
     "en": "sold"
-  },
-  "addToCart": {
-    "ar": "أضف الي السلة",
-    "en": "Add To Cart"
   }
 }

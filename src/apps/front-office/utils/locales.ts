@@ -12,6 +12,29 @@ export function the(key: string) {
 
 // Add only common localization
 groupedTranslations({
-  // add your common localization here
+  home: {
+    en: "Home Page",
+    ar: "الصفحة الرئيسية",
+  },
+  contactUs: {
+    en: "Contact Us",
+    ar: "اتصل بنا",
+  },
+  popularProducts: {
+    en: "Popular Products",
+    ar: "المنتجات الشائعة",
+  },
+  allProducts: {
+    en: "all products",
+    ar: "جميع المنتجات ",
+  },
+  new: {
+    en: "New",
+    ar: "جديد",
+  },
+  addToCart: {
+    en: "Add",
+    ar: "اضافة للسلة",
+  },
   ...productsTranslation,
 });
