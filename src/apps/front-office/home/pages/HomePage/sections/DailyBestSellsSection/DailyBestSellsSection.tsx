@@ -10,7 +10,7 @@ export default function DailyBestSellsSection() {
         <SectionHeader
           sectionName="best-daily-products"
           headerText="Daily Best Sells"
-          customComponent={<DailyBestFilter />}
+          asideComponent={<DailyBestFilter />}
         />
       </div>
 
