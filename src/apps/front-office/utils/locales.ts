@@ -1,5 +1,6 @@
 import { groupedTranslations, trans } from "@mongez/localization";
 import mainTranslation from "shared/localization/index.json";
+import productsTranslation from "shared/localization/products.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -12,4 +13,5 @@ export function the(key: string) {
 // Add only common localization
 groupedTranslations({
   // add your common localization here
+  ...productsTranslation,
 });
