@@ -16,7 +16,7 @@ export default function SectionHeader({
         {headerText}
       </h2>
 
-      {asideComponent && asideComponent}
+      {asideComponent}
     </>
   );
 }

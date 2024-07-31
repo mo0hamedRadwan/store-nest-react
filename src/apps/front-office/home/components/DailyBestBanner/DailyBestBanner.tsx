@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import { ArrowRightFromLine } from "lucide-react";
 
 export default function DailyBestBanner() {
@@ -9,11 +10,11 @@ export default function DailyBestBanner() {
       }}>
       <div className="daily-best-banner__content absolute top-0 left-0 p-12">
         <h3 className="banner-text text-4xl font-bold mb-32 text-black-soft-foreground">
-          Bring nature into your home
+          {trans("daily-best-sells-banner-text")}
         </h3>
 
         <button className="font-medium rounded-sm bg-primary hover:bg-[#FDC040] p-2 text-white text-sm flex items-center gap-2 group transition-all">
-          Shop Now{" "}
+          {trans("shop-now")}{" "}
           <ArrowRightFromLine className="block w-4 h-4 group-hover:ms-2 transition-all" />
         </button>
       </div>
