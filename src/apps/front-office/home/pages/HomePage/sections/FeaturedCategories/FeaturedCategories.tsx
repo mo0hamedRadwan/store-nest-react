@@ -1,7 +1,7 @@
+import { trans } from "@mongez/localization";
 import {
     Carousel,
     CarouselContent,
-    CarouselItem,
     CarouselNext,
     CarouselPrevious,
 } from "apps/front-office/design-system/components/ui/carousel"
@@ -20,51 +20,30 @@ export default function FeaturedCategories() {
     )
 
     const data = [
-        { id: 1, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 2, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 3, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 4, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 5, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 6, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 7, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 8, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 9, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 10, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 11, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 12, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 13, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 14, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
-        { id: 15, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 1, name: 'Organic Kiwi', items: 28, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 2, name: 'Organic Kiwi', items: 15, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 3, name: 'Organic Kiwi', items: 30, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 4, name: 'Organic Kiwi', items: 28, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 5, name: 'Organic Kiwi', items: 15, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 6, name: 'Organic Kiwi', items: 30, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 7, name: 'Organic Kiwi', items: 28, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 8, name: 'Organic Kiwi', items: 15, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 9, name: 'Organic Kiwi', items: 30, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 10, name: 'Organic Kiwi', items: 28, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 11, name: 'Organic Kiwi', items: 15, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 12, name: 'Organic Kiwi', items: 30, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 13, name: 'Organic Kiwi', items: 28, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 14, name: 'Organic Kiwi', items: 15, imgSrc: '/images/featured-categories/kiwi.png' },
+        { id: 15, name: 'Organic Kiwi', items: 30, imgSrc: '/images/featured-categories/kiwi.png' },
     ];
 
-
-
-    const cards = [
-        {
-            backgroundImage: 'public/images/featured-categories/banner-1.png',
-            title: 'Everyday Fresh & Clean with Our Products',
-        },
-        {
-            backgroundImage: 'public/images/featured-categories/banner-2.png',
-            title: 'Make your Breakfast Healthy and Easy',
-        },
-        {
-            backgroundImage: 'public/images/featured-categories/banner-3.png',
-            title: 'The best Organic Products Online',
-        },
-    ];
 
 
     return (
         <section className="featured-categories px-3 py-[25px]">
 
             <div className="featured-categories-title relative mb-11 ">
-                <h3 className="sm:text-2xl lg:text-4xl font-bold text-[#253D4E]">Featured Categories</h3>
-                {/* <div className="flex relative max-w-[200px] justify-end top-[unset] z-[2] w-full">
-                <span className="relative w-10 h-10 leading-[44px] text-2xl cursor-pointer block z-[100] transition-all duration-[0.2s] ease-[ease-out] text-center text-[#7E7E7E] rounded-[50%] inset-x-[unset] bg-[#f2f3f4] mr-2.5 " >L </span>
-                <span className="relative w-10 h-10 leading-[44px] text-2xl cursor-pointer block z-[100] transition-all duration-[0.2s] ease-[ease-out] text-center text-[#7E7E7E] rounded-[50%] inset-x-[unset] bg-[#f2f3f4]" >R</span>
-
-              </div> */}
+                <h3 className="sm:text-2xl lg:text-4xl font-bold text-[#253D4E]">{trans("Featured Categories")}</h3>
             </div>
             <div className="featured-categories-body flex justify-center mb-10">
                 <Carousel
@@ -85,14 +64,7 @@ export default function FeaturedCategories() {
                 </Carousel>
             </div>
 
-            <div className="featured-categories-banners flex justify-center">
-                {cards.map((card, index) => (
-                    <FeaturedCategoriesBanner
-                        key={index}
-                        backgroundImage={card.backgroundImage}
-                    />
-                ))}
-            </div>
+            <FeaturedCategoriesBanner/>
 
         </section >
     )

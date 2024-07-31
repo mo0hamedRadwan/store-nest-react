@@ -1,3 +1,4 @@
+import { trans } from '@mongez/localization';
 import { Link } from '@mongez/react-router';
 import { Card, CardContent } from 'apps/front-office/design-system/components/ui/card';
 import { CarouselItem } from 'apps/front-office/design-system/components/ui/carousel';
@@ -32,7 +33,7 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
                             </Link>
                         </figure>
                         <p><Link className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md md:text-lg">{item.name}</Link></p>
-                        <span className="text-slate-400 text-base font-normal my-1">{item.items} items</span>
+                        <span className="text-slate-400 text-base font-normal my-1">{item.items} {trans("Items")}</span>
                     </CardContent>
                 </Card>
             </div>
