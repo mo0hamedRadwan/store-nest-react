@@ -1,4 +1,3 @@
-import { Card, CardContent } from "apps/front-office/design-system/components/ui/card"
 import {
     Carousel,
     CarouselContent,
@@ -6,7 +5,8 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "apps/front-office/design-system/components/ui/carousel"
-import FeaturedCategoriesBanner from "apps/front-office/home/components/FeaturedCategorieBanner";
+import CategoryCard from "apps/front-office/home/components/CategoryCard";
+import FeaturedCategoriesBanner from "apps/front-office/home/components/FeaturedCategoriesBanner";
 import Autoplay from "embla-carousel-autoplay"
 import React from "react";
 
@@ -19,7 +19,25 @@ export default function FeaturedCategories() {
         Autoplay({ delay: 2000, stopOnInteraction: true })
     )
 
-    const backgroundColors = ["#ECFFEC", "#FEEFEA", "#FFF3EB", "#FFF3FF"];
+    const data = [
+        { id: 1, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 2, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 3, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 4, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 5, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 6, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 7, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 8, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 9, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 10, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 11, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 12, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 13, name: 'Organic Kiwi', items: 28, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 14, name: 'Organic Kiwi', items: 15, imgSrc: 'public/images/featured-categories/kiwi.png' },
+        { id: 15, name: 'Organic Kiwi', items: 30, imgSrc: 'public/images/featured-categories/kiwi.png' },
+    ];
+
+
 
     const cards = [
         {
@@ -56,24 +74,8 @@ export default function FeaturedCategories() {
                     onMouseLeave={plugin.current.reset}
                 >
                     <CarouselContent className="w-full overflow">
-                        {Array.from({ length: 15 }).map((_, index) => (
-                            <CarouselItem key={index} className="pl-1 basis-1/4 sm:basis-1/4 md:basis-1/5 lg:basis-1/11  me-2"
-                            >
-                                <div className="p-1">
-                                    <Card style={{ backgroundColor: backgroundColors[index % backgroundColors.length] }}>
-                                        <CardContent className="flex flex-col aspect-[1_/_1.5] items-center justify-center p-6">
-                                            <figure >
-                                                <a>
-                                                    <img
-                                                        src="public/images/featured-categories/kiwi.png" alt="img-product" />
-                                                </a>
-                                            </figure>
-                                            <p><a className=" text-slate-800 font-bold leading-relaxed md:text-lg">Oganic Kiwi</a></p>
-                                            <span className="text-slate-400 text-base font-normal my-1">28 items</span>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
+                        {data.map((item, index) => (
+                            <CategoryCard index={index} item={item} key={index} />
                         ))}
                     </CarouselContent>
                     <div className="flex relative justify-end top-[-120.333333%] z-[2] w-full">
