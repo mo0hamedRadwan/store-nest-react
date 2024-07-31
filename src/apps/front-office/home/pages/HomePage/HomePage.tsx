@@ -1,5 +1,6 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
+import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
 import { useOnce } from "@mongez/react-hooks";
 import { Button } from "apps/front-office/design-system/components/ui/button";
 import { products } from "apps/front-office/utils/data";
@@ -24,6 +25,8 @@ export default function HomePage() {
   return (
     <>
       <Helmet title={trans("home")} appendAppName={false} />
+
+      <FeaturedCategories />
       <div className="App">
         <DailyBestSellsSection />
       </div>
