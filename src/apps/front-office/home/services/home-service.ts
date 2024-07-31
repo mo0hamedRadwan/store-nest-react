@@ -6,7 +6,7 @@ export function getHome() {
 }
 
 export function getCategories() {
-  return new Promise((resolve, reject) =>
+  return new Promise(resolve =>
     setTimeout(() => {
       resolve([]);
     }, 5000),

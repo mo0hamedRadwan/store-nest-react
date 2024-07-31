@@ -10,6 +10,7 @@ import SearchFormInMiddleHeader from "./SearchFormInMiddleHeader";
 
 const MiddleHeader = () => {
   // to handle login user
+  // eslint-disable-next-line unused-imports/no-unused-vars
   const [isLogin, setIsLogin] = useState(true);
   const [openNavMenu, setOpenNavMenu] = useState<boolean>(false);
 

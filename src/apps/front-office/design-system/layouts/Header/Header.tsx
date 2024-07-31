@@ -10,7 +10,8 @@ export default function Header() {
 
   useEffect(() => {
     setCategories();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  });
 
   return (
     <div className="font-custom">
