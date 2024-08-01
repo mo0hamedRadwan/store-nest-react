@@ -8,6 +8,7 @@ import { popularProductsAtom } from "../../atoms/popular-products-atom";
 import PopularProducts from "./components/PopularProducts";
 import "./HomePage.css";
 import DailyBestSellsSection from "./sections/DailyBestSellsSection";
+import DealsDayTwo from "./sections/DealsDayTwo/DealsDayTwo";
 import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
 
 export default function HomePage() {
@@ -34,6 +35,9 @@ export default function HomePage() {
       <Button className="bg-primary-default hover:bg-primary-dark font-custom">
         Welcome Home
       </Button>
+      <div>
+        <DealsDayTwo />
+      </div>
     </>
   );
 }

@@ -26,6 +26,11 @@
   }
 }
 
+::selection {
+  background: #3bb77e;
+  color: #fff;
+}
+
 @layer base {
   * {
     font-family: "Quicksand", sans-serif;
