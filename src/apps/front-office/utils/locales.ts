@@ -30,14 +30,6 @@ groupedTranslations({
     en: "all products",
     ar: "جميع المنتجات ",
   },
-  new: {
-    en: "New",
-    ar: "جديد",
-  },
-  addToCart: {
-    en: "Add",
-    ar: "اضافة للسلة",
-  },
   ...productsTranslation,
   ...sectionsTranslation,
   ...bannersTranslation,

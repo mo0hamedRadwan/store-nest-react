@@ -11,7 +11,7 @@ export default function DailyBestSellsSection() {
       <div className="best-daily-products__header flex flex-col md:flex-row justify-between">
         <SectionHeader
           sectionName="best-daily-products"
-          headerText={trans("daily-best-sells")}
+          headerText={trans("dailyBestSells")}
           asideComponent={<DailyBestFilter />}
         />
       </div>

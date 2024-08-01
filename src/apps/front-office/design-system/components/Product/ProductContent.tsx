@@ -64,7 +64,7 @@ export default function ProductContent({
           <span className="w-4 h-4">
             <ShoppingCart className="w-full h-full" />
           </span>
-          <span className="font-medium">{trans("add-to-cart")}</span>
+          <span className="font-medium">{trans("addToCart")}</span>
         </button>
       </div>
     </section>

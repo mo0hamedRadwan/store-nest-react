@@ -7,7 +7,7 @@ export default function DailyBestFilter() {
   return (
     <div className="best-sells-filter">
       <div className="best-sells-filter__accordion flex items-center gap-2 py-4">
-        {["featured", "popular", "new-added"].map(text => (
+        {["featured", "popular", "newAdded"].map(text => (
           <button
             key={text}
             onClick={() => setFilterItem(text)}
