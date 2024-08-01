@@ -1,6 +1,5 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
-import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
 import { useOnce } from "@mongez/react-hooks";
 import { Button } from "apps/front-office/design-system/components/ui/button";
 import { products } from "apps/front-office/utils/data";
@@ -9,6 +8,7 @@ import { popularProductsAtom } from "../../atoms/popular-products-atom";
 import PopularProducts from "./components/PopularProducts";
 import "./HomePage.css";
 import DailyBestSellsSection from "./sections/DailyBestSellsSection";
+import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
 
 export default function HomePage() {
   const [data, setData] = useState<any>(null);
