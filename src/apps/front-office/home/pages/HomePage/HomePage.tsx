@@ -8,8 +8,8 @@ import { popularProductsAtom } from "../../atoms/popular-products-atom";
 import PopularProducts from "./components/PopularProducts";
 import "./HomePage.css";
 import DailyBestSellsSection from "./sections/DailyBestSellsSection";
-import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
 import DealsDayTwo from "./sections/DealsDayTwo/DealsDayTwo";
+import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
 
 export default function HomePage() {
   const [data, setData] = useState<any>(null);

@@ -1,4 +1,4 @@
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { Star, StarHalf } from "lucide-react";
 import { topSellingType } from "./index";
 export default function TopSellingCard({
   productImageTop,
@@ -25,19 +25,19 @@ export default function TopSellingCard({
         <div className="hidden xl:flex gap-1">
           <ul className="flex items-center">
             <li>
-              <FaStar className="text-starColor" />
+              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
             </li>
             <li>
-              <FaStar className="text-starColor" />
+              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
             </li>
             <li>
-              <FaStar className="text-starColor" />
+              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
             </li>
             <li>
-              <FaStar className="text-starColor" />
+              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
             </li>
             <li>
-              <FaStarHalfAlt className="text-starColor" />
+              <StarHalf className="w-4" fill="#fcc43c" stroke="transparent" />
             </li>
           </ul>
           <span className="text-rateColor">(4.0)</span>
@@ -52,9 +52,3 @@ export default function TopSellingCard({
     </div>
   );
 }
-
-
-
-
-
-

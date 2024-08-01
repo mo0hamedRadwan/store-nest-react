@@ -33,5 +33,3 @@ export default function TopSelling() {
     </div>
   );
 }
-
-

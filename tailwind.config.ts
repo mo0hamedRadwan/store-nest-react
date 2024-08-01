@@ -24,7 +24,6 @@ export default {
       colors: {
         "mainColor": "#253D4E",
         "rateColor": "#B6B6B6",
-        "starColor": "#fcc43c",
         "priceNowColor": "#3BB77E",
         "priceOldColor": "#adadad",
         primary: {

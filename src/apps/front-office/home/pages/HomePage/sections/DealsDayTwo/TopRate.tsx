@@ -32,6 +32,3 @@ export default function TopRate() {
     </div>
   );
 }
-
-
-
