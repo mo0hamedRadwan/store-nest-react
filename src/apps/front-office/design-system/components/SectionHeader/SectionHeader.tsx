@@ -1,12 +1,12 @@
 export type SectionHeaderProps = {
   headerText: string;
-  customComponent?: React.ReactNode;
+  asideComponent?: React.ReactNode;
   sectionName?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export default function SectionHeader({
   headerText,
-  customComponent,
+  asideComponent,
   sectionName = "section",
 }: SectionHeaderProps) {
   return (
@@ -16,7 +16,7 @@ export default function SectionHeader({
         {headerText}
       </h2>
 
-      {customComponent && customComponent}
+      {asideComponent}
     </>
   );
 }

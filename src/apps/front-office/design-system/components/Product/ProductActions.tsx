@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import React from "react";
 import { PRODUCT_ACTIONS } from "shared/constants";
 import ProductAction from "./ProductAction";
@@ -9,7 +10,7 @@ function _ProductActions() {
         {PRODUCT_ACTIONS.map((action, index) => (
           <ProductAction
             key={index}
-            tooltip={action.tooltip}
+            tooltip={trans(action.tooltip)}
             Icon={action.icon}
           />
         ))}

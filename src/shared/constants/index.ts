@@ -24,15 +24,15 @@ export const DEFAULT_IMAGE = "https://via.placeholder.com/150";
 export const PRODUCT_ACTIONS = [
   {
     icon: Eye,
-    tooltip: "Quick view",
+    tooltip: "quickView",
   },
   {
     icon: Share,
-    tooltip: "Share",
+    tooltip: "share",
   },
 
   {
-    tooltip: "Add to wishlist",
+    tooltip: "wishlist",
     icon: Heart,
   },
 ];

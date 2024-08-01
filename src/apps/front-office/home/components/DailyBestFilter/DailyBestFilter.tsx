@@ -1,12 +1,13 @@
+import { trans } from "@mongez/localization";
 import { cn } from "@utils";
 import { useState } from "react";
 
 export default function DailyBestFilter() {
-  const [filterItem, setFilterItem] = useState<string>("Featured");
+  const [filterItem, setFilterItem] = useState<string>("featured");
   return (
     <div className="best-sells-filter">
       <div className="best-sells-filter__accordion flex items-center gap-2 py-4">
-        {["Featured", "Popular", "New added"].map(text => (
+        {["featured", "popular", "newAdded"].map(text => (
           <button
             key={text}
             onClick={() => setFilterItem(text)}
@@ -20,7 +21,7 @@ export default function DailyBestFilter() {
                 "translate-y-1": filterItem === text,
               },
             ])}>
-            {text}
+            {trans(text)}
           </button>
         ))}
       </div>

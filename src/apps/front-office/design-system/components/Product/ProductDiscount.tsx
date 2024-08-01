@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import { PRODUCT_STATUS, PRODUCT_STATUS_CLASSES } from "shared/constants";
 
 type ProductDiscountProps = {
@@ -14,6 +15,8 @@ const ProductDiscount = ({
   const discountBadge = `Save ${discount}%`;
 
   const backgroundBasedOnStatus = PRODUCT_STATUS_CLASSES[status];
+
+  status = trans(status);
 
   return (
     <div
