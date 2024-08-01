@@ -9,6 +9,7 @@ import PopularProducts from "./components/PopularProducts";
 import "./HomePage.css";
 import DailyBestSellsSection from "./sections/DailyBestSellsSection";
 import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
+import DealsDayTwo from "./sections/DealsDayTwo/DealsDayTwo";
 
 export default function HomePage() {
   const [data, setData] = useState<any>(null);
@@ -34,6 +35,9 @@ export default function HomePage() {
       <Button className="bg-primary-default hover:bg-primary-dark font-custom">
         Welcome Home
       </Button>
+      <div>
+        <DealsDayTwo />
+      </div>
     </>
   );
 }

@@ -22,8 +22,12 @@
     --radius: 0.5rem;
   }
 
-  .dark {
-  }
+  .dark {}
+}
+
+::selection {
+  background: #3bb77e;
+  color: #fff;
 }
 
 @layer base {

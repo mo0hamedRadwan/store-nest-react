@@ -19,8 +19,14 @@ export default {
       screens: {
         xs: "375px",
         "2xl": "1400px",
+        'small-to-medium': { 'min': '486px', 'max': '767px' },
       },
       colors: {
+        "mainColor": "#253D4E",
+        "rateColor": "#B6B6B6",
+        "starColor": "#fcc43c",
+        "priceNowColor": "#3BB77E",
+        "priceOldColor": "#adadad",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
