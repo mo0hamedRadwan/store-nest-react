@@ -8,7 +8,7 @@ import {
   FieldValues,
   FormProvider,
   useFormContext,
-} from "yarn ";
+} from "react-hook-form";
 
 import { Label } from "apps/front-office/design-system/components/ui/label";
 import { cn } from "apps/front-office/design-system/utils/utils";
