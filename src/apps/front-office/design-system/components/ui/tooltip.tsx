@@ -5,7 +5,6 @@ import * as React from "react";
 
 import { cn } from "apps/front-office/design-system/utils/utils";
 
-
 const TooltipProvider = TooltipPrimitive.Provider;
 
 const Tooltip = TooltipPrimitive.Root;

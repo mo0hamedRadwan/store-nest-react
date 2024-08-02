@@ -3,7 +3,6 @@ import * as React from "react";
 
 import { cn } from "apps/front-office/design-system/utils/utils";
 
-
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
