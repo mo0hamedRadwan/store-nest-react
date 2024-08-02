@@ -227,12 +227,10 @@ const CarouselPrevious = React.forwardRef<
 CarouselPrevious.propTypes = {
   className: PropTypes.string,
   variant: PropTypes.oneOf([
-    "link",
     "default",
-    "destructive",
+    "cart",
     "outline",
-    "secondary",
-    "ghost",
+    "link",
     null,
     undefined,
   ]),
@@ -270,12 +268,10 @@ const CarouselNext = React.forwardRef<
 CarouselNext.propTypes = {
   className: PropTypes.string,
   variant: PropTypes.oneOf([
-    "link",
     "default",
-    "destructive",
+    "cart",
     "outline",
-    "secondary",
-    "ghost",
+    "link",
     null,
     undefined,
   ]),
