@@ -1,37 +1,43 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
-import { Badge } from "apps/front-office/design-system/components/ui/badge";
+import { useOnce } from "@mongez/react-hooks";
 import { Button } from "apps/front-office/design-system/components/ui/button";
-import { CiHeart } from "react-icons/ci";
-import { LuShoppingCart } from "react-icons/lu";
+import { products } from "apps/front-office/utils/data";
+import { useState } from "react";
+import { popularProductsAtom } from "../../atoms/popular-products-atom";
+import PopularProducts from "./components/PopularProducts";
+import "./HomePage.css";
+import DailyBestSellsSection from "./sections/DailyBestSellsSection";
+import DealsDayTwo from "./sections/DealsDayTwo/DealsDayTwo";
+import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
 
 export default function HomePage() {
+  const [data, setData] = useState<any>(null);
+
+  const fetchData = async () => {
+    setData(products);
+    popularProductsAtom.change("products", products);
+  };
+
+  useOnce(() => {
+    fetchData();
+  });
+
   return (
     <>
       <Helmet title={trans("home")} appendAppName={false} />
-      <Button variant="default">
-        <LuShoppingCart size={25} /> {trans("addToCart")}
+
+      <FeaturedCategories />
+      <div className="App">
+        <DailyBestSellsSection />
+      </div>
+      {data && <PopularProducts />}
+      <Button className="bg-primary-default hover:bg-primary-dark font-custom">
+        Welcome Home
       </Button>
-      <br />
-      <Button variant="cart" size="sm">
-        <LuShoppingCart size={18} /> {trans("Add")}
-      </Button>
-      <br />
-      <Button variant="outline">
-        <CiHeart size={22} />
-      </Button>
-      <br />
-      <Button variant="outline" className="px-8 rounded-3xl">
-        description
-      </Button>
-      <br />
-      <Badge variant="product" className="bg-primary-dark">
-        Sale
-      </Badge>
-      <br />
-      <Badge variant="icon" className="bg-primary-dark">
-        0
-      </Badge>
+      <div>
+        <DealsDayTwo />
+      </div>
     </>
   );
 }

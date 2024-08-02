@@ -5,10 +5,9 @@ import {
   ChevronUpIcon,
 } from "@radix-ui/react-icons";
 import * as SelectPrimitive from "@radix-ui/react-select";
-import * as React from "react";
-
 import { cn } from "apps/front-office/design-system/utils/utils";
-import { commonPropTypes } from "shared/types";
+
+import * as React from "react";
 
 const Select = SelectPrimitive.Root;
 
@@ -23,13 +22,13 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-slate-200 bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-white placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-950 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-slate-800 dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus:ring-slate-300",
+      "relative flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-slate-200 bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-white placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-950 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-slate-800 dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus:ring-slate-300",
       className,
     )}
     {...props}>
     {children}
     <SelectPrimitive.Icon asChild>
-      <CaretSortIcon className="h-4 w-4 opacity-50" />
+      <CaretSortIcon className="h-4 w-4 opacity-50 absolute top-3 right-3" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
@@ -117,7 +116,7 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-800 dark:focus:text-slate-50",
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none focus:bg-white focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-800 dark:focus:text-slate-50",
       className,
     )}
     {...props}>
@@ -137,43 +136,11 @@ const SelectSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
     ref={ref}
-    className={cn("-mx-1 my-1 h-px bg-slate-100 dark:bg-slate-800", className)}
+    className={cn("-mx-1 my-1 h-px bg-white dark:bg-slate-800", className)}
     {...props}
   />
 ));
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
-
-SelectTrigger.propTypes = {
-  ...commonPropTypes,
-};
-
-SelectScrollUpButton.propTypes = {
-  ...commonPropTypes,
-};
-
-SelectScrollDownButton.propTypes = {
-  ...commonPropTypes,
-};
-
-SelectScrollDownButton.propTypes = {
-  ...commonPropTypes,
-};
-
-SelectContent.propTypes = {
-  ...commonPropTypes,
-};
-
-SelectLabel.propTypes = {
-  ...commonPropTypes,
-};
-
-SelectItem.propTypes = {
-  ...commonPropTypes,
-};
-
-SelectSeparator.propTypes = {
-  ...commonPropTypes,
-};
 
 export {
   Select,

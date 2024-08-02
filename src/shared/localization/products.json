@@ -1,0 +1,58 @@
+{
+  "sold": {
+    "ar": "تم بيع",
+    "en": "sold"
+  },
+  "addToCart": {
+    "ar": "أضف الي السلة",
+    "en": "Add To Cart"
+  },
+  "shopNow": {
+    "ar": "تسوق الان",
+    "en": "Shop Now"
+  },
+  "sale": {
+    "ar": "خصم",
+    "en": "sale"
+  },
+  "new": {
+    "ar": "جديد",
+    "en": "new"
+  },
+  "hot": {
+    "ar": "أكثر مبيعا",
+    "en": "hot"
+  },
+  "best": {
+    "ar": "الأفضل",
+    "en": "best"
+  },
+  "save": {
+    "ar": "وفر",
+    "en": "save"
+  },
+  "featured": {
+    "ar": "مميز",
+    "en": "featured"
+  },
+  "popular": {
+    "ar": "شائع",
+    "en": "popular"
+  },
+  "newAdded": {
+    "ar": "جديد",
+    "en": "new"
+  },
+  "quickView": {
+    "en": "Quick View",
+    "ar": "عرض سريع"
+  },
+  "wishlist": {
+    "en": "Wishlist",
+    "ar": "قائمة الرغبات"
+  },
+  "share": {
+    "en": "Share",
+    "ar": "مشاركة"
+  }
+}
