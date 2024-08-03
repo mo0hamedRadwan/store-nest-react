@@ -1,21 +1,20 @@
 "use client";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slider1 from "../../../../../../shared/assets/images/slider/slider-1.png";
-import slider2 from "../../../../../../shared/assets/images/slider/slider-2.png";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./slider.css";
-export type SliderProps = {
-  // props go here
+import { useSlider } from "shared/hooks/use-slider";
+
+type SlideData = {
+  id: number;
+  image: string;
 };
-const sliderArray = [
-  { id: 1, image: slider1 },
-  { id: 2, image: slider2 },
-];
-export default function Slider(props: SliderProps) {
+export default function Slider() {
+  const {sliderData, isLoading, error} = useSlider();
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
   return (
     <div className="relative group">
       <Swiper
@@ -37,10 +36,8 @@ export default function Slider(props: SliderProps) {
           bulletClass: "swiper-pagination-bullet",
           bulletActiveClass: "swiper-pagination-bullet-active",
         }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={swiper => console.log(swiper)}
         className="rounded-3xl">
-        {sliderArray.map(slide => (
+        {sliderData.map(slide => (
           <SwiperSlide key={slide.id}>
             <div className="relative flex items-center justify-center py-6 rounded-3xl">
               <img

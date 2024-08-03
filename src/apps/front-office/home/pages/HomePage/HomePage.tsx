@@ -10,7 +10,7 @@ import "./HomePage.css";
 import DailyBestSellsSection from "./sections/DailyBestSellsSection";
 import DealsDayTwo from "./sections/DealsDayTwo/DealsDayTwo";
 import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
-import Slider from "./Slider";
+import Slider from "./sections/Slider";
 
 export default function HomePage() {
   const [data, setData] = useState<any>(null);
