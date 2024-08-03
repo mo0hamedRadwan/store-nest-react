@@ -4,11 +4,3 @@ import endpoint from "shared/endpoint";
 export function getHome() {
   return endpoint.get("/home");
 }
-
-export function getCategories() {
-  return new Promise(resolve =>
-    setTimeout(() => {
-      resolve([]);
-    }, 5000),
-  );
-}
