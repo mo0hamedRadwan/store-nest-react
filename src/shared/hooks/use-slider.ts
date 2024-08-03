@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { apiAuthToken, apiBaseUrl, apiClient } from 'shared/flags';
+import { useEffect, useState } from "react";
+import { apiAuthToken, apiBaseUrl, apiClient } from "shared/flags";
 type SlideData = {
   id: number;
   image: string;
@@ -17,10 +17,10 @@ export const useSlider = () => {
       try {
         const response = await fetch(apiBaseUrl, {
           headers: {
-            'client-id': apiClient,
-            'Authorization': `Bearer ${apiAuthToken}`,
-            'Content-Type': 'application/json'
-          }
+            "client-id": apiClient,
+            Authorization: `Bearer ${apiAuthToken}`,
+            "Content-Type": "application/json",
+          },
         });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -29,12 +29,15 @@ export const useSlider = () => {
         const sliderBanners = data.rows[0].columns[0].module.slider.banners;
         const processedData = sliderBanners.map(banner => ({
           id: banner.id,
-          image: banner.image.find(img => img.localeCode === 'en')?.value.url || ''
+          image:
+            banner.image.find(img => img.localeCode === "en")?.value.url || "",
         }));
         setSliderData(processedData);
       } catch (error) {
-        console.error('Error fetching slider data:', error);
-        setError(error instanceof Error ? error.message : 'An unknown error occurred');
+        console.error("Error fetching slider data:", error);
+        setError(
+          error instanceof Error ? error.message : "An unknown error occurred",
+        );
       } finally {
         setIsLoading(false);
       }

@@ -1,18 +1,14 @@
 "use client";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useSlider } from "shared/hooks/use-slider";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.css";
-import { useSlider } from "shared/hooks/use-slider";
 
-type SlideData = {
-  id: number;
-  image: string;
-};
 export default function Slider() {
-  const {sliderData, isLoading, error} = useSlider();
+  const { sliderData, isLoading, error } = useSlider();
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
