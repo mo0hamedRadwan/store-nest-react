@@ -1,13 +1,10 @@
-import PropTypes from "prop-types";
-
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import * as React from "react";
-
-import { Button } from "apps/front-office/design-system/components/ui/button";
-import { cn } from "apps/front-office/design-system/utils/utils";
+import { cn } from "../../utils/utils";
+import { Button } from "./button";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -56,7 +53,6 @@ const Carousel = React.forwardRef<
       children,
       ...props
     },
-
     ref,
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
@@ -64,7 +60,6 @@ const Carousel = React.forwardRef<
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
       },
-
       plugins,
     );
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
@@ -163,7 +158,6 @@ const CarouselContent = React.forwardRef<
         className={cn(
           "flex",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-
           className,
         )}
         {...props}
@@ -187,7 +181,6 @@ const CarouselItem = React.forwardRef<
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
         orientation === "horizontal" ? "pl-4" : "pt-4",
-
         className,
       )}
       {...props}
@@ -212,30 +205,16 @@ const CarouselPrevious = React.forwardRef<
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-
         className,
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <ArrowLeft className="h-4 w-4" />
+      <ArrowLeftIcon className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
 });
-
-CarouselPrevious.propTypes = {
-  className: PropTypes.string,
-  variant: PropTypes.oneOf([
-    "default",
-    "cart",
-    "outline",
-    "link",
-    null,
-    undefined,
-  ]),
-  size: PropTypes.oneOf(["default", "sm", "lg", "icon", null, undefined]),
-};
 CarouselPrevious.displayName = "CarouselPrevious";
 
 const CarouselNext = React.forwardRef<
@@ -259,24 +238,11 @@ const CarouselNext = React.forwardRef<
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-      <ArrowRight className="h-4 w-4" />
+      <ArrowRightIcon className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
     </Button>
   );
 });
-
-CarouselNext.propTypes = {
-  className: PropTypes.string,
-  variant: PropTypes.oneOf([
-    "default",
-    "cart",
-    "outline",
-    "link",
-    null,
-    undefined,
-  ]),
-  size: PropTypes.oneOf(["default", "sm", "lg", "icon", null, undefined]),
-};
 CarouselNext.displayName = "CarouselNext";
 
 export {
