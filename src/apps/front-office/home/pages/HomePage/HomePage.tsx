@@ -10,6 +10,7 @@ import "./HomePage.css";
 import DailyBestSellsSection from "./sections/DailyBestSellsSection";
 import DealsDayTwo from "./sections/DealsDayTwo/DealsDayTwo";
 import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories";
+import Slider from "./Slider";
 
 export default function HomePage() {
   const [data, setData] = useState<any>(null);
@@ -26,7 +27,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet title={trans("home")} appendAppName={false} />
-
+      <Slider />
       <FeaturedCategories />
       <div className="App">
         <DailyBestSellsSection />
