@@ -31,14 +31,18 @@ export default function Footer() {
           </div>
           <div className="flex gap-2 mb-4 lg:mb-0">
             {["1900 - 6666", "1900 - 6666"].map((phone, index) => (
-              <div key={index} className="min-w-[200px] flex items-center gap-2">
+              <div
+                key={index}
+                className="min-w-[200px] flex items-center gap-2">
                 <img src={phoneCall} alt="phone-call" className="w-[30px]" />
                 <p className="flex flex-col">
                   <span className="text-[26px] font-bold leading-6 text-primary-default">
                     {phone}
                   </span>
                   <span>
-                    {index === 0 ? "Working 8:00 - 22:00" : "24/7 Support Center"}
+                    {index === 0
+                      ? "Working 8:00 - 22:00"
+                      : "24/7 Support Center"}
                   </span>
                 </p>
               </div>
