@@ -1,13 +1,10 @@
-import PropTypes from "prop-types";
-
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import * as React from "react";
-
-import { cn } from "@utils";
-import { Button } from "apps/front-office/design-system/components/ui/button";
+import { cn } from "../../utils/utils";
+import { Button } from "./button";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -213,26 +210,11 @@ const CarouselPrevious = React.forwardRef<
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <ArrowLeft className="h-4 w-4" />
+      <ArrowLeftIcon className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
 });
-
-CarouselPrevious.propTypes = {
-  className: PropTypes.string,
-  variant: PropTypes.oneOf([
-    "link",
-    "default",
-    "destructive",
-    "outline",
-    "secondary",
-    "ghost",
-    null,
-    undefined,
-  ]),
-  size: PropTypes.oneOf(["default", "sm", "lg", "icon", null, undefined]),
-};
 CarouselPrevious.displayName = "CarouselPrevious";
 
 const CarouselNext = React.forwardRef<
@@ -256,26 +238,11 @@ const CarouselNext = React.forwardRef<
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-      <ArrowRight className="h-4 w-4" />
+      <ArrowRightIcon className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
     </Button>
   );
 });
-
-CarouselNext.propTypes = {
-  className: PropTypes.string,
-  variant: PropTypes.oneOf([
-    "link",
-    "default",
-    "destructive",
-    "outline",
-    "secondary",
-    "ghost",
-    null,
-    undefined,
-  ]),
-  size: PropTypes.oneOf(["default", "sm", "lg", "icon", null, undefined]),
-};
 CarouselNext.displayName = "CarouselNext";
 
 export {

@@ -1,3 +1,5 @@
+import { trans } from "@mongez/localization";
+
 import SectionHeader from "apps/front-office/design-system/components/SectionHeader";
 import DailyBestBanner from "apps/front-office/home/components/DailyBestBanner";
 import DailyBestFilter from "apps/front-office/home/components/DailyBestFilter";
@@ -9,8 +11,8 @@ export default function DailyBestSellsSection() {
       <div className="best-daily-products__header flex flex-col md:flex-row justify-between">
         <SectionHeader
           sectionName="best-daily-products"
-          headerText="Daily Best Sells"
-          customComponent={<DailyBestFilter />}
+          headerText={trans("dailyBestSells")}
+          asideComponent={<DailyBestFilter />}
         />
       </div>
 

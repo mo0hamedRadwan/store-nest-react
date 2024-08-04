@@ -8,11 +8,18 @@ import {
 } from "apps/front-office/design-system/components/ui/carousel";
 
 import products from "app/mocks/daily-best-sells-products";
+import {
+  currentDirection,
+  currentLocaleCode,
+} from "apps/front-office/utils/helpers";
 
 export default function DailyBestProducts() {
   return (
     <Carousel>
-      <CarouselContent className="ml-4">
+      <CarouselContent
+        lang={currentLocaleCode()}
+        dir={currentDirection()}
+        className="ml-4">
         {products.map((product, index) => (
           <CarouselItem
             key={index}

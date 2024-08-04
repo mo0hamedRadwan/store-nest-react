@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./index.html","./src/**/*.{js,ts,jsx,tsx,mdx}"],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "3xl": "1800px",
+        "2xl": "1610px",
       },
     },
     extend: {
@@ -16,13 +16,26 @@ module.exports = {
           default: "#3BB77E",
           light: "#DEF9EC",
           dark: "#29A56C",
+          hover: "#FDC040"
+        },
+        category: {
+          1: "#f2fce4",
+          2: "#fffceb",
+          3: "#ecffec",
+          4: "#feefea",
+          5: "#fff3eb",
+          6: "#fff3ff",
         },
         font: {
           default: "#253D4E",
         },
       },
       fontFamily: {
-        custom: ["Quicksand", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
+        cairo: ["Cairo", "sans-serif"],
+      },
+      translate: {
+        '-5px': '-5px',
       },
       keyframes: {
         "accordion-down": {
@@ -38,16 +51,6 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-    },
-    borderRadius: {
-      none: "0",
-      sm: "0.125rem",
-      DEFAULT: "0.25rem",
-      DEFAULT: "4px",
-      md: "0.375rem",
-      lg: "0.9rem",
-      full: "9999px",
-      large: "12px",
     },
   },
   plugins: [require("tailwindcss-animate")],
