@@ -2,9 +2,10 @@ import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
 import { useOnce } from "@mongez/react-hooks";
 import { Button } from "apps/front-office/design-system/components/ui/button";
-import { products } from "apps/front-office/utils/data";
+import { toast } from "apps/front-office/design-system/components/ui/use-toast";
 import { useState } from "react";
 import { popularProductsAtom } from "../../atoms/popular-products-atom";
+import { getHome, HomeData } from "../../services/home-service";
 import PopularProducts from "./components/PopularProducts";
 import "./HomePage.css";
 import DailyBestSellsSection from "./sections/DailyBestSellsSection";
@@ -13,16 +14,30 @@ import FeaturedCategories from "./sections/FeaturedCategories/FeaturedCategories
 import Slider from "./sections/Slider";
 
 export default function HomePage() {
-  const [data, setData] = useState<any>(null);
-
-  const fetchData = async () => {
-    setData(products);
-    popularProductsAtom.change("products", products);
-  };
+  const [data, setData] = useState<HomeData | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useOnce(() => {
-    fetchData();
+    getHome()
+      .then(response => {
+        setData(response);
+        const categories =
+          response.rows[2]?.columns[0]?.module?.categories || [];
+        const products = categories.flatMap(
+          category => category.products || [],
+        );
+        popularProductsAtom.change("products", products);
+
+        setLoading(false);
+      })
+      .catch(_error => {
+        toast(_error || trans("someThingWantWrong"));
+      });
   });
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>

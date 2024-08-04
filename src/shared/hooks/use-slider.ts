@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { apiAuthToken, apiBaseUrl, apiClient } from "shared/flags";
+import { apiAuthToken, apiClient } from "shared/flags";
 type SlideData = {
   id: number;
   image: string;
@@ -15,7 +15,7 @@ export const useSlider = () => {
       setIsLoading(true);
       setError(null);
       try {
-        const response = await fetch(apiBaseUrl, {
+        const response = await fetch("https://store.mentoor.io/home", {
           headers: {
             "client-id": apiClient,
             Authorization: `Bearer ${apiAuthToken}`,
