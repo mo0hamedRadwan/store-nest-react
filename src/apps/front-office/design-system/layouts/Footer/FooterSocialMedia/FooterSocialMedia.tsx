@@ -17,8 +17,8 @@ const socialIcons = [
 export default function FooterSocialMedia() {
   return (
     <div className="text-center lg:text-left ml-4">
-      <div className="flex justify-center lg:justify-start gap-2 mb-2 ">
-        <h6 className="text-font-default font-bold leading-7 text-[12px] md:text-[18px]">
+      <div className="flex justify-center lg:justify-start gap-2 mb-2">
+        <h6 className="text-font-default font-bold leading-7 text-[13px] md:text-[18px]">
           Follow Us
         </h6>
         {socialIcons.map(({ src, alt }) => (
@@ -30,7 +30,7 @@ export default function FooterSocialMedia() {
           />
         ))}
       </div>
-      <p className="text-[12px] md:text-[18px]">
+      <p className="text-[13px] md:text-[18px]">
         Up to 15% discount on your first subscribe
       </p>
     </div>
