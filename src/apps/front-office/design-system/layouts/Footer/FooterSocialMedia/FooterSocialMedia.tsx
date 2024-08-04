@@ -26,7 +26,7 @@ export default function FooterSocialMedia() {
             key={alt}
             src={src}
             alt={alt}
-            className="w-[25px] h-[25px] p-1 bg-primary-default rounded-lg cursor-pointer"
+            className="w-[25px] h-[25px] p-1 bg-primary-default rounded-full cursor-pointer"
           />
         ))}
       </div>

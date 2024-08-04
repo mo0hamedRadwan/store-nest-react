@@ -5,6 +5,7 @@ import { phoneCall } from "assets/footerImages";
 import FooterAppInstall from "./FooterAppInstall";
 import FooterContactInfo from "./FooterContactInfo";
 import FooterLinks from "./FooterLinks";
+import FooterSocialMedia from "./FooterSocialMedia";
 
 import { trans } from "@mongez/localization";
 
@@ -46,6 +47,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
+        <FooterSocialMedia />
       </div>
     </footer>
   );
