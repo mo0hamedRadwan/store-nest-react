@@ -21,7 +21,7 @@ export default function Footer() {
         <FooterAppInstall />
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-center py-5 text-[#7E7E7E] px-4">
+      <div className="flex flex-col lg:flex-row justify-between items-center py-5 text-[#7E7E7E] px-3">
         <div className="mb-4 lg:mb-0">
           <p className="pl-4 text-center lg:text-start ">
             © {currentYear} <strong>Nest</strong> {trans("templateName")}
@@ -30,12 +30,14 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex gap-2 mb-4 lg:mb-0">
+        <div className="flex flex-wrap justify-center text-center gap-4 mb-4 lg:mb-0 ">
           {["1900 - 6666", "1900 - 6666"].map((phone, index) => (
-            <div key={index} className="min-w-[200px] flex items-center gap-2">
+            <div
+              key={index}
+              className="max-w-[300px] flex flex-col justify-center items-center gap-2 ">
               <img src={phoneCall} alt="phone-call" className="w-[30px]" />
               <p className="flex flex-col">
-                <span className="text-[26px] font-bold leading-6 text-primary-default">
+                <span className="text-[16px] sm:text-[26px] font-bold text-primary-default">
                   {phone}
                 </span>
                 <span>
