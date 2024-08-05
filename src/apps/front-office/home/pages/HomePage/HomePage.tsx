@@ -1,7 +1,6 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
 import { useOnce } from "@mongez/react-hooks";
-import { Button } from "apps/front-office/design-system/components/ui/button";
 import { products } from "apps/front-office/utils/data";
 import { useState } from "react";
 import { popularProductsAtom } from "../../atoms/popular-products-atom";
@@ -92,9 +91,6 @@ export default function HomePage() {
         <DailyBestSellsSection />
       </div>
       {data && <PopularProducts />}
-      <Button className="bg-primary-default hover:bg-primary-dark font-custom">
-        Welcome Home
-      </Button>
       <div>
         <DealsDayTwo />
       </div>
