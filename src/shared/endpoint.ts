@@ -4,7 +4,7 @@ import { navigateTo } from "@mongez/react-router";
 import user from "apps/front-office/account/user";
 import URLS from "apps/front-office/utils/urls";
 import { AxiosResponse } from "axios";
-import { apiAuthToken, apiBaseUrl, apiClient, apiKey, apiOS } from "./flags";
+import { apiAuthToken, apiClient, apiKey, apiOS } from "./flags";
 
 const endpoint = new Endpoint({
   putToPost: false,

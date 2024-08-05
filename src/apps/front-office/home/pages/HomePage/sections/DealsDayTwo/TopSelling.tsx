@@ -4,7 +4,6 @@ import productImg1 from "assets/images/topselling/thumbnail-1.jpg";
 import productImg2 from "assets/images/topselling/thumbnail-2.jpg";
 import productImg3 from "assets/images/topselling/thumbnail-3.jpg";
 export default function TopSelling() {
-
   return (
     <div>
       <div>

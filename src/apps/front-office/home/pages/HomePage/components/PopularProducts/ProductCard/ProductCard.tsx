@@ -9,7 +9,7 @@ import PreviewProducts from "../PreviewProducts";
 export type ProductCardProps = {
   product: Product;
 };
- 
+
 export default function ProductCard({ product }: ProductCardProps) {
   const isOnSale = product.salePrice ? true : false;
   const currentLang = getCurrentLocaleCode();
