@@ -1,16 +1,24 @@
+import { Meta, Row } from "apps/front-office/utils/types";
 import endpoint from "shared/endpoint";
 
-// for dummy purpose only
-export function getHome() {
-  return endpoint.get("/home");
+export type HomeData = {
+  meta: Meta;
+  rows: Row[];
+};
+
+export async function getHome(): Promise<HomeData> {
+  const response = await endpoint.get("/home");
+  console.log("response", response.data);
+  return {
+    meta: response.data.meta,
+    rows: response.data.rows,
+  };
 }
-export async function getCategories(): Promise<[]> {
-  try {
-    const response = await fetch("/api/categories");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Failed to fetch categories:", error);
-    throw error;
-  }
+
+export function getCategories() {
+  return new Promise(resolve =>
+    setTimeout(() => {
+      resolve([]);
+    }, 5000),
+  );
 }
