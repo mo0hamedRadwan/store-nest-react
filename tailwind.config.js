@@ -9,9 +9,13 @@ module.exports = {
       screens: {
         "2xl": "1610px",
       },
-    },
+    }, 
     extend: {
       colors: {
+        mainColor: "#253D4E",
+        rateColor: "#B6B6B6",
+        priceNowColor: "#3BB77E",
+        priceOldColor: "#adadad",
         primary: {
           default: "#3BB77E",
           light: "#DEF9EC",

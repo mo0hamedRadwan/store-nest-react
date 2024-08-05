@@ -8,7 +8,7 @@ export type HomeData = {
 
 export async function getHome(): Promise<HomeData> {
   const response = await endpoint.get("/home");
-  console.log("response", response.data);
+  // console.log("response", response.data);
   return {
     meta: response.data.meta,
     rows: response.data.rows,

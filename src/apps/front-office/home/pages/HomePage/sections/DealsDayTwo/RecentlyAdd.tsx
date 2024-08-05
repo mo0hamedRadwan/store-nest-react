@@ -6,7 +6,7 @@ import productImg9 from "assets/images/topselling/thumbnail-9.jpg";
 
 export default function RecentlyAdd() {
   return (
-    <div>
+    <div className="hidden lg:block">
       <div>
         <TopSellingHead productTitle="Recently added" />
       </div>
@@ -14,20 +14,20 @@ export default function RecentlyAdd() {
         <TopSellingCard
           productImageTop={productImg7}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg8}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg9}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
       </div>
     </div>

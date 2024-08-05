@@ -5,7 +5,7 @@ import productImg11 from "assets/images/topselling/thumbnail-11.jpg";
 import productImg12 from "assets/images/topselling/thumbnail-12.jpg";
 export default function TopRate() {
   return (
-    <div>
+    <div className="hidden xl:block">
       <div>
         <TopSellingHead productTitle="Top Rated" />
       </div>
@@ -13,20 +13,20 @@ export default function TopRate() {
         <TopSellingCard
           productImageTop={productImg10}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg11}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg12}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
       </div>
     </div>

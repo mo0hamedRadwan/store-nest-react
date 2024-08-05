@@ -7,26 +7,26 @@ export default function TrendingProduct() {
   return (
     <div>
       <div>
-        <TopSellingHead productTitle="Trending Products" />
+        <TopSellingHead productTitle="Top Rated" />
       </div>
       <div>
         <TopSellingCard
           productImageTop={productImg4}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg5}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg6}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow="$32.85"
-          priceOld="$33.8"
+          priceNow={32.85}
+          priceOld={33.8}
         />
       </div>
     </div>

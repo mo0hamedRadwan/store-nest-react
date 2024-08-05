@@ -17,6 +17,7 @@ export type Module = {
   title: LocaleValue[];
   shortDescription: LocaleValue[];
   categories: Category[];
+  products: Product[];
 };
 
 export type Column = {
