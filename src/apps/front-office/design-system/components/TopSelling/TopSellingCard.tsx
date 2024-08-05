@@ -43,9 +43,9 @@ export default function TopSellingCard({
           <span className="text-rateColor">(4.0)</span>
         </div>
         <div className="flex gap-2 mt-1">
-          <h3 className="text-lg font-medium text-priceNowColor">{priceNow}</h3>
+          <h3 className="text-lg font-medium text-priceNowColor">{priceNow}$</h3>
           <h5 className="text-sm font-medium mt-1 line-through text-priceOldColor">
-            {priceOld}
+            {priceOld}$
           </h5>
         </div>
       </div>

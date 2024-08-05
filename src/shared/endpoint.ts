@@ -8,7 +8,7 @@ import { apiAuthToken, apiBaseUrl, apiClient, apiKey, apiOS } from "./flags";
 
 const endpoint = new Endpoint({
   putToPost: false,
-  baseURL: apiBaseUrl,
+  baseURL: "https://store.mentoor.io/",
   cache: false,
   cacheOptions: {
     driver: new RunTimeDriver(),
