@@ -1,5 +1,5 @@
 import { atom } from "@mongez/react-atom";
-import { getCategories } from "apps/front-office/home/services/home-service";
+import { getCategories } from "src/apps/front-office/home/services/home-service";
 import { Category } from "../types";
 
 type categoriesActionsType = {
@@ -15,10 +15,10 @@ const categoriesAtom = atom<Category[], categoriesActionsType>({
       // Fetch categories from server or API and return them here
       getCategories()
         .then(data => {
-          console.log("Categories");
+          console.log("Categories fetched:", data);
           categoriesAtom.update(data as Category[]);
         })
-        .catch(err => console.error(err));
+        .catch(err => console.error("Error fetching categories:", err));
     },
     getCategories: () => {
       return categoriesAtom.useValue();
