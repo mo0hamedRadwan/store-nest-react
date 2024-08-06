@@ -16,9 +16,10 @@ import "swiper/css";
 
 export default function QuickView() {
   const visible = ProductQuickViewAtom.use("visible");
-  let product = ProductQuickViewAtom.use("product");
+  let product = ProductQuickViewAtom.get("product");
 
-  console.log("PRODUVT", product);
+  console.log("PRODUVT", product, visible);
+
   if (!visible) {
     product = { images: {}, body: {} } as IProduct;
   }

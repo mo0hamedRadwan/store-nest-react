@@ -42,3 +42,11 @@ export function getDailyBestSellsDataSection(locale: string = "en") {
       };
     });
 }
+
+export function getCategories() {
+  return new Promise(resolve =>
+    setTimeout(() => {
+      resolve([]);
+    }, 5000),
+  );
+}

@@ -14,8 +14,8 @@ export default function Product({
 }: ProductProps) {
   return (
     <div
-      className={`product relative w-full max-w-56 overflow-hidden ${className}`}
-      {...htmlProps}>
+      {...htmlProps}
+      className={`product relative w-full max-w-56 overflow-hidden ${className}`}>
       {/* What is best render component condionally or within component check, if not discoutn return null? */}
       <ProductDiscount status={status} discount={body.discount} />
       <ProductImage images={images} />
