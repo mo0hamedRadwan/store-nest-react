@@ -14,3 +14,5 @@ export const facebookAppVersion = import.meta.env.FACEBOOK_APP_VERSION;
 export const googleClientId = import.meta.env.GOOGLE_CLIENT_ID;
 export const appClientId = import.meta.env.APP_CLIENT_ID;
 export const appAccessToken = import.meta.env.APP_ACCESS_TOKEN;
+export const apiAuthToken = import.meta.env.APP_API_TOKEN;
+export const apiClient = import.meta.env.APP_CLIENT_ID;

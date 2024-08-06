@@ -26,5 +26,22 @@ export type Product = {
   reviews: number;
   totalReviews: number;
   maxAmountPerOrder?: number;
+  path: string;
+  size: number;
+  url: string;
+  width: number;
   slug?: string;
+};
+
+export type CreatedAt = {
+  format: string;
+  timestamp: number;
+  offset: number;
+  humanTime: string;
+  text: string;
+};
+
+export type Discount = {
+  percentage: number;
+  amount: number;
 };
