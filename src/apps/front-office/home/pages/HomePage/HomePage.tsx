@@ -27,7 +27,6 @@ export default function HomePage() {
           category => category.products || [],
         );
         popularProductsAtom.change("products", products);
-
         setLoading(false);
       })
       .catch(_error => {
