@@ -39,7 +39,15 @@ export default function SearchForm() {
   };
 
   useEffect(() => {
-    if (selectedCategory === "All Categories") setSelectedCategoryId(undefined);
+    if (
+      selectedCategory === "All Categories" ||
+      filteredCategories.length === 0
+    ) {
+      setSelectedCategoryId(undefined);
+      return;
+    }
+
+    console.log(filteredCategories);
 
     const categoryId = filteredCategories.find(
       c => c.name.toLowerCase() === selectedCategory.toLowerCase(),

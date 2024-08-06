@@ -4,18 +4,11 @@ import { navigateTo } from "@mongez/react-router";
 import user from "apps/front-office/account/user";
 import URLS from "apps/front-office/utils/urls";
 import { AxiosResponse } from "axios";
-// import { apiBaseUrl, appAccessToken, appClientId } from "./flags";
-import {
-  apiAuthToken,
-  apiBaseUrl,
-  apiClient,
-  apiOS,
-  appAccessToken,
-} from "./flags";
+import { apiAuthToken, apiClient, apiKey, apiOS } from "./flags";
 
 const endpoint = new Endpoint({
   putToPost: false,
-  baseURL: apiBaseUrl,
+  baseURL: "https://store.mentoor.io/",
   cache: false,
   cacheOptions: {
     driver: new RunTimeDriver(),
@@ -26,11 +19,9 @@ const endpoint = new Endpoint({
       return `Bearer ${user.getAccessToken()}`;
     }
 
-    return `Bearer ${appAccessToken}`;
+    if (!apiKey) return;
 
-    // if (!apiKey) return;
-
-    // return `key ${apiKey}`;
+    return `key ${apiKey}`;
   },
 });
 
