@@ -47,8 +47,6 @@ export default function SearchForm() {
       return;
     }
 
-    console.log(filteredCategories);
-
     const categoryId = filteredCategories.find(
       c => c.name.toLowerCase() === selectedCategory.toLowerCase(),
     )?.id;
