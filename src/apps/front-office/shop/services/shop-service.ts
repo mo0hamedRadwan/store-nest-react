@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import endpoint from "shared/endpoint";
-
-/**
- * Get Shops list
- */
-export function getShopsList(params: any = {}) {
-  return endpoint.get("/shop", {
-    params,
-  });
-}
-
-/**
- * Get shop details
- */
-export function getShop(id: string | number) {
-  return endpoint.get("/shop/" + id);
-}
-=======
 import endpoint from "shared/endpoint";
 
 import { apiKey, appClientId } from "shared/flags";
@@ -35,4 +16,3 @@ export function getShopPageData() {
     },
   });
 }
->>>>>>> 61b3a45 (feat/shop-page)
