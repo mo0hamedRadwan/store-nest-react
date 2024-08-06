@@ -26,5 +26,5 @@ export type Product = {
   reviews: number;
   totalReviews: number;
   maxAmountPerOrder?: number;
-  slug: string;
+  slug?: string;
 };
