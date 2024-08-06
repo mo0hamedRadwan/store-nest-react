@@ -3,6 +3,7 @@ import bannersTranslation from "shared/localization/banners.json";
 import mainTranslation from "shared/localization/index.json";
 import productsTranslation from "shared/localization/products.json";
 import sectionsTranslation from "shared/localization/sections.json";
+import shopTranslation from "shared/localization/shop.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -33,4 +34,5 @@ groupedTranslations({
   ...productsTranslation,
   ...sectionsTranslation,
   ...bannersTranslation,
+  ...shopTranslation,
 });

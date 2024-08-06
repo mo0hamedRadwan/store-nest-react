@@ -1,4 +1,7 @@
-import React from "react";
+import { trans } from "@mongez/localization";
+import Breadcrumb from "apps/front-office/design-system/layouts/Breadcrumb";
+import ProductsContainer from "../components/MealsContainer/ProductsContainer";
+import ViewDisplayMode from "../components/MealsContainer/ViewDisplayMode";
 
 export type ShopPageProps = {
   // props go here
@@ -6,10 +9,20 @@ export type ShopPageProps = {
 function _ShopPage() {
   return (
     <>
-      <h1>ShopPage</h1>
+      <Breadcrumb title={trans("shop")} navItems={[{ name: trans("shop") }]} />
+      <div className="container">
+        <div className="md:flex md:flex-row md:justify-between md:gap-12 md:my-12">
+          <div className="md:basis-1/4 md:mt-7 md:visible md:block md:z-0 z-[60] top-0 h-screen fixed md:relative rtl:right-0 ltr:left-0 w-10/12 sm:w-1/2 md:w-1/3 bg-white p-[10px] transition-all">
+            <h2>sidebar</h2>
+          </div>
+          <div className="md:basis-3/4 mt-5 md:mt-0">
+            <ViewDisplayMode />
+            <ProductsContainer />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
 
-const ShopPage = React.memo(_ShopPage);
-export default ShopPage;
+export default _ShopPage;

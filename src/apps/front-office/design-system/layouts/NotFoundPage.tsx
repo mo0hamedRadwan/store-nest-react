@@ -14,7 +14,7 @@ export default function NotFoundPage() {
           alt="notfound"
           className="max-w-80"
         />
-        <h1 className="text-[72px] text-[#253D4E] font-bold leading-3	">
+        <h1 className="text-[36px] md:text-[48px] lg:text-[72px] text-[#253D4E] font-bold leading-tight">
           {trans("pageNotFound")}
         </h1>
         <p className="text-gray-800 font-medium leading-6 text-[16px] max-w-[560px]">
