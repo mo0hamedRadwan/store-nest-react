@@ -4,7 +4,7 @@ import { navigateTo } from "@mongez/react-router";
 import user from "apps/front-office/account/user";
 import URLS from "apps/front-office/utils/urls";
 import { AxiosResponse } from "axios";
-import { apiBaseUrl, apiKey, apiOS } from "./flags";
+import { apiBaseUrl, apiKey } from "./flags";
 
 const endpoint = new Endpoint({
   putToPost: false,
@@ -29,7 +29,7 @@ const endpointEvents = endpoint.events;
 
 endpointEvents.beforeSending(config => {
   const headers: any = config.headers;
-  headers["os"] = apiOS;
+  headers["client-id"] = 127295491;
 });
 
 endpointEvents.onSuccess((response: AxiosResponse) => {
