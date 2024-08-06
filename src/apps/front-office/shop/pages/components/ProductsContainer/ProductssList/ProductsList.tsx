@@ -5,7 +5,7 @@ export type ProductsListProps = {
   products: Product[];
 };
 
-export default function MealsList({ products }: ProductsListProps) {
+export default function ProductsList({ products }: ProductsListProps) {
   return (
     <div className="flex flex-col">
       {products.map(product => {
