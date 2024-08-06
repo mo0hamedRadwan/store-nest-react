@@ -103,9 +103,9 @@ export default function FeaturedCategories() {
   ];
 
   return (
-    <section className="featured-categories px-3 py-[25px]">
-      <div className="featured-categories-title relative mb-11 ">
-        <h3 className="sm:text-2xl lg:text-4xl font-bold text-[#253D4E]">
+    <section className="featured-categories px-3 py-[25px] relative">
+      <div className="featured-categories-title mb-11 ">
+        <h3 className="text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold text-[#253D4E]">
           {trans("Featured Categories")}
         </h3>
       </div>
@@ -118,7 +118,7 @@ export default function FeaturedCategories() {
             disableOnInteraction: false,
           }}
           spaceBetween={5}
-          slidesPerView={Math.min(4, data.length)}
+          slidesPerView={Math.min(3, data.length)}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -144,8 +144,8 @@ export default function FeaturedCategories() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="swiper-button-prev p-2 absolute !top-[11%] !important] !left-[83.75rem] z-10  bg-[#f2f3f4] transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary-default cursor-pointer"></div>
-        <div className=" swiper-button-next p-2 absolute !top-[11%] !important] !right-7 z-10  bg-[#f2f3f4] transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary-default cursor-pointer"></div>
+        <div className="swiper-button-prev p-2 static !top-[8%] !important] !left-[83.75rem] z-10  bg-[#f2f3f4] transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary-default cursor-pointer"></div>
+        <div className=" swiper-button-next p-2 absolute !top-[8%] !important] !right-7 z-10  bg-[#f2f3f4] transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary-default cursor-pointer"></div>
       </div>
 
       <FeaturedCategoriesBanner />

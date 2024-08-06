@@ -20,12 +20,13 @@ interface CategoryCardProps {
 const CategoryCard = ({ index, item }: CategoryCardProps) => {
   const backgroundColors = ["#ECFFEC", "#FEEFEA", "#FFF3EB", "#FFF3FF"];
 
-  const cardClass = `bg-${backgroundColors[index % backgroundColors.length]}`;
-
   return (
     <SwiperSlide key={index}>
       <div className="p-1">
-        <Card className={cardClass}>
+        <Card
+          style={{
+            backgroundColor: backgroundColors[index % backgroundColors.length],
+          }}>
           <CardContent className="flex flex-col aspect-[1_/_1.5] items-center justify-center p-6">
             <figure>
               <Link>
