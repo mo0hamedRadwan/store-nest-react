@@ -4,8 +4,12 @@ import SectionHeader from "apps/front-office/design-system/components/SectionHea
 import DailyBestBanner from "apps/front-office/home/components/DailyBestBanner";
 import DailyBestFilter from "apps/front-office/home/components/DailyBestFilter";
 import DailyBestProducts from "apps/front-office/home/components/DailyBestProducts";
+import useFetchDailyData from "apps/front-office/home/hooks/use-fetch-daily-data";
 
 export default function DailyBestSellsSection() {
+  // const { data, loading, error } = useFetchDailyData();
+  // console.log(data);
+
   return (
     <section className="best-daily-products">
       <div className="best-daily-products__header flex flex-col md:flex-row justify-between">
