@@ -15,9 +15,7 @@ export default function ProductAction({ tooltip, Icon }: ProductActionProps) {
     <TooltipProvider delayDuration={200}>
       <Tooltip>
         <TooltipTrigger>
-          <button className="p-2">
-            <Icon className="w-3 h-3 text-primary hover:text-secondary hover:-translate-y-1.5 transition-all duration-400" />
-          </button>
+          <Icon className="p-2 w-3 h-3 text-primary hover:text-secondary hover:-translate-y-1.5 transition-all duration-400" />
         </TooltipTrigger>
         <TooltipContent className="bg-primary text-primary-foreground text-xs animate-bounce-up">
           <div>{tooltip}</div>

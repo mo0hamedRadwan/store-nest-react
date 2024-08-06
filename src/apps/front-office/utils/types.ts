@@ -7,6 +7,7 @@ export type Image = {
 export type ProductCategory = {
   id: number;
   name: string;
+  img?: string;
 };
 
 export type Product = {
@@ -25,4 +26,5 @@ export type Product = {
   reviews: number;
   totalReviews: number;
   maxAmountPerOrder?: number;
+  slug: string;
 };

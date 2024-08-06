@@ -1,27 +1,72 @@
 import { atom } from "@mongez/react-atom";
 import { getCategories } from "apps/front-office/home/services/home-service";
-import { Category } from "../types";
+import { ProductCategory } from "apps/front-office/utils/types";
 
-type categoriesActionsType = {
-  setCategories: () => void;
-  getCategories: () => Category[];
+type CategoriesAtomDataType = {
+  isLoading: boolean;
+  originalCategories: ProductCategory[];
+  categories: ProductCategory[];
+  isError: string;
+  searchTerm: string;
 };
 
-const categoriesAtom = atom<Category[], categoriesActionsType>({
+type CategoriesActionsType = {
+  setCategories: () => void;
+  getCategories: () => CategoriesAtomDataType;
+  setLoading: (isLoading: boolean) => void;
+  setError: (message: string) => void;
+  filter: (searchTerm: string) => void;
+};
+
+const categoriesAtom = atom<CategoriesAtomDataType, CategoriesActionsType>({
   key: "categories",
-  default: [] as Category[],
+  default: {
+    isLoading: false,
+    originalCategories: [],
+    categories: [],
+    isError: "",
+  },
   actions: {
     setCategories: () => {
       // Fetch categories from server or API and return them here
+      // categoriesAtom.merge({
+      //   isLoading: true,
+      // });
+      categoriesAtom.change("isLoading", true);
       getCategories()
         .then(data => {
-          console.log("Categories");
-          categoriesAtom.update(data as Category[]);
+          const categories = data.data.categories;
+          // console.log("Categories");
+          // console.log(data);
+          // console.log(categories);
+          categoriesAtom.merge({
+            isLoading: false,
+            originalCategories: categories,
+            categories,
+            isError: "",
+          });
         })
-        .catch(err => console.error(err));
+        .catch(err => {
+          console.error(err);
+          categoriesAtom.merge({
+            isLoading: false,
+            isError: err.message,
+          });
+        });
     },
     getCategories: () => {
-      return categoriesAtom.useValue();
+      return categoriesAtom.use("originalCategories");
+    },
+    filter: searchTerm => {
+      const filtered = categoriesAtom.value.originalCategories.filter(
+        category =>
+          category.name.toLowerCase().includes(searchTerm.toLowerCase()),
+      );
+      // categoriesAtom.change("categories", filtered);
+      categoriesAtom.merge({
+        categories: filtered,
+        searchTerm,
+      });
     },
   },
 });

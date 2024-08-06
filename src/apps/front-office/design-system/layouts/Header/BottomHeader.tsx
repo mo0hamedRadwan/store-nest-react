@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { useWindowScroll } from "../../hooks";
 import { bottomHeaderNavbarItems } from "./constant/bottomHeaderData";
-import BrowseCatigoriesMenu from "./menu/BrowseCategoriesMenu";
+import BrowseCategoriesMenu from "./menu/BrowseCategoriesMenu";
 import DropMegaMenu from "./menu/DropMegaMenu";
 
 const BottomHeader = () => {
@@ -30,16 +30,16 @@ const BottomHeader = () => {
             <i className="bx bx-chevron-down"></i>
           )}
         </Button>
-        {openCategoriesMenu && <BrowseCatigoriesMenu />}
+        {openCategoriesMenu && <BrowseCategoriesMenu />}
         <ul className="flex items-center gap-x-6 xl:gap-x-8">
-          <li className="text-base font-bold hover:text-main-700 cursor-pointer">
+          <li className="text-base font-bold hover:text-primary-dark cursor-pointer">
             <i className="bx bxs-hot text-primary-default"></i>
             <span className="ml-2 mr-2 xl:mr-8">Deals</span>
           </li>
           {bottomHeaderNavbarItems.map(item => (
             <li
               key={item.label}
-              className={`text-base font-bold hover:text-main-700 cursor-pointer group py-5 ${activeNavItem === item.label ? "text-primary-default" : ""}`}>
+              className={`text-base font-bold hover:text-primary-dark cursor-pointer group py-5 ${activeNavItem === item.label ? "text-primary-default" : ""}`}>
               {item.label === "Mega menu" ? (
                 <div className="">
                   <span>{item.label}</span>

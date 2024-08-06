@@ -4,12 +4,11 @@ import categoriesAtom from "../../atoms/categoriesAtom";
 
 const BrowseCategoriesMenu = () => {
   const [openSeeMore, setOpenSeeMore] = useState(false);
-  const categories = categoriesAtom.getCategories();
+  const categories = categoriesAtom.use("categories");
 
   return (
     <div
-      className={`absolute top-20 left-8 w-[500px] p-10 z-10 rounded-xl bg-white
-      ${openSeeMore ? "h-[600px]" : "h-[450px]"} duration-300 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]`}>
+      className={`absolute top-20 left-8 w-[500px] p-10 z-10 rounded-xl bg-white duration-300 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]`}>
       <div className="flex flex-col">
         <ul className="flex flex-row flex-wrap gap-5">
           {categories.map((category, index) => {
@@ -17,15 +16,17 @@ const BrowseCategoriesMenu = () => {
             return (
               <li
                 key={index}
-                className="w-[198px] border border-slate-200 rounded-lg px-4 py-2  hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                className="w-[198px] h-[50px] flex items-center border border-slate-200 rounded-lg px-4 py-2  hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                 <Link
                   to={`/category/${category.id}`}
                   className="flex items-center gap-x-4">
-                  <img
-                    src={category.img}
-                    alt="category icon"
-                    className="w-8 h-8"
-                  />
+                  {category.img && (
+                    <img
+                      src={category.img}
+                      alt="category icon"
+                      className="w-8 h-8"
+                    />
+                  )}
                   <h3 className="text-sm font-bold text-slate-600">
                     {category.name}
                   </h3>

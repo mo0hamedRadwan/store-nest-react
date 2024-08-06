@@ -3,15 +3,14 @@ import logo from "assets/images/logo.svg";
 import { useState } from "react";
 import { useWindowScroll } from "../../hooks";
 import { middleHeaderActions, navbarIcons } from "./constant/middleHeaderData";
+import SearchForm from "./forms/SearchForm";
 import AccountMenu from "./menu/AccountMenu";
 import CartMenu from "./menu/CartMenu";
 import NavigationMenu from "./menu/NavigationMenu";
-import SearchFormInMiddleHeader from "./SearchFormInMiddleHeader";
 
 const MiddleHeader = () => {
   // to handle login user
-  // eslint-disable-next-line unused-imports/no-unused-vars
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [openNavMenu, setOpenNavMenu] = useState<boolean>(false);
 
   const windowScroll = useWindowScroll();
@@ -35,7 +34,8 @@ const MiddleHeader = () => {
         />
       </div>
 
-      <SearchFormInMiddleHeader />
+      {/* <SearchFormInMiddleHeader /> */}
+      <SearchForm />
 
       <ul className="hidden lg:flex items-center gap-x-2 lx:gap-x-4">
         {middleHeaderActions.map(action => {
@@ -50,14 +50,14 @@ const MiddleHeader = () => {
               )}
 
               {action.name === "Account" && !isLogin ? (
-                <>
+                <span onClick={() => setIsLogin(!isLogin)}>
                   <i className="bx bx-door-open text-2xl"></i>
-                  <Link
+                  {/* <Link
                     to="/login"
                     className="ml-1 text-slate-500 hover:text-black">
                     Login
-                  </Link>
-                </>
+                  </Link> */}
+                </span>
               ) : (
                 <>
                   <i className={`bx bx-${action.iconName} text-2xl`}></i>

@@ -27,7 +27,7 @@ const SelectTrigger = React.forwardRef<
     {...props}>
     {children}
     <SelectPrimitive.Icon asChild>
-      <CaretSortIcon className="h-4 w-4 opacity-50 absolute top-3 right-3" />
+      <CaretSortIcon className="h-4 w-4 opacity-50 absolute top-2.5 right-2" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
