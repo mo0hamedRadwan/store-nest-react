@@ -8,7 +8,7 @@ export default function NotFoundPage() {
   return (
     <>
       <Helmet title={trans("notFoundPage")} />
-      <div className="container mx-auto text-center py-20 flex flex-col justify-center space-y-12">
+      <div className="container mx-auto text-center py-20 flex flex-col justify-center items-center space-y-12">
         <img
           src="https://nest-frontend-v6.netlify.app/assets/imgs/page/page-404.png"
           alt="notfound"
