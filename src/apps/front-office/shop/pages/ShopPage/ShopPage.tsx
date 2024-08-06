@@ -1,7 +1,7 @@
 import { trans } from "@mongez/localization";
 import Breadcrumb from "apps/front-office/design-system/layouts/Breadcrumb";
-import ProductsContainer from "../components/MealsContainer/ProductsContainer";
-import ViewDisplayMode from "../components/MealsContainer/ViewDisplayMode";
+import ProductsContainer from "../components/ProductsContainer";
+import ViewDisplayMode from "../components/ProductsContainer/ViewDisplayMode";
 
 export type ShopPageProps = {
   // props go here
