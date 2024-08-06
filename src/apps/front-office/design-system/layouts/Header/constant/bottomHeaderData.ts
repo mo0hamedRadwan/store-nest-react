@@ -1,11 +1,11 @@
 export const bottomHeaderNavbarItems = [
-  { label: "Home", link: "/" },
-  { label: "About", link: "/about" },
-  { label: "Shop", link: "/shop" },
-  { label: "Venders", link: "/venders" },
-  { label: "Mega menu", link: "" },
-  { label: "Blog", link: "/blog" },
-  { label: "Contact", link: "/contact" },
+  { label: "home", link: "/" },
+  { label: "about", link: "/about" },
+  { label: "shop", link: "/shop" },
+  { label: "venders", link: "/venders" },
+  { label: "megaMenu", link: "" },
+  { label: "blog", link: "/blog" },
+  { label: "contact", link: "/contact" },
 ];
 
 // Mega Menu

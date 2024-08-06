@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import logo from "assets/images/logo.svg";
 import { useState } from "react";
@@ -64,7 +65,7 @@ const MiddleHeader = () => {
                   <Link
                     to={action.href}
                     className="ml-1 text-slate-500 hover:text-black">
-                    {action.name}
+                    {trans(action.name)}
                   </Link>
                 </>
               )}

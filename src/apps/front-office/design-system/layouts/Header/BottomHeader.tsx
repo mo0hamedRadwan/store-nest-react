@@ -1,3 +1,4 @@
+import { getCurrentLocaleCode, trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { useState } from "react";
 import { Button } from "../../components/ui/button";
@@ -7,6 +8,7 @@ import BrowseCategoriesMenu from "./menu/BrowseCategoriesMenu";
 import DropMegaMenu from "./menu/DropMegaMenu";
 
 const BottomHeader = () => {
+  const currentLanguage = getCurrentLocaleCode();
   const [openCategoriesMenu, setOpenCategoriesMenu] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("Home");
 
@@ -23,7 +25,7 @@ const BottomHeader = () => {
           className="bg-primary-default hover:bg-main-700 active:bg-main-700 border-none outline-none focus-visible:ring-0"
           onClick={() => setOpenCategoriesMenu(!openCategoriesMenu)}>
           <i className="bx bx-category"></i>
-          <span className="mx-2">Browse All Categories</span>
+          <span className="mx-2">{`${trans("browse")} ${trans("allCategories")}`}</span>
           {openCategoriesMenu ? (
             <i className="bx bx-chevron-up"></i>
           ) : (
@@ -34,7 +36,10 @@ const BottomHeader = () => {
         <ul className="flex items-center gap-x-6 xl:gap-x-8">
           <li className="text-base font-bold hover:text-primary-dark cursor-pointer">
             <i className="bx bxs-hot text-primary-default"></i>
-            <span className="ml-2 mr-2 xl:mr-8">Deals</span>
+            <span
+              className={`mx-2 ${currentLanguage === "en" ? "xl:mr-8" : "xl-ml-8"}`}>
+              {trans("deals")}
+            </span>
           </li>
           {bottomHeaderNavbarItems.map(item => (
             <li
@@ -50,7 +55,7 @@ const BottomHeader = () => {
                 <Link
                   to={item.link}
                   onClick={() => setActiveNavItem(item.label)}>
-                  {item.label}
+                  {trans(item.label)}
                 </Link>
               )}
             </li>

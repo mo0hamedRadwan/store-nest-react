@@ -1,17 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "default",
+  "style": "new-york",
   "rsc": false,
   "tsx": true,
   "tailwind": {
-    "config": "tailwind.config.ts",
+    "config": "tailwind.config.js",
     "css": "src/main.css",
     "baseColor": "slate",
-    "cssVariables": true,
+    "cssVariables": false,
     "prefix": ""
   },
   "aliases": {
     "components": "src/apps/front-office/design-system/components",
-    "utils": "@utils"
+    "utils": "apps/front-office/design-system/utils/utils"
   }
 }

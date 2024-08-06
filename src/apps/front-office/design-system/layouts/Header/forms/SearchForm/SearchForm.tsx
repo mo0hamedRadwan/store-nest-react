@@ -1,3 +1,4 @@
+import { getCurrentLocaleCode, trans } from "@mongez/localization";
 import {
   useClickOutside,
   useFilterProducts,
@@ -8,7 +9,10 @@ import CategoryMenu from "./CategoryMenu";
 import SuggestProductsMenu from "./SuggestProductsMenu";
 
 export default function SearchForm() {
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const currentLAnguage = getCurrentLocaleCode();
+  const [selectedCategory, setSelectedCategory] = useState(
+    trans("allCategories"),
+  );
   const [selectedCategoryId, setSelectedCategoryId] = useState<
     string | undefined
   >();
@@ -40,7 +44,7 @@ export default function SearchForm() {
 
   useEffect(() => {
     if (
-      selectedCategory === "All Categories" ||
+      selectedCategory === trans("allCategories") ||
       filteredCategories.length === 0
     ) {
       setSelectedCategoryId(undefined);
@@ -88,12 +92,13 @@ export default function SearchForm() {
       <div className="relative flex items-center" ref={suggestProductsMenuRef}>
         <input
           type="text"
-          placeholder="Search for products..."
+          placeholder={trans("searchForProducts")}
           className="2xl:w-[600px] w-[400px] text-lg placeholder:text-slate-500 outline-none"
           value={searchInputProduct}
           onChange={handleInputProductChange}
         />
-        <div className="absolute right-4 text-2xl text-slate-500">
+        <div
+          className={`absolute ${currentLAnguage === "en" ? "right-4" : "left-4"} text-2xl text-slate-500`}>
           <i className="bx bx-search"></i>
         </div>
         {showSuggestProductsMenu && (

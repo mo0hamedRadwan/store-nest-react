@@ -6,10 +6,10 @@ export const MiddleHeaderSelectPlacholder = "All Categories";
 export const MiddleHeaderInputPlacholder = "Search for items";
 
 export const middleHeaderActions = [
-  { name: "Compare", href: "/compare", iconName: "git-compare" },
-  { name: "Washlist", href: "/washlist", iconName: "heart" },
-  { name: "Cart", href: "/cart", iconName: "cart" },
-  { name: "Account", href: "/account", iconName: "user" },
+  { name: "compare", href: "/compare", iconName: "git-compare" },
+  { name: "wishlist", href: "/washlist", iconName: "heart" },
+  { name: "cart", href: "/cart", iconName: "cart" },
+  { name: "myAccount", href: "/account", iconName: "user" },
 ];
 
 export const navbarIcons = [

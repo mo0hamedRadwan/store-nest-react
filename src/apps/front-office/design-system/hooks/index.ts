@@ -1,6 +1,6 @@
 import { filterProducts } from "apps/front-office/home/services/home-service";
-import { Product } from "apps/front-office/utils/types";
 import { useEffect, useRef, useState } from "react";
+import { Product } from "../layouts/types";
 
 /**
  * the purpose of this hook is get current position with live scrolling

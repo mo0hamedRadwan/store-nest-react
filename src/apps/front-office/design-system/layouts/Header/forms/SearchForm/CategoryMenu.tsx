@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import { useState } from "react";
 import categoriesAtom from "../../../atoms/categoriesAtom";
 
@@ -12,6 +13,8 @@ export default function CategoryMenu({
 }: CategoryMenuPropsType) {
   const [searchInputCategory, setSearchInputCategory] = useState("");
   const filteredCategories = categoriesAtom.use("categories");
+
+  // console.log(filteredCategories);
 
   const handleInputCategoryChange = e => {
     const value = e.target.value;
@@ -35,13 +38,13 @@ export default function CategoryMenu({
           onChange={handleInputCategoryChange}
         />
         {[
-          "All Categories",
+          trans("allCategories"),
           ...filteredCategories.map(category => category.name),
-        ].map(option => (
+        ].map((option, index) => (
           <li
-            key={option}
-            className="py-1 px-2 hover:bg-primary-default hover:text-white duration-200 rounded cursor-pointer"
-            onClick={handleSelectCategory}>
+            key={index}
+            onClick={handleSelectCategory}
+            className="p-2 hover:bg-primary-default hover:text-white rounded">
             {option}
           </li>
         ))}

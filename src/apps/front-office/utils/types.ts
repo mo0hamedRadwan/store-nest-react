@@ -92,5 +92,4 @@ export type Product = {
 export type ProductCategory = {
   id: number;
   name: string;
-  img?: string;
 };

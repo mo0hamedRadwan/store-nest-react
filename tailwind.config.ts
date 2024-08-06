@@ -19,6 +19,7 @@ export default {
       screens: {
         xs: "375px",
         "2xl": "1400px",
+        "small-to-medium": { min: "486px", max: "767px" },
       },
       colors: {
         primary: {

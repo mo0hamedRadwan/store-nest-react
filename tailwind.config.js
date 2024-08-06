@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./index.html","./src/**/*.{js,ts,jsx,tsx,mdx}"],
   prefix: "",
   theme: {
     container: {
@@ -9,7 +9,7 @@ module.exports = {
       screens: {
         "2xl": "1610px",
       },
-    },
+    }, 
     extend: {
       colors: {
         mainColor: "#253D4E",
@@ -20,7 +20,7 @@ module.exports = {
           default: "#3BB77E",
           light: "#DEF9EC",
           dark: "#29A56C",
-          hover: "#FDC040",
+          hover: "#FDC040"
         },
         category: {
           1: "#f2fce4",
@@ -39,7 +39,7 @@ module.exports = {
         cairo: ["Cairo", "sans-serif"],
       },
       translate: {
-        "-5px": "-5px",
+        '-5px': '-5px',
       },
       keyframes: {
         "accordion-down": {

@@ -41,11 +41,7 @@
   },
   "deals": {
     "en": "Deals",
-    "ar": "عروضات"
-  },
-  "home": {
-    "en": "Home",
-    "ar": "الصفحة الرئيسية"
+    "ar": "عروض"
   },
   "shop": {
     "en": "Shop",
@@ -62,6 +58,10 @@
   "contact": {
     "en": "Contact",
     "ar": "تواصل معنا"
+  },
+  "megaMenu": {
+    "en": "Mega Menu",
+    "ar": "القائمة الضخمة"
   },
   "offerNotification": {
     "en": "Trendy 25: silver jewelry, save up 35% off today",

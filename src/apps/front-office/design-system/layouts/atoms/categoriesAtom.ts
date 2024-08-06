@@ -1,11 +1,11 @@
 import { atom } from "@mongez/react-atom";
 import { getCategories } from "apps/front-office/home/services/home-service";
-import { ProductCategory } from "apps/front-office/utils/types";
+import { Category } from "../types";
 
 type CategoriesAtomDataType = {
   isLoading: boolean;
-  originalCategories: ProductCategory[];
-  categories: ProductCategory[];
+  originalCategories: Category[];
+  categories: Category[];
   isError: string;
   searchTerm: string;
 };

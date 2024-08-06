@@ -1,8 +1,12 @@
-import { getCurrentLocaleCode } from "@mongez/localization";
+import { getCurrentLocaleCode, trans } from "@mongez/localization";
 import { Link, changeLocaleCode } from "@mongez/react-router";
 import { useState } from "react";
 import { Separator } from "../../components/ui/separator";
-import { topHeaderLanguages, topHeaderLinks } from "./constant/topHeaderData";
+import {
+  offerNotification,
+  topHeaderLanguages,
+  topHeaderLinks,
+} from "./constant/topHeaderData";
 
 const TopHeader = () => {
   const [currentLanguage, setCurrentLanguage] = useState(
@@ -23,7 +27,7 @@ const TopHeader = () => {
             <Link
               to={link.href}
               className="text-slate-700 hover:text-slate-950 hover:dark:text-white">
-              {link.name}
+              {trans(link.name)}
             </Link>
             {index !== topHeaderLinks.length - 1 && (
               <Separator orientation="vertical" className="h-2.5 mx-2.5" />
@@ -32,14 +36,14 @@ const TopHeader = () => {
         ))}
       </ul>
       <ul className="hidden md:flex lg:w-auto md:w-full justify-center">
-        <li>Trendy 25: silver jewelry, save up 35% off today</li>
+        <li>{trans(offerNotification)}</li>
         {/* <li>100% Secure delivery without contacting the courier</li> */}
         {/* <li>Supper Value Deals - Save more with coupons</li> */}
       </ul>
       <ul className="hidden lg:flex items-center gap-x-2">
         <li>
           <p>
-            Need help? Call Us:
+            {trans("needHelp")} {trans("callUs")}:
             <span className="text-primary-default hover:text-primary-dark hover:font-bold">
               + 1800 900
             </span>
