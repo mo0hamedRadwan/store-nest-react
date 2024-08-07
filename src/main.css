@@ -30,4 +30,34 @@
   * {
     font-family: "Quicksand", sans-serif;
   }
+
+  /* Custom style for slider thumb */
+  .slider-thumb-green::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #38a169;
+    /* Tailwind green-500 */
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .slider-thumb-green::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #38a169;
+    /* Tailwind green-500 */
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .absolute-block-center {
+    @apply absolute inset-0 flex items-center justify-center;
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
 }

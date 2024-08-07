@@ -3,9 +3,12 @@ import TopSellingHead from "apps/front-office/design-system/components/TopSellin
 import productImg10 from "assets/images/topselling/thumbnail-10.jpg";
 import productImg11 from "assets/images/topselling/thumbnail-11.jpg";
 import productImg12 from "assets/images/topselling/thumbnail-12.jpg";
-export default function TopRate() {
+
+type TopRateProps = React.HTMLAttributes<HTMLDivElement>;
+
+export default function TopRate(attributes: TopRateProps) {
   return (
-    <div className="hidden xl:block">
+    <div {...attributes}>
       <div>
         <TopSellingHead productTitle="Top Rated" />
       </div>
