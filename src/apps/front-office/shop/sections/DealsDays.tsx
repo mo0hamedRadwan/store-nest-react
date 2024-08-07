@@ -91,17 +91,19 @@ function DealsDays(props: DealsDaysProps, ref: any) {
                       </span>
                     </span>
 
-                    <div className="mt-2 flex gap-2 items-start">
-                      {product.price && (
-                        <span className="text-primary font-bold text-md ">
-                          ${product.price}
-                        </span>
-                      )}
-                      {product.salePrice && (
-                        <span className="text-muted-foreground text-sm line-through">
-                          ${product.salePrice}
-                        </span>
-                      )}
+                    <div className="mt-2 flex gap-2 justify-between items-center">
+                      <div className="flex gap-2">
+                        {product.price && (
+                          <span className="text-primary font-bold text-md ">
+                            ${product.price}
+                          </span>
+                        )}
+                        {product.salePrice && (
+                          <span className="text-muted-foreground text-sm line-through">
+                            ${product.salePrice}
+                          </span>
+                        )}
+                      </div>
 
                       <div className="flex items-center justify-between gap-4">
                         <Button size={"sm"} variant={"cart"}>
