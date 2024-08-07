@@ -20,3 +20,17 @@ export function useWindowScroll() {
 
   return scrollPosition;
 }
+
+/**
+ *
+ */
+
+// export type PaginationProps = {
+//   totalCount: number;
+//   currentPage: number;
+//   onPageChange: (page: number) => void;
+//   pageSize: number;
+//   siblingCount?: number;
+//   className?: string;
+// };
+// export function usePagination({}: PaginationProps) {}

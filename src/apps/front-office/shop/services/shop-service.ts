@@ -7,8 +7,8 @@ import { apiKey, appClientId } from "shared/flags";
  * @description Get Shop Data (all in one request)
  * @access Private
  */
-export function getShopPageData() {
-  return endpoint.get("/products?wf=true", {
+export function getShopPageData(query) {
+  return endpoint.get(`/products?wf=true&${query}`, {
     headers: {
       Accept: "application/json",
       Authorization: `Bearer ${apiKey}`,

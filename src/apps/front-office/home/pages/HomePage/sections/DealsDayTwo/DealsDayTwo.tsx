@@ -9,7 +9,7 @@ export default function DealsDayTwo() {
       <TopSelling />
       <TrendingProduct />
       <RecentlyAdd />
-      <TopRate />
+      <TopRate className="hidden xl:block" />
     </section>
   );
 }
