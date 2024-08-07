@@ -12,6 +12,7 @@ import {
   currentDirection,
   currentLocaleCode,
 } from "apps/front-office/utils/helpers";
+import { showProductQuickView } from "../../atoms/product-quick-view";
 
 export default function DailyBestProducts() {
   return (
@@ -23,8 +24,9 @@ export default function DailyBestProducts() {
         {products.map((product, index) => (
           <CarouselItem
             key={index}
-            className="w-full xs:basis-1/2 flex-wrap md:basis-1/3 xl:basis-1/4 me-2">
+            className="w-full flex-wrap me-2 lg:basis-1/4 md:basis-1/3 xs:basis-1/2">
             <Product
+              onClick={() => showProductQuickView(product)}
               key={index}
               images={product.images}
               status={product.status}
