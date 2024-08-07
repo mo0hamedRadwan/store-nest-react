@@ -3,9 +3,10 @@ import RateStar from "./RateStar";
 
 type RatingProps = {
   rate: number;
+  className?: string;
 };
 
-export default function Rating({ rate }: RatingProps) {
+export default function Rating({ rate, className }: RatingProps) {
   const [mode, setMode] = useState<string>(() =>
     rate > -1 ? "actives" : "hover",
   );
@@ -27,7 +28,7 @@ export default function Rating({ rate }: RatingProps) {
       {Array.from({ length: 5 }).map((_, index) => (
         <RateStar
           key={index}
-          className="w-4 h-4 my-2 mx-[-2px]"
+          className={`w-4 h-4 my-2 mx-[-2px] ${className}`}
           onClick={accumulateActive(index)}
           onMouseEnter={accumulateHover(index)}
           onMouseLeave={() => setMode("actives")}

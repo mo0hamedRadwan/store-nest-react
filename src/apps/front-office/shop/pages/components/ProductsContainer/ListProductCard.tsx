@@ -17,7 +17,7 @@ export default function ListProductCard({ product }: ListMealCardProps) {
         <Link to={"/"}>
           <img
             style={{ margin: "18px auto" }}
-            src={product.images[0]?.url}
+            src={product.images[0].url}
             width={200}
             height={200}
             alt={"product"}

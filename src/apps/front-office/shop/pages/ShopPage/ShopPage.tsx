@@ -5,7 +5,8 @@ import ShopBanner from "../components/shopBanner/ShopBanner";
 export type ShopPageProps = {
   // props go here
 };
-function _ShopPage() {
+
+function ShopPage() {
   return (
     <>
       <ShopBanner />
@@ -24,4 +25,4 @@ function _ShopPage() {
   );
 }
 
-export default _ShopPage;
+export default ShopPage;

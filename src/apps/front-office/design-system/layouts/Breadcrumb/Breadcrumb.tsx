@@ -13,8 +13,9 @@ export type BreadcrumbProps = {
 export default function Breadcrumb({ title, navItems }: BreadcrumbProps) {
   return (
     <>
-      <div className={` ${styles.breadcrumb} flex items-center`}>
-        <div className="container flex flex-col items-start">
+      <div
+        className={` ${styles.breadcrumb} flex items-center min-h-[240px] py-10 max-sm:min-h-[180px]`}>
+        <div className="container text-center">
           <h1 className="title font-bold text-[52px] mb-1 max-md:text-[42px] max-sm:text-[32px]">
             {trans(title)}
           </h1>
@@ -23,7 +24,7 @@ export default function Breadcrumb({ title, navItems }: BreadcrumbProps) {
               <li className="flex items-center ">
                 <Link
                   to={URLS.home}
-                  className="mx-1 text-primary-default hover:text-primary-hover">
+                  className="mx-1 text-gray-400 hover:text-primary-hover">
                   {trans("home")}
                 </Link>
                 {isLTR() ? (
