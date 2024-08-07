@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./index.html","./src/**/*.{js,ts,jsx,tsx,mdx}"],
   prefix: "",
   theme: {
     container: {
@@ -39,7 +39,7 @@ module.exports = {
         cairo: ["Cairo", "sans-serif"],
       },
       translate: {
-        "-5px": "-5px",
+        '-5px': '-5px',
       },
       keyframes: {
         "accordion-down": {
