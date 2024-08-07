@@ -3,7 +3,7 @@ import { topSellingType } from "./index";
 export default function TopSellingCard({
   productImageTop,
   productDescription,
-  priceNow,
+  salePrice,
   priceOld,
 }: topSellingType) {
   return (
@@ -19,7 +19,7 @@ export default function TopSellingCard({
         />
       </div>
       <div>
-        <h6 className="font-medium text-mainColor leading-5 group-hover:text-priceNowColor duration-500">
+        <h6 className="font-[700] text-sm text-[#253D4E] leading-5 group-hover:text-[#3BB77E] duration-500">
           {productDescription}
         </h6>
         <div className="hidden xl:flex gap-1">
@@ -43,10 +43,8 @@ export default function TopSellingCard({
           <span className="text-rateColor">(4.0)</span>
         </div>
         <div className="flex gap-2 mt-1">
-          <h3 className="text-lg font-medium text-priceNowColor">
-            {priceNow}$
-          </h3>
-          <h5 className="text-sm font-medium mt-1 line-through text-priceOldColor">
+          <h3 className="text-lg font-medium text-[#3BB77E]">{salePrice}$</h3>
+          <h5 className="text-sm font-medium mt-1 line-through text-[#adadad]">
             {priceOld}$
           </h5>
         </div>
