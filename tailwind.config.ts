@@ -22,6 +22,11 @@ export default {
         "small-to-medium": { min: "486px", max: "767px" },
       },
       colors: {
+        mainColor: "#253D4E",
+        rateColor: "#B6B6B6",
+        priceNowColor: "#3BB77E",
+        priceOldColor: "#adadad",
+        shopCategoryColor: "#BCE3C9",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

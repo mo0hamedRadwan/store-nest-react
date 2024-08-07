@@ -1,3 +1,4 @@
+import CategorySidebar from "../../components/CategorySidebar";
 import ProductsContainer from "../components/ProductsContainer";
 import ViewDisplayMode from "../components/ProductsContainer/ViewDisplayMode";
 import ShopBanner from "../components/shopBanner/ShopBanner";
@@ -18,6 +19,7 @@ function ShopPage() {
           <div className="md:basis-3/4 mt-5 md:mt-0">
             <ViewDisplayMode />
             <ProductsContainer />
+            <CategorySidebar />
           </div>
         </div>
       </div>
