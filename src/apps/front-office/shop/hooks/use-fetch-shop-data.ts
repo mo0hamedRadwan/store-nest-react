@@ -6,17 +6,17 @@ import { getShopPageData } from "../services/shop-service";
 export type ShopData = {
   products: Product[];
   filters: {
-    type: String;
-    label: String;
+    type: string;
+    label: string;
     data: [];
   }[];
   sortOptions: {
-    text: String;
-    value: String;
+    text: string;
+    value: string;
   }[];
   breadcrumbs: {
-    text: String;
-    url: String;
+    text: string;
+    url: string;
   }[];
   paginationInfo: {
     limit: number;
