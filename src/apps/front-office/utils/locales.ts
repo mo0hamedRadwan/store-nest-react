@@ -1,5 +1,8 @@
 import { groupedTranslations, trans } from "@mongez/localization";
+import bannersTranslation from "shared/localization/banners.json";
 import mainTranslation from "shared/localization/index.json";
+import productsTranslation from "shared/localization/products.json";
+import sectionsTranslation from "shared/localization/sections.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -11,5 +14,23 @@ export function the(key: string) {
 
 // Add only common localization
 groupedTranslations({
-  // add your common localization here
+  home: {
+    en: "Home Page",
+    ar: "الصفحة الرئيسية",
+  },
+  contactUs: {
+    en: "Contact Us",
+    ar: "اتصل بنا",
+  },
+  popularProducts: {
+    en: "Popular Products",
+    ar: "المنتجات الشائعة",
+  },
+  allProducts: {
+    en: "all products",
+    ar: "جميع المنتجات ",
+  },
+  ...productsTranslation,
+  ...sectionsTranslation,
+  ...bannersTranslation,
 });
