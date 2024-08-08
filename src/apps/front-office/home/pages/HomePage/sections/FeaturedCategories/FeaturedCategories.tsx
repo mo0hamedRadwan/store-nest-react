@@ -1,6 +1,7 @@
 import { trans } from "@mongez/localization";
 import CategoryCard from "apps/front-office/home/components/CategoryCard";
 import FeaturedCategoriesBanner from "apps/front-office/home/components/FeaturedCategoriesBanner";
+import { useFeaturedCategories } from "shared/hooks/useFeaturedCategories";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -101,12 +102,21 @@ export default function FeaturedCategories() {
       imgSrc: "/images/featured-categories/kiwi.png",
     },
   ];
+  const { sliderData, isLoading, error } = useFeaturedCategories();
+
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
+
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
   return (
     <section className="featured-categories px-3 py-[25px] relative">
       <div className="featured-categories-title mb-11 ">
         <h3 className="text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold text-[#253D4E]">
-          {trans("Featured Categories")}
+          {sliderData.sectionTitle.value || trans("Featured Categories")}
         </h3>
       </div>
       <div className="featured-categories-body flex justify-center mb-10">

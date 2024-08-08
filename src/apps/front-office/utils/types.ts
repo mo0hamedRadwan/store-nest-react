@@ -93,3 +93,18 @@ export type ProductCategory = {
   id: number;
   name: string;
 };
+
+export interface Category2 {
+  id: number;
+  name: string;
+  items: number;
+  imgSrc: string;
+}
+
+export interface SliderData {
+  categories: Category2[];
+  sectionTitle: {
+    localeCode: string;
+    value: string;
+  };
+}

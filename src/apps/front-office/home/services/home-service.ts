@@ -1,6 +1,7 @@
 import { Meta, Row } from "apps/front-office/utils/types";
 import endpoint from "shared/endpoint";
 import { apiKey, clientId } from "shared/flags";
+import { SliderData } from "../../utils/types";
 
 export type HomeData = {
   meta: Meta;
@@ -49,4 +50,26 @@ export function getCategories() {
       resolve([]);
     }, 5000),
   );
+}
+
+export async function getFeaturedCategoryData(
+  locale: string = "en",
+): Promise<SliderData> {
+  const response = await endpoint.get(`/home?${locale}=${locale}?layout=1`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      "client-id": clientId,
+    },
+  });
+
+  const { data } = response;
+  const { rows } = data;
+  const sectionTitle = rows[1].columns[0].module.title;
+  const categories = rows[2].columns[0].module.categories;
+
+  return {
+    sectionTitle,
+    categories,
+  };
 }
