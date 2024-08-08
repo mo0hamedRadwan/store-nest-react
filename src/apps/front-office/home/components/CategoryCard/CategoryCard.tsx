@@ -4,6 +4,7 @@ import {
   Card,
   CardContent,
 } from "apps/front-office/design-system/components/ui/card";
+import URLS from "apps/front-office/utils/urls";
 import { SwiperSlide } from "swiper/react";
 
 interface Item {
@@ -29,12 +30,14 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
           }}>
           <CardContent className="flex flex-col aspect-[1_/_1.5] items-center justify-center p-6">
             <figure>
-              <Link>
+              <Link to={URLS.home}>
                 <img src={item.imgSrc} alt="img-product" />
               </Link>
             </figure>
             <p>
-              <Link className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md md:text-lg">
+              <Link
+                to={URLS.home}
+                className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md md:text-lg">
                 {item.name}
               </Link>
             </p>
