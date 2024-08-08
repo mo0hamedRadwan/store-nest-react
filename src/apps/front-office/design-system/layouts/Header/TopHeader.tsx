@@ -1,26 +1,20 @@
 import { getCurrentLocaleCode, trans } from "@mongez/localization";
 import { Link, changeLocaleCode } from "@mongez/react-router";
-import { useState } from "react";
-import { Separator } from "../../components/ui/separator";
+import { SelectItem } from "@radix-ui/react-select";
+import { localeCodesList } from "apps/front-office/utils/localization";
 import {
-  offerNotification,
-  topHeaderLanguages,
-  topHeaderLinks,
-} from "./constant/topHeaderData";
+  Select,
+  SelectContent,
+  SelectTrigger,
+  SelectValue,
+} from "../../components/ui/select";
+import { Separator } from "../../components/ui/separator";
+import { offerNotification, topHeaderLinks } from "./constant/topHeaderData";
 
 const TopHeader = () => {
-  const [currentLanguage, setCurrentLanguage] = useState(
-    getCurrentLocaleCode(),
-  );
-
-  const handleSwitchLanguage = e => {
-    const code = e.target.value;
-    setCurrentLanguage(code);
-    changeLocaleCode(code);
-  };
-
+  const language = localeCodesList[getCurrentLocaleCode()].name;
   return (
-    <div className="container hidden md:flex md:justify-between items-center py-2 text-sm lg:bg-white lg:dark:bg-slate-900 md:bg-primary-default lg:text-black lg:dark:text-white md:text-white">
+    <div className="container hidden md:flex md:justify-between items-center py-2 text-sm lg:bg-white lg:dark:bg-slate-900 md:bg-primary lg:text-black lg:dark:text-white md:text-white">
       <ul className="hidden lg:flex items-center">
         {topHeaderLinks.map((link, index) => (
           <li key={link.name} className="flex items-center">
@@ -44,22 +38,24 @@ const TopHeader = () => {
         <li>
           <p>
             {trans("needHelp")} {trans("callUs")}:
-            <span className="text-primary-default hover:text-primary-dark hover:font-bold">
+            <span className="text-primary hover:text-primary-dark hover:font-bold">
               + 1800 900
             </span>
           </p>
         </li>
         <li>
-          <select
-            className="text-black font-semibold"
-            onChange={handleSwitchLanguage}
-            defaultValue={currentLanguage}>
-            {topHeaderLanguages.map(language => (
-              <option value={language.code} key={language.code}>
-                {language.name}
-              </option>
-            ))}
-          </select>
+          <Select onValueChange={value => changeLocaleCode(value)}>
+            <SelectTrigger className="w-[100px]">
+              <SelectValue placeholder={language}>{language}</SelectValue>
+            </SelectTrigger>
+            <SelectContent className="cursor-pointer w-[100px]">
+              {Object.keys(localeCodesList).map(locale => (
+                <SelectItem key={locale} value={locale}>
+                  {localeCodesList[locale].name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </li>
       </ul>
     </div>

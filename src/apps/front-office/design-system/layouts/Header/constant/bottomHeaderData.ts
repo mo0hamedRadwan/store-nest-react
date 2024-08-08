@@ -1,11 +1,13 @@
+import URLS from "apps/front-office/utils/urls";
+
 export const bottomHeaderNavbarItems = [
-  { label: "home", link: "/" },
-  { label: "about", link: "/about" },
-  { label: "shop", link: "/shop" },
-  { label: "venders", link: "/venders" },
-  { label: "megaMenu", link: "" },
-  { label: "blog", link: "/blog" },
-  { label: "contact", link: "/contact" },
+  { label: "home", link: URLS.home },
+  { label: "about", link: URLS.pages.aboutUs },
+  { label: "shop", link: URLS.shop },
+  { label: "venders", link: URLS.venders },
+  { label: "megaMenu", link: "/" },
+  { label: "blog", link: "/blogLink" },
+  { label: "contact", link: URLS.contactUs },
 ];
 
 // Mega Menu

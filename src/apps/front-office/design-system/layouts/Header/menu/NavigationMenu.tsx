@@ -56,7 +56,7 @@ const NavigationMenu = ({ toggleSidebar }: NavigationMenuType) => {
         <ul className="p-5 flex flex-col gap-y-2 border border-slate-200 font-bold">
           {websiteInfo.map(info => (
             <li key={info.name} className="flex items-center gap-x-2">
-              <i className={`bx bx-${info.icon} text-primary-default`}></i>
+              <i className={`bx bx-${info.icon} text-primary`}></i>
               <span>{info.name}</span>
             </li>
           ))}
@@ -67,7 +67,7 @@ const NavigationMenu = ({ toggleSidebar }: NavigationMenuType) => {
             {socialMediaLinks.map(socialLink => (
               <li
                 key={socialLink.name}
-                className="w-8 h-8 flex justify-center items-center bg-primary-default hover:bg-main-700 text-white rounded-full">
+                className="w-8 h-8 flex justify-center items-center bg-primary hover:bg-main-700 text-white rounded-full">
                 <Link to={socialLink.link}>
                   <i className={`bx bxl-${socialLink.name}`}></i>
                 </Link>

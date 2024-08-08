@@ -1,4 +1,3 @@
-import { capitalize } from "@mongez/reinforcements";
 import { SelectItem } from "../../components/ui/select";
 import categoriesAtom from "../atoms/categoriesAtom";
 
@@ -12,7 +11,7 @@ export default function HeaderCategoriesList() {
       ) : (
         catigories.map(category => (
           <SelectItem value={category.id.toString()} key={category.id}>
-            {capitalize(category.name)}
+            {category.name}
           </SelectItem>
         ))
       )}

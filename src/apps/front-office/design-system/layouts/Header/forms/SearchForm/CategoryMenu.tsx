@@ -14,8 +14,6 @@ export default function CategoryMenu({
   const [searchInputCategory, setSearchInputCategory] = useState("");
   const filteredCategories = categoriesAtom.use("categories");
 
-  // console.log(filteredCategories);
-
   const handleInputCategoryChange = e => {
     const value = e.target.value;
     setSearchInputCategory(value);
@@ -44,7 +42,7 @@ export default function CategoryMenu({
           <li
             key={index}
             onClick={handleSelectCategory}
-            className="p-2 hover:bg-primary-default hover:text-white rounded">
+            className="p-2 hover:bg-primary hover:text-white rounded">
             {option}
           </li>
         ))}

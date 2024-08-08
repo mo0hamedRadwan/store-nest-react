@@ -6,6 +6,8 @@ const BrowseCategoriesMenu = () => {
   const [openSeeMore, setOpenSeeMore] = useState(false);
   const categories = categoriesAtom.use("categories");
 
+  console.log(categories);
+
   return (
     <div
       className={`absolute top-20 w-[500px] p-10 z-10 rounded-xl bg-white duration-300 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]`}>
@@ -20,9 +22,9 @@ const BrowseCategoriesMenu = () => {
                 <Link
                   to={`/category/${category.id}`}
                   className="flex items-center gap-x-4">
-                  {category.img && (
+                  {category.image.url && (
                     <img
-                      src={category.img}
+                      src={category.image.url}
                       alt="category icon"
                       className="w-8 h-8"
                     />
@@ -59,7 +61,7 @@ const BrowseCategoriesMenu = () => {
           <button
             className="mt-8 text-xl flex justify-center items-center gap-x-2"
             onClick={() => setOpenSeeMore(!openSeeMore)}>
-            <span className="text-primary-default text-2xl">
+            <span className="text-primary text-2xl">
               {openSeeMore ? (
                 <i className="bx bx-minus-circle"></i>
               ) : (

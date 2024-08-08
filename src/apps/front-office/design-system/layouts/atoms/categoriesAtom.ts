@@ -29,16 +29,10 @@ const categoriesAtom = atom<CategoriesAtomDataType, CategoriesActionsType>({
   actions: {
     setCategories: () => {
       // Fetch categories from server or API and return them here
-      // categoriesAtom.merge({
-      //   isLoading: true,
-      // });
       categoriesAtom.change("isLoading", true);
       getCategories()
         .then(data => {
           const categories = data.data.categories;
-          // console.log("Categories");
-          // console.log(data);
-          // console.log(categories);
           categoriesAtom.merge({
             isLoading: false,
             originalCategories: categories,

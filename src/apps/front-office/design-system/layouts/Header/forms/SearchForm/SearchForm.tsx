@@ -1,15 +1,15 @@
-import { getCurrentLocaleCode, trans } from "@mongez/localization";
+import { trans } from "@mongez/localization";
 import {
   useClickOutside,
   useFilterProducts,
 } from "apps/front-office/design-system/hooks";
+import { isLTR } from "apps/front-office/utils/helpers";
 import { useEffect, useState } from "react";
 import categoriesAtom from "../../../atoms/categoriesAtom";
 import CategoryMenu from "./CategoryMenu";
 import SuggestProductsMenu from "./SuggestProductsMenu";
 
 export default function SearchForm() {
-  const currentLAnguage = getCurrentLocaleCode();
   const [selectedCategory, setSelectedCategory] = useState(
     trans("allCategories"),
   );
@@ -63,7 +63,7 @@ export default function SearchForm() {
 
   return (
     <form
-      className="hidden lg:flex items-center border border-primary-default rounded-lg p-2"
+      className="hidden lg:flex items-center border border-primary rounded-lg p-2"
       onSubmit={handleSearch}>
       <div
         className="relative w-[190px] hidden xl:flex justify-center items-center"
@@ -98,11 +98,11 @@ export default function SearchForm() {
           onChange={handleInputProductChange}
         />
         <div
-          className={`absolute ${currentLAnguage === "en" ? "right-4" : "left-4"} text-2xl text-slate-500`}>
+          className={`absolute ${isLTR() ? "right-4" : "left-4"} text-2xl text-slate-500`}>
           <i className="bx bx-search"></i>
         </div>
         {showSuggestProductsMenu && (
-          <SuggestProductsMenu filteredProducts={filteredProducts} />
+          <SuggestProductsMenu suggestProducts={filteredProducts} />
         )}
       </div>
     </form>

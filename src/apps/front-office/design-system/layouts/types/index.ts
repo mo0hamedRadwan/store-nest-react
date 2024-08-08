@@ -1,7 +1,9 @@
 export type Category = {
   id: number;
   name: string;
-  img?: string;
+  image?: {
+    url: string;
+  };
 };
 
 export type Product = {

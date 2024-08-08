@@ -17,7 +17,6 @@ const MiddleHeader = () => {
   const windowScroll = useWindowScroll();
 
   const toggleSidebar = () => {
-    // console.log("toggleSidebar");
     setOpenNavMenu(!openNavMenu);
   };
 
@@ -45,7 +44,7 @@ const MiddleHeader = () => {
               {action.name === "Account" && isLogin && <AccountMenu />}
               {action.name === "Cart" && isLogin && <CartMenu />}
               {action.name !== "Account" && isLogin && (
-                <span className="w-5 h-5 flex items-center justify-center absolute -top-1 left-3 bg-primary-default text-white text-xs font-bold rounded-full">
+                <span className="w-5 h-5 flex items-center justify-center absolute -top-1 left-3 bg-primary text-white text-xs font-bold rounded-full">
                   5
                 </span>
               )}
@@ -78,7 +77,7 @@ const MiddleHeader = () => {
         {navbarIcons.map(icon => (
           <li key={icon.icon}>
             <Link to={icon.link} className="relative">
-              <span className="w-5 h-5 flex items-center justify-center absolute -top-5 left-5 bg-primary-default text-white text-xs font-bold rounded-full">
+              <span className="w-5 h-5 flex items-center justify-center absolute -top-5 left-5 bg-primary text-white text-xs font-bold rounded-full">
                 5
               </span>
               <i className={`bx bx-${icon.icon} text-4xl`}></i>
