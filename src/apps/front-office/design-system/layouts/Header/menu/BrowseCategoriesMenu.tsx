@@ -22,7 +22,7 @@ const BrowseCategoriesMenu = () => {
                 <Link
                   to={`/category/${category.id}`}
                   className="flex items-center gap-x-4">
-                  {category.image.url && (
+                  {category.image?.url && (
                     <img
                       src={category.image.url}
                       alt="category icon"
