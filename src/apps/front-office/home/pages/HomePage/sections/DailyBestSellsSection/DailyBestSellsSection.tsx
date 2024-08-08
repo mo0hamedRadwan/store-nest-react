@@ -8,7 +8,7 @@ import Loader from "src/apps/front-office/design-system/Indicators/Loader";
 import useFetchDailyBannerData from "src/apps/front-office/home/hooks/use-fetch-daily-data";
 
 export default function DailyBestSellsSection() {
-  const { data, loading, error } = useFetchDailyBannerData();
+  const { data, loading } = useFetchDailyBannerData();
 
   return (
     <section className="best-daily-products">
@@ -21,11 +21,11 @@ export default function DailyBestSellsSection() {
       </div>
 
       <div className="best-daily-products__body lg:flex">
-        <div className="best-daily-products__banner hidden lg:block basis-3/12 rounded-3xl">
+        <div className="best-daily-products__banner hidden lg:block min-w-[250px] md:w-1/6 rounded-3xl">
           <DailyBestBanner />
         </div>
 
-        <div className="best-daily-products__products lg:basis-9/12 transition-all">
+        <div className="best-daily-products__products lg:w-5/6 transition-all">
           {loading ? (
             <Loader />
           ) : (

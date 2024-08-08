@@ -28,7 +28,7 @@ export default function DailyBestProducts({ products }: DailyBestSellsProps) {
         {products.map((product, index) => (
           <CarouselItem
             key={index}
-            className="w-full flex-wrap me-2 lg:basis-1/4 md:basis-1/3 xs:basis-1/2">
+            className="w-full me-2 xs:basis-1/2 md:basis-1/3 lg:basis-1/4">
             <Product
               key={index}
               product={product}

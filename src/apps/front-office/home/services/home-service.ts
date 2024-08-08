@@ -16,9 +16,10 @@ export async function getHome(): Promise<HomeData> {
   };
 }
 
-export function getDailyBestSellsBannerDataSection(
-  locale: string = "en",
-): Promise<{ banner: { imageUrl: string; title: string } }> {
+export function getDailyBestSellsBannerDataSection(): Promise<{
+  // locale: string = "en",
+  banner: { imageUrl: string; title: string };
+}> {
   return endpoint
     .get(`/home`, {
       // ?locale=${locale}
@@ -42,9 +43,8 @@ export function getDailyBestSellsBannerDataSection(
     });
 }
 
-export function getDailyBestSellsDataSection(
-  locale: string = "en",
-): Promise<Product[]> {
+export function getDailyBestSellsDataSection(): Promise<Product[]> {
+  // locale: string = "en",
   return endpoint
     .get(`/products?wf=true`) // &locale=${locale}
     .then(response => {

@@ -1,9 +1,8 @@
 /**
  * Progress bar is used for lazy loading for modules
  */
-export default function ProgressBar(
-  { start, end }: { start?: number; end?: number } = { start: 0, end: 100 },
-) {
+export default function ProgressBar() {
+  // { start, end }: { start?: number; end?: number } = { start: 0, end: 100 },
   return (
     <>
       <div className={`progress-bar w-full h-2 bg-slate-200`}>
