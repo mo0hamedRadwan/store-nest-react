@@ -104,13 +104,13 @@ export default function FeaturedCategories() {
   ];
   const { sliderData, isLoading, error } = useFeaturedCategories();
 
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
-  // if (error) {
-  //   return <div>Error: {error}</div>;
-  // }
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <section className="featured-categories px-3 py-[25px] relative">
