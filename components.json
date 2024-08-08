@@ -12,6 +12,6 @@
   },
   "aliases": {
     "components": "src/apps/front-office/design-system/components",
-    "utils": "src/apps/front-office/design-system/utils"
+    "utils": "apps/front-office/design-system/utils/utils"
   }
 }
