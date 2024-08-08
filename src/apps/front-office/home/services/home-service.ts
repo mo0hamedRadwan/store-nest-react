@@ -1,6 +1,9 @@
+import { getCurrentLocaleCode } from "@mongez/localization";
 import { Meta, Row } from "apps/front-office/utils/types";
 import endpoint from "shared/endpoint";
 import { apiKey, clientId } from "shared/flags";
+
+const currentLanguage = getCurrentLocaleCode();
 
 export type HomeData = {
   meta: Meta;
@@ -9,7 +12,6 @@ export type HomeData = {
 
 export async function getHome(): Promise<HomeData> {
   const response = await endpoint.get("/home");
-  // console.log("response", response.data);
   return {
     meta: response.data.meta,
     rows: response.data.rows,
@@ -44,9 +46,11 @@ export function getDailyBestSellsDataSection(locale: string = "en") {
 }
 
 export function getCategories() {
-  return new Promise(resolve =>
-    setTimeout(() => {
-      resolve([]);
-    }, 5000),
+  return endpoint.get(`/categories?locale=${currentLanguage}`);
+}
+
+export function filterProducts(productName: string, categoryId?: string) {
+  return endpoint.get(
+    `/products?name=${productName}${categoryId ? `&category=${categoryId}` : ""}&locale=${currentLanguage}`,
   );
 }

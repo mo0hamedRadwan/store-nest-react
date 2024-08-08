@@ -14,9 +14,7 @@ const CartMenu = () => {
           <li key={index} className="flex justify-between items-start gap-x-3">
             <img src={item.img} alt="item image" className="w-20 h-20" />
             <div className="w-[180px]">
-              <h3 className="text-xl font-bold text-primary-default">
-                {item.title}
-              </h3>
+              <h3 className="text-xl font-bold text-primary">{item.title}</h3>
               <p>
                 {item.amount} x ${item.price}
               </p>
@@ -31,17 +29,17 @@ const CartMenu = () => {
       <div className="mt-5 flex flex-col gap-y-3">
         <div className="flex justify-between items-center">
           <p>Total</p>
-          <p className="text-primary-default text-xl font-bold">${total}</p>
+          <p className="text-primary text-xl font-bold">${total}</p>
         </div>
         <div className="flex justify-between items-center">
           <Link
             to="/cart"
-            className="px-5 py-2.5 rounded-lg text-primary-default border border-primary-default">
+            className="px-5 py-2.5 rounded-lg text-primary border border-primary">
             View Cart
           </Link>
           <Link
             to="/checkout"
-            className="px-5 py-2.5 rounded-lg text-white bg-primary-default ">
+            className="px-5 py-2.5 rounded-lg text-white bg-primary ">
             Checkout
           </Link>
         </div>
