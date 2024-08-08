@@ -15,6 +15,7 @@ export default function ProductAction({ tooltip, Icon }: ProductActionProps) {
   let onView = () => {};
 
   if (tooltip === "Quick View") {
+    // eslint-disable-next-line unused-imports/no-unused-vars
     onView = () => ProductQuickViewAtom.show();
   }
 
