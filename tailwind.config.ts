@@ -17,9 +17,9 @@ export default {
     },
     extend: {
       screens: {
-        xs: "375px",
         "2xl": "1400px",
         "small-to-medium": { min: "486px", max: "767px" },
+        xs: "375px",
       },
       colors: {
         mainColor: "#253D4E",

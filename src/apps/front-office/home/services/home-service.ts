@@ -1,4 +1,4 @@
-import { Meta, Row } from "apps/front-office/utils/types";
+import { Meta, Product, Row } from "apps/front-office/utils/types";
 import endpoint from "shared/endpoint";
 import { apiKey, clientId } from "shared/flags";
 
@@ -16,9 +16,12 @@ export async function getHome(): Promise<HomeData> {
   };
 }
 
-export function getDailyBestSellsDataSection(locale: string = "en") {
+export function getDailyBestSellsBannerDataSection(
+  locale: string = "en",
+): Promise<{ banner: { imageUrl: string; title: string } }> {
   return endpoint
-    .get(`/home?locale=${locale}`, {
+    .get(`/home`, {
+      // ?locale=${locale}
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${apiKey}`,
@@ -28,18 +31,30 @@ export function getDailyBestSellsDataSection(locale: string = "en") {
     .then(response => {
       const { data } = response;
       const { rows } = data;
-      const categories = rows[2].columns[0].module.categories;
-      const products = rows[3].columns[0].module.products;
       const { title, image } = rows[4].columns[0].module.banner;
 
       return {
-        categories,
-        products,
         banner: {
           imageUrl: image.url,
           title: title,
         },
       };
+    });
+}
+
+export function getDailyBestSellsDataSection(
+  locale: string = "en",
+): Promise<Product[]> {
+  return endpoint
+    .get(`/products?wf=true`) // &locale=${locale}
+    .then(response => {
+      const { data } = response;
+      const { products } = data;
+
+      return products;
+    })
+    .catch(error => {
+      console.log("error", error);
     });
 }
 

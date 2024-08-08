@@ -6,6 +6,7 @@ export type LocaleValue = {
 export type Category = {
   id: number;
   name: LocaleValue[];
+  slug?: string;
   products?: Product[];
 };
 
@@ -73,6 +74,7 @@ export type Product = {
   inCart: boolean;
   inCompare: boolean;
   inStock: boolean;
+  stock?: { available: number };
   inWishlist: boolean;
   isActive: boolean;
   isLowStock: boolean;

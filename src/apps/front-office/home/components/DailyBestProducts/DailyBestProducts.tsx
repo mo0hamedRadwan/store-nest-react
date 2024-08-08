@@ -7,14 +7,18 @@ import {
   CarouselPrevious,
 } from "apps/front-office/design-system/components/ui/carousel";
 
-import products from "app/mocks/daily-best-sells-products";
 import {
   currentDirection,
   currentLocaleCode,
 } from "apps/front-office/utils/helpers";
+import { Product as ProductType } from "src/apps/front-office/utils/types";
 import { showProductQuickView } from "../../atoms/product-quick-view";
 
-export default function DailyBestProducts() {
+type DailyBestSellsProps = {
+  products: ProductType[];
+};
+
+export default function DailyBestProducts({ products }: DailyBestSellsProps) {
   return (
     <Carousel>
       <CarouselContent
@@ -26,12 +30,10 @@ export default function DailyBestProducts() {
             key={index}
             className="w-full flex-wrap me-2 lg:basis-1/4 md:basis-1/3 xs:basis-1/2">
             <Product
-              onClick={() => showProductQuickView(product)}
               key={index}
-              images={product.images}
-              status={product.status}
-              body={product.body}
+              product={product}
               className="w-full group/product"
+              onClick={() => showProductQuickView(product)}
             />
           </CarouselItem>
         ))}
