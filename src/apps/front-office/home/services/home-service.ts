@@ -50,3 +50,10 @@ export function getCategories() {
     }, 5000),
   );
 }
+
+export async function getFooterData() {
+  const response = await endpoint.get("https://store.mentoor.io/settings");
+  return {
+    data: response.data,
+  };
+}

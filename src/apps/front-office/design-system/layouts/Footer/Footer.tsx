@@ -1,13 +1,8 @@
-// import image
-import { phoneCall } from "assets/footerImages";
-
-// import components
+import { trans } from "@mongez/localization";
 import FooterAppInstall from "./FooterAppInstall";
 import FooterContactInfo from "./FooterContactInfo";
 import FooterLinks from "./FooterLinks";
 import FooterSocialMedia from "./FooterSocialMedia";
-
-import { trans } from "@mongez/localization";
 
 export default function Footer() {
   // create dynamically year
@@ -34,8 +29,9 @@ export default function Footer() {
           {["1900 - 6666", "1900 - 6666"].map((phone, index) => (
             <div
               key={index}
-              className="max-w-[300px] flex flex-col justify-center items-center gap-2 ">
-              <img src={phoneCall} alt="phone-call" className="w-[30px]" />
+              className="max-w-[300px] flex flex-col justify-center items-center gap-2">
+              <i className="bx bx-phone-call text-primary-default text-3xl"></i>
+
               <p className="flex flex-col">
                 <span className="text-[16px] sm:text-[26px] font-bold text-primary-default">
                   {phone}
