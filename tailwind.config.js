@@ -16,7 +16,7 @@ module.exports = {
           default: "#3BB77E",
           light: "#DEF9EC",
           dark: "#29A56C",
-          hover: "#FDC040"
+          hover: "#FDC040",
         },
         category: {
           1: "#f2fce4",

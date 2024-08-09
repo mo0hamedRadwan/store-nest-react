@@ -17,8 +17,16 @@
       "name": "home"
     },
     {
+      "entry": ["/shop"],
+      "name": "shop"
+    },
+    {
       "entry": ["/about-us", "/privacy-policy", "/terms-conditions"],
       "name": "informative-pages"
+    },
+    {
+      "entry": ["/shop"],
+      "name": "shop"
     }
   ]
 }
