@@ -10,99 +10,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css";
 
 export default function FeaturedCategories() {
-  const data = [
-    {
-      id: 1,
-      name: "Organic Kiwi",
-      items: 28,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 2,
-      name: "Organic Kiwi",
-      items: 15,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 3,
-      name: "Organic Kiwi",
-      items: 30,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 4,
-      name: "Organic Kiwi",
-      items: 28,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 5,
-      name: "Organic Kiwi",
-      items: 15,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 6,
-      name: "Organic Kiwi",
-      items: 30,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 7,
-      name: "Organic Kiwi",
-      items: 28,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 8,
-      name: "Organic Kiwi",
-      items: 15,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 9,
-      name: "Organic Kiwi",
-      items: 30,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 10,
-      name: "Organic Kiwi",
-      items: 28,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 11,
-      name: "Organic Kiwi",
-      items: 15,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 12,
-      name: "Organic Kiwi",
-      items: 30,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 13,
-      name: "Organic Kiwi",
-      items: 28,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 14,
-      name: "Organic Kiwi",
-      items: 15,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-    {
-      id: 15,
-      name: "Organic Kiwi",
-      items: 30,
-      imgSrc: "/images/featured-categories/kiwi.png",
-    },
-  ];
   const { sliderData, isLoading, error } = useFeaturedCategories();
+  // console.log(JSON.stringify(sliderData.categories[0]), isLoading, error);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -122,13 +31,13 @@ export default function FeaturedCategories() {
       <div className="featured-categories-body flex justify-center mb-10">
         <Swiper
           modules={[Navigation, Autoplay]}
-          loop={data.length > 10}
+          loop={sliderData.categories.length > 10}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
           spaceBetween={5}
-          slidesPerView={Math.min(3, data.length)}
+          slidesPerView={Math.min(3, sliderData.categories.length)}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -148,7 +57,7 @@ export default function FeaturedCategories() {
             },
           }}
           className="w-full">
-          {data.map((item, index) => (
+          {sliderData.categories.map((item, index) => (
             <SwiperSlide key={index}>
               <CategoryCard item={item} index={index} />
             </SwiperSlide>

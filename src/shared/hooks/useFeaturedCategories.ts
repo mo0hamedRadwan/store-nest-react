@@ -118,15 +118,16 @@ export function useFeaturedCategories() {
       setError(null);
       try {
         const result = await getFeaturedCategoryData();
-        setSliderData({
+        // console.log(JSON.stringify(result));
+        setSliderData(prevState => ({
+          ...prevState,
           categories: result.categories,
           sectionTitle: {
             localeCode: result.sectionTitle.localeCode,
             value: result.sectionTitle.value,
           },
-        });
-        console.log(JSON.stringify(result));
-        console.log(JSON.stringify(sliderData.categories));
+        }));
+        // console.log(JSON.stringify(sliderData.categories));
       } catch (error) {
         console.error(
           "Failed to fetch featured category data, using mock data",
