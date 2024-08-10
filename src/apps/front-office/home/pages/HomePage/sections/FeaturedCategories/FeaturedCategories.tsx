@@ -25,19 +25,19 @@ export default function FeaturedCategories() {
     <section className="featured-categories px-3 py-[25px] relative">
       <div className="featured-categories-title mb-11 ">
         <h3 className="text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold text-[#253D4E]">
-          {sliderData.sectionTitle.value || trans("Featured Categories")}
+          {sliderData!.sectionTitle.title || trans("Featured Categories")}
         </h3>
       </div>
       <div className="featured-categories-body flex justify-center mb-10">
         <Swiper
           modules={[Navigation, Autoplay]}
-          loop={sliderData.categories.length > 10}
+          loop={sliderData!.categories.length > 10}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
           spaceBetween={5}
-          slidesPerView={Math.min(3, sliderData.categories.length)}
+          slidesPerView={Math.min(3, sliderData!.categories.length)}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -57,7 +57,7 @@ export default function FeaturedCategories() {
             },
           }}
           className="w-full">
-          {sliderData.categories.map((item, index) => (
+          {sliderData!.categories.map((item, index) => (
             <SwiperSlide key={index}>
               <CategoryCard item={item} index={index} />
             </SwiperSlide>

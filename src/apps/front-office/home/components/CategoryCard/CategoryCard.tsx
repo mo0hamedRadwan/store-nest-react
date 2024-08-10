@@ -4,102 +4,13 @@ import {
   Card,
   CardContent,
 } from "apps/front-office/design-system/components/ui/card";
-import { Discount, Image, LocaleValue } from "apps/front-office/utils/types";
+import { Category2 } from "apps/front-office/utils/types";
 import URLS from "apps/front-office/utils/urls";
 import { SwiperSlide } from "swiper/react";
 
-export interface Item {
-  id: number;
-  isActive: boolean;
-  name: LocaleValue[];
-  image: Image;
-  slug: string;
-  totalProducts: number;
-  products: Product[];
-}
-
-export interface Product {
-  id: number;
-  isActive: boolean;
-  createdAt: CreatedAt;
-  updatedAt: UpdatedAt;
-  createdBy: CreatedBy;
-  updatedBy: UpdatedBy;
-  name: LocaleValue[];
-  shortDescription: LocaleValue[];
-  description: LocaleValue[];
-  price: number;
-  salePrice: number;
-  discount: Discount;
-  inStock: boolean;
-  slug: string;
-  isLowStock: boolean;
-  sortOrder: number;
-  purchase: {
-    minQuantity: number;
-  };
-  type: string;
-  hasDiscount: boolean;
-  images: Image[];
-  category: Category;
-  inCart: boolean;
-  inWishlist: boolean;
-  inCompare: boolean;
-}
-
-export interface CreatedAt {
-  format: string;
-  timestamp: number;
-  offset: number;
-  humanTime: string;
-  text: string;
-  date: string;
-  time: string;
-}
-
-export interface UpdatedAt {
-  format: string;
-  timestamp: number;
-  offset: number;
-  humanTime: string;
-  text: string;
-  date: string;
-  time: string;
-}
-
-export interface CreatedBy {
-  id: number;
-  isCustomer: boolean;
-  name: string;
-  phoneNumber: string;
-  email: string;
-  userType: string;
-  totalWishlist: number;
-  totalCompare: number;
-}
-
-export interface UpdatedBy {
-  id: number;
-  isCustomer: boolean;
-  name: string;
-  phoneNumber: string;
-  email: string;
-  userType: string;
-  totalWishlist: number;
-  totalCompare: number;
-}
-
-export interface Category {
-  id: number;
-  isActive: boolean;
-  name: LocaleValue[];
-  image: Image;
-  slug: string;
-}
-
 interface CategoryCardProps {
   index: number;
-  item: Item;
+  item: Category2;
 }
 
 const CategoryCard = ({ index, item }: CategoryCardProps) => {

@@ -1,7 +1,6 @@
 import { Meta, Row } from "apps/front-office/utils/types";
 import endpoint from "shared/endpoint";
 import { apiKey, clientId } from "shared/flags";
-import { SliderData } from "../../utils/types";
 
 export type HomeData = {
   meta: Meta;
@@ -52,9 +51,7 @@ export function getCategories() {
   );
 }
 
-export async function getFeaturedCategoryData(
-  locale: string = "en",
-): Promise<SliderData> {
+export async function getFeaturedCategoryData(locale: string = "en") {
   const response = await endpoint.get(`/home?${locale}=${locale}?layout=1`, {
     headers: {
       "Content-Type": "application/json",
@@ -67,6 +64,10 @@ export async function getFeaturedCategoryData(
   const { rows } = data;
   const sectionTitle = rows[1].columns[0].module.title;
   const categories = rows[2].columns[0].module.categories;
+  // const categories = rows[1].columns[0].module.categories;
+  // console.log(`sectionTitle is ${JSON.stringify(sectionTitle)}`);
+  // console.log(`categories is ${JSON.stringify(categories)}`);
+  // console.log(`all result are ${JSON.stringify(rows)}`);
 
   return {
     sectionTitle,

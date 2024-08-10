@@ -3,13 +3,7 @@ import { SliderData } from "apps/front-office/utils/types";
 import { useEffect, useState } from "react";
 
 export function useFeaturedCategories() {
-  const [sliderData, setSliderData] = useState<SliderData>({
-    categories: [],
-    sectionTitle: {
-      localeCode: "",
-      value: "",
-    },
-  });
+  const [sliderData, setSliderData] = useState<SliderData>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -17,99 +11,206 @@ export function useFeaturedCategories() {
     const mockData: SliderData = {
       categories: [
         {
-          id: 1,
-          name: "Organic Kiwi",
-          items: 28,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
           id: 2,
-          name: "Organic Kiwi",
-          items: 15,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 3,
-          name: "Organic Kiwi",
-          items: 30,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 4,
-          name: "Organic Kiwi",
-          items: 28,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 5,
-          name: "Organic Kiwi",
-          items: 15,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 6,
-          name: "Organic Kiwi",
-          items: 30,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 7,
-          name: "Organic Kiwi",
-          items: 28,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 8,
-          name: "Organic Kiwi",
-          items: 15,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 9,
-          name: "Organic Kiwi",
-          items: 30,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 10,
-          name: "Organic Kiwi",
-          items: 28,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 11,
-          name: "Organic Kiwi",
-          items: 15,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 12,
-          name: "Organic Kiwi",
-          items: 30,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 13,
-          name: "Organic Kiwi",
-          items: 28,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 14,
-          name: "Organic Kiwi",
-          items: 15,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
         {
-          id: 15,
-          name: "Organic Kiwi",
-          items: 30,
-          imgSrc: "/images/featured-categories/kiwi.png",
+          id: 2,
+          name: [
+            {
+              localeCode: "en",
+              value: "Organic Kiwi",
+            },
+          ],
+          totalProducts: 15,
+          isActive: false,
+          slug: "",
+          products: [],
         },
       ],
       sectionTitle: {
-        localeCode: "",
-        value: "Featured Categories",
+        userId: 0,
+        id: 0,
+        title: "Featured Categories",
+        completed: true,
       },
     };
 
@@ -118,16 +219,15 @@ export function useFeaturedCategories() {
       setError(null);
       try {
         const result = await getFeaturedCategoryData();
-        // console.log(JSON.stringify(result));
-        setSliderData(prevState => ({
-          ...prevState,
+        setSliderData({
           categories: result.categories,
           sectionTitle: {
-            localeCode: result.sectionTitle.localeCode,
-            value: result.sectionTitle.value,
+            userId: result.sectionTitle.userId,
+            title: result.sectionTitle.value,
+            id: result.sectionTitle.id,
+            completed: result.sectionTitle.completed,
           },
-        }));
-        // console.log(JSON.stringify(sliderData.categories));
+        });
       } catch (error) {
         console.error(
           "Failed to fetch featured category data, using mock data",
@@ -136,7 +236,7 @@ export function useFeaturedCategories() {
         setError(
           error instanceof Error ? error.message : "An unknown error occurred",
         );
-        setSliderData(mockData); // Use mock data on error
+        setSliderData(mockData);
       } finally {
         setIsLoading(false);
       }
