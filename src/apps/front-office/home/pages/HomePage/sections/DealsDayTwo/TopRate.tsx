@@ -16,19 +16,19 @@ export default function TopRate(attributes: TopRateProps) {
         <TopSellingCard
           productImageTop={productImg10}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow={32.85}
+          salePrice={32.85}
           priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg11}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow={32.85}
+          salePrice={32.85}
           priceOld={33.8}
         />
         <TopSellingCard
           productImageTop={productImg12}
           productDescription="Nestle Original Coffee-Mate Coffee Creamer"
-          priceNow={32.85}
+          salePrice={32.85}
           priceOld={33.8}
         />
       </div>
