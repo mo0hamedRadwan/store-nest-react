@@ -45,7 +45,7 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
             <p>
               <Link
                 to={`${URLS.home}/${item.slug}`}
-                className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md md:text-lg">
+                className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md">
                 {itemName}
               </Link>
             </p>
