@@ -10,16 +10,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css";
 
 export default function FeaturedCategories() {
-  const { sliderData, isLoading, error } = useFeaturedCategories();
+  const { sliderData, isLoading } = useFeaturedCategories();
   // console.log(JSON.stringify(sliderData.categories[0]), isLoading, error);
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
   return (
     <section className="featured-categories px-3 py-[25px] relative">
