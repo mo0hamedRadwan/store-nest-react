@@ -22,7 +22,7 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
   // Safely access the name and image properties
   const itemName =
     item.name?.find(n => n.localeCode === "en")?.value || "Unnamed";
-  const itemImage = item.image?.url || "/images/featured-categories/Kiwi.png"; // Fallback to a default image if the image URL is missing
+  const itemImage = item.image?.url || "/images/featured-categories/kiwi.png"; // Fallback to a default image if the image URL is missing
 
   return (
     <SwiperSlide key={index}>
