@@ -32,6 +32,9 @@ endpointEvents.beforeSending(config => {
   headers["client-id"] = apiClient;
   headers["os"] = apiOS;
   headers["Authorization"] = `Bearer ${apiKey}`;
+  // config.params = {
+  //   locale: getCurrentLocaleCode(),
+  // };
 });
 
 endpointEvents.onSuccess((response: AxiosResponse) => {

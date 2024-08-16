@@ -3,7 +3,20 @@
 const URLS = {
   shop: "/shop",
   home: "/",
+  compare: "/compare",
+  cart: "/cart",
+  checkout: "/checkout",
+  account: "/account",
+  wishlist: "/wishlist",
+  addresses: "/addresses",
+  orders: "/orders",
+  venders: "/venders",
   notFound: "/404",
+  product: {
+    root: "/product",
+    viewRoute: "/product/:id/:slug",
+    view: (post: any) => `/product/${post.id}/${post.slug}`,
+  },
   blog: {
     root: "/blog",
     viewRoute: "/blog/:id/:slug",
