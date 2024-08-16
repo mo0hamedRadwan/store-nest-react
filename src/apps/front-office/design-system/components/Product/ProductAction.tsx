@@ -1,3 +1,4 @@
+import ProductQuickViewAtom from "apps/front-office/home/atoms/product-quick-view";
 import {
   Tooltip,
   TooltipContent,
@@ -11,6 +12,13 @@ export type ProductActionProps = {
 };
 
 export default function ProductAction({ tooltip, Icon }: ProductActionProps) {
+  let onView = () => {};
+
+  if (tooltip === "Quick View") {
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    onView = () => ProductQuickViewAtom.show();
+  }
+
   return (
     <TooltipProvider delayDuration={200}>
       <Tooltip>

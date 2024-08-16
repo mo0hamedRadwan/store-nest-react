@@ -54,5 +54,9 @@
   "share": {
     "en": "Share",
     "ar": "مشاركة"
+  },
+  "someThingWantWrong": {
+    "en": "Something went wrong",
+    "ar": "هناك خطأ ما"
   }
 }

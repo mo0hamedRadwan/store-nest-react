@@ -8,31 +8,33 @@ export type TabCategory = {
   products: Product[];
 };
 
-type popularProductsAtomOptions = {
+type PopularProductsAtomOptions = {
   activeTab: number;
   tabs: TabCategory[];
   products: Product[];
   activeProducts: Product[];
 };
 
-const collectTabsData = (products: Product[]) => {
-  const categories: GenericObject = {};
+const collectTabsData = (products: Product[]): TabCategory[] => {
+  const categories: GenericObject<TabCategory> = {};
   for (const product of products) {
-    if (!categories[product.category.id]) {
-      categories[product.category.id] = {
-        id: product.category.id,
-        name: product.category.name,
+    const categoryId = product.category.id;
+    const categoryName = product.category.name[0]?.value ?? "";
+
+    if (!categories[categoryId]) {
+      categories[categoryId] = {
+        id: categoryId,
+        name: categoryName,
         products: [],
       };
     }
 
-    categories[product.category.id].products.push(product);
+    categories[categoryId].products.push(product);
   }
-
-  return Object.values(categories) as TabCategory[];
+  return Object.values(categories);
 };
 
-export const popularProductsAtom = atom<popularProductsAtomOptions>({
+export const popularProductsAtom = atom<PopularProductsAtomOptions>({
   key: "popularProducts",
   beforeUpdate(data) {
     if (data.tabs.length === 0) {
@@ -49,7 +51,7 @@ export const popularProductsAtom = atom<popularProductsAtomOptions>({
     return data;
   },
   default: {
-    activeTab: 0, // all categories
+    activeTab: 0,
     tabs: [],
     products: [],
     activeProducts: [],

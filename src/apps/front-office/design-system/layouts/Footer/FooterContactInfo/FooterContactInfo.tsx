@@ -5,10 +5,6 @@ export default function FooterContactInfo() {
   const { footerData } = useFetchFooterData();
   const { contact, logoUrl } = footerData;
 
-  console.log("footerData:", footerData);
-  console.log("contact:", contact);
-  console.log("logoUrl:", logoUrl);
-
   const contactInfo = contact
     ? [
         {

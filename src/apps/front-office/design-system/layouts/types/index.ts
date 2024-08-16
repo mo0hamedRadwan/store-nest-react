@@ -1,7 +1,17 @@
 export type Category = {
   id: number;
   name: string;
-  img: string;
+  image?: {
+    url: string;
+  };
+};
+
+export type Product = {
+  id: string;
+  name: string;
+  price: number;
+  category: Category;
+  slug?: string;
 };
 
 export interface ContactInfo {
@@ -10,6 +20,8 @@ export interface ContactInfo {
   phoneNumber: string;
   workingDays: { localeCode: string; value: string }[];
 }
+
+// Define the type for the footerData state
 
 export interface FooterData {
   contact: ContactInfo | null;

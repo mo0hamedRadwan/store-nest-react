@@ -4,11 +4,11 @@ import { navigateTo } from "@mongez/react-router";
 import user from "apps/front-office/account/user";
 import URLS from "apps/front-office/utils/urls";
 import { AxiosResponse } from "axios";
-import { apiBaseUrl, apiKey, apiOS } from "./flags";
+import { apiClient, apiKey, apiOS } from "./flags";
 
 const endpoint = new Endpoint({
   putToPost: false,
-  baseURL: apiBaseUrl,
+  baseURL: "https://store.mentoor.io/",
   cache: false,
   cacheOptions: {
     driver: new RunTimeDriver(),
@@ -29,7 +29,12 @@ const endpointEvents = endpoint.events;
 
 endpointEvents.beforeSending(config => {
   const headers: any = config.headers;
+  headers["client-id"] = apiClient;
   headers["os"] = apiOS;
+  headers["Authorization"] = `Bearer ${apiKey}`;
+  // config.params = {
+  //   locale: getCurrentLocaleCode(),
+  // };
 });
 
 endpointEvents.onSuccess((response: AxiosResponse) => {
