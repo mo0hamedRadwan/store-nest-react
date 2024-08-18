@@ -25,42 +25,48 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <>
-      <div className="p-3 group rounded-[1rem] border relative hover:border-primary-default transition duration-500">
-        <div className="absolute z-10 top-0 left-0 font-bold bg-primary-default text-[#fff]  rounded-tl-[12px] rounded-br-[25px] py-[10px] px-5 text-[13px] leading-none">
-          {trans("new")}
+      <div className=" group rounded-[15px] border border-[#ececec] relative overflow-hidden hover:border-primary-light hover:shadow-md transition duration-500">
+        <div>
+          {isOnSale ? (
+            <div className="absolute z-10 top-0 left-0 font-normal bg-[#67bcee] text-[#fff] rounded-tl-[12px] rounded-br-[25px]  px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
+              {trans("sale")}
+            </div>
+          ) : (
+            <div className="absolute z-10 top-0 left-0 font-normal bg-primary-default text-[#fff] rounded-tl-[12px] rounded-br-[25px] px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
+              {trans("new")}
+            </div>
+          )}
         </div>
-        <div className="relative">
-          <Link
-            to={"/"}
-            className="h-64 relative overflow-hidden flex items-center justify-center cursor-pointer rounded-3xl">
+        <div className="relative p-[25px] pb-0">
+          <div className="overflow-hidden flex items-center justify-center cursor-pointer rounded-3xl max-h-[320px] ">
             <img
               src={product.images[0]?.url + "?w=200&h=200"}
               alt={getLocalizedValue(product.name)}
-              width={200}
-              height={200}
-              className="group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
+              className="max-w-80 max-h-[320px] group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
             />
-          </Link>
+          </div>
           <PreviewProducts />
         </div>
-
-        <div className="mt-6 space-y-3 m-3">
-          <span className="text-[#adadad] text-[12px] ">
+        <div className="px-[20px] pt-[20px] pb-[20px]">
+          <span className="flex text-[#adadad] text-[12px] mb-[5px] hover:text-primary-default cursor-pointer">
             {getLocalizedValue(product.category.name)}
           </span>
+          <h2>
+            <Link
+              to={"/"}
+              className="font-bold text-base inline-block text-[#253D4E] hover:text-primary-default transition duration-500">
+              {getLocalizedValue(product.name)}
+            </Link>
+          </h2>
           {/* Stars */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mt-1">
             <Stars ratings={product.rating || 0} />
             <span className="text-[#B6B6B6] text-[14px] ">
               ({product.rating || 0})
             </span>
           </div>
-          <Link
-            to={"/"}
-            className="font-bold text-base inline-block hover:text-primary-default transition duration-500">
-            {getLocalizedValue(product.name)}
-          </Link>
-          <div className="flex items-center justify-between gap-4">
+
+          <div className="mt-[15px] flex items-center justify-between gap-4">
             <div className="flex items-center justify-center gap-2">
               {isOnSale && (
                 <span className="inline-block self-start text-primary-default font-bold text-lg">
