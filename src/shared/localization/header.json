@@ -1,0 +1,70 @@
+{
+  "aboutUs": {
+    "en": "About us",
+    "ar": "معلومات عنا"
+  },
+  "myAccount": {
+    "en": "My Account",
+    "ar": "حسابي"
+  },
+  "wishlist": {
+    "en": "Wishlist",
+    "ar": "القائمة المفضلة"
+  },
+  "cart": {
+    "en": "Cart",
+    "ar": "السلة"
+  },
+  "needHelp": {
+    "en": "Need Help",
+    "ar": "تحتاج مساعدة"
+  },
+  "callUs": {
+    "en": "Call Us",
+    "ar": "تواصل معنا"
+  },
+  "allCategories": {
+    "en": "All Categories",
+    "ar": "كل التصنيفات"
+  },
+  "searchForProducts": {
+    "en": "Search for products",
+    "ar": "البحث عن المنتجات"
+  },
+  "compare": {
+    "en": "Compare",
+    "ar": "مقارنة"
+  },
+  "browse": {
+    "en": "Browse",
+    "ar": "استكشاف"
+  },
+  "deals": {
+    "en": "Deals",
+    "ar": "عروض"
+  },
+  "shop": {
+    "en": "Shop",
+    "ar": "التسوق"
+  },
+  "venders": {
+    "en": "Venders",
+    "ar": "البائعون"
+  },
+  "Blog": {
+    "en": "Blog",
+    "ar": "مدونة"
+  },
+  "contact": {
+    "en": "Contact",
+    "ar": "تواصل معنا"
+  },
+  "megaMenu": {
+    "en": "Mega Menu",
+    "ar": "القائمة الضخمة"
+  },
+  "offerNotification": {
+    "en": "Trendy 25: silver jewelry, save up 35% off today",
+    "ar": "الحدث 25: مجوهرات فضية، وفر حتى 35% اليوم"
+  }
+}

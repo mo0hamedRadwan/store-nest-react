@@ -1,11 +1,10 @@
+import URLS from "apps/front-office/utils/urls";
+
 export const topHeaderLinks = [
-  { name: "About us", href: "/about-us" },
-  { name: "My Account", href: "/account" },
-  { name: "Wishlist", href: "/wishlist" },
-  { name: "Cart", href: "/cart" },
+  { name: "aboutUs", href: URLS.pages.aboutUs },
+  { name: "myAccount", href: URLS.account },
+  { name: "wishlist", href: URLS.wishlist },
+  { name: "cart", href: URLS.cart },
 ];
 
-export const topHeaderLanguages = [
-  { name: "English", code: "en" },
-  { name: "العربية", code: "ar" },
-];
+export const offerNotification = "offerNotification";

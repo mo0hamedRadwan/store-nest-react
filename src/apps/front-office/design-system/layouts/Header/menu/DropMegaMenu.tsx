@@ -1,5 +1,6 @@
 import { Link } from "@mongez/react-router";
 import { Button } from "apps/front-office/design-system/components/ui/button";
+import URLS from "apps/front-office/utils/urls";
 import bannerMenu from "assets/images/banner-menu.png";
 import { megaDropMenu } from "../constant/bottomHeaderData";
 
@@ -8,7 +9,7 @@ const DropMegaMenu = () => {
     <div className="hidden absolute left-0 container mt-5 p-9 z-10 w-full group-hover:flex justify-between bg-white rounded-xl  shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
       {megaDropMenu.map((megaDropHeader, index) => (
         <div key={megaDropHeader.title + index}>
-          <h2 className="text-xl text-primary-default font-bold mb-4">
+          <h2 className="text-xl text-primary font-bold mb-4">
             {megaDropHeader.title}
           </h2>
           <ul className="flex flex-col gap-y-2.5 ">
@@ -23,7 +24,7 @@ const DropMegaMenu = () => {
         </div>
       ))}
       <div className="w-[500px] h-[320px] relative">
-        <Link to="/shop">
+        <Link to={URLS.shop}>
           <img src={bannerMenu} alt="" className="" />
           <div className="absolute top-10 left-8">
             <h4 className="text-slate-400 text-lg mb-2">Hot deals</h4>
@@ -33,7 +34,7 @@ const DropMegaMenu = () => {
               Trending
             </h3>
             <h3 className="text-2xl text-[#81B13D] mb-6">Save to 50%</h3>
-            <Button className="text-center text-sm bg-primary-default text-white rounded-full">
+            <Button className="text-center text-sm bg-primary text-white rounded-full">
               Shop Now
             </Button>
           </div>

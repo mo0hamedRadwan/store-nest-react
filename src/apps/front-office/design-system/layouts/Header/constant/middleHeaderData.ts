@@ -1,3 +1,4 @@
+import URLS from "apps/front-office/utils/urls";
 import img1 from "assets/images/thumbnail/thumbnail-1.jpg";
 import img2 from "assets/images/thumbnail/thumbnail-2.jpg";
 import img3 from "assets/images/thumbnail/thumbnail-3.jpg";
@@ -6,22 +7,22 @@ export const MiddleHeaderSelectPlacholder = "All Categories";
 export const MiddleHeaderInputPlacholder = "Search for items";
 
 export const middleHeaderActions = [
-  { name: "Compare", href: "/compare", iconName: "git-compare" },
-  { name: "Washlist", href: "/washlist", iconName: "heart" },
-  { name: "Cart", href: "/cart", iconName: "cart" },
-  { name: "Account", href: "/account", iconName: "user" },
+  { name: "compare", href: URLS.compare, iconName: "git-compare" },
+  { name: "wishlist", href: URLS.wishlist, iconName: "heart" },
+  { name: "cart", href: URLS.cart, iconName: "cart" },
+  { name: "myAccount", href: URLS.account, iconName: "user" },
 ];
 
 export const navbarIcons = [
-  { icon: "cart", link: "/cart" },
-  { icon: "heart", link: "/wishlist" },
+  { icon: "cart", link: URLS.cart },
+  { icon: "heart", link: URLS.wishlist },
 ];
 
 // Navigation Menu
 
 export const websiteInfo = [
-  { name: "location", link: "/location", icon: "location-plus" },
-  { name: "Login in / Sign up", link: "/login", icon: "user" },
+  { name: "location", link: "/", icon: "location-plus" },
+  { name: "Login in / Sign up", link: URLS.auth.login, icon: "user" },
   { name: "(+01)-2345-6789", link: "/", icon: "phone" },
 ];
 
@@ -35,12 +36,12 @@ export const socialMediaLinks = [
 
 // Account menu
 export const accountMenu = [
-  { name: "My Account", link: "/account" },
-  { name: "Addresses", link: "/addresses" },
-  { name: "Orders", link: "/orders" },
-  { name: "Wishlist", link: "/wishlist" },
-  { name: "Setting", link: "/setting" },
-  { name: "Logout", link: "/logout" },
+  { name: "My Account", link: URLS.account },
+  { name: "Addresses", link: URLS.addresses },
+  { name: "Orders", link: URLS.orders },
+  { name: "Wishlist", link: URLS.wishlist },
+  { name: "Settings", link: URLS.settings },
+  { name: "Logout", link: URLS.home }, // logout action and navigate to home
 ];
 
 // Cart menu
