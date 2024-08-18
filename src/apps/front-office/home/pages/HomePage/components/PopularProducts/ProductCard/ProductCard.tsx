@@ -25,7 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <>
-      <div className=" group rounded-[15px] border border-[#ececec] relative overflow-hidden hover:border-primary-light hover:shadow-md transition duration-500">
+      <div className=" group rounded-[15px] border border-[#ececec] relative overflow-hidden hover:border-primary-light hover:shadow-md transition duration-500 max-h-[465px] max-w-[298px]">
         <div>
           {isOnSale ? (
             <div className="absolute z-10 top-0 left-0 font-normal bg-[#67bcee] text-[#fff] rounded-tl-[12px] rounded-br-[25px]  px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
@@ -38,11 +38,11 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
         <div className="relative p-[25px] pb-0">
-          <div className="overflow-hidden flex items-center justify-center cursor-pointer rounded-3xl max-h-[320px] ">
+          <div className="overflow-hidden flex items-center justify-center cursor-pointer rounded-3xl ">
             <img
               src={product.images[0]?.url + "?w=200&h=200"}
               alt={getLocalizedValue(product.name)}
-              className="max-w-80 max-h-[320px] group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
+              className="max-w-60 max-h-60 group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
             />
           </div>
           <PreviewProducts />
