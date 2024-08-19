@@ -23,6 +23,13 @@ export default function ProductCard({ product }: ProductCardProps) {
     return localizedValue ? localizedValue.value : localizedValues[0].value;
   };
 
+  function addProductToCart(id: number, arg1: number) {
+    // this function is not implemented yet, waiting for atom to be implemented
+    const product = { id, quantity: arg1 };
+    console.log(product);
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <>
       <div className=" group rounded-[15px] border border-[#ececec] relative overflow-hidden hover:border-primary-light hover:shadow-md transition duration-500 max-h-[465px] max-w-[298px]">
@@ -45,7 +52,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               className="max-w-60 max-h-60 group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
             />
           </div>
-          <PreviewProducts />
+          <PreviewProducts product={product} />
         </div>
         <div className="px-[20px] pt-[20px] pb-[20px]">
           <span className="flex text-[#adadad] text-[12px] mb-[5px] hover:text-primary-default cursor-pointer">
@@ -82,7 +89,10 @@ export default function ProductCard({ product }: ProductCardProps) {
                 ${product.price}
               </span>
             </div>
-            <Button size={"sm"} variant={"cart"}>
+            <Button
+              size={"sm"}
+              variant={"cart"}
+              onClick={() => addProductToCart(product.id, 1)}>
               <ShoppingCart size={15}></ShoppingCart>
               {trans("addToCart")}
             </Button>
