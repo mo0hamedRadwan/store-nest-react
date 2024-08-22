@@ -1,6 +1,8 @@
+import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { Input } from "apps/front-office/design-system/components/ui/input";
 import { Separator } from "apps/front-office/design-system/components/ui/separator";
+import { useClickOutside } from "apps/front-office/design-system/hooks";
 import logo from "assets/images/logo.svg";
 import { useState } from "react";
 import { bottomHeaderNavbarItems } from "../constant/bottomHeaderData";
@@ -12,6 +14,7 @@ type NavigationMenuType = {
 
 const NavigationMenu = ({ toggleSidebar }: NavigationMenuType) => {
   const [searchInput, setSearchInput] = useState<string>("");
+  const navRef = useClickOutside(() => toggleSidebar());
 
   const handleSearchForm = e => {
     e.preventDefault();
@@ -20,12 +23,14 @@ const NavigationMenu = ({ toggleSidebar }: NavigationMenuType) => {
   };
 
   return (
-    <div className="absolute top-0 left-0 bottom-0 right-0 z-20 bg-black bg-opacity-15">
-      <div className="w-1/2 h-full bg-white px-5">
+    <div className="absolute top-0 left-0 bottom-0 right-0 z-20 bg-black bg-opacity-50">
+      <div
+        ref={navRef}
+        className="fixed top-0 left-0 w-1/2 h-full bg-white px-5">
         <div className="flex justify-between items-center p-5">
           <img src={logo} alt="nest logo" className="w-[140px] h-[44px]" />
           <span
-            className="w-8 h-8 flex justify-center items-center rounded-full bg-primary-light"
+            className="w-8 h-8 flex justify-center items-center rounded-full bg-[#DEF9EC]"
             onClick={() => toggleSidebar()}>
             <i className="bx bx-x font-bold"></i>
           </span>
@@ -39,15 +44,21 @@ const NavigationMenu = ({ toggleSidebar }: NavigationMenuType) => {
             onChange={e => setSearchInput(e.target.value)}
           />
         </form>
-        <ul className="flex flex-col gap-y-3 p-5">
-          {bottomHeaderNavbarItems.map(item => (
-            <li key={item.label}>
-              <Link to={item.link}>
-                <span className="pb-3 block font-bold">{item.label}</span>
-              </Link>
-              <Separator />
-            </li>
-          ))}
+        <ul className="flex flex-col gap-y-1">
+          {bottomHeaderNavbarItems.map(
+            item =>
+              item.label !== "megaMenu" && (
+                <li
+                  key={item.label}
+                  className="p-3 rounded hover:bg-primary hover:text-primary-foreground">
+                  <Link to={item.link}>
+                    <span className=" block font-bold">
+                      {trans(item.label)}
+                    </span>
+                  </Link>
+                </li>
+              ),
+          )}
           <li className="pb-3">
             <span className="pb-3 block font-bold">Language</span>
             <Separator />
