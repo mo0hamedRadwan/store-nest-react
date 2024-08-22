@@ -1,10 +1,10 @@
 "use client";
 import { useSlider } from "shared/hooks/use-slider";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-import { Autoplay, Navigation, Pagination , EffectFade  } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.css";
 
@@ -19,7 +19,6 @@ export default function Slider() {
         loop={true}
         effect="fade"
         virtualTranslate
-
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

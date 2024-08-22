@@ -23,12 +23,12 @@
 .swiper-button-next:after {
   font-size: 16px;
   color: black;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 .swiper-button-prev:hover:after,
 .swiper-button-next:hover:after {
-  color: white; 
+  color: white;
 }
 
 .swiper-button-prev,
@@ -37,7 +37,9 @@
   height: 50px;
   padding: 8px;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, background-color 0.3s ease; /* Add transition for background-color */
+  transition:
+    opacity 0.3s ease-in-out,
+    background-color 0.3s ease; /* Add transition for background-color */
 }
 
 .group:hover .swiper-button-prev,
@@ -45,8 +47,7 @@
   opacity: 1;
 }
 
-
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: #10b981; 
+  background-color: #10b981;
 }
