@@ -17,9 +17,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   const getLocalizedValue = (
     localizedValues: { localeCode: string; value: string }[],
   ) => {
-    const localizedValue = localizedValues.find(
-      item => item.localeCode === currentLang,
-    );
+    const localizedValue = Array.isArray(localizedValues)
+      ? localizedValues.find(item => item.localeCode === currentLang)
+      : { value: "" };
+
     return localizedValue ? localizedValue.value : localizedValues[0].value;
   };
 

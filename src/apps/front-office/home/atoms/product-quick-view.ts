@@ -1,9 +1,9 @@
 import { atom } from "@mongez/react-atom";
-import { IProduct } from "shared/contracts/IProduct";
+import { Product } from "../../utils/types";
 
 type ProductQuickViewType = {
   visible: boolean;
-  product: IProduct | null;
+  product: Product | null;
 };
 
 const ProductQuickViewAtom = atom<ProductQuickViewType>({
@@ -18,7 +18,7 @@ const ProductQuickViewAtom = atom<ProductQuickViewType>({
   },
 });
 
-export const showProductQuickView = (product: IProduct) => {
+export const showProductQuickView = (product: Product) => {
   ProductQuickViewAtom.merge({
     product,
   });

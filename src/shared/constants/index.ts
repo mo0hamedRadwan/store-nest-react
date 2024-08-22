@@ -2,19 +2,15 @@ import { Eye, Heart, Share } from "lucide-react";
 
 // ============================== STATUS ==============================
 export enum PRODUCT_STATUS {
-  SALE = "sale",
-  NEW = "new",
-  HOT = "hot",
-  BEST = "best",
-  DEFAULT = "default",
+  SALE = "top-selling",
+  RATED = "top-rated",
+  NEW = "recently-added",
 }
 
 export const PRODUCT_STATUS_CLASSES = {
   [PRODUCT_STATUS.SALE]: "bg-red-500",
   [PRODUCT_STATUS.NEW]: "bg-blue-500",
-  [PRODUCT_STATUS.HOT]: "bg-yellow-500",
-  [PRODUCT_STATUS.BEST]: "bg-green-500",
-  [PRODUCT_STATUS.DEFAULT]: "bg-gray-500",
+  [PRODUCT_STATUS.RATED]: "bg-yellow-500",
 };
 
 // ============================== IMAGES ==============================

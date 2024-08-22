@@ -1,31 +1,47 @@
-import { currentLocaleCode } from "apps/front-office/utils/helpers";
-import { useEffect, useState } from "react";
-import { getDailyBestSellsDataSection } from "../services/home-service";
+import { useEffect } from "react";
+import dailyBestSellsAtom from "../atoms/daily-best-sells.atom";
+import {
+  getDailyBestSellsBannerDataSection,
+  getDailyBestSellsDataSection,
+} from "../services/home-service";
 
-export default function useFetchDailyData() {
-  const [data, setData] = useState({
-    categories: [],
-    products: [],
-    banner: {
-      imageUrl: "",
-      title: "",
-    },
-  });
+export default function useFetchDailyBannerData() {
+  const data = dailyBestSellsAtom.use("products");
+  const loading = dailyBestSellsAtom.use("loading");
+  const error = dailyBestSellsAtom.use("error");
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const getBanner = async () => {
+    return await getDailyBestSellsBannerDataSection();
+  };
+
+  const getProducts = async () => {
+    return await getDailyBestSellsDataSection();
+  };
 
   useEffect(() => {
-    setLoading(true);
-    getDailyBestSellsDataSection(currentLocaleCode())
-      .then(data => {
-        setLoading(false);
-        setData(data);
-      })
-      .catch(error => {
-        setLoading(false);
-        setError(error);
-      });
+    const fetchData = async () => {
+      dailyBestSellsAtom.change("loading", true);
+
+      try {
+        const bannerData = await getBanner();
+        const products = await getProducts();
+
+        dailyBestSellsAtom.setData({
+          products,
+          banner: {
+            imageUrl: bannerData.banner.imageUrl,
+            text: bannerData.banner.title,
+          },
+        });
+
+        dailyBestSellsAtom.change("loading", false);
+      } catch (error) {
+        dailyBestSellsAtom.change("error", error);
+        dailyBestSellsAtom.change("loading", false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return { data, loading, error };
