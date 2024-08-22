@@ -53,7 +53,7 @@ function Tab({ tab }: TabProps) {
 
   return (
     <li
-      className={`font-semibold hover:text-primary-default hover:-translate-y-0.5 transition duration-200 ease-in-out ${activeTab ? "text-primary-default" : "text-[#253D4E]"}`}
+      className={`font-semibold hover:text-primary hover:-translate-y-0.5 transition duration-200 ease-in-out ${activeTab ? "text-primary" : "text-[#253D4E]"}`}
       role="button"
       onClick={() => popularProductsAtom.change("activeTab", tab.id)}>
       {tab.name}

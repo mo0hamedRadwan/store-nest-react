@@ -17,9 +17,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   const getLocalizedValue = (
     localizedValues: { localeCode: string; value: string }[],
   ) => {
-    const localizedValue = localizedValues.find(
-      item => item.localeCode === currentLang,
-    );
+    const localizedValue = Array.isArray(localizedValues)
+      ? localizedValues.find(item => item.localeCode === currentLang)
+      : { value: "" };
+
     return localizedValue ? localizedValue.value : localizedValues[0].value;
   };
 
@@ -39,7 +40,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               {trans("sale")}
             </div>
           ) : (
-            <div className="absolute z-10 top-0 left-0 font-normal bg-primary-default text-[#fff] rounded-tl-[12px] rounded-br-[25px] px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
+            <div className="absolute z-10 top-0 left-0 font-normal bg-primary text-[#fff] rounded-tl-[12px] rounded-br-[25px] px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
               {trans("new")}
             </div>
           )}
@@ -55,13 +56,13 @@ export default function ProductCard({ product }: ProductCardProps) {
           <PreviewProducts product={product} />
         </div>
         <div className="px-[20px] pt-[20px] pb-[20px]">
-          <span className="flex text-[#adadad] text-[12px] mb-[5px] hover:text-primary-default cursor-pointer">
+          <span className="flex text-[#adadad] text-[12px] mb-[5px] hover:text-primary cursor-pointer">
             {getLocalizedValue(product.category.name)}
           </span>
           <h2>
             <Link
               to={"/"}
-              className="font-bold text-base inline-block text-[#253D4E] hover:text-primary-default transition duration-500">
+              className="font-bold text-base inline-block text-[#253D4E] hover:text-primary transition duration-500">
               {getLocalizedValue(product.name)}
             </Link>
           </h2>
@@ -76,7 +77,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="mt-[15px] flex items-center justify-between gap-4">
             <div className="flex items-center justify-center gap-2">
               {isOnSale && (
-                <span className="inline-block self-start text-primary-default font-bold text-lg">
+                <span className="inline-block self-start text-primary font-bold text-lg">
                   ${product.salePrice}
                 </span>
               )}
@@ -84,7 +85,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 className={`font-bold ${
                   isOnSale
                     ? "text-[#adadad] line-through text-sm"
-                    : "text-primary-default text-xl"
+                    : "text-primary text-xl"
                 }`}>
                 ${product.price}
               </span>

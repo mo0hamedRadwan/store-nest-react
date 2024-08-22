@@ -49,10 +49,11 @@ export default function PreviewProductDetails({
         </div>
         {/* Product Name */}
         <div className="mb-4">
-          <h3 className="text-3xl font-bold text-[#253D4E] hover:text-primary-hover transition duration-500">
+          <h3 className="text-3xl font-bold text-[#253D4E] hover:text-[#FDC040] transition duration-500">
             <Link to="/">{getLocalizedValue(product.name)}</Link>
           </h3>
         </div>
+
         {/* Rating */}
         <div className="flex items-center gap-2 py-4">
           <Stars ratings={product.rating || 0} />
@@ -63,7 +64,7 @@ export default function PreviewProductDetails({
         {/* Pricing */}
         <div className="flex items-center gap-2 mt-4 mb-6">
           {isOnSale && (
-            <span className="text-primary-default font-bold text-[58px]">
+            <span className="text-primary font-bold text-[58px]">
               ${product.salePrice}
             </span>
           )}
@@ -71,18 +72,16 @@ export default function PreviewProductDetails({
             className={`font-bold ${
               isOnSale
                 ? "text-[#adadad] line-through text-[22px]"
-                : "text-primary-default text-[58px]"
+                : "text-primary text-[58px]"
             }`}>
             ${product.price}
           </span>
         </div>
         {/* Quantity and Add to Cart Button */}
         <div className="flex items-center gap-4">
-          <div className="border-2 border-primary-default rounded-md py-2 px-4 flex items-center gap-2">
-            <span className="text-primary-default text-[16px] font-bold">
-              1
-            </span>
-            <span className="text-primary-default text-[16px]">
+          <div className="border-2 border-primary rounded-md py-2 px-4 flex items-center gap-2">
+            <span className="text-primary text-[16px] font-bold">1</span>
+            <span className="text-primary text-[16px]">
               <ChevronUp size={18} />
               <ChevronDown size={18} />
             </span>
