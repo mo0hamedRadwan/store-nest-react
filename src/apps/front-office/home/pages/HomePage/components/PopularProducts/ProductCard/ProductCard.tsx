@@ -17,14 +17,18 @@ export default function ProductCard({ product }: ProductCardProps) {
   const getLocalizedValue = (
     localizedValues: { localeCode: string; value: string }[],
   ) => {
-    const localizedValue = localizedValues.find(
-      item => item.localeCode === currentLang,
-    );
+    const localizedValue = Array.isArray(localizedValues)
+      ? localizedValues.find(item => item.localeCode === currentLang)
+      : { value: "" };
+
     return localizedValue ? localizedValue.value : localizedValues[0].value;
   };
 
   return (
     <>
+      {/* [karim] basis-full sm:basis-1/2 md:basis-1/3 lg-basis-1/4 */}
+      {/* <div className="flex-grow  basis-full sm:basis-1/2 lg:basis-1/6 xl:basis-1/6"> */}
+      {/* [abdelray] p-3 group rounded-[1rem] border relative hover:border-primary-default transition duration-500 */}
       <div className="p-3 group rounded-[1rem] border relative hover:border-primary-default transition duration-500">
         <div className="absolute z-10 top-0 left-0 font-bold bg-primary-default text-[#fff]  rounded-tl-[12px] rounded-br-[25px] py-[10px] px-5 text-[13px] leading-none">
           {trans("new")}
@@ -46,7 +50,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <div className="mt-6 space-y-3 m-3">
           <span className="text-[#adadad] text-[12px] ">
-            {getLocalizedValue(product.category.name)}
+            {getLocalizedValue(product.category?.name)}
           </span>
           {/* Stars */}
           <div className="flex items-center gap-2">

@@ -4,11 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import ProductQuickViewAtom from "apps/front-office/home/atoms/product-quick-view";
 import { ShoppingCart, X } from "lucide-react";
-import { IProduct } from "shared/contracts/IProduct";
 import Rating from "../Rating";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
+import { getLocalizedValue } from "src/apps/front-office/utils/localization";
 import "swiper/css";
 
 // export type QuickViewProps = IProduct;
@@ -16,15 +16,9 @@ import "swiper/css";
 
 export default function QuickView() {
   const visible = ProductQuickViewAtom.use("visible");
-  let product = ProductQuickViewAtom.get("product");
+  const product = ProductQuickViewAtom.get("product");
 
   console.log("PRODUVT", product, visible);
-
-  if (!visible) {
-    product = { images: {}, body: {} } as IProduct;
-  }
-
-  const { images, body } = product as IProduct;
 
   return (
     <div
@@ -49,8 +43,8 @@ export default function QuickView() {
         <div className="images p-7 w-full max-w-xl md:max-w-sm">
           {/* Main Image */}
           <img
-            src={images.background}
-            alt={body.name}
+            src={product?.images[0].url}
+            alt={getLocalizedValue(product?.name)}
             className="product-image rounded-lg shadow-sm shadow-slate-400"
           />
 
@@ -71,8 +65,8 @@ export default function QuickView() {
                 <SwiperSlide key={index}>
                   <div key={index}>
                     <img
-                      src={images.background}
-                      alt={body.name}
+                      src={product?.images[index]?.url || ""}
+                      alt={getLocalizedValue(product?.name)}
                       className="rounded-lg"
                     />
                     {/* ./product-image  */}
@@ -93,11 +87,13 @@ export default function QuickView() {
           </div>
           {/* ./Product Status */}
 
-          <h2 className="text-2xl sm:text-4xl font-bold my-3 ">{body.name}</h2>
+          <h2 className="text-2xl sm:text-4xl font-bold my-3 ">
+            {getLocalizedValue(product?.name)}
+          </h2>
           {/* ./Produvt Name */}
 
           <div className="rate flex items-center text-sm">
-            <Rating rate={body.rate!} className="w-5 h-5" />{" "}
+            <Rating rate={product?.rating || 1} className="w-5 h-5" />{" "}
             <span className="text-muted-foreground ml-1">(32 reviews)</span>
           </div>
           {/* ./Product Reviews */}
@@ -106,11 +102,11 @@ export default function QuickView() {
             <p className="text-primary font-bold text-5xl">$38</p>
             <p>
               <span className="block text-center font-bold text-xs text-secondary">
-                26% Off
+                {product?.discount.percentage}% Off
               </span>
               {/* ./Product Discount */}
               <span className="block text-center font-bold text-3xl text-slate-500 line-through">
-                $53
+                ${product?.salePrice}
               </span>
               {/* ./Product Price Before Discount */}
             </p>
@@ -129,7 +125,7 @@ export default function QuickView() {
 
           <div className="vendor-info my-10">
             <p className="text-muted-foreground text-sm">
-              Vendor: <span className="text-primary">{body.brandName}</span>
+              Vendor: <span className="text-primary">{product?.type}</span>
             </p>
             <p className="text-muted-foreground text-sm">
               MFG: <span className="text-primary">#98123</span>

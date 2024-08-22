@@ -3,6 +3,7 @@ import Helmet from "@mongez/react-helmet";
 import { useOnce } from "@mongez/react-hooks";
 import { Button } from "apps/front-office/design-system/components/ui/button";
 import { toast } from "apps/front-office/design-system/components/ui/use-toast";
+import Loader from "apps/front-office/design-system/Indicators/Loader";
 import { useState } from "react";
 import { popularProductsAtom } from "../../atoms/popular-products-atom";
 import { getHome, HomeData } from "../../services/home-service";
@@ -96,7 +97,7 @@ export default function HomePage() {
   });
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
