@@ -31,7 +31,7 @@ export default function FooterContactInfo() {
     : [];
 
   return (
-    <div className="flex flex-col w-full md:w-auto items-start mb-6 md:mb-0">
+    <div className="flex flex-col w-full md:w-auto items-start mb-6 md:mb-0 ">
       <div className="flex flex-col items-start">
         <Link href="/">
           <img src={logoUrl || ""} alt="logo" />
@@ -40,11 +40,11 @@ export default function FooterContactInfo() {
       </div>
       <ul className="flex flex-col list-none max-w-[400px]">
         {contactInfo.map(({ iconClass, label, value }) => (
-          <li key={label} className="flex py-2 gap-2 items-start">
+          <li key={label} className="flex py-2 gap-2 text-[15px] items-start">
             <i
-              className={`${iconClass} text-xl text-primary-default`}
+              className={`${iconClass} text-xl text-primary`}
               aria-label={label}></i>
-            <strong>{label}:</strong>
+            <h4 className="font-semibold">{label}:</h4>
             <span className="px-2">{value}</span>
           </li>
         ))}
