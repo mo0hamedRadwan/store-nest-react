@@ -3,7 +3,7 @@ import { appleIcon, googleIcon, paymentMethod } from "assets/footerImages";
 
 export default function FooterAppInstall() {
   return (
-    <div className="flex flex-col flex-wrap p-6 lg:pt-0">
+    <div className="flex flex-col flex-wrap lg:pt-0 ">
       <h4 className="font-bold text-2xl">Install App</h4>
       <p className="py-4">From App Store or Google Play</p>
       <div className="flex py-3 cursor-pointer">
