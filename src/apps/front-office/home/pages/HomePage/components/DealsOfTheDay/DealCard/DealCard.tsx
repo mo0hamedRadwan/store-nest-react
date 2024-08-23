@@ -1,22 +1,23 @@
 import { Link } from "@mongez/react-router";
+import { DealsData } from "apps/front-office/home/services/home-service";
 import { FaShoppingCart } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
+
 const DealCard = ({
-  imageSrc,
-  title,
+  images,
+  name,
   rating,
-  by,
   price,
-  oldPrice,
+  salePrice,
   timeCards,
-}) => {
+}: DealsData & { timeCards }) => {
   return (
     <div className="w-full sm:w-[calc(100%/2-1rem)] lg:w-[calc(100%/3-1rem)] xl:w-[calc(100%/4-1rem)] p-2">
       <div className="border-0 pb-12 relative bg-white rounded-2xl overflow-hidden transition duration-200 ">
         <div className="relative z-0">
           <div className="relative overflow-hidden rounded-3xl">
             <Link className="block" href="#">
-              <img src={imageSrc} alt={title} className="w-full h-auto" />
+              <img src={images[0].url} alt={name} className="w-full h-auto" />
             </Link>
           </div>
         </div>
@@ -35,7 +36,7 @@ const DealCard = ({
           </div>
           <div className="bg-white rounded-xl shadow-md pt-6 pb-6 px-5">
             <h2 className="font-quicksand text-sm font-bold mb-1 transition duration-300 hover:text-teal-500">
-              <Link href="#">{title}</Link>
+              <Link href="#">{name}</Link>
             </h2>
             <div className="mt-2">
               <div className="flex items-center space-x-0">
@@ -50,14 +51,14 @@ const DealCard = ({
               <Link
                 className="text-teal-500 transition duration-300 hover:text-orange-400"
                 href="#">
-                {by}
+                by
               </Link>
             </div>
             <div className="flex justify-between mt-4 font-bold">
               <div className="pt-1">
                 <span className="text-teal-500 text-lg">${price}</span>
                 <span className="text-base text-gray-500 ml-2 line-through">
-                  ${oldPrice}
+                  ${salePrice}
                 </span>
               </div>
               <div>

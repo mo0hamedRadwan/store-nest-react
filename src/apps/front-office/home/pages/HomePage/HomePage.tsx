@@ -3,8 +3,10 @@ import Helmet from "@mongez/react-helmet";
 import { useOnce } from "@mongez/react-hooks";
 import { Button } from "apps/front-office/design-system/components/ui/button";
 import { toast } from "apps/front-office/design-system/components/ui/use-toast";
+import Loader from "apps/front-office/design-system/Indicators/Loader";
 import { useState } from "react";
 import { popularProductsAtom } from "../../atoms/popular-products-atom";
+import useFetchDeals from "../../hooks/use-fetch-deals";
 import { getHome, HomeData } from "../../services/home-service";
 import DealList from "./components/DealsOfTheDay/DealList";
 import Header from "./components/DealsOfTheDay/Header";
@@ -18,6 +20,8 @@ import Slider from "./sections/Slider";
 
 export default function HomePage() {
   const [data, setData] = useState<HomeData | null>(null);
+  const { data1, _loading } = useFetchDeals();
+  console.log(data1);
   const [loading, setLoading] = useState(true);
   const deals = [
     {
@@ -96,7 +100,7 @@ export default function HomePage() {
   });
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
@@ -116,7 +120,7 @@ export default function HomePage() {
       </div>
       <SectionWrapper>
         <Header title="Deals Of The Day" linkText="All Deals" linkHref="#" />
-        <DealList deals={deals} />
+        <DealList deals={data1.slice(0, 4)} timeCards={deals} />
       </SectionWrapper>
     </>
   );
