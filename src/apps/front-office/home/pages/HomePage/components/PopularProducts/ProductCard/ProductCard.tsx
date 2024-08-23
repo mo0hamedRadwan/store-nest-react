@@ -33,7 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <>
-      <div className=" group rounded-[15px] border border-[#ececec] relative overflow-hidden hover:border-primary-light hover:shadow-md transition duration-500 max-h-[465px] max-w-[298px]">
+      <div className=" group rounded-[15px] border border-[#ececec] relative overflow-hidden hover:border-light hover:shadow-md transition duration-500 max-h-[465px] max-w-[298px]">
         <div>
           {isOnSale ? (
             <div className="absolute z-10 top-0 left-0 font-normal bg-[#67bcee] text-[#fff] rounded-tl-[12px] rounded-br-[25px]  px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
