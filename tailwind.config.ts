@@ -18,8 +18,12 @@ export default {
     extend: {
       screens: {
         xs: "375px",
-        "2xl": "1400px",
-        "small-to-medium": { min: "486px", max: "767px" },
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1610px",
+        // "small-to-medium": { min: "486px", max: "767px" },
       },
       colors: {
         mainColor: "#253D4E",

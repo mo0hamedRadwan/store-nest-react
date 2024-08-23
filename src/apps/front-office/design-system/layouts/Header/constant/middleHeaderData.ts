@@ -36,12 +36,12 @@ export const socialMediaLinks = [
 
 // Account menu
 export const accountMenu = [
-  { name: "My Account", link: URLS.account },
-  { name: "Addresses", link: URLS.addresses },
-  { name: "Orders", link: URLS.orders },
-  { name: "Wishlist", link: URLS.wishlist },
-  { name: "Settings", link: URLS.settings },
-  { name: "Logout", link: URLS.home }, // logout action and navigate to home
+  { name: "myAccount", link: URLS.account },
+  { name: "addresses", link: URLS.addresses },
+  { name: "orders", link: URLS.orders },
+  { name: "wishlist", link: URLS.wishlist },
+  { name: "settings", link: URLS.settings },
+  { name: "logout", link: URLS.home }, // logout action and navigate to home
 ];
 
 // Cart menu

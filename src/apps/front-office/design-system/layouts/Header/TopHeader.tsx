@@ -14,7 +14,7 @@ import { offerNotification, topHeaderLinks } from "./constant/topHeaderData";
 const TopHeader = () => {
   const language = localeCodesList[getCurrentLocaleCode()].name;
   return (
-    <div className="container hidden md:flex md:justify-between items-center py-2 text-sm lg:bg-white lg:dark:bg-slate-900 md:bg-primary lg:text-black lg:dark:text-white md:text-white">
+    <div className="lg:container hidden md:flex md:justify-between items-center py-2 text-sm lg:bg-white lg:dark:bg-slate-900 md:bg-primary lg:text-black lg:dark:text-white md:text-white">
       <ul className="hidden lg:flex items-center">
         {topHeaderLinks.map((link, index) => (
           <li key={link.name} className="flex items-center">

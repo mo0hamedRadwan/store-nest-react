@@ -1,8 +1,9 @@
+import { trans } from "@mongez/localization";
 import URLS from "apps/front-office/utils/urls";
 
 export const bottomHeaderNavbarItems = [
   { label: "home", link: URLS.home },
-  { label: "about", link: URLS.pages.aboutUs },
+  { label: "aboutUs", link: URLS.pages.aboutUs },
   { label: "shop", link: URLS.shop },
   { label: "venders", link: URLS.venders },
   { label: "megaMenu", link: "/" },
@@ -13,7 +14,7 @@ export const bottomHeaderNavbarItems = [
 // Mega Menu
 export const megaDropMenu = [
   {
-    title: "Fruit & Vegetables",
+    title: `${trans("fruit")} ${trans("and")} ${trans("vegetables")}`,
     items: [
       { name: "item-1", link: "/item-1" },
       { name: "item-1", link: "/item-1" },
@@ -24,7 +25,7 @@ export const megaDropMenu = [
     ],
   },
   {
-    title: "Breakfast & Dairy",
+    title: `${trans("breakfast")}${trans("and")} ${trans("dairy")}`,
     items: [
       { name: "item-2", link: "/item-2" },
       { name: "item-2", link: "/item-2" },
@@ -35,7 +36,7 @@ export const megaDropMenu = [
     ],
   },
   {
-    title: "Meat & Seafood",
+    title: `${trans("meat")}${trans("and")}${trans("seafood")}`,
     items: [
       { name: "item-3", link: "/item-3" },
       { name: "item-3", link: "/item-3" },
