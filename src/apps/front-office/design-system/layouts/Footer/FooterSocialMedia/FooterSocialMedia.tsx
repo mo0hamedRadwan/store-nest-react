@@ -1,36 +1,26 @@
-import {
-  facebook,
-  instagram,
-  pinterest,
-  twitter,
-  youtube,
-} from "assets/footerImages";
-
 const socialIcons = [
-  { src: facebook, alt: "facebook" },
-  { src: twitter, alt: "twitter" },
-  { src: instagram, alt: "instagram" },
-  { src: pinterest, alt: "pinterest" },
-  { src: youtube, alt: "youtube" },
+  { iconClass: "bx bxl-facebook", alt: "facebook" },
+  { iconClass: "bx bxl-twitter", alt: "twitter" },
+  { iconClass: "bx bxl-instagram", alt: "instagram" },
+  { iconClass: "bx bxl-pinterest", alt: "pinterest" },
+  { iconClass: "bx bxl-youtube", alt: "youtube" },
 ];
 
 export default function FooterSocialMedia() {
   return (
-    <div className="text-center lg:text-left ml-4">
-      <div className="flex justify-center lg:justify-start gap-2 mb-2">
-        <h6 className="text-font-default font-bold leading-7 text-[13px] md:text-[18px]">
+    <div className="hidden md:block text-center lg:text-left">
+      <div className="flex justify-center lg:justify-start  mb-2">
+        <h6 className="text-muted-foreground font-bold text-[16px] flex items-center whitespace-nowrap">
           Follow Us
         </h6>
-        {socialIcons.map(({ src, alt }) => (
-          <img
+        {socialIcons.map(({ iconClass, alt }) => (
+          <i
             key={alt}
-            src={src}
-            alt={alt}
-            className="w-[25px] h-[25px] p-1 bg-primary-default rounded-full cursor-pointer"
-          />
+            className={`${iconClass} ml-2 w-[30px] h-[30px] bg-primary flex justify-center items-center rounded-full cursor-pointer text-white`}
+            aria-label={alt}></i>
         ))}
       </div>
-      <p className="text-[13px] md:text-[18px]">
+      <p className="text-muted-foreground text-[14px]">
         Up to 15% discount on your first subscribe
       </p>
     </div>

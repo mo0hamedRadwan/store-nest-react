@@ -9,6 +9,7 @@
 .swiper-button-next::after {
   content: "";
   /* display: inline-block; */
+
   width: 20px;
   height: 15px;
   background-size: contain;

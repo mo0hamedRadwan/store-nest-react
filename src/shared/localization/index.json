@@ -2688,7 +2688,11 @@
     "ar": "عمر"
   },
   "copyRight": {
-    "en": "Copy Right Reversed",
+    "en": "All rights reserved",
     "ar": "حقوق النشر محفوظة"
+  },
+  "templateName": {
+    "en": "HTML Ecommerce Template",
+    "ar": " HTML قالب التجارة الإلكترونية "
   }
 }
