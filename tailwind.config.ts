@@ -35,6 +35,10 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        light: {
+          DEFAULT: "hsl(var(--light))",
+          background: "hsl(var(--light-background))",
+        },
         "black-soft-foreground": {
           DEFAULT: "hsl(var(--black-soft-foreground))",
         },

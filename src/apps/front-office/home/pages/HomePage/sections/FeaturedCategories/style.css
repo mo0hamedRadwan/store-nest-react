@@ -7,7 +7,7 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: '';
+  content: "";
   /* display: inline-block; */
   width: 20px;
   height: 15px;
@@ -16,9 +16,9 @@
 }
 
 .swiper-button-prev::after {
-  background-image: url('/images/featured-categories/arrowLeft.svg');
+  background-image: url("/images/featured-categories/arrowLeft.svg");
 }
 
 .swiper-button-next::after {
-  background-image: url('/images/featured-categories/arrowRight.svg');
+  background-image: url("/images/featured-categories/arrowRight.svg");
 }
