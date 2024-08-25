@@ -10,16 +10,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css";
 
 export default function FeaturedCategories() {
-  const { sliderData, isLoading, error } = useFeaturedCategories();
+  const { sliderData, isLoading } = useFeaturedCategories();
   // console.log(JSON.stringify(sliderData.categories[0]), isLoading, error);
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
   return (
     <section className="featured-categories px-3 py-[25px] relative">
@@ -63,8 +63,8 @@ export default function FeaturedCategories() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="swiper-button-prev p-2 static !top-[8%] !important] !left-[83.75rem] z-10  bg-[#f2f3f4] transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary-default cursor-pointer"></div>
-        <div className=" swiper-button-next p-2 absolute !top-[8%] !important] !right-7 z-10  bg-[#f2f3f4] transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary-default cursor-pointer"></div>
+        <div className="swiper-button-prev !absolute !left-[76.75rem] w-4 h-4 lg:w-8 lg:h-8 md:w-6 md:h-6 sm:w-5 sm:h-5 mr-2 p-2 !top-[8%] z-100 bg-[#e0ebf6] transition-all duration-300 ease-in-out hover:bg-[#3ab57c] !cursor-pointer !flex !pointer-events-auto !opacity-100"></div>
+        <div className="swiper-button-next !absolute w-4 h-4 lg:w-8 lg:h-8 md:w-6 md:h-6 sm:w-5 sm:h-5 p-2 !top-[8%] z-100 bg-[#e0ebf6] transition-all duration-300 ease-in-out hover:bg-[#3ab57c] !cursor-pointer !flex !pointer-events-auto !opacity-100"></div>
       </div>
 
       <FeaturedCategoriesBanner />

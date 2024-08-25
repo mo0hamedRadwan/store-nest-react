@@ -1,6 +1,7 @@
 import { getCurrentLocaleCode } from "@mongez/localization";
 import { Meta, Product, Row } from "apps/front-office/utils/types";
 import endpoint from "shared/endpoint";
+
 import { apiKey, clientId } from "shared/flags";
 
 const currentLanguage = getCurrentLocaleCode();
@@ -9,6 +10,13 @@ export type HomeData = {
   meta: Meta;
   rows: Row[];
 };
+export type DealsData = {
+  images: { url: string }[];
+  price: number;
+  salePrice: number;
+  name: string;
+  rating: number;
+};
 
 export async function getHome(): Promise<HomeData> {
   const response = await endpoint.get("/home");
@@ -16,6 +24,11 @@ export async function getHome(): Promise<HomeData> {
     meta: response.data.meta,
     rows: response.data.rows,
   };
+}
+export async function getDeals(): Promise<DealsData[]> {
+  const response = await endpoint.get("/products?wf=true&locale=en");
+  console.log("response", response.data);
+  return response.data.products;
 }
 
 export function getDailyBestSellsBannerDataSection(): Promise<{
@@ -91,5 +104,12 @@ export async function getFeaturedCategoryData(locale: string = "en") {
   return {
     sectionTitle,
     categories,
+  };
+}
+
+export async function getFooterData() {
+  const response = await endpoint.get("https://store.mentoor.io/settings");
+  return {
+    data: response.data,
   };
 }

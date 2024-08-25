@@ -1,14 +1,15 @@
 .swiper-button-prev,
 .swiper-button-next {
-  width: 30px;
-  height: 35px;
+  width: 35px !important;
+  height: 40px !important;
   border-radius: 50%;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: "";
-  display: inline-block;
+  /* display: inline-block; */
+
   width: 20px;
   height: 15px;
   background-size: contain;

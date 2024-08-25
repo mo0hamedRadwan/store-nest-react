@@ -10,10 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary-default text-slate-50 hover:bg-primary-hover transform hover:-translate-y-0.5",
-        cart: "bg-primary-light text-primary-default hover:bg-primary-default  hover:text-white transform hover:-translate-y-0.5",
+          "bg-primary text-slate-50 hover:bg-primary-hover transform hover:-translate-y-0.5",
+        cart: "bg-light text-primary hover:bg-primary  hover:text-white transform hover:-translate-y-0.5",
         outline:
-          "text-gray-400 border border-slate-200 bg-white hover:bg-primary-default hover:text-white hover:border-transparent hover:text-white transform hover:-translate-y-0.5",
+          "text-gray-400 border border-slate-200 bg-white hover:bg-primary hover:text-white hover:border-transparent hover:text-white transform hover:-translate-y-0.5",
         link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50",
       },
       size: {

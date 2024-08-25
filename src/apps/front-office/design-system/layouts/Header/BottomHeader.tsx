@@ -1,5 +1,6 @@
-import { getCurrentLocaleCode, trans } from "@mongez/localization";
+import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
+import { isLTR } from "apps/front-office/utils/helpers";
 import { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { useWindowScroll } from "../../hooks";
@@ -8,7 +9,6 @@ import BrowseCategoriesMenu from "./menu/BrowseCategoriesMenu";
 import DropMegaMenu from "./menu/DropMegaMenu";
 
 const BottomHeader = () => {
-  const currentLanguage = getCurrentLocaleCode();
   const [openCategoriesMenu, setOpenCategoriesMenu] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("Home");
 
@@ -32,20 +32,19 @@ const BottomHeader = () => {
         </Button>
         {openCategoriesMenu && <BrowseCategoriesMenu />}
         <ul className="flex items-center gap-x-6 xl:gap-x-8">
-          <li className="text-base font-bold hover:text-primary-dark cursor-pointer">
+          <li className="text-base font-bold hover:text-primary cursor-pointer">
             <i className="bx bxs-hot text-primary"></i>
-            <span
-              className={`mx-2 ${currentLanguage === "en" ? "xl:mr-8" : "xl-ml-8"}`}>
+            <span className={`mx-2 ${isLTR() ? "xl:mr-8" : "xl-ml-8"}`}>
               {trans("deals")}
             </span>
           </li>
           {bottomHeaderNavbarItems.map(item => (
             <li
               key={item.label}
-              className={`text-base font-bold hover:text-primary-dark cursor-pointer group py-5 ${activeNavItem === item.label ? "text-primary" : ""}`}>
-              {item.label === "Mega menu" ? (
+              className={`text-base font-bold hover:text-primary cursor-pointer group py-5 ${activeNavItem === item.label ? "text-primary" : ""}`}>
+              {item.label === "megaMenu" ? (
                 <div className="">
-                  <span>{item.label}</span>
+                  <span>{trans(item.label)}</span>
                   <i className="bx bx-chevron-down"></i>
                   <DropMegaMenu />
                 </div>
