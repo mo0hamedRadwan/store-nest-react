@@ -12,10 +12,10 @@ import {
   TabsList,
   TabsTrigger,
 } from "app/design-system/components/ui/tabs";
-import { getLocalizedValue } from "apps/front-office/utils/localization";
 import { Product } from "apps/front-office/utils/types";
 import ProductReviews from "../ProductReviews";
 import ProductReviewForm from "../ProductReviews/components/ProductReviewForm";
+import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 
 export type ProductDescriptionProps = {
   product: Product;
@@ -64,8 +64,8 @@ export default function ProductDescription({
         </Table>
       </TabsContent>
       <TabsContent value="reviews">
-        <ProductReviews/>
-        <ProductReviewForm/>
+        <ProductReviews />
+        <ProductReviewForm />
       </TabsContent>
     </Tabs>
   );

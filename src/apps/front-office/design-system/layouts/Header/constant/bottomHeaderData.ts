@@ -4,7 +4,7 @@ import URLS from "apps/front-office/utils/urls";
 export const bottomHeaderNavbarItems = [
   { label: "home", link: URLS.home },
   { label: "aboutUs", link: URLS.pages.aboutUs },
-  { label: "shop", link: URLS.shop },
+  { label: "shop", link: URLS.shop.list },
   { label: "venders", link: URLS.venders },
   { label: "megaMenu", link: "/" },
   { label: "blog", link: "/blogLink" },

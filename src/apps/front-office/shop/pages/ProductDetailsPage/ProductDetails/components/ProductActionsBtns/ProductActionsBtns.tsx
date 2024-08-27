@@ -1,9 +1,7 @@
 import { trans } from "@mongez/localization";
 import { Button } from "apps/front-office/design-system/components/ui/button";
-import { addToCart } from "apps/front-office/shop/services/shop-service";
 
 export default function ProductActionsBtns() {
-
   // const handleClick = () => {
 
   //   addToCart(id, amount)

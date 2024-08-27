@@ -21,7 +21,7 @@
       "name": "informative-pages"
     },
     {
-      "entry": ["/products","shop"],
+      "entry": ["/products", "shop"],
       "name": "shop"
     }
   ]

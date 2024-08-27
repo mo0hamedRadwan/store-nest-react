@@ -25,7 +25,7 @@ const DropMegaMenu = () => {
         </div>
       ))}
       <div className="w-[500px] h-[320px] relative">
-        <Link to={URLS.shop}>
+        <Link to={URLS.shop.list}>
           <img src={bannerMenu} alt="" className="" />
           <div className="absolute top-10 left-8">
             <h4 className="text-slate-400 text-lg mb-2">{trans("hotDeals")}</h4>

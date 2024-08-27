@@ -1,6 +1,7 @@
 import endpoint from "shared/endpoint";
 
 import { apiKey, appClientId } from "shared/flags";
+import { Product } from "../../utils/types";
 
 /**
  * @route GET /products?wf=true
@@ -43,7 +44,6 @@ export function getShopsList(params: any = {}) {
 export function getShop(id: string | number) {
   return endpoint.get("/shop/" + id);
 }
-
 
 /**
  * Get Product details
