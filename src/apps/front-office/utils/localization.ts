@@ -1,13 +1,23 @@
 import { current, LocaleCodes } from "@mongez/react";
+import Is from "@mongez/supportive-is";
 
 export const LingualMode: "array" | "object" = "array";
+
 export function getLocalizedValue(
-  localizedValues: { localeCode: string; value: string }[],
+  value: any,
+  localeCode: string = current("localeCode"),
+  localeCodeKey = "localeCode",
+  textKey = "text",
 ) {
-  const localizedValue = localizedValues.find(
-    item => item.localeCode === current("localeCode"),
-  );
-  return localizedValue ? localizedValue.value : localizedValues[0].value;
+  if (!value) return "";
+
+  if (value[localeCode]) return value[localeCode];
+
+  if (Is.array(value)) {
+    return value.find(item => item[localeCodeKey] === localeCode)?.[textKey];
+  }
+
+  return value;
 }
 
 export const localeCodesList: LocaleCodes = {

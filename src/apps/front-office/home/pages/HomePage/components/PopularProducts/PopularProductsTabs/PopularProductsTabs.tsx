@@ -16,7 +16,7 @@ export default function PopularProductsTabs() {
       <h3 className="font-bold text-3xl text-[#253D4E]">
         {trans("popularProducts")}
       </h3>
-      <ul className="flex flex-wrap items-center gap-3 md:gap-5 text-[#253D4E]">
+      <ul className="flex flex-wrap items-center justify-center md:justify-end gap-2 md:gap-4 mt-3 md:mt-0 w-full md:w-auto">
         <Tab tab={{ id: 0, name: "All" }} />
         {tabs.length > 0 ? (
           tabs.map(tab => <Tab key={tab.id} tab={tab} />)
@@ -53,7 +53,7 @@ function Tab({ tab }: TabProps) {
 
   return (
     <li
-      className={`font-semibold ${activeTab ? "text-primary-default hover:-translate-y-0.5 transition duration-300" : "text-[#253D4E]"}`}
+      className={`font-semibold hover:text-primary hover:-translate-y-0.5 transition duration-200 ease-in-out ${activeTab ? "text-primary" : "text-[#253D4E]"}`}
       role="button"
       onClick={() => popularProductsAtom.change("activeTab", tab.id)}>
       {tab.name}

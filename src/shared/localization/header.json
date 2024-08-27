@@ -15,6 +15,10 @@
     "en": "Cart",
     "ar": "السلة"
   },
+  "addresses": {
+    "en": "Addresses",
+    "ar": "العناوين"
+  },
   "needHelp": {
     "en": "Need Help",
     "ar": "تحتاج مساعدة"
@@ -63,8 +67,60 @@
     "en": "Mega Menu",
     "ar": "القائمة الضخمة"
   },
+  "fruit": {
+    "en": "Fruit",
+    "ar": "الفاكهة"
+  },
+  "vegetables": {
+    "en": "Vegetables",
+    "ar": "الخضروات"
+  },
+  "breakfast": {
+    "en": "Breakfast",
+    "ar": "الفطار"
+  },
+  "dairy": {
+    "en": "Dairy",
+    "ar": "الألبان"
+  },
+  "meat": {
+    "en": "Meat",
+    "ar": "اللحوم"
+  },
+  "seafood": {
+    "en": "Seafood",
+    "ar": "المأكولات البحرية"
+  },
   "offerNotification": {
     "en": "Trendy 25: silver jewelry, save up 35% off today",
     "ar": "الحدث 25: مجوهرات فضية، وفر حتى 35% اليوم"
+  },
+  "and": {
+    "en": "&",
+    "ar": " و "
+  },
+  "off": {
+    "en": "off",
+    "ar": "خصم"
+  },
+  "hotDeals": {
+    "en": "Hot Deals",
+    "ar": "عروض ممتازة"
+  },
+  "donotMiss": {
+    "en": "Don't miss",
+    "ar": "لاتنس"
+  },
+  "trending": {
+    "en": "Trending",
+    "ar": "العروض الحديثة"
+  },
+  "saveTo": {
+    "en": "Save up to",
+    "ar": "وفر حتى "
+  },
+  "showNow": {
+    "en": "Show Now",
+    "ar": "تسوق الأن"
   }
 }

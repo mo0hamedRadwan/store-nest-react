@@ -1,43 +1,39 @@
-// import image
-import { phoneCall } from "assets/footerImages";
-
-// import components
+import { trans } from "@mongez/localization";
 import FooterAppInstall from "./FooterAppInstall";
 import FooterContactInfo from "./FooterContactInfo";
 import FooterLinks from "./FooterLinks";
 import FooterSocialMedia from "./FooterSocialMedia";
 
-import { trans } from "@mongez/localization";
-
 export default function Footer() {
-  // create dynamically year
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
-      <div className="flex justify-between items-start py-4 px-9 w-full flex-wrap border border-solid border-gray-400">
+    <footer className="py-3 px-5 w-11/12 lg:w-full mx-auto">
+      <div className="flex flex-wrap justify-between ">
         <FooterContactInfo />
         <FooterLinks />
         <FooterAppInstall />
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-center py-5 text-[#7E7E7E] px-3">
-        <div className="mb-4 lg:mb-0">
-          <p className="pl-4 text-center lg:text-start ">
-            © {currentYear} <strong>Nest</strong> {trans("templateName")}
+      <div className="border border-solid border-shopCategoryColor w-11/12 lg:w-full mx-auto mt-2" />
+
+      <div className="flex flex-wrap lg:flex-row md:justify-between justify-start items-center py-3 text-[#7E7E7E] w-11/12 lg:w-full mx-auto ">
+        <div className="flex-1 mb-3 text-[14px] leading-[24px]">
+          <p className="lg:text-start whitespace-nowrap">
+            © {currentYear} <strong className="text-primary">Nest</strong> -
+            {trans("templateName")}
             <br />
             {trans("copyRight")}
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center text-center gap-4 mb-4 lg:mb-0 ">
+        <div className="hidden lg:flex flex-wrap justify-start gap-4 mb-4 lg:mb-0 flex-1 pr-10">
           {["1900 - 6666", "1900 - 6666"].map((phone, index) => (
-            <div
-              key={index}
-              className="max-w-[300px] flex flex-col justify-center items-center gap-2 ">
-              <img src={phoneCall} alt="phone-call" className="w-[30px]" />
+            <div key={index} className="flex justify-center items-center gap-2">
+              <i className="bx bx-phone-call text-primary-default text-3xl"></i>
+
               <p className="flex flex-col">
-                <span className="text-[16px] sm:text-[26px] font-bold text-primary-default">
+                <span className="text-[16px] font-bold text-primary">
                   {phone}
                 </span>
                 <span>

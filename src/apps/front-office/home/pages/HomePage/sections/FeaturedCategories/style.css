@@ -1,0 +1,25 @@
+.swiper-button-prev,
+.swiper-button-next {
+  width: 35px !important;
+  height: 40px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  /* display: inline-block; */
+
+  width: 20px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev::after {
+  background-image: url("/images/featured-categories/arrowLeft.svg");
+}
+
+.swiper-button-next::after {
+  background-image: url("/images/featured-categories/arrowRight.svg");
+}

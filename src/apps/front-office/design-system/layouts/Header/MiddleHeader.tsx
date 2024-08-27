@@ -40,24 +40,35 @@ const MiddleHeader = () => {
       <ul className="hidden lg:flex items-center gap-x-2 lx:gap-x-4">
         {middleHeaderActions.map(action => {
           return (
-            <li key={action.name} className="relative pb-4  group">
-              {action.name === "Account" && isLogin && <AccountMenu />}
+            <li
+              key={action.name}
+              className="relative pb-4 flex flex-col items-center group">
+              {action.name === "myAccount" && isLogin && <AccountMenu />}
               {action.name === "Cart" && isLogin && <CartMenu />}
-              {action.name !== "Account" && isLogin && (
+              {action.name !== "myAccount" && isLogin && (
                 <span className="w-5 h-5 flex items-center justify-center absolute -top-1 left-3 bg-primary text-white text-xs font-bold rounded-full">
                   5
                 </span>
               )}
 
-              {action.name === "Account" && !isLogin ? (
-                <span onClick={() => setIsLogin(!isLogin)}>
-                  <i className="bx bx-door-open text-2xl"></i>
-                  {/* <Link
-                    to="/login"
-                    className="ml-1 text-slate-500 hover:text-black">
-                    Login
-                  </Link> */}
-                </span>
+              {action.name === "myAccount" && !isLogin ? (
+                <>
+                  <span
+                    className="text-2xl cursor-pointer"
+                    onClick={() => setIsLogin(!isLogin)}>
+                    <i className="bx bx-door-open"></i>
+                  </span>
+                  <span className="ml-1 text-slate-500 hover:text-black">
+                    {trans("login")}
+                  </span>
+                  {/* <span>
+                    <Link
+                      to={URLS.auth.login}
+                      className="ml-1 text-slate-500 hover:text-black">
+                      {trans("login")}
+                    </Link>
+                  </span> */}
+                </>
               ) : (
                 <>
                   <i className={`bx bx-${action.iconName} text-2xl`}></i>

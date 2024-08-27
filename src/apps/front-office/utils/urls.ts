@@ -20,6 +20,11 @@ const URLS = {
     viewProductRoute: "products/:id",
     viewProduct: (product: Product) => `/produucts/${product.id}`,
   },
+  product: {
+    root: "/product",
+    viewRoute: "/product/:id/:slug",
+    view: (post: any) => `/product/${post.id}/${post.slug}`,
+  },
   blog: {
     root: "/blog",
     viewRoute: "/blog/:id/:slug",
@@ -42,6 +47,6 @@ const URLS = {
     viewRoute: "/pages/:slug",
     view: (page: any) => `/pages/${page.id}/${page.slug}`,
   },
-};
+}
 
 export default URLS;

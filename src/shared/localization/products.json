@@ -13,11 +13,11 @@
   },
   "sale": {
     "ar": "خصم",
-    "en": "sale"
+    "en": "Sale"
   },
   "new": {
     "ar": "جديد",
-    "en": "new"
+    "en": "New"
   },
   "hot": {
     "ar": "أكثر مبيعا",
@@ -58,5 +58,21 @@
   "someThingWantWrong": {
     "en": "Something went wrong",
     "ar": "هناك خطأ ما"
+  },
+  "goToHomePage": {
+    "en": "Go To Home Page",
+    "ar": "الذهاب للصفحة الرئيسية"
+  },
+  "errMsgNotFound": {
+    "en": " The link you clicked may be broken or the page may have been removed. visit the",
+    "ar": "قد يكون الرابط الذي قمت بالنقر عليه معطلاً أو قد تمت إزالة الصفحة. قم بزيارة"
+  },
+  "aboutTheProblem": {
+    "en": "about the problem",
+    "ar": "عن الخطأ"
+  },
+  "or": {
+    "en": "or",
+    "ar": "او"
   }
 }

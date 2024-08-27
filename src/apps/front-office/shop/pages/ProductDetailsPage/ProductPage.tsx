@@ -31,7 +31,7 @@ type DataState = {
   product: any;
 };
 
-export default function ProductDetailsPage({ params }: ProductPageProps) {
+export default function ProductPage({ params }: ProductPageProps) {
   const [data, setData] = useState<DataState>({
     loading: true,
     error: null,

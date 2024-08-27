@@ -8,4 +8,8 @@ import "yet-another-react-lightbox/styles.css";
 import "./main.css";
 import "./shared/apps-list";
 import "./shared/config";
+import "./main.css";
+import "./shared/apps-list";
+import "./shared/config";
+
 startApplication();
