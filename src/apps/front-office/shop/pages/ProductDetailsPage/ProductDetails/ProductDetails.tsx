@@ -1,9 +1,9 @@
 import { trans } from "@mongez/localization";
 import { Product } from "apps/front-office/utils/types";
+import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 import ProductActionsBtns from "./components/ProductActionsBtns";
 import ProductOptions from "./components/ProductOptions/ProductOptions";
 import ProductQuantity from "./components/ProductQuantity";
-import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 
 export type ProductDetailsProps = {
   product: Product;

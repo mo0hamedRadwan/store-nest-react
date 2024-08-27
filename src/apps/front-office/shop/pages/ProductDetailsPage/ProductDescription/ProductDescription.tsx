@@ -13,9 +13,9 @@ import {
   TabsTrigger,
 } from "app/design-system/components/ui/tabs";
 import { Product } from "apps/front-office/utils/types";
+import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 import ProductReviews from "../ProductReviews";
 import ProductReviewForm from "../ProductReviews/components/ProductReviewForm";
-import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 
 export type ProductDescriptionProps = {
   product: Product;

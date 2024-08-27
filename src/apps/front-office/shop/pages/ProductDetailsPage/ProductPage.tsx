@@ -12,9 +12,9 @@ import {
 import Loader from "apps/front-office/design-system/components/ui/Indicators/Indicators";
 import URLS from "apps/front-office/utils/urls";
 import React, { useState } from "react";
+import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 import { getProduct } from "../../services/shop-service";
 import ProductMainDetails from "./ProductMainDetails";
-import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 
 export type NavItem = { name: string; url?: string };
 export type NavItems = NavItem[] | undefined;
@@ -65,7 +65,6 @@ export default function ProductPage({ params }: ProductPageProps) {
   }
 
   console.log(data);
-
 
   const navItems: NavItems = [
     {
