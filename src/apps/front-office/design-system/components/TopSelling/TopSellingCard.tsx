@@ -8,7 +8,7 @@ export default function TopSellingCard({
 }: topSellingType) {
   return (
     <div
-      className="flex items-center gap-5 mb-7 cursor-pointer relative 
+      className="flex items-center gap-5 mb-7 cursor-pointer relative
       group hover:-translate-y-2 duration-700
        small-to-medium:block small-to-medium:m-auto">
       <div>

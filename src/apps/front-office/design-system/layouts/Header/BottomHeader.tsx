@@ -16,7 +16,7 @@ const BottomHeader = () => {
 
   return (
     <div
-      className={`container relative bg-white py-2 w-full hidden lg:flex justify-between items-center 
+      className={`container relative bg-white py-2 w-full hidden lg:flex justify-between items-center
         ${windowScroll >= 150 && "sticky top-0 z-50"}`}>
       <div className="flex justify-between items-center gap-x-8">
         <Button
