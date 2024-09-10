@@ -585,10 +585,10 @@
   resolved "https://registry.yarnpkg.com/@mongez/react-localization/-/react-localization-3.0.0.tgz#ba777c815b0ef4176ceb0d20380cc76e8585fcb6"
   integrity sha512-8O3BRXqORQVZ+vN5ANtVdxpyRzRojgkncxKyodfTDxH1yPm67B7FGScRPF07Tos4CJHg6cKJEw8LeoImvu0PYQ==
 
-"@mongez/react-router@2.4.2":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@mongez/react-router/-/react-router-2.4.2.tgz#ab3694ed5d583386d3a94c3abbb712b74900478a"
-  integrity sha512-pYuH/qDHeFNlby0TK3f26RujrXtUNuJGGrAGpSEPKbG+d4/RMx3Dfz70AQDzfeCbRtlNx7caqUZZbg+NQiRdKw==
+"@mongez/react-router@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@mongez/react-router/-/react-router-2.5.1.tgz#7d827f4f3fd036ccc1a13c7d176bc05feae0fe55"
+  integrity sha512-lu3olLCBH/jo4BM9/JrwCkMfHZvn9poReakuzztCrXaI/1l5VOLUuumXAiz+Gg+CWPWLvUMri5n1wUkvw5+hFQ==
   dependencies:
     "@mongez/concat-route" "^1.0.0"
     "@mongez/events" "^2.1.0"

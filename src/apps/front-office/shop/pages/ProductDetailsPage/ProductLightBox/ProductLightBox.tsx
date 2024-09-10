@@ -19,7 +19,7 @@ export default function ProductLightBox({ images }: ProductLightBoxProps) {
       <button
         className="flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 text-primary text-2xl rounded-lg shadow-md  transition-all duration-500 ease-in-out"
         onClick={() => setOpen(true)}>
-        <i className="bx bx-expand text-primary-default"></i>
+        <i className="bx bx-expand text-primary"></i>
       </button>
       <Lightbox
         slides={images?.map(img => ({ src: img.url }))}

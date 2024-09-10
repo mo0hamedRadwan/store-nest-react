@@ -20,7 +20,7 @@ const BottomHeader = () => {
         ${windowScroll >= 150 && "sticky top-0 z-50"}`}>
       <div className="flex justify-between items-center gap-x-8">
         <Button
-          className="bg-primary-default hover:bg-main-700 active:bg-main-700 border-none outline-none focus-visible:ring-0"
+          className="bg-primary hover:bg-main-700 active:bg-main-700 border-none outline-none focus-visible:ring-0"
           onClick={() => setOpenCategoriesMenu(!openCategoriesMenu)}>
           <i className="bx bx-category"></i>
           <span className="mx-2">{`${trans("browse")} ${trans("allCategories")}`}</span>
@@ -32,7 +32,7 @@ const BottomHeader = () => {
         </Button>
         {openCategoriesMenu && <BrowseCategoriesMenu />}
         <ul className="flex items-center gap-x-6 xl:gap-x-8">
-          <li className="text-base font-bold hover:text-primary-default cursor-pointer">
+          <li className="text-base font-bold hover:text-primary cursor-pointer">
             <i className="bx bxs-hot text-primary"></i>
             <span className={`mx-2 ${isLTR() ? "xl:mr-8" : "xl-ml-8"}`}>
               {trans("deals")}
@@ -41,7 +41,7 @@ const BottomHeader = () => {
           {bottomHeaderNavbarItems.map(item => (
             <li
               key={item.label}
-              className={`text-base font-bold hover:text-primary-default cursor-pointer group py-5 ${activeNavItem === item.label ? "text-primary" : ""}`}>
+              className={`text-base font-bold hover:text-primary cursor-pointer group py-5 ${activeNavItem === item.label ? "text-primary" : ""}`}>
               {item.label === "megaMenu" ? (
                 <div className="">
                   <span>{trans(item.label)}</span>

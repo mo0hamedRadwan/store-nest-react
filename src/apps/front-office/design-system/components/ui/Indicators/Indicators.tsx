@@ -9,7 +9,7 @@ export default function Loader({ size = "lg", className = "" }: LoaderProps) {
   return (
     <div className={cn("flex justify-center items-center h-screen", className)}>
       <i
-        className={`bx bx-loader-alt text-${size} text-primary-default animate-spin}`}></i>
+        className={`bx bx-loader-alt text-${size} text-primary animate-spin}`}></i>
     </div>
   );
 }
