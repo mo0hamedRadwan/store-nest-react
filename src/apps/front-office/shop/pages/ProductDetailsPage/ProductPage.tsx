@@ -12,7 +12,6 @@ import {
 import Loader from "apps/front-office/design-system/components/ui/Indicators/Indicators";
 import URLS from "apps/front-office/utils/urls";
 import React, { useState } from "react";
-import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 import { getProduct } from "../../services/shop-service";
 import ProductMainDetails from "./ProductMainDetails";
 
@@ -68,10 +67,10 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   const navItems: NavItems = [
     {
-      name: getLocalizedValue(data?.product?.category?.name),
+      name: data?.product?.category?.name,
       url: URLS.shop.viewCategoryRoute,
     },
-    { name: getLocalizedValue(data?.product?.name) },
+    { name: data?.product?.name },
   ];
 
   return (
