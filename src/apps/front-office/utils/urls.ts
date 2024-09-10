@@ -23,7 +23,7 @@ const URLS = {
   product: {
     root: "/product",
     viewRoute: "/product/:id/:slug",
-    view: (post: any) => `/product/${post.id}/${post.slug}`,
+    view: (product: Product) => `/product/${product.id}/${product.slug}`,
   },
   blog: {
     root: "/blog",

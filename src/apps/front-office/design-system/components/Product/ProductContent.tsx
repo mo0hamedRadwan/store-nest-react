@@ -1,7 +1,6 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { ShoppingCart } from "lucide-react";
-import { URLS } from "shared/constants";
 import { getLocalizedValue } from "src/apps/front-office/utils/localization";
 import { Product } from "src/apps/front-office/utils/types";
 import ProgressBar from "../../Indicators/ProgressBar";
@@ -24,14 +23,14 @@ export default function ProductContent({
     <section className="product-content">
       <div className="product-category">
         <Link
-          href={URLS.BRAND_DETAILS}
+          href={"brand/:id"}
           className="text-slate-400 block text-xs font-normal my-1">
           {type}
         </Link>
       </div>
 
       <div className="product-name">
-        <Link href={URLS.PRODUCT_DETAILs} className="font-bold">
+        <Link href={"product/:id"} className="font-bold">
           {getLocalizedValue(name)}
         </Link>
       </div>
