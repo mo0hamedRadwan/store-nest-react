@@ -1,115 +1,122 @@
-import { getCurrentLocaleCode } from "@mongez/localization";
-import { Meta, Product, Row } from "apps/front-office/utils/types";
-import endpoint from "shared/endpoint";
+import endpoint from "src/shared/endpoint";
 
-import { apiKey, clientId } from "shared/flags";
+// const currentLanguage = getCurrentLocaleCode();
 
-const currentLanguage = getCurrentLocaleCode();
+// export type HomeData = {
+//   meta: Meta;
+//   rows: Row[];
+// };
 
-export type HomeData = {
-  meta: Meta;
-  rows: Row[];
-};
-export type DealsData = {
-  images: { url: string }[];
-  price: number;
-  salePrice: number;
-  name: string;
-  rating: number;
-};
+// export async function getHome(): Promise<HomeData> {
+//   const response = await endpoint.get("/home");
+//   return {
+//     meta: response.data.meta,
+//     rows: response.data.rows,
+//   };
+// }
+// export async function useGetDeals(): Promise<DealsData[]> {
+//   const response = await endpoint.get("/products?wf=true&locale=en");
+//   console.log("response", response.data);
+//   return response.data.products;
+// }
 
-export async function getHome(): Promise<HomeData> {
-  const response = await endpoint.get("/home");
-  return {
-    meta: response.data.meta,
-    rows: response.data.rows,
-  };
-}
-export async function getDeals(): Promise<DealsData[]> {
-  const response = await endpoint.get("/products?wf=true&locale=en");
-  console.log("response", response.data);
-  return response.data.products;
-}
+// export function getDailyBestSellsDataSection(): Promise<Product[]> {
+//   // locale: string = "en",
+//   return endpoint
+//     .get(`/products?wf=true`) // &locale=${locale}
+//     .then(response => {
+//       const { data } = response;
+//       const { products } = data;
 
-export function getDailyBestSellsBannerDataSection(): Promise<{
-  // locale: string = "en",
-  banner: { imageUrl: string; title: string };
-}> {
-  return endpoint
-    .get(`/home`, {
-      // ?locale=${locale}
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-        "client-id": clientId,
-      },
-    })
-    .then(response => {
-      const { data } = response;
-      const { rows } = data;
-      const { title, image } = rows[4].columns[0].module.banner;
+//       return products;
+//     })
+//     .catch(error => {
+//       console.log("error", error);
+//     });
+// }
 
-      return {
-        banner: {
-          imageUrl: image.url,
-          title: title,
-        },
-      };
-    });
-}
+// export function getCategories() {
+//   return endpoint.get(`/categories?locale=${currentLanguage}`);
+// }
 
-export function getDailyBestSellsDataSection(): Promise<Product[]> {
-  // locale: string = "en",
-  return endpoint
-    .get(`/products?wf=true`) // &locale=${locale}
-    .then(response => {
-      const { data } = response;
-      const { products } = data;
+// export function filterProducts(productName: string, categoryId?: string) {
+//   return endpoint.get(
+//     `/products?name=${productName}${categoryId ? `&category=${categoryId}` : ""}&locale=${currentLanguage}`,
+//   );
+// }
 
-      return products;
-    })
-    .catch(error => {
-      console.log("error", error);
-    });
-}
+// export async function getFeaturedCategoryData(locale: string = "en") {
+//   const response = await endpoint.get(`/home?${locale}=${locale}?layout=1`, {
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `Bearer ${apiKey}`,
+//       "client-id": clientId,
+//     },
+//   });
 
-export function getCategories() {
-  return endpoint.get(`/categories?locale=${currentLanguage}`);
+//   const { data } = response;
+//   const { rows } = data;
+//   const sectionTitle = rows[1].columns[0].module.title;
+//   const categories = rows[2].columns[0].module.categories;
+//   // const categories = rows[1].columns[0].module.categories;
+//   // console.log(`sectionTitle is ${JSON.stringify(sectionTitle)}`);
+//   // console.log(`categories is ${JSON.stringify(categories)}`);
+//   // console.log(`all result are ${JSON.stringify(rows)}`);
+
+//   return {
+//     sectionTitle,
+//     categories,
+//   };
+// }
+
+export function getFooterData() {
+  return endpoint.get("/settings");
 }
 
-export function filterProducts(productName: string, categoryId?: string) {
-  return endpoint.get(
-    `/products?name=${productName}${categoryId ? `&category=${categoryId}` : ""}&locale=${currentLanguage}`,
-  );
+export function getHome() {
+  return endpoint.get("/home");
 }
 
-export async function getFeaturedCategoryData(locale: string = "en") {
-  const response = await endpoint.get(`/home?${locale}=${locale}?layout=1`, {
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-      "client-id": clientId,
-    },
+export function getCategories(params?: any) {
+  return endpoint.get(`/categories`, {
+    params,
   });
-
-  const { data } = response;
-  const { rows } = data;
-  const sectionTitle = rows[1].columns[0].module.title;
-  const categories = rows[2].columns[0].module.categories;
-  // const categories = rows[1].columns[0].module.categories;
-  // console.log(`sectionTitle is ${JSON.stringify(sectionTitle)}`);
-  // console.log(`categories is ${JSON.stringify(categories)}`);
-  // console.log(`all result are ${JSON.stringify(rows)}`);
-
-  return {
-    sectionTitle,
-    categories,
-  };
 }
 
-export async function getFooterData() {
-  const response = await endpoint.get("https://store.mentoor.io/settings");
-  return {
-    data: response.data,
-  };
+export function getProducts(params?: any) {
+  return endpoint.get(`/products`, {
+    params,
+  });
+}
+
+export function getCartItems(params?: any) {
+  return endpoint.get(`/cart`, {
+    params,
+  });
+}
+
+export function addToCart(data: any) {
+  return endpoint.post(`/cart`, data);
+}
+
+export function removeFromCart(data: any) {
+  return endpoint.delete(`/cart`, {
+    data,
+  });
+}
+
+export function getWishlist(params?: any) {
+  return endpoint.get(`/wishlists`, {
+    params,
+  });
+}
+
+export function addToWishlist(data: any) {
+  return endpoint.post(`/wishlists`, data);
+}
+
+export function removeFromWishlist(data: any) {
+  return endpoint.delete(`/wishlists`, {
+    data,
+  });
 }

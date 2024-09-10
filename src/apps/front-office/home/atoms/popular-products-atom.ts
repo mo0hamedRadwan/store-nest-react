@@ -1,6 +1,6 @@
 import { atom } from "@mongez/react-atom";
 import { GenericObject } from "@mongez/reinforcements";
-import { type Product } from "apps/front-office/utils/types";
+import { Product } from "apps/front-office/utils/types";
 
 export type TabCategory = {
   id: number;
@@ -19,7 +19,7 @@ const collectTabsData = (products: Product[]): TabCategory[] => {
   const categories: GenericObject<TabCategory> = {};
   for (const product of products) {
     const categoryId = product.category.id;
-    const categoryName = product.category.name[0]?.value ?? "";
+    const categoryName = product.category.name ?? "";
 
     if (!categories[categoryId]) {
       categories[categoryId] = {

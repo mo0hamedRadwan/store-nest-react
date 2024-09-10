@@ -25,11 +25,11 @@ export default function CustomDialog({
   return (
     <Dialog>
       <DialogTrigger>
-        <button
+        <span
           onClick={onViewClick}
           className="flex justify-center items-center">
           {icon}
-        </button>
+        </span>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

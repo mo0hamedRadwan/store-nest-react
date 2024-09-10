@@ -1,14 +1,12 @@
-import { getCurrentLocaleCode } from "@mongez/localization";
 import TopSellingCard from "apps/front-office/design-system/components/TopSelling/TopSellingCard";
 import TopSellingHead from "apps/front-office/design-system/components/TopSelling/TopSellingHead";
 import { useEffect, useState } from "react";
+import { Product } from "src/apps/front-office/utils/types";
 import { getTopsellingHttpsList } from "./topselling-http-service";
-import { LocaleValue, Product } from "./types";
 
 export default function TopSelling({ moduleName }) {
   const [productData, setProductData] = useState<Product | any>([]);
-  const [productTitle, setProductTitle] = useState<LocaleValue | any>({});
-  const currentLang = getCurrentLocaleCode();
+  // const [productTitle, setProductTitle] = useState<string | any>({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,12 +16,9 @@ export default function TopSelling({ moduleName }) {
           for (const column of row.columns) {
             if (column.module.name === moduleName) {
               const data = column.module.products;
-              const title =
-                currentLang === "en"
-                  ? column.module.title[0]
-                  : column.module.title[1];
+              // const title = column.module.title;
               setProductData(data);
-              setProductTitle(title);
+              // setProductTitle(title);
               return;
             }
           }
@@ -33,12 +28,12 @@ export default function TopSelling({ moduleName }) {
       }
     };
     fetchData();
-  }, [moduleName, currentLang]);
+  }, [moduleName]);
 
   return (
     <div>
       <div>
-        <TopSellingHead productTitle={productTitle.value} />
+        <TopSellingHead productTitle={moduleName} />
       </div>
       <div>
         {productData.map(el => {
@@ -46,11 +41,7 @@ export default function TopSelling({ moduleName }) {
             <div key={el.id}>
               <TopSellingCard
                 productImageTop={el.images[0].url}
-                productDescription={
-                  currentLang === "en"
-                    ? el.shortDescription[0].value
-                    : el.shortDescription[1].value
-                }
+                productDescription={el.shortDescription}
                 salePrice={el.salePrice}
                 priceOld={el.price}
               />

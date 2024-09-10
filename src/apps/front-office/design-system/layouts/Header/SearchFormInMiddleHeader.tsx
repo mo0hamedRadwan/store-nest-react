@@ -43,7 +43,7 @@ export default function SearchFormInMiddleHeader() {
 
   return (
     <form
-      className="hidden lg:flex items-center border border-primary rounded-lg p-2"
+      className="hidden lg:flex items-center border border-primary-default rounded-lg p-2"
       onSubmit={handleSearchForm}>
       <Select onValueChange={(value: string) => setCategorySelected(value)}>
         <SelectTrigger className="hidden xl:block xl:w-[180px] font-bold border-none shadow-none focus:ring-0">

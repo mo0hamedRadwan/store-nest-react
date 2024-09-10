@@ -1,12 +1,13 @@
 import { useOnce } from "@mongez/react-hooks";
-import { getFooterData } from "apps/front-office/home/services/home-service";
 import { useState } from "react";
-import { FooterData } from "../layouts/types/index";
+import { getFooterData } from "../../home/services/home-service";
+import { FooterData } from "../../utils/types";
+import URLS from "../../utils/urls";
 
 export default function useFetchFooterData() {
   const [footerData, setFooterData] = useState<FooterData>({
-    contact: null,
-    logoUrl: null,
+    contact: undefined,
+    logoUrl: URLS.home,
   });
 
   useOnce(() => {
@@ -15,7 +16,7 @@ export default function useFetchFooterData() {
         const { contact, general } = response.data.settings;
         console.log(response.data);
 
-        const logoUrl = general?.logo?.url;
+        const logoUrl = general?.logo?.url || URLS.home;
         setFooterData({ contact, logoUrl });
       })
       .catch(error => {

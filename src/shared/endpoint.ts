@@ -1,5 +1,6 @@
 import { RunTimeDriver } from "@mongez/cache";
 import Endpoint, { setCurrentEndpoint } from "@mongez/http";
+import { getCurrentLocaleCode } from "@mongez/localization";
 import { navigateTo } from "@mongez/react-router";
 import user from "apps/front-office/account/user";
 import URLS from "apps/front-office/utils/urls";
@@ -32,9 +33,10 @@ endpointEvents.beforeSending(config => {
   headers["client-id"] = apiClient;
   headers["os"] = apiOS;
   headers["Authorization"] = `Bearer ${apiKey}`;
-  // config.params = {
-  //   locale: getCurrentLocaleCode(),
-  // };
+  config.params = {
+    locale: getCurrentLocaleCode(),
+    ...config.params,
+  };
 });
 
 endpointEvents.onSuccess((response: AxiosResponse) => {
