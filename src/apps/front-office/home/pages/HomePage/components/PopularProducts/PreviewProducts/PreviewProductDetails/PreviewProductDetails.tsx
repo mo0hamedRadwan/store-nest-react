@@ -1,4 +1,4 @@
-import { getCurrentLocaleCode, trans } from "@mongez/localization";
+import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import Stars from "apps/front-office/design-system/components/Stars";
 import { Badge } from "apps/front-office/design-system/components/ui/badge";
@@ -14,16 +14,6 @@ export default function PreviewProductDetails({
   product,
 }: PreviewProductDetailsProps) {
   const isOnSale = !!product.salePrice; // Simplified boolean check
-  const currentLang = getCurrentLocaleCode();
-
-  const getLocalizedValue = (
-    localizedValues: { localeCode: string; value: string }[],
-  ) => {
-    const localizedValue = localizedValues.find(
-      item => item.localeCode === currentLang,
-    );
-    return localizedValue ? localizedValue.value : localizedValues[0].value;
-  };
 
   return (
     <div className="flex flex-col md:flex-row items-center gap-6 p-4 max-w-screen-lg mx-auto">
@@ -32,7 +22,7 @@ export default function PreviewProductDetails({
         <div className="flex items-center justify-center cursor-pointer border rounded-md overflow-hidden w-full">
           <img
             src={`${product.images[0]?.url}?w=200&h=200`}
-            alt={getLocalizedValue(product.name)}
+            alt={product.name}
             className="max-w-auto max-h-auto object-cover"
           />
         </div>
@@ -50,7 +40,7 @@ export default function PreviewProductDetails({
         {/* Product Name */}
         <div className="mb-4">
           <h3 className="text-3xl font-bold text-[#253D4E] hover:text-[#FDC040] transition duration-500">
-            <Link to="/">{getLocalizedValue(product.name)}</Link>
+            <Link to="/">{product.name}</Link>
           </h3>
         </div>
 

@@ -1,5 +1,4 @@
 import { PRODUCT_STATUS, PRODUCT_STATUS_CLASSES } from "shared/constants";
-import { getLocalizedValue } from "src/apps/front-office/utils/localization";
 import { Category } from "src/apps/front-office/utils/types";
 
 type ProductDiscountProps = {
@@ -10,7 +9,7 @@ type ProductDiscountProps = {
 const ProductDiscount = ({
   category = {
     id: 0,
-    name: [],
+    name: "",
   },
   discount = 0,
 }: ProductDiscountProps) => {
@@ -21,12 +20,7 @@ const ProductDiscount = ({
   const backgroundBasedOnStatus =
     PRODUCT_STATUS_CLASSES[category?.slug as PRODUCT_STATUS];
 
-  console.log(
-    category.slug,
-    discountBadge,
-    category,
-    getLocalizedValue(category?.name),
-  );
+  // console.log(category.slug, discountBadge, category, category.name);
 
   return (
     <div

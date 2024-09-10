@@ -1,7 +1,7 @@
 import { Link } from "@mongez/react-router";
-import { DealsData } from "apps/front-office/home/services/home-service";
 import { FaShoppingCart } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
+import { DealsData } from "src/apps/front-office/utils/types";
 
 const DealCard = ({
   images,
@@ -10,7 +10,7 @@ const DealCard = ({
   price,
   salePrice,
   timeCards,
-}: DealsData & { timeCards }) => {
+}: DealsData) => {
   return (
     <div className="w-full sm:w-[calc(100%/2-1rem)] lg:w-[calc(100%/3-1rem)] xl:w-[calc(100%/4-1rem)] p-2">
       <div className="border-0 pb-12 relative bg-white rounded-2xl overflow-hidden transition duration-200 ">
@@ -24,7 +24,7 @@ const DealCard = ({
         <div className="relative mt-[-70px] z-[3] p-4 mx-auto transition-all duration-500 hover:mt-[-80px]">
           <div className="absolute top-[-50px] w-full text-center">
             <div className="flex space-x-2 gap-1 justify-center mr-8">
-              {timeCards.map((card, index) => (
+              {timeCards?.map((card, index) => (
                 <span
                   key={index}
                   className="text-sm font-bold text-gray-500 bg-white rounded-md px-2 py-1 w-full">

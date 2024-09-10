@@ -1,4 +1,4 @@
-import { getCurrentLocaleCode, trans } from "@mongez/localization";
+import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import Stars from "apps/front-office/design-system/components/Stars";
 import { Button } from "apps/front-office/design-system/components/ui/button";
@@ -12,17 +12,6 @@ export type ProductCardProps = {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const isOnSale = product.salePrice ? true : false;
-  const currentLang = getCurrentLocaleCode();
-
-  const getLocalizedValue = (
-    localizedValues: { localeCode: string; value: string }[],
-  ) => {
-    const localizedValue = Array.isArray(localizedValues)
-      ? localizedValues.find(item => item.localeCode === currentLang)
-      : { value: "" };
-
-    return localizedValue ? localizedValue.value : localizedValues[0].value;
-  };
 
   function addProductToCart(id: number, arg1: number) {
     // this function is not implemented yet, waiting for atom to be implemented
@@ -49,7 +38,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="overflow-hidden flex items-center justify-center cursor-pointer rounded-3xl ">
             <img
               src={product.images[0]?.url + "?w=200&h=200"}
-              alt={getLocalizedValue(product.name)}
+              alt={product.name}
               className="max-w-60 max-h-60 group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
             />
           </div>
@@ -57,13 +46,13 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
         <div className="px-[20px] pt-[20px] pb-[20px]">
           <span className="flex text-[#adadad] text-[12px] mb-[5px] hover:text-primary cursor-pointer">
-            {getLocalizedValue(product.category.name)}
+            {product.category.name}
           </span>
           <h2>
             <Link
               to={"/"}
               className="font-bold text-base inline-block text-[#253D4E] hover:text-primary transition duration-500">
-              {getLocalizedValue(product.name)}
+              {product.name}
             </Link>
           </h2>
           {/* Stars */}

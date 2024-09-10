@@ -1,50 +1,31 @@
-import { useEffect, useState } from "react";
-import { apiAuthToken, apiClient } from "shared/flags";
-type SlideData = {
-  id: number;
-  image: string;
-};
+import { useOnce } from "@mongez/react-hooks";
+import { useState } from "react";
+import { getHome } from "src/apps/front-office/home/services/home-service";
+import { Banner } from "src/apps/front-office/utils/types";
 
 export const useSlider = () => {
-  const [sliderData, setSliderData] = useState<SlideData[]>([]);
+  const [sliderData, setSliderData] = useState<Banner[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchSliderData = async () => {
-      setIsLoading(true);
-      setError(null);
-      try {
-        const response = await fetch("https://store.mentoor.io/home", {
-          headers: {
-            "client-id": apiClient,
-            Authorization: `Bearer ${apiAuthToken}`,
-            "Content-Type": "application/json",
-          },
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        const sliderBanners = data.rows[0].columns[0].module.slider.banners;
-        const processedData = sliderBanners.map(banner => ({
-          id: banner.id,
-          image:
-            banner.image.find(img => img.localeCode === "en")?.value.url || "",
-        }));
-        setSliderData(processedData);
-      } catch (error) {
-        console.error("Error fetching slider data:", error);
-        setError(
-          error instanceof Error ? error.message : "An unknown error occurred",
-        );
-      } finally {
+  useOnce(() => {
+    // setIsLoading(true);
+    getHome()
+      .then(response => {
+        console.log(response.data.rows[0].columns[0].module.slider);
+        const sliderBanners =
+          response.data.rows[0].columns[0].module.slider?.banners;
+        // const processedData = sliderBanners?.map(banner => ({
+        //   id: banner.id,
+        //   image: banner.image[0].url || "",
+        // }));
+        setSliderData(sliderBanners!);
         setIsLoading(false);
-      }
-    };
-
-    fetchSliderData();
-  }, []);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  });
 
   return { sliderData, isLoading, error };
 };

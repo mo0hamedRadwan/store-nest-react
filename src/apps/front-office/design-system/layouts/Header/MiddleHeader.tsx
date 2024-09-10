@@ -2,6 +2,7 @@ import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import logo from "assets/images/logo.svg";
 import { useState } from "react";
+import URLS from "src/apps/front-office/utils/urls";
 import { useWindowScroll } from "../../hooks";
 import { middleHeaderActions, navbarIcons } from "./constant/middleHeaderData";
 import SearchForm from "./forms/SearchForm";
@@ -27,17 +28,19 @@ const MiddleHeader = () => {
         <i className="bx bx-menu"></i>
       </div>
       <div>
-        <img
-          src={logo}
-          alt="nest logo"
-          className="w-[150px] sm:min-w-[180px] h-[45px] sm:h-[55px]"
-        />
+        <Link to={URLS.home}>
+          <img
+            src={logo}
+            alt="nest logo"
+            className="w-[150px] sm:min-w-[180px] h-[45px] sm:h-[55px]"
+          />
+        </Link>
       </div>
 
       {/* <SearchFormInMiddleHeader /> */}
       <SearchForm />
 
-      <ul className="hidden lg:flex items-center gap-x-2 lx:gap-x-4">
+      <ul className="hidden lg:flex items-center gap-x-5 lx:gap-x-4">
         {middleHeaderActions.map(action => {
           return (
             <li
