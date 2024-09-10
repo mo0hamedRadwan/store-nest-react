@@ -20,7 +20,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         ))}
       </div>
       <div className="product-price flex items-center gap-1 mb-3">
-        <span className="text-4xl md:text-5xl text-primary-default font-bold">
+        <span className="text-4xl md:text-5xl text-primary font-bold">
           {product?.hasDiscount ? product?.salePrice : product?.price}$
         </span>
         {product?.hasDiscount && (
@@ -44,7 +44,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         <ProductQuantity />
         <ProductActionsBtns />
       </div>
-      <ul className="product-info grid grid-cols-2 gap-y-2 text-xs capitalize text-primary-default font-semibold">
+      <ul className="product-info grid grid-cols-2 gap-y-2 text-xs capitalize text-primary font-semibold">
         <li>
           <label className="text-gray-500">{trans("type")} : </label>
           {product?.type}

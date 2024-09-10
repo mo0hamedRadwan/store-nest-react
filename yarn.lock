@@ -511,7 +511,7 @@
   dependencies:
     crypto-js "^4.0.0"
 
-"@mongez/events@^2.0.0", "@mongez/events@^2.1.0":
+"@mongez/events@2.1.0", "@mongez/events@^2.0.0", "@mongez/events@^2.1.0":
   version "2.1.0"
   resolved "https://registry.npmjs.org/@mongez/events/-/events-2.1.0.tgz"
   integrity sha512-gUTDm8fy0BRJmG/kkSmLi/Ir2PAFQQtk0FE9GGivnIK5YpGJD6MFrIj3Ui8SN3mMFKvCJae6zJjuYv6fLFQgBQ==
@@ -543,10 +543,10 @@
     "@mongez/fs" "^3.0.4"
     husky "^8.0.3"
 
-"@mongez/localization@^2.2.1", "@mongez/localization@^2.2.4":
-  version "2.2.4"
-  resolved "https://registry.npmjs.org/@mongez/localization/-/localization-2.2.4.tgz"
-  integrity sha512-AVuIhuj2ibrRfsFAN0L2H3y9YDMqmPU07ee7Y/iCQiOIMCwwvxsE2x6t07z27MPFAtcexvt5rykZuQtmBBJ+tg==
+"@mongez/localization@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@mongez/localization/-/localization-3.0.0.tgz#20bce6e7aac7d04435139f1415946b890cb0cf4a"
+  integrity sha512-+308DSwq/T4p4IOjFVvI7RJsKRlhH3DRYqUJHuHzOD1fPJcG4dCalXPNdbDClvQRSvi4lwiyQaxwegskXaNmXg==
   dependencies:
     "@mongez/events" "^2.1.0"
     "@mongez/reinforcements" "^2.3.8"
@@ -558,13 +558,13 @@
   dependencies:
     "@mongez/atom" "^1.0.0"
 
-"@mongez/react-form@^2.1.3":
-  version "2.1.3"
-  resolved "https://registry.npmjs.org/@mongez/react-form/-/react-form-2.1.3.tgz"
-  integrity sha512-mMlj5lkJWgLQFNK/1pRlGcCDtwnVZRKpjQDMQN2pycpkf8+1bLans/0VV68FkUIxyjQEKTiQtkTrre25FUShCw==
+"@mongez/react-form@^3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@mongez/react-form/-/react-form-3.0.8.tgz#f72f15109a11e019742c8c5210b00b1aab33309a"
+  integrity sha512-aFbBFTzOcJK8m+3rv9g17SR8WcUTOuvhSahvv9In4ZeEk1g1z7suoRyJ7HZSAXB2bxmmLaAyPSoWKOjiqN4d2Q==
   dependencies:
-    "@mongez/events" "^2.0.0"
-    "@mongez/localization" "^2.2.1"
+    "@mongez/events" "2.1.0"
+    "@mongez/localization" "^3.0.0"
 
 "@mongez/react-helmet@^1.0.9":
   version "1.0.9"
@@ -580,23 +580,23 @@
     "@mongez/http" "^2.2.1"
     "@mongez/reinforcements" "^2.2.8"
 
-"@mongez/react-localization@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/@mongez/react-localization/-/react-localization-1.0.5.tgz"
-  integrity sha512-rcI2VWuUMbwHh8CWeLhiik4+6PxDCTDLlxDL75deHWM7jbo/jVt6Xhk1x6kLj4E3ivdmPvm9UReikIsnXvp8+Q==
+"@mongez/react-localization@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@mongez/react-localization/-/react-localization-3.0.0.tgz#ba777c815b0ef4176ceb0d20380cc76e8585fcb6"
+  integrity sha512-8O3BRXqORQVZ+vN5ANtVdxpyRzRojgkncxKyodfTDxH1yPm67B7FGScRPF07Tos4CJHg6cKJEw8LeoImvu0PYQ==
 
-"@mongez/react-router@^2.3.3":
-  version "2.3.8"
-  resolved "https://registry.npmjs.org/@mongez/react-router/-/react-router-2.3.8.tgz"
-  integrity sha512-Qk+6Yba+BbEj7yLsjguJHjFqT8cAYMazDQ4J31VjarHe4pGY8/41d/D5BOftQYxQIGZohJRsQqCMIGpco9dviQ==
+"@mongez/react-router@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@mongez/react-router/-/react-router-2.5.1.tgz#7d827f4f3fd036ccc1a13c7d176bc05feae0fe55"
+  integrity sha512-lu3olLCBH/jo4BM9/JrwCkMfHZvn9poReakuzztCrXaI/1l5VOLUuumXAiz+Gg+CWPWLvUMri5n1wUkvw5+hFQ==
   dependencies:
     "@mongez/concat-route" "^1.0.0"
     "@mongez/events" "^2.1.0"
 
-"@mongez/react@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.npmjs.org/@mongez/react/-/react-3.0.6.tgz"
-  integrity sha512-26kkRivQ92rljrXogoF58/mZ4AnlNMpWSRqs2Nn/y+knrre5cBT80y21/dgFPML4DAFIS56EtNYN0+kzwbBR+g==
+"@mongez/react@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@mongez/react/-/react-3.2.2.tgz#5d2a1986fd6bc9dffcda9a921a3fd55631782460"
+  integrity sha512-HqFSseCuDjzoimdn4mASLK4PR9Lj5g2JvTFvMVyfLw1YyvlIJHaXs9iAtHS1vfEhVs1m06HwYUGv9AxGfd1QBA==
 
 "@mongez/reinforcements@^2.2.8", "@mongez/reinforcements@^2.3.1", "@mongez/reinforcements@^2.3.10", "@mongez/reinforcements@^2.3.6", "@mongez/reinforcements@^2.3.8", "@mongez/reinforcements@^2.x.x":
   version "2.3.10"
@@ -5173,7 +5173,16 @@ ssri@^9.0.0:
   dependencies:
     minipass "^3.1.1"
 
-"string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -5259,7 +5268,14 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==

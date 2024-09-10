@@ -11,7 +11,7 @@ export default function Loader({ size = 50, className = "" }: LoaderProps) {
       <div
         className={cn("flex justify-center items-center h-screen", className)}>
         <div className="animate-spin">
-          <LoaderCircle size={size} className="text-primary-default" />
+          <LoaderCircle size={size} className="text-primary" />
         </div>
       </div>
       );

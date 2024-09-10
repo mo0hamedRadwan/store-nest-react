@@ -32,9 +32,3 @@ export const PRODUCT_ACTIONS = [
     icon: Heart,
   },
 ];
-
-// ============================== URLS =============================
-export const URLS = {
-  PRODUCT_DETAILs: "/product/:id",
-  BRAND_DETAILS: "/brand/:id",
-};

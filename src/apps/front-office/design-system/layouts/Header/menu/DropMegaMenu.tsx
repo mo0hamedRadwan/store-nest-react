@@ -10,7 +10,7 @@ const DropMegaMenu = () => {
     <div className="hidden absolute left-0 container mt-5 p-9 z-10 w-full group-hover:flex justify-between bg-white rounded-xl  shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
       {megaDropMenu.map((megaDropHeader, index) => (
         <div key={megaDropHeader.title + index}>
-          <h2 className="text-xl text-primary-default font-bold mb-4">
+          <h2 className="text-xl text-primary font-bold mb-4">
             {megaDropHeader.title}
           </h2>
           <ul className="flex flex-col gap-y-2.5 ">

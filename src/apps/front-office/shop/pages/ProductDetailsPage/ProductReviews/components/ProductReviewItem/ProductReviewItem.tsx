@@ -11,7 +11,7 @@ export default function ProductReviewItem() {
           </span>
         </div>
         <div>
-          <h3 className="block text-sm text-primary-default font-semibold">
+          <h3 className="block text-sm text-primary font-semibold">
             Eman Awaad
           </h3>
           <span className="date block text-xs md:text-sm text-gray-400 mb-1">
