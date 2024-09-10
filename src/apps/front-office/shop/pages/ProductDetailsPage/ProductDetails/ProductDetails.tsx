@@ -1,6 +1,5 @@
 import { trans } from "@mongez/localization";
 import { Product } from "apps/front-office/utils/types";
-import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 import ProductActionsBtns from "./components/ProductActionsBtns";
 import ProductOptions from "./components/ProductOptions/ProductOptions";
 import ProductQuantity from "./components/ProductQuantity";
@@ -13,7 +12,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   return (
     <div className="product-details mb-4 w-full sm:w-1/2 md:pt-3 lg:pt-6">
       <h2 className="product-name text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-gray-700 capitalize mb-4">
-        {getLocalizedValue(product?.name)}
+        {product?.name}
       </h2>
       <div className="product-rating mb-3">
         {Array.from({ length: 5 }).map((_, index) => (
@@ -37,7 +36,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
       </div>
       {product?.shortDescription && (
         <p className="text-sm text-gray-500 font-semibold lg:leading-7 mb-4">
-          {getLocalizedValue(product?.shortDescription)}
+          {product?.shortDescription}
         </p>
       )}
       <ProductOptions />
@@ -52,7 +51,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         </li>
         <li>
           <label className="text-gray-500">{trans("category")} : </label>
-          {getLocalizedValue(product?.category?.name)}
+          {product?.category?.name}
         </li>
       </ul>
     </div>

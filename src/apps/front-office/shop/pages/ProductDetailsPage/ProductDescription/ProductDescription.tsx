@@ -13,7 +13,6 @@ import {
   TabsTrigger,
 } from "app/design-system/components/ui/tabs";
 import { Product } from "apps/front-office/utils/types";
-import { getLocalizedValue } from "src/apps/front-office/utils/helpers";
 import ProductReviews from "../ProductReviews";
 import ProductReviewForm from "../ProductReviews/components/ProductReviewForm";
 
@@ -39,7 +38,7 @@ export default function ProductDescription({
         className="description text-sm text-gray-500 font-semibold leading-7">
         <div
           dangerouslySetInnerHTML={{
-            __html: getLocalizedValue(product?.description || []),
+            __html: product?.description || "",
           }}
         />
       </TabsContent>
@@ -55,9 +54,7 @@ export default function ProductDescription({
             {product?.category && (
               <TableRow>
                 <TableHead>{trans("category")}</TableHead>
-                <TableCell>
-                  {getLocalizedValue(product?.category?.name)}
-                </TableCell>
+                <TableCell>{product?.category?.name}</TableCell>
               </TableRow>
             )}
           </TableBody>
