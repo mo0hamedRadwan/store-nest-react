@@ -3,6 +3,7 @@
 import { Category, Product } from "./types";
 
 const URLS = {
+  catalog: "/catalog",
   home: "/",
   compare: "/compare",
   cart: "/cart",
