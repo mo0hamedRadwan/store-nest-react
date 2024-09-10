@@ -10,7 +10,7 @@ export default function FooterContactInfo() {
         {
           iconClass: "bx bx-map",
           label: "Address",
-          value: contact.address[0]?.value,
+          value: contact.address,
         },
         {
           iconClass: "bx bx-phone",
@@ -25,7 +25,7 @@ export default function FooterContactInfo() {
         {
           iconClass: "bx bx-time",
           label: "Hours",
-          value: contact.workingDays[0]?.value,
+          value: contact.workingDays,
         },
       ]
     : [];

@@ -1,5 +1,5 @@
 "use client";
-import { useSlider } from "shared/hooks/use-slider";
+import { Banner } from "src/apps/front-office/utils/types";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -8,10 +8,21 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.css";
 
-export default function Slider() {
-  const { sliderData, isLoading, error } = useSlider();
+type SliderPropsType = {
+  sliderData: Banner[];
+  isLoading: boolean;
+  error?: string;
+};
+
+export default function Slider({
+  sliderData,
+  isLoading,
+  error,
+}: SliderPropsType) {
+  // const { sliderData, isLoading, error } = useSlider();
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
+
   return (
     <div className="relative group">
       <Swiper
@@ -40,7 +51,7 @@ export default function Slider() {
           <SwiperSlide key={slide.id}>
             <div className="relative flex items-center justify-center py-6 rounded-3xl">
               <img
-                src={slide.image}
+                src={slide.image.url}
                 className="object-fit lg:bg-cover bg-center bg-no-repeat rounded-3xl w-full h-[200px]  lg:h-full lg:min-h-[350px]"
               />
             </div>

@@ -1,7 +1,8 @@
 // append urls here, DO NOT remove this line
 
+import { Category, Product } from "./types";
+
 const URLS = {
-  shop: "/shop",
   home: "/",
   compare: "/compare",
   cart: "/cart",
@@ -12,6 +13,13 @@ const URLS = {
   orders: "/orders",
   venders: "/venders",
   notFound: "/404",
+  shop: {
+    list: "/products",
+    viewCategoryRoute: "/category/:id",
+    viewCategory: (category: Category) => `/category/${category.id}`,
+    viewProductRoute: "products/:id",
+    viewProduct: (product: Product) => `/produucts/${product.id}`,
+  },
   product: {
     root: "/product",
     viewRoute: "/product/:id/:slug",

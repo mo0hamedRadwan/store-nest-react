@@ -1,38 +1,33 @@
+/* eslint-disable unused-imports/no-unused-vars */
 import { useEffect } from "react";
 import dailyBestSellsAtom from "../atoms/daily-best-sells.atom";
-import {
-  getDailyBestSellsBannerDataSection,
-  getDailyBestSellsDataSection,
-} from "../services/home-service";
+import { useGetDailyBestSellsBanner } from "../pages/HomePage/hooks/use-get-daily-best-sells-banner";
 
 export default function useFetchDailyBannerData() {
   const data = dailyBestSellsAtom.use("products");
   const loading = dailyBestSellsAtom.use("loading");
   const error = dailyBestSellsAtom.use("error");
 
-  const getBanner = async () => {
-    return await getDailyBestSellsBannerDataSection();
-  };
-
-  const getProducts = async () => {
-    return await getDailyBestSellsDataSection();
-  };
+  const {
+    loading: loadingBanner,
+    error: errorBanner,
+    banner,
+  } = useGetDailyBestSellsBanner();
 
   useEffect(() => {
     const fetchData = async () => {
       dailyBestSellsAtom.change("loading", true);
 
       try {
-        const bannerData = await getBanner();
-        const products = await getProducts();
+        // const products = await getProducts();
 
-        dailyBestSellsAtom.setData({
-          products,
-          banner: {
-            imageUrl: bannerData.banner.imageUrl,
-            text: bannerData.banner.title,
-          },
-        });
+        // dailyBestSellsAtom.setData({
+        //   products,
+        //   banner: {
+        //     imageUrl: banner?.image[0].url,
+        //     text: banner?.title,
+        //   },
+        // });
 
         dailyBestSellsAtom.change("loading", false);
       } catch (error) {
