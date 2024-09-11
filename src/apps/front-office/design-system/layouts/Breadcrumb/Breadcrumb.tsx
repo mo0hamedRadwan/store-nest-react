@@ -51,7 +51,7 @@ export default function Breadcrumb({
                       <Link
                         to={item.url}
                         className="text-black font-bold group-hover:text-primary transition-colors line-clamp-1">
-                        /{trans(item.name)}
+                        {trans(item.name)}
                       </Link>
                     ) : (
                       <span className="inline-block text-gray-800">
