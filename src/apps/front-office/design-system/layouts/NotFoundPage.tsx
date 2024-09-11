@@ -19,11 +19,11 @@ export default function NotFoundPage() {
         </h1>
         <p className="text-gray-800 font-medium leading-6 text-[16px] max-w-[560px]">
           {trans("errMsgNotFound")}{" "}
-          <Link to="/" className="text-primary-default">
+          <Link to="/" className="text-primary">
             {trans("homePage")}
           </Link>{" "}
           {trans("or")}{" "}
-          <Link to="/contact" className="text-primary-default">
+          <Link to="/contact" className="text-primary">
             {" "}
             {trans("contactUs")}
           </Link>{" "}

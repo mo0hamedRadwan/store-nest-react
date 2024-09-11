@@ -27,7 +27,7 @@ const FeaturedCategoriesBanner = () => {
                      <h4 className="font-bold min-h-[100px] mb-[15px]" style={{ whiteSpace: 'pre-line' }}>
                          {card.title}
                      </h4>
-                     <Button className="bg-primary-default hover:bg-primary-dark font-custom leading-[1.3] pl-3 pr-2 py-[7px] text-sm h-9">
+                     <Button className="bg-primary hover:bg-primary-dark font-custom leading-[1.3] pl-3 pr-2 py-[7px] text-sm h-9">
                          shop now
                      </Button>
                  </div> */}

@@ -50,7 +50,7 @@ const BreadcrumbLink = React.forwardRef<
     <Comp
       ref={ref}
       className={cn(
-        "text-primary-dark hover:text-primary-default capitalize",
+        "text-primary-dark hover:text-primary capitalize",
         className,
       )}
       {...props}

@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="hidden lg:flex flex-wrap justify-start gap-4 mb-4 lg:mb-0 flex-1 pr-10">
           {["1900 - 6666", "1900 - 6666"].map((phone, index) => (
             <div key={index} className="flex justify-center items-center gap-2">
-              <i className="bx bx-phone-call text-primary-default text-3xl"></i>
+              <i className="bx bx-phone-call text-primary text-3xl"></i>
 
               <p className="flex flex-col">
                 <span className="text-[16px] font-bold text-primary">

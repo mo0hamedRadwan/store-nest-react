@@ -9,7 +9,7 @@ export default function DailyBestBanner() {
           {trans("dailyBestSellsBannerText")}
         </h3>
 
-        <button className="font-medium rounded-sm bg-primary-default hover:bg-[#FDC040] p-2 text-white text-sm flex items-center gap-2 group transition-all">
+        <button className="font-medium rounded-sm bg-primary hover:bg-[#FDC040] p-2 text-white text-sm flex items-center gap-2 group transition-all">
           {trans("shopNow")}{" "}
           <ArrowRightFromLine className="block w-4 h-4 group-hover:ms-2 transition-all" />
         </button>

@@ -61,7 +61,7 @@ const BrowseCategoriesMenu = () => {
           <button
             className="mt-8 text-xl flex justify-center items-center gap-x-2"
             onClick={() => setOpenSeeMore(!openSeeMore)}>
-            <span className="text-primary-default text-2xl">
+            <span className="text-primary text-2xl">
               {openSeeMore ? (
                 <i className="bx bx-minus-circle"></i>
               ) : (
