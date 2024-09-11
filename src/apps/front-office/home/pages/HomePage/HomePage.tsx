@@ -116,15 +116,19 @@ export default function HomePage() {
   return (
     <>
       <Helmet title={trans("home")} appendAppName={false} />
-      <Slider
-        sliderData={rows[0].columns[0].module.slider!.banners}
-        isLoading={loading}
-      />
-      <FeaturedCategories moduleName={rows[1].columns[0].module.name} />
-      {/* <div className="App">
-        <DailyBestSellsSection />
-      </div> */}
-      <PopularProducts />
+      <div className="container">
+        <Slider
+          sliderData={rows[0].columns[0].module.slider!.banners}
+          isLoading={loading}
+        />
+
+        <FeaturedCategories moduleName={rows[1].columns[0].module.name} />
+        {/* <div className="App">
+          <DailyBestSellsSection />
+        </div> */}
+        <PopularProducts />
+      </div>
+
       <DealsDayTwo columns={rows[3].columns} />
       {/* <SectionWrapper>
         <Header title="Deals Of The Day" linkText="All Deals" linkHref="#" />

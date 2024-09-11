@@ -23,6 +23,10 @@
     {
       "entry": ["/products", "shop"],
       "name": "shop"
+    },
+    {
+      "entry": ["/informative-pages"],
+      "name": "informative-pages"
     }
   ]
 }

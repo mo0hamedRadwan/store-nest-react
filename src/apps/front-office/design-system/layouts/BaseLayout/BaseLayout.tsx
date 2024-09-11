@@ -15,7 +15,7 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
       {/* <Portal containerId="root">
         <QuickView />
       </Portal> */}
-      <main className="container">{children}</main>
+      <main className="relative">{children}</main>
       <Footer />
     </>
   );
