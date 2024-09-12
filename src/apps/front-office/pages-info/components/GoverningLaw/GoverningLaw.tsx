@@ -29,7 +29,7 @@ export default function GoverningLaw() {
       <p className="text-[17px] mb-4 font-normal">
         {trans("contactUsContentOne")}
         <a href="/" className="text-priceNowColor pl-2">
-          {trans("contactUsContentTwo")}
+          {trans("contactUs")}
         </a>
         .
       </p>
