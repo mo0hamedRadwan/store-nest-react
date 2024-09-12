@@ -17,7 +17,7 @@
       "name": "home"
     },
     {
-      "entry": ["/about-us", "/privacy-policy", "/terms-conditions"],
+      "entry": ["/about-us", "/privacy-policy"],
       "name": "informative-pages"
     },
     {
@@ -29,7 +29,7 @@
       "name": "catalog"
     },
     {
-      "entry": ["/pages-info"],
+      "entry": ["/terms-conditions"],
       "name": "pages-info"
     }
   ]
