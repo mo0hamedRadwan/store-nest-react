@@ -1,3 +1,4 @@
+import Card from "src/apps/front-office/design-system/components/Card";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +11,8 @@ import {
   currentDirection,
   currentLocaleCode,
 } from "src/apps/front-office/utils/helpers";
+
+import provide_mock from "../../mocks/we-provide.mock";
 
 export default function AboutUsPage() {
   return (
@@ -29,7 +32,7 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className="container my-10">
+      <div className="my-10">
         <main className="about-body">
           <div className="body-t-1 h-m px-10 py-4">
             <div className="flex gap-4 max-lg:flex-col">
@@ -89,6 +92,19 @@ export default function AboutUsPage() {
             <h2 className="text-4xl font-bold text-center capitalize my-4 bg-[url('https://nest-frontend-rtl-v6.vercel.app/assets/imgs/theme/wave.png')] bg-no-repeat bg-bottom pb-7">
               What we provide?
             </h2>
+
+            <section className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-7 py-10">
+              {provide_mock.map((item, index) => (
+                <div className="" key={index}>
+                  <Card
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                    link={item.link}
+                  />
+                </div>
+              ))}
+            </section>
           </div>
           <div className="body-t-3"></div>
           <div className="body-t-4"></div>
