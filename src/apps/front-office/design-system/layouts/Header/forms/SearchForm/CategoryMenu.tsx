@@ -42,7 +42,11 @@ export default function CategoryMenu({
           <li
             key={index}
             onClick={handleSelectCategory}
+<<<<<<< Updated upstream
             className="p-2 hover:bg-primary hover:text-white rounded cursor-pointer">
+=======
+            className="p-2 hover:bg-primary-default hover:text-white rounded cursor-pointer">
+>>>>>>> Stashed changes
             {option}
           </li>
         ))}

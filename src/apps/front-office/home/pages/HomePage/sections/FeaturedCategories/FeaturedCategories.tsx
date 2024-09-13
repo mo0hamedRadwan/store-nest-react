@@ -1,4 +1,9 @@
 import CategoryCard from "apps/front-office/home/components/CategoryCard";
+<<<<<<< Updated upstream
+=======
+import FeaturedCategoriesBanner from "apps/front-office/home/components/FeaturedCategoriesBanner";
+import { useFeaturedCategories } from "src/shared/hooks/useFeaturedCategories";
+>>>>>>> Stashed changes
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,8 +13,27 @@ import { Module } from "../../../../utils/types";
 import "./style.css";
 
 type FeaturedCategoriesPropsType = {
+<<<<<<< Updated upstream
   module: Module;
 };
+=======
+  moduleName: string;
+};
+
+export default function FeaturedCategories({
+  moduleName,
+}: FeaturedCategoriesPropsType) {
+  const { categories, isLoading } = useFeaturedCategories();
+  // console.log(JSON.stringify(sliderData.categories[0]), isLoading, error);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
+>>>>>>> Stashed changes
 
 export default function FeaturedCategories({
   module,
@@ -18,7 +42,11 @@ export default function FeaturedCategories({
     <section className="featured-categories px-3 py-[25px] relative">
       <div className="featured-categories-title mb-11 ">
         <h3 className="text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold text-[#253D4E]">
+<<<<<<< Updated upstream
           {module.title}
+=======
+          {moduleName || trans("featured_categories")}
+>>>>>>> Stashed changes
         </h3>
       </div>
       <div className="mb-10">
@@ -29,8 +57,13 @@ export default function FeaturedCategories({
             delay: 2500,
             disableOnInteraction: false,
           }}
+<<<<<<< Updated upstream
           spaceBetween={12}
           slidesPerView={10}
+=======
+          spaceBetween={5}
+          slidesPerView={Math.min(3, categories.length)}
+>>>>>>> Stashed changes
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -50,7 +83,11 @@ export default function FeaturedCategories({
             },
           }}
           className="w-full">
+<<<<<<< Updated upstream
           {module.categories.map((item, index) => (
+=======
+          {categories.map((item, index) => (
+>>>>>>> Stashed changes
             <SwiperSlide key={index}>
               <CategoryCard item={item} index={index} />
             </SwiperSlide>

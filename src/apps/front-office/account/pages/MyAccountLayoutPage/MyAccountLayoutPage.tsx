@@ -11,7 +11,7 @@ export default function MyAccountLayoutPage({
   children,
 }: MyAccountLayoutPagePropsType) {
   return (
-    <div className="px-0 py-10 xl:p-32 container flex gap-5 flex-wrap lg:flex-nowrap border border-red-500">
+    <div className="px-0 py-10 xl:p-32 container flex gap-5 flex-wrap lg:flex-nowrap">
       <ul className="flex flex-row flex-wrap justify-center lg:flex-col lg:justify-start gap-2">
         {accountItems.map(accountItem => (
           <li
