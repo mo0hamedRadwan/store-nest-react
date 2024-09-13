@@ -1,3 +1,9 @@
 import { publicRoutes } from "apps/front-office/utils/router";
+import PagesInfoPage from "./pages/PagesInfoPage";
 
-publicRoutes([]);
+publicRoutes([
+  {
+    path: URLS.pagesInfo,
+    component: PagesInfoPage,
+  },
+]);
