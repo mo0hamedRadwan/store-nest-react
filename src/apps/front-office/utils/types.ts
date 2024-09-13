@@ -179,3 +179,7 @@ export type DealsData = {
     type: string;
   }[];
 };
+
+export type Order = {
+  id: number;
+};

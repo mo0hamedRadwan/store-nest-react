@@ -3,13 +3,21 @@
 import { Category, Product } from "./types";
 
 const URLS = {
-  pagesInfo: "/pages-info",
-  catalog: "/catalog",
   home: "/",
   compare: "/compare",
   cart: "/cart",
   checkout: "/checkout",
-  account: "/account",
+  account: {
+    root: "/account",
+    dashboard: "/account/dashboard",
+    orders: "/account/orders",
+    trackOrder: "/account/track-order",
+    addresses: "/account/addresses",
+    details: "/account/details",
+    wishlist: "/account/wishlist",
+    settings: "/account/settings",
+    logout: "/logout",
+  },
   wishlist: "/wishlist",
   addresses: "/addresses",
   orders: "/orders",

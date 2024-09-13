@@ -31,6 +31,10 @@ export default {
         priceNowColor: "#3BB77E",
         priceOldColor: "#adadad",
         shopCategoryColor: "#BCE3C9",
+        specialColor: {
+          primary: "#7E7E7E",
+          secondary: "#253D4E",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
