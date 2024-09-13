@@ -4,6 +4,7 @@ import headerTranslation from "shared/localization/header.json";
 import mainTranslation from "shared/localization/index.json";
 import productsTranslation from "shared/localization/products.json";
 import sectionsTranslation from "shared/localization/sections.json";
+import TermsAndConditionsTranslation from "shared/localization/terms.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -55,4 +56,5 @@ groupedTranslations({
   ...sectionsTranslation,
   ...bannersTranslation,
   ...headerTranslation,
+  ...TermsAndConditionsTranslation,
 });

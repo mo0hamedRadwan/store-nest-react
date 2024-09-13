@@ -1,41 +1,32 @@
-import { debounce } from "@mongez/reinforcements";
-import Banner from "apps/front-office/design-system/components/Banner";
-import { useEffect, useRef, useState } from "react";
-import CategorySidebar from "../../components/CategorySidebar";
-import FilterSide from "../../components/FilterSide";
-import DealsDays from "../../sections/DealsDays";
-import ProductsContainer from "../components/ProductsContainer";
-import ViewDisplayMode from "../components/ProductsContainer/ViewDisplayMode";
 import ShopBanner from "../components/shopBanner/ShopBanner";
-import TrendingProducts from "../components/TrendingProducts";
 
 function ShopPage() {
-  const sidebarRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isSticky, setIsSticky] = useState(false);
+  // const sidebarRef = useRef<HTMLDivElement>(null);
+  // const sectionRef = useRef<HTMLDivElement>(null);
+  // const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sidebar = sidebarRef.current;
-      const section = sectionRef.current;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const sidebar = sidebarRef.current;
+  //     const section = sectionRef.current;
 
-      if (sidebar && section) {
-        const sidebarTop = sidebar.getBoundingClientRect().top;
-        const sectionTop = section.getBoundingClientRect().top;
+  //     if (sidebar && section) {
+  //       const sidebarTop = sidebar.getBoundingClientRect().top;
+  //       const sectionTop = section.getBoundingClientRect().top;
 
-        setIsSticky(sidebarTop < 0 && sectionTop > 0);
-      } else {
-        setIsSticky(false);
-      }
-    };
+  //       setIsSticky(sidebarTop < 0 && sectionTop > 0);
+  //     } else {
+  //       setIsSticky(false);
+  //     }
+  //   };
 
-    const debouncedHandleScroll = debounce(handleScroll, 300);
-    window.addEventListener("scroll", debouncedHandleScroll);
+  //   const debouncedHandleScroll = debounce(handleScroll, 300);
+  //   window.addEventListener("scroll", debouncedHandleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", debouncedHandleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", debouncedHandleScroll);
+  //   };
+  // }, []);
 
   return (
     <div className="relative">
@@ -43,16 +34,16 @@ function ShopPage() {
       <div className="container">
         <div className="md:flex md:flex-row md:justify-between md:gap-12 md:my-12">
           <div className="basis-full lg:basis-10/12 mt-5 md:mt-0">
-            <ViewDisplayMode />
-            <ProductsContainer />
+            {/* <ViewDisplayMode /> */}
+            {/* <ProductsContainer /> */}
 
             {/* Deals Of The Day Component [Task] */}
-            <DealsDays ref={sectionRef} />
+            {/* <DealsDays ref={sectionRef} /> */}
             {/* Stay home Banner [Task Muhammad Darkdir] */}
           </div>
           {/* ./Left Side */}
 
-          <div
+          {/* <div
             ref={sidebarRef}
             className={`${isSticky ? "sticky" : "relative"} top-0 h-full basis-full lg:basis-2/12`}>
             <CategorySidebar />
@@ -67,7 +58,7 @@ function ShopPage() {
                 </>
               )}
             />
-          </div>
+          </div> */}
           {/* ./Right Side */}
         </div>
       </div>
