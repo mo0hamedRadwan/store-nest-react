@@ -6,7 +6,7 @@ import Content from "./Content";
 export default function PrivacyPage() {
   return (
     <div className="flex">
-      <div className="">
+      <div className=" ">
         <CategorySidebar />
       </div>
       <div className="">
