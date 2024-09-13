@@ -6,6 +6,7 @@ export function useGetDailyBestSellsBanner() {
   const [loading, setloading] = useState(false);
   const [error, setError] = useState<string>("");
   const [banner, setBanner] = useState<Banner | undefined>(undefined);
+
   useEffect(() => {
     getHome()
       .then(response => {
