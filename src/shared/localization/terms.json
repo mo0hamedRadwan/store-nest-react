@@ -1,0 +1,102 @@
+{
+  "termsOfService": {
+    "en": "Terms of Service",
+    "ar": "شروط الخدمة"
+  },
+  "termsOfServiceContentOne": {
+    "en": "Please read these Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://Evara.com website (the “Service”) operated by Evara (“us”, “we”, or “our”).",
+    "ar": "يرجى قراءة شروط الخدمة ('الشروط'، 'شروط الخدمة') بعناية قبل استخدام موقع https://Evara.com (يُشار إليه بـ 'الخدمة') الذي تديره شركة Evara ('نحن' أو 'لنا' أو 'خاصتنا')."
+  },
+  "termsOfServiceContentTwo": {
+    "en": "Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.",
+    "ar": "يعتمد وصولك إلى الخدمة واستخدامها على قبولك والتزامك بهذه الشروط. تنطبق هذه الشروط على جميع الزوار والمستخدمين وغيرهم ممن يصلون إلى الخدمة أو يستخدمونها."
+  },
+  "termsOfServiceContentThree": {
+    "en": "By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.",
+    "ar": "من خلال الوصول إلى الخدمة أو استخدامها، فإنك توافق على الالتزام بهذه الشروط. إذا كنت لا توافق على أي جزء من الشروط، فلا يحق لك الوصول إلى الخدمة."
+  },
+  "rightsAndRestrictions": {
+    "en": "Rights And Restrictions",
+    "ar": "الحقوق والقيود"
+  },
+  "rightsAndRestrictionsContentOne": {
+    "en": "Members must be at least 18 years of age.",
+    "ar": "يجب أن يكون الأعضاء بعمر 18 عامًا على الأقل."
+  },
+  "rightsAndRestrictionsContentTwo": {
+    "en": "Members are granted a time-limited, non-exclusive, revocable, nontransferable, and non-sublicensable right to access that portion of the online course corresponding to the purchase.",
+    "ar": "يُمنح الأعضاء حق الوصول إلى الجزء المتعلق بالشراء من الدورة التدريبية عبر الإنترنت، ويكون هذا الحق محدودًا بمدة زمنية معينة، وغير حصري، وقابل للإلغاء، وغير قابل للنقل أو التنازل عنه أو الترخيص من الباطن."
+  },
+  "rightsAndRestrictionsContentThree": {
+    "en": "The portion of the online course corresponding to the purchase will be available to the Member as long as the course is maintained by the Company, which will be a minimum of one year after Member’s purchase.",
+    "ar": "سيكون الجزء المتعلق بالشراء من الدورة التدريبية عبر الإنترنت متاحًا للعضو طالما أن الشركة تحتفظ بالدورة، على أن يكون ذلك لمدة لا تقل عن سنة واحدة بعد الشراء."
+  },
+  "rightsAndRestrictionsContentFour": {
+    "en": "The videos in the course are provided as a video stream and are not downloadable.",
+    "ar": "تُقدَّم مقاطع الفيديو في الدورة على شكل بث مباشر ولا يمكن تحميلها."
+  },
+  "rightsAndRestrictionsContentFive": {
+    "en": "By agreeing to grant such access, the Company does not obligate itself to maintain the course, or to maintain it in its present form.",
+    "ar": "من خلال الموافقة على منح هذا الوصول، لا تلتزم الشركة بالحفاظ على الدورة التدريبية أو إبقائها بشكلها الحالي."
+  },
+  "linksToOtherWebSites": {
+    "en": "Links To Other Web Sites",
+    "ar": "الروابط إلى مواقع ويب أخرى"
+  },
+  "linksToOtherWebSitesContentOne": {
+    "en": "Our Service may contain links to third-party web sites or services that are not owned or controlled by Evara.",
+    "ar": "قد تحتوي خدمتنا على روابط لمواقع ويب أو خدمات تابعة لجهات خارجية لا تملكها أو تتحكم بها شركة Evara."
+  },
+  "linksToOtherWebSitesContentTwo": {
+    "en": "Evara has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that Evara shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.",
+    "ar": "لا تتحمل شركة Evara أي مسؤولية عن المحتوى أو سياسات الخصوصية أو ممارسات أي مواقع ويب أو خدمات تابعة لجهات خارجية، وليس لها أي سيطرة عليها. كما أنك تقر وتوافق على أن شركة Evara لن تكون مسؤولة أو ملزمة، بشكل مباشر أو غير مباشر، عن أي ضرر أو خسارة قد تحدث أو يُزعم أنها ناتجة عن استخدام أو الاعتماد على أي محتوى أو سلع أو خدمات متاحة على أو من خلال أي من هذه المواقع أو الخدمات."
+  },
+  "linksToOtherWebSitesContentThree": {
+    "en": "We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.",
+    "ar": "ننصح بشدة بقراءة الشروط والأحكام وسياسات الخصوصية الخاصة بأي مواقع أو خدمات تابعة لجهات خارجية تزورها."
+  },
+  "termination": {
+    "en": "Termination",
+    "ar": "إنهاء"
+  },
+  "terminationContentOne": {
+    "en": "We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.",
+    "ar": "قد نقوم بإنهاء أو تعليق الوصول إلى خدمتنا فوراً، دون إشعار مسبق أو مسؤولية، لأي سبب كان، بما في ذلك على سبيل المثال لا الحصر إذا قمت بانتهاك الشروط."
+  },
+  "terminationContentTwo": {
+    "en": "All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.",
+    "ar": "جميع أحكام هذه الشروط التي بطبيعتها يجب أن تستمر بعد الإنهاء ستظل سارية بعد الإنهاء، بما في ذلك على سبيل المثال لا الحصر أحكام الملكية، وإخلاء المسؤولية عن الضمانات، والتعويضات، وحدود المسؤولية."
+  },
+  "governingLaw": {
+    "en": "Governing Law",
+    "ar": "القانون الواجب التطبيق"
+  },
+  "governingLawContentOne": {
+    "en": "These Terms shall be governed and construed in accordance with the laws of Viet Nam, without regard to its conflict of law provisions.",
+    "ar": "تخضع هذه الشروط وتُفسر وفقًا لقوانين فيتنام، دون اعتبار لأحكام تنازع القوانين الخاصة بها."
+  },
+  "governingLawContentTwo": {
+    "en": "Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.",
+    "ar": "إن فشلنا في تطبيق أي حق أو حكم من هذه الشروط لا يُعتبر تنازلاً عن تلك الحقوق. وإذا اعتبرت أي محكمة أن أي حكم من هذه الشروط غير صالح أو غير قابل للتنفيذ، ستظل الأحكام الأخرى من هذه الشروط سارية وفعالة. تشكل هذه الشروط الاتفاق الكامل بيننا بشأن خدمتنا، وتلغي وتحل محل أي اتفاقات سابقة قد تكون بيننا فيما يتعلق بالخدمة."
+  },
+  "changes": {
+    "en": "changes",
+    "ar": "التعديلات"
+  },
+  "changesContentOne": {
+    "en": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.",
+    "ar": "نحتفظ بالحق، وفقًا لتقديرنا الخاص، في تعديل أو استبدال هذه الشروط في أي وقت. إذا كان التعديل جوهريًا، سنحاول تقديم إشعار مسبق لمدة لا تقل عن 30 يومًا قبل أن تصبح الشروط الجديدة سارية المفعول. سيتم تحديد ما يُعد تغييرًا جوهريًا وفقًا لتقديرنا الخاص."
+  },
+  "changesContentTwo": {
+    "en": "By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.",
+    "ar": "باستمرارك في الوصول إلى خدمتنا أو استخدامها بعد سريان هذه التعديلات، فإنك توافق على الالتزام بالشروط المعدلة. إذا كنت لا توافق على الشروط الجديدة، يرجى التوقف عن استخدام الخدمة."
+  },
+  "contactUsContentOne": {
+    "en": "If you have any questions about these Terms, please",
+    "ar": "إذا كانت لديك أي أسئلة حول هذه الشروط، يرجى ."
+  },
+  "search": {
+    "en": "Search...",
+    "ar": "...بحث"
+  }
+}

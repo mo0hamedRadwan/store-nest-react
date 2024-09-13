@@ -28,9 +28,5 @@
       "entry": ["/catalog"],
       "name": "catalog"
     },
-    {
-      "entry": ["/pages-info"],
-      "name": "pages-info"
-    }
   ]
 }
