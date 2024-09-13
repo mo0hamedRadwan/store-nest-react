@@ -1,27 +1,31 @@
-import { trans } from "@mongez/localization";
 import { PRODUCT_STATUS, PRODUCT_STATUS_CLASSES } from "shared/constants";
+import { Category } from "src/apps/front-office/utils/types";
 
 type ProductDiscountProps = {
   discount?: number;
-  status?: PRODUCT_STATUS;
+  category?: Category;
 };
 
 const ProductDiscount = ({
+  category = {
+    id: 0,
+    name: "",
+  },
   discount = 0,
-  status = PRODUCT_STATUS.DEFAULT,
 }: ProductDiscountProps) => {
   if (!discount) return null;
 
   const discountBadge = `Save ${discount}%`;
 
-  const backgroundBasedOnStatus = PRODUCT_STATUS_CLASSES[status];
+  const backgroundBasedOnStatus =
+    PRODUCT_STATUS_CLASSES[category?.slug as PRODUCT_STATUS];
 
-  status = trans(status);
+  // console.log(category.slug, discountBadge, category, category.name);
 
   return (
     <div
       className={`absolute z-10 top-0 left-0 p-1 px-4 text-xs rounded-ss-lg rounded-ee-lg ${backgroundBasedOnStatus} text-white`}>
-      {status !== "default" && status + " - "} {discountBadge}
+      {discountBadge}
     </div>
   );
 };

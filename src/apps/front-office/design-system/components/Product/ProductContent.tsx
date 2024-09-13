@@ -1,42 +1,42 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { ShoppingCart } from "lucide-react";
-import { URLS } from "shared/constants";
-import { IProductContent } from "shared/contracts/IProductContent";
+import { getLocalizedValue } from "src/apps/front-office/utils/localization";
+import { Product } from "src/apps/front-office/utils/types";
 import ProgressBar from "../../Indicators/ProgressBar";
 import Rating from "../Rating";
 
 export default function ProductContent({
   name,
-  rate,
+  rating,
   price,
   discount,
-  brandName,
-  total,
-  sold,
-}: IProductContent) {
+  type,
+  stock,
+  purchase,
+}: Product) {
   const priceAfterDiscount = discount
-    ? price - (price * discount) / 100
+    ? price - (price * discount.percentage) / 100
     : price;
 
   return (
     <section className="product-content">
       <div className="product-category">
         <Link
-          href={URLS.BRAND_DETAILS}
+          href={"brand/:id"}
           className="text-slate-400 block text-xs font-normal my-1">
-          {brandName}
+          {type}
         </Link>
       </div>
 
       <div className="product-name">
-        <Link href={URLS.PRODUCT_DETAILs} className="font-bold">
-          {name}
+        <Link href={"product/:id"} className="font-bold">
+          {getLocalizedValue(name)}
         </Link>
       </div>
 
       <div className="product-rate flex">
-        <Rating rate={rate || -1} />
+        <Rating rate={rating || 2} />
       </div>
 
       <div className="product-price flex gap-2 py-2">
@@ -55,7 +55,7 @@ export default function ProductContent({
         <ProgressBar />
 
         <div className="product-sold-text text-sm">
-          {trans("sold")}: {sold}/{total}
+          {trans("sold")}: {purchase.minQuantity}/{stock?.available}
         </div>
       </div>
 

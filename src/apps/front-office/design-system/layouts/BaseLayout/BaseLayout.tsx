@@ -1,5 +1,3 @@
-import Portal from "../../components/Portal";
-import QuickView from "../../components/QuickView";
 import Footer from "../Footer";
 import Header from "../Header";
 
@@ -14,10 +12,10 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
   return (
     <>
       <Header />
-      <Portal containerId="root">
+      {/* <Portal containerId="root">
         <QuickView />
-      </Portal>
-      <main className="container">{children}</main>
+      </Portal> */}
+      <main className="relative">{children}</main>
       <Footer />
     </>
   );

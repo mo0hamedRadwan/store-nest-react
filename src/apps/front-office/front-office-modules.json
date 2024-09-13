@@ -21,8 +21,12 @@
       "name": "informative-pages"
     },
     {
-      "entry": ["/shop"],
+      "entry": ["/products", "shop"],
       "name": "shop"
+    },
+    {
+      "entry": ["/catalog"],
+      "name": "catalog"
     }
   ]
 }

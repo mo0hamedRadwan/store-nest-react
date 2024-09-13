@@ -4,6 +4,7 @@ import headerTranslation from "shared/localization/header.json";
 import mainTranslation from "shared/localization/index.json";
 import productsTranslation from "shared/localization/products.json";
 import sectionsTranslation from "shared/localization/sections.json";
+import TermsAndConditionsTranslation from "shared/localization/terms.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -17,7 +18,7 @@ export function the(key: string) {
 groupedTranslations({
   home: {
     en: "Home",
-    ar: "الصفحة الرئيسية",
+    ar: "الرئيسية",
   },
   contactUs: {
     en: "Contact Us",
@@ -31,8 +32,29 @@ groupedTranslations({
     en: "all products",
     ar: "جميع المنتجات ",
   },
+  description: {
+    en: "description",
+    ar: "الوصف",
+  },
+  additionalInfo: {
+    en: "additional info",
+    ar: "معلومات اضافية",
+  },
+  addReview: {
+    en: "Add a review",
+    ar: "أضف تعليق",
+  },
+  yourComment: {
+    en: "Your comment",
+    ar: "تعليقك",
+  },
+  submitReview: {
+    en: "Submit Review",
+    ar: "أضافة تعلبق",
+  },
   ...productsTranslation,
   ...sectionsTranslation,
   ...bannersTranslation,
   ...headerTranslation,
+  ...TermsAndConditionsTranslation,
 });

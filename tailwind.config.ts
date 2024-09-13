@@ -18,19 +18,32 @@ export default {
     extend: {
       screens: {
         xs: "375px",
-        "2xl": "1400px",
-        "small-to-medium": { min: "486px", max: "767px" },
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1610px",
+        // "small-to-medium": { min: "486px", max: "767px" },
       },
       colors: {
+        mainColor: "#253D4E",
+        rateColor: "#B6B6B6",
+        priceNowColor: "#3BB77E",
+        priceOldColor: "#adadad",
+        shopCategoryColor: "#BCE3C9",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        light: {
+          DEFAULT: "hsl(var(--light))",
+          background: "hsl(var(--light-background))",
         },
         "black-soft-foreground": {
           DEFAULT: "hsl(var(--black-soft-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#253D4E",
           foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
@@ -55,6 +68,9 @@ export default {
             transform: "translateY(-5px)",
           },
         },
+      },
+      boxShadow: {
+        lg: "5px 5px 15px rgba(0, 0, 0, 0.05)",
       },
       animation: {
         "bounce-up": "bounce-up 0.5s cubic-bezier(0.71, 1.7, 0.77, 1.24)",

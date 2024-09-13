@@ -4,13 +4,13 @@ import {
   Card,
   CardContent,
 } from "apps/front-office/design-system/components/ui/card";
-import { Category2 } from "apps/front-office/utils/types";
 import URLS from "apps/front-office/utils/urls";
+import { Category } from "src/apps/front-office/utils/types";
 import { SwiperSlide } from "swiper/react";
 
 interface CategoryCardProps {
   index: number;
-  item: Category2;
+  item: Category;
 }
 
 const CategoryCard = ({ index, item }: CategoryCardProps) => {
@@ -20,9 +20,8 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
   // console.log("CategoryCard item:", item);
 
   // Safely access the name and image properties
-  const itemName =
-    item.name?.find(n => n.localeCode === "en")?.value || "Unnamed";
-  const itemImage = item.image?.url || "/images/featured-categories/Kiwi.png"; // Fallback to a default image if the image URL is missing
+  const itemName = item.name || "Unnamed";
+  const itemImage = item.image?.url || "/images/featured-categories/kiwi.png"; // Fallback to a default image if the image URL is missing
 
   return (
     <SwiperSlide key={index}>
@@ -45,12 +44,12 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
             <p>
               <Link
                 to={`${URLS.home}/${item.slug}`}
-                className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md md:text-lg">
+                className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md">
                 {itemName}
               </Link>
             </p>
             <span className="text-slate-400 text-base font-normal my-1">
-              {item.totalProducts} {trans("Items")}
+              {item.totalProducts || 0} {trans("Items")}
             </span>
           </CardContent>
         </Card>

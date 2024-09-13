@@ -1,5 +1,6 @@
+import Module from "module";
 import endpoint from "shared/endpoint";
-import { Column, Module, Row } from "./types";
+import { Column, Row } from "src/apps/front-office/utils/types";
 
 export type TopData = {
   rows: Row[];

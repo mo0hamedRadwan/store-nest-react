@@ -8,34 +8,33 @@ export default function NotFoundPage() {
   return (
     <>
       <Helmet title={trans("notFoundPage")} />
-      <div className="container mx-auto text-center py-20 flex flex-col justify-center space-y-12">
+      <div className="container mx-auto text-center py-20 flex flex-col justify-center items-center space-y-12">
         <img
           src="https://nest-frontend-v6.netlify.app/assets/imgs/page/page-404.png"
           alt="notfound"
           className="max-w-80"
         />
-        <h1 className="text-[72px] text-[#253D4E] font-bold leading-3	">
-          Page Not Found
+        <h1 className="text-[36px] md:text-[48px] lg:text-[72px] text-[#253D4E] font-bold leading-tight">
+          {trans("pageNotFound")}
         </h1>
         <p className="text-gray-800 font-medium leading-6 text-[16px] max-w-[560px]">
-          The link you clicked may be broken or the page may have been removed.
-          visit the{" "}
-          <Link to="/" className="text-primary-default">
-            HomePage
+          {trans("errMsgNotFound")}{" "}
+          <Link to="/" className="text-primary">
+            {trans("homePage")}
           </Link>{" "}
-          or{" "}
-          <Link to="/contact" className="text-primary-default">
+          {trans("or")}{" "}
+          <Link to="/contact" className="text-primary">
             {" "}
-            Contact us
+            {trans("contactUs")}
           </Link>{" "}
-          about the problem
+          {trans("aboutTheProblem")}
         </p>
         <Button
           variant="default"
           size="lg"
           className="px-6 flex items-center justify-center">
           <HomeIcon className="w-4 h-4 mr-1 " />
-          Back to Home Page
+          {trans("goToHomePage")}
         </Button>
       </div>
     </>

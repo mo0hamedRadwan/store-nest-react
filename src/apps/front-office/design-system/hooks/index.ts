@@ -1,6 +1,6 @@
-import { filterProducts } from "apps/front-office/home/services/home-service";
 import { useEffect, useRef, useState } from "react";
-import { Product } from "../layouts/types";
+import { getProducts } from "../../home/services/home-service";
+import { Product } from "../../utils/types";
 
 /**
  * the purpose of this hook is get current position with live scrolling
@@ -82,7 +82,10 @@ export function useFilterProducts(searchTerm: string, categoryId?: string) {
       return;
     }
     setIsLoading(true);
-    filterProducts(debounceSearch, categoryId)
+    getProducts({
+      name: debounceSearch,
+      category: categoryId,
+    })
       .then(data => {
         const products = data.data.products as Product[];
         setFilteredProducts(products);
@@ -98,3 +101,17 @@ export function useFilterProducts(searchTerm: string, categoryId?: string) {
 
   return { isLoading, filteredProducts, isError };
 }
+
+/**
+ *
+ */
+
+// export type PaginationProps = {
+//   totalCount: number;
+//   currentPage: number;
+//   onPageChange: (page: number) => void;
+//   pageSize: number;
+//   siblingCount?: number;
+//   className?: string;
+// };
+// export function usePagination({}: PaginationProps) {}

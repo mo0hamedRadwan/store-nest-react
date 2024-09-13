@@ -39,7 +39,7 @@ const CartMenu = () => {
           </Link>
           <Link
             to="/checkout"
-            className="px-5 py-2.5 rounded-lg text-white bg-primary ">
+            className="px-5 py-2.5 rounded-lg text-white bg-primary">
             Checkout
           </Link>
         </div>

@@ -32,7 +32,7 @@ export default function ListProductCard({ product }: ListMealCardProps) {
         <p className="font-light mt-1 line-clamp-3">description</p>
         <div className="flex items-center justify-center gap-2">
           {isOnSale && (
-            <span className="inline-block self-start text-primary-default font-bold text-lg">
+            <span className="inline-block self-start text-primary font-bold text-lg">
               ${product.salePrice}
             </span>
           )}
@@ -40,7 +40,7 @@ export default function ListProductCard({ product }: ListMealCardProps) {
             className={`font-bold ${
               isOnSale
                 ? "text-[#adadad] line-through text-sm"
-                : "text-primary-default text-xl"
+                : "text-primary text-xl"
             }`}>
             ${product.price}
           </span>

@@ -12,7 +12,7 @@ export default function Rating({ rate, className }: RatingProps) {
   );
 
   const [hovers, setHovers] = useState<number>(-1);
-  const [actives, setActives] = useState<number>(-1);
+  const [actives, setActives] = useState<number>(rate || -1);
 
   const accumulateActive = (rank: number) => _ => {
     setActives(rank);

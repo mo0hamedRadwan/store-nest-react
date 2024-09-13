@@ -42,7 +42,7 @@ export default function CategoryMenu({
           <li
             key={index}
             onClick={handleSelectCategory}
-            className="p-2 hover:bg-primary hover:text-white rounded">
+            className="p-2 hover:bg-primary hover:text-white rounded cursor-pointer">
             {option}
           </li>
         ))}
