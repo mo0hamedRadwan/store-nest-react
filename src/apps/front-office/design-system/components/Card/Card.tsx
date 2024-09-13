@@ -10,7 +10,7 @@ export type CardProps = {
 function _Card({ image, title, description, link }: CardProps) {
   return (
     <>
-      <div className="w-full card text-center border border-gray-200 p-9 py-14 rounded-lg hover:shadow-sm transition-all cursor-pointer">
+      <div className="w-full card text-center border border-gray-200 p-9 py-14 rounded-lg hover:shadow-lg transition-all cursor-pointer">
         <div className="card-image">
           <img
             src={image}

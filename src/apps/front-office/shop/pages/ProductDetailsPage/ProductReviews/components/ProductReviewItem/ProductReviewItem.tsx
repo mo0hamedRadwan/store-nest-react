@@ -1,6 +1,3 @@
-export type ProductReviewItemProps = {
-  // props go here
-};
 export default function ProductReviewItem() {
   return (
     <>
