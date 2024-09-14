@@ -1,0 +1,210 @@
+{
+  "hello": {
+    "en": "Hello",
+    "ar": "مرحبا"
+  },
+  "user": {
+    "en": "User",
+    "ar": "مستخدم"
+  },
+  "from": {
+    "en": "From",
+    "ar": "من"
+  },
+  "yourAccountDashboard": {
+    "en": "Your Account Dashboard",
+    "ar": "لوحة التحكم الخاصة بحسابك"
+  },
+  "youCan": {
+    "en": "you can",
+    "ar": "يمكنك"
+  },
+  "easily": {
+    "en": "easily",
+    "ar": "بسهولة"
+  },
+  "check": {
+    "en": "check",
+    "ar": "التحقق"
+  },
+  "view": {
+    "en": "view",
+    "ar": "عرض"
+  },
+  "manage": {
+    "en": "manage",
+    "ar": "ادارة"
+  },
+  "edit": {
+    "en": "edit",
+    "ar": "تعديل"
+  },
+  "yourRecentOrders": {
+    "en": "Your Recent Orders",
+    "ar": "طلباتك الأخيرة"
+  },
+  "yourShipping": {
+    "en": "Your Shipping",
+    "ar": "شحنتك"
+  },
+  "and": {
+    "en": "and",
+    "ar": "و"
+  },
+  "billingAddresses": {
+    "en": "Billing Addresses",
+    "ar": "عناوين الفواتير"
+  },
+  "yourPassword": {
+    "en": "Your Password",
+    "ar": "كلمة المرور الخاصة بك"
+  },
+  "accountDetails": {
+    "en": "Account Details",
+    "ar": "تفاصيل الحساب"
+  },
+  "orders": {
+    "en": "Orders",
+    "ar": "الطلبات"
+  },
+  "date": {
+    "en": "Date",
+    "ar": "التاريخ"
+  },
+  "states": {
+    "en": "States",
+    "ar": "الحالات"
+  },
+  "total": {
+    "en": "Total",
+    "ar": "المجموع"
+  },
+  "actions": {
+    "en": "Actions",
+    "ar": "الإجراءات"
+  },
+  "ordersTracking": {
+    "en": "Orders Tracking",
+    "ar": "تتبع الطلبات"
+  },
+  "toTrack": {
+    "en": "To track",
+    "ar": "لتتبع"
+  },
+  "yourOrder": {
+    "en": "Your Order",
+    "ar": "طلبك"
+  },
+  "please": {
+    "en": "Please",
+    "ar": "من فضلك"
+  },
+  "enter": {
+    "en": "enter",
+    "ar": "أدخل"
+  },
+  "your": {
+    "en": "your",
+    "ar": "الخاص بك"
+  },
+  "orderID": {
+    "en": "Order ID",
+    "ar": "رقم الطلب"
+  },
+  "in": {
+    "en": "in",
+    "ar": "في"
+  },
+  "below": {
+    "en": "below",
+    "ar": "أسفل"
+  },
+  "theBox": {
+    "en": "the box",
+    "ar": "الصندوق"
+  },
+  "press": {
+    "en": "press",
+    "ar": "اضغط علي"
+  },
+  "track": {
+    "en": "track",
+    "ar": "تتبع"
+  },
+  "button": {
+    "en": "Button",
+    "ar": "الزر"
+  },
+  "this": {
+    "en": "this",
+    "ar": "هذا"
+  },
+  "wasGivenToYou": {
+    "en": "was given to you",
+    "ar": "كان متوفرا لك"
+  },
+  "onYourReceipt": {
+    "en": "on your receipt",
+    "ar": "على ايصالك"
+  },
+  "theConfirmationEmail": {
+    "en": "the confirmation email",
+    "ar": "البريد الإلكتروني التأكيدي"
+  },
+  "youShould": {
+    "en": "you should",
+    "ar": "يجب أن"
+  },
+  "have": {
+    "en": "have",
+    "ar": "يكون لديك"
+  },
+  "received": {
+    "en": "received",
+    "ar": "تم استلامها"
+  },
+  "billingEmail": {
+    "en": "Billing Email",
+    "ar": "البريد الإلكتروني الفواتيري"
+  },
+  "Processing": {
+    "en": "Processing",
+    "ar": "جاري المعالحة"
+  },
+  "completed": {
+    "en": "Completed",
+    "ar": "تم الانتهاء"
+  },
+  "firstName": {
+    "en": "First Name",
+    "ar": "الاسم الأول"
+  },
+  "lastName": {
+    "en": "Last Name",
+    "ar": "الاسم الأخير"
+  },
+  "displayName": {
+    "en": "Display Name",
+    "ar": "اسم العرض"
+  },
+  "emailAddress": {
+    "en": "Email Address",
+    "ar": "عنوان البريد الإلكتروني"
+  },
+  "currentPassword": {
+    "en": "Current Password",
+    "ar": "كلمة المرور الحالية"
+  },
+  "newPassword": {
+    "en": "New Password",
+    "ar": "كلمة المرور الجديدة"
+  },
+  "confirmPassword": {
+    "en": "Confirm Password",
+    "ar": "تأكيد كلمة المرور"
+  },
+  "saveChanges": {
+    "en": "Save Changes",
+    "ar": "حفظ التغييرات"
+  }
+}

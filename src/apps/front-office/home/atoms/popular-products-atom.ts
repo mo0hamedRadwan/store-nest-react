@@ -1,6 +1,6 @@
 import { atom } from "@mongez/react-atom";
 import { GenericObject } from "@mongez/reinforcements";
-import { Product } from "../../shop/utils/types";
+import { Product } from "apps/front-office/shop/utils/types";
 
 export type TabCategory = {
   id: number;

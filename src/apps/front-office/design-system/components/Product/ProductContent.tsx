@@ -55,7 +55,7 @@ export default function ProductContent({
         <ProgressBar />
 
         <div className="product-sold-text text-sm">
-          {trans("sold")}: {purchase?.minQuantity || 0}/{stock?.available}
+          {trans("sold")}: {purchase?.minQuantity}/{stock?.available}
         </div>
       </div>
 

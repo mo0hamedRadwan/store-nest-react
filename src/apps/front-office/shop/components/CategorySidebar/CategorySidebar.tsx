@@ -27,7 +27,6 @@ export default function CategorySidebar() {
             key={item.id}
             name={item.name}
             img={categoryImages[index]}
-            products={item.products!}
           />
         ))}
       </ul>

@@ -1,4 +1,4 @@
-import { Product } from "src/apps/front-office/shop/utils/types";
+import { Product } from "apps/front-office/shop/utils/types";
 import ListProductCard from "../ListProductCard";
 
 export type ProductsListProps = {

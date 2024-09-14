@@ -5,11 +5,11 @@ import URLS from "app/utils/urls";
 
 const companyLinks = [
   {
-    route: URLS.aboutUS,
+    route: URLS.pages.aboutUs,
     text: "aboutUs",
   },
   {
-    route: URLS.contactUs,
+    route: URLS.pages.contactUs,
     text: "contactUs",
   },
   {

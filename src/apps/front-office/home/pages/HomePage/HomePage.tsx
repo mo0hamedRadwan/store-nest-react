@@ -13,6 +13,7 @@ export default function HomePage() {
 
   const rows = useMemo(() => {
     if (!data) return null;
+    console.log(data);
 
     return data.map((row, index) => {
       const columnSize = row.columns.length; // 12 is the number of columns in a row
@@ -43,18 +44,16 @@ export default function HomePage() {
   return (
     <>
       <Helmet title={trans("home")} appendAppName={false} />
-      <div className="container">
-        {/* <Slider
-          banners={rows[0].columns[0].module.slider!.banners}
-          isLoading={false}
-        /> */}
+      {/* <Slider
+        banners={rows[0].columns[0].module.slider!.banners}
+        isLoading={false}
+      /> */}
 
-        {/* <FeaturedCategories moduleName={rows[1].columns[0].module.name} /> */}
-        {/* <div className="App">
-          <DailyBestSellsSection />
-        </div> */}
-        {/* <PopularProducts /> */}
-      </div>
+      {/* <FeaturedCategories moduleName={rows[1].columns[0].module.name} /> */}
+      {/* <div className="App">
+        <DailyBestSellsSection />
+      </div> */}
+      {/* <PopularProducts /> */}
 
       {/* <DealsDayTwo columns={rows[3].columns} /> */}
       {/* <SectionWrapper>

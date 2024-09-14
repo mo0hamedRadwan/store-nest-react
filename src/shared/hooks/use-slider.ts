@@ -11,20 +11,14 @@ export const useSlider = () => {
   useOnce(() => {
     // setIsLoading(true);
     getHome()
-      .then(response => {
-        console.log(response);
-        const banners = response.map(row => {
-          console.log(row);
-          return {
-            id: row.columns,
-            name: row.columns,
-            isActive: row.columns,
-            title: row.columns,
-            description: row.columns,
-            image: row.columns,
-          };
-        });
-        setSliderData(banners);
+      .then(rows => {
+        console.log(rows[0].columns[0].module.slider);
+        const sliderBanners = rows[0].columns[0].module.slider?.banners;
+        // const processedData = sliderBanners?.map(banner => ({
+        //   id: banner.id,
+        //   image: banner.image[0].url || "",
+        // }));
+        setSliderData(sliderBanners!);
         setIsLoading(false);
       })
       .catch(error => {

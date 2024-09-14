@@ -3,15 +3,20 @@
 import { Category, Product } from "../shop/utils/types";
 
 const URLS = {
-  informativePages: "/informative-pages",
-  aboutUS: "/about-us",
   pagesInfo: "/pages-info",
   catalog: "/catalog",
   home: "/",
   compare: "/compare",
   cart: "/cart",
   checkout: "/checkout",
-  account: "/account",
+  account: {
+    dashboard: "/account/dashboard",
+    orders: "/account/orders",
+    trackOrder: "account/track-order",
+    addresses: "/account/addresses",
+    details: "/account/details",
+    logout: "/account/logout",
+  },
   wishlist: "/wishlist",
   addresses: "/addresses",
   orders: "/orders",
@@ -47,6 +52,7 @@ const URLS = {
   pages: {
     aboutUs: "/about-us",
     termsConditions: "/terms-conditions",
+    contactUs: "/contact-us",
     privacyPolicy: "/privacy-policy",
     viewRoute: "/pages/:slug",
     view: (page: any) => `/pages/${page.id}/${page.slug}`,
