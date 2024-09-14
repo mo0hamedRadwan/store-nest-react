@@ -1,8 +1,16 @@
-import { trans } from "@mongez/localization";
-import { Link } from "@mongez/react-router";
+import { getCurrentLocaleCode, trans } from "@mongez/localization";
+import { changeLocaleCode, Link } from "@mongez/react-router";
 import { isLTR } from "apps/front-office/utils/helpers";
 import { useState } from "react";
+import { localeCodesList } from "src/apps/front-office/utils/localization";
 import { Button } from "../../components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../../components/ui/select";
 import { useWindowScroll } from "../../hooks";
 import { bottomHeaderNavbarItems } from "./constant/bottomHeaderData";
 import BrowseCategoriesMenu from "./menu/BrowseCategoriesMenu";
@@ -12,6 +20,7 @@ const BottomHeader = () => {
   const [openCategoriesMenu, setOpenCategoriesMenu] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("Home");
 
+  const language = localeCodesList[getCurrentLocaleCode()].name;
   const windowScroll = useWindowScroll();
 
   return (
@@ -31,17 +40,17 @@ const BottomHeader = () => {
           )}
         </Button>
         {openCategoriesMenu && <BrowseCategoriesMenu />}
-        <ul className="flex text-secondary text-xs font-bold items-center gap-x-6 xl:gap-x-8">
+        <ul className="flex text-secondary font-bold items-center gap-x-6 xl:gap-x-8">
           <li className="text-base hover:text-primary cursor-pointer">
             <i className="bx bxs-hot text-primary"></i>
-            <span className={`mx-2 ${isLTR() ? "xl:mr-8" : "xl-ml-8"}`}>
+            <span className={`mx-2 ${isLTR() ? "xl:mr-5" : "xl-ml-5"}`}>
               {trans("deals")}
             </span>
           </li>
           {bottomHeaderNavbarItems.map(item => (
             <li
               key={item.label}
-              className={`hover:text-primary cursor-pointer group ${activeNavItem === item.label ? "text-primary" : ""}`}>
+              className={`hover:text-primary cursor-pointer text-xs xl:text-base group ${activeNavItem === item.label ? "text-primary" : ""}`}>
               {item.label === "megaMenu" ? (
                 <div className="">
                   <span>{trans(item.label)}</span>
@@ -59,7 +68,23 @@ const BottomHeader = () => {
           ))}
         </ul>
       </div>
-      <div className="flex justify-between items-center">
+      <Select onValueChange={value => changeLocaleCode(value)}>
+        <SelectTrigger className="w-[100px]">
+          <SelectValue placeholder={language}>{language}</SelectValue>
+        </SelectTrigger>
+        <SelectContent className="cursor-pointer w-[200px] outline-none">
+          {Object.keys(localeCodesList).map(locale => (
+            <SelectItem
+              key={locale}
+              value={locale}
+              className="hover:bg-primary hover:text-white cursor-pointer">
+              {localeCodesList[locale].name}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+
+      {/* <div className="flex justify-between items-center">
         <div className="hidden 2xl:flex items-center gap-x-3">
           <i className="bx bx-headphone text-4xl"></i>
           <div className="flex flex-col">
@@ -69,7 +94,7 @@ const BottomHeader = () => {
             <span className="text-xs font-serif">24/7 Support Center</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

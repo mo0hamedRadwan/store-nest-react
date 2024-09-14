@@ -23,7 +23,10 @@ const MiddleHeader = () => {
 
   return (
     <div
-      className={`container bg-white w-full flex justify-between items-center py-3 lg:py-7 ${windowScroll >= 25 && "sticky top-0 z-50 lg:relative lg:top-auto lg:z-0"}`}>
+      className={`container bg-white w-full flex justify-between items-center py-2 ${
+        windowScroll >= 25 &&
+        "sticky top-0 z-50 lg:relative lg:top-auto lg:z-50"
+      } `}>
       <div className="block lg:hidden text-6xl" onClick={() => toggleSidebar()}>
         <i className="bx bx-menu"></i>
       </div>

@@ -7,7 +7,7 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 15px;
