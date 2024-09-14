@@ -17,10 +17,13 @@
       "name": "home"
     },
     {
-      "entry": ["/about-us", "/privacy-policy", "/terms-conditions"],
-
+      "entry": [
+        "/about-us",
+        "/privacy-policy",
+        "/terms-conditions",
+        "/contact-us"
+      ],
       "name": "pages-info"
-      "name": "informative-pages"
     },
     {
       "entry": ["/products", "shop"],
@@ -29,10 +32,6 @@
     {
       "entry": ["/catalog"],
       "name": "catalog"
-    },
-    {
-      "entry": ["/pages-info"],
-      "name": "pages-info"
     }
   ]
 }

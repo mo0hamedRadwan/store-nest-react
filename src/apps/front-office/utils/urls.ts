@@ -52,6 +52,7 @@ const URLS = {
   pages: {
     aboutUs: "/about-us",
     termsConditions: "/terms-conditions",
+    contactUs: "/contact-us",
     privacyPolicy: "/privacy-policy",
     viewRoute: "/pages/:slug",
     view: (page: any) => `/pages/${page.id}/${page.slug}`,

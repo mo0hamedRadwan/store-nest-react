@@ -39,11 +39,7 @@ const CartMenu = () => {
           </Link>
           <Link
             to="/checkout"
-<<<<<<< Updated upstream
             className="px-5 py-2.5 rounded-lg text-white bg-primary">
-=======
-            className="px-5 py-2.5 rounded-lg text-white bg-primary-default">
->>>>>>> Stashed changes
             Checkout
           </Link>
         </div>

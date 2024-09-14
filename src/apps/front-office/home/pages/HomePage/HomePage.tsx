@@ -13,6 +13,7 @@ export default function HomePage() {
 
   const rows = useMemo(() => {
     if (!data) return null;
+    console.log(data);
 
     return data.map((row, index) => {
       const columnSize = row.columns.length; // 12 is the number of columns in a row
