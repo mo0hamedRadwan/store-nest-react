@@ -1,4 +1,5 @@
 import { groupedTranslations, trans } from "@mongez/localization";
+import dashboardTraslations from "shared/localization/dashboard.json";
 import bannersTranslation from "shared/localization/banners.json";
 import headerTranslation from "shared/localization/header.json";
 import mainTranslation from "shared/localization/index.json";
@@ -57,4 +58,5 @@ groupedTranslations({
   ...bannersTranslation,
   ...headerTranslation,
   ...TermsAndConditionsTranslation,
+  ...dashboardTraslations,
 });
