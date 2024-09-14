@@ -52,7 +52,7 @@ const NavigationMenu = ({ toggleSidebar }: NavigationMenuType) => {
                   key={item.label}
                   className="p-3 rounded hover:bg-primary hover:text-primary-foreground">
                   <Link to={item.link}>
-                    <span className=" block font-bold">
+                    <span className="block text-secondary">
                       {trans(item.label)}
                     </span>
                   </Link>

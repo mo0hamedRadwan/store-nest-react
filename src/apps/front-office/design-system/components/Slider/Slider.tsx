@@ -1,5 +1,4 @@
-"use client";
-import { Banner } from "src/apps/front-office/utils/types";
+import { Banner } from "app/utils/types";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -10,15 +9,9 @@ import "./slider.css";
 
 type SliderPropsType = {
   banners: Banner[];
-  isLoading: boolean;
-  error?: string;
 };
 
-export default function Slider({ banners, isLoading, error }: SliderPropsType) {
-  // const { banners, isLoading, error } = useSlider();
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
+export default function Slider({ banners }: SliderPropsType) {
   return (
     <div className="relative group">
       <Swiper

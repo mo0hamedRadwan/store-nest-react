@@ -11,7 +11,7 @@ import AboutWelcomeSection from "./sections/AboutWelcomeSection"; // 1#
 
 export default function AboutUsPage() {
   return (
-    <section className="w-full">
+    <section className="w-full text-secondary">
       <div className="breadcrump relative">
         <div className="absolute w-full border-b-2 border-b-gray-200 top-full"></div>
         <div className="nav-links w-full">

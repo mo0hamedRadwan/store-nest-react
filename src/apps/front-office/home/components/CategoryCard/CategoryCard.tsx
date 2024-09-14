@@ -49,7 +49,7 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
               </Link>
             </p>
             <span className="text-slate-400 text-base font-normal my-1">
-              {item.products?.length} {trans("Items")}
+              {item.totalProducts || 0} {trans("Items")}
             </span>
           </CardContent>
         </Card>

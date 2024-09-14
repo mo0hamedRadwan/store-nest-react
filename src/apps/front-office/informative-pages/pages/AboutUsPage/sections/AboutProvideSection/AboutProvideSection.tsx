@@ -1,5 +1,5 @@
+import Card from "design-system/components/Card";
 import React from "react";
-import Card from "src/apps/front-office/design-system/components/Card";
 import provide_mock from "../../../../mocks/we-provide.mock";
 
 function _AboutProvideSection() {
