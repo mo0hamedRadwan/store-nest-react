@@ -1,8 +1,8 @@
 /* eslint-disable unused-imports/no-unused-vars */
 import { trans } from "@mongez/localization";
 import { useState } from "react";
-import { Order } from "src/apps/front-office/utils/types";
 import { accountItems } from "../../constants";
+import { Order } from "../../utils/types";
 import MyAccountLayoutPage from "../MyAccountLayoutPage";
 
 export default function AccountOrdersPage() {
