@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 export type LocaleValue = {
   localeCode: string;
   value: string;
@@ -57,7 +55,6 @@ export type Row = {
   columns: Column[];
 };
 
->>>>>>> Stashed changes
 export type Meta = {
   appendAppName: boolean;
 };
@@ -75,32 +72,6 @@ export type Image = {
   width: number;
 };
 
-export type CreatedBy = {
-  id: number;
-  name: string;
-};
-
-<<<<<<< Updated upstream
-export type ContactInfo = {
-  address: string;
-  email: string;
-  phoneNumber: string;
-  workingDays: string;
-};
-
-// Define the type for the footerData state
-
-export type FooterData = {
-  contact?: ContactInfo;
-  logoUrl?: string;
-};
-
-export type DealsData = {
-  images: Image;
-  price: number;
-  salePrice: number;
-  name: string;
-=======
 export type UpdatedAt = {
   format: string;
   timestamp: number;
@@ -140,7 +111,6 @@ export type Discount = {
 export type Product = {
   id: number;
   category: Category;
-  createdAt: CreatedAt;
   description: string;
   discount: Discount;
   hasDiscount: boolean;
@@ -162,15 +132,12 @@ export type Product = {
   slug: string;
   sortOrder: number;
   type: string;
->>>>>>> Stashed changes
   rating: number;
   timeCards?: {
     time: number;
     type: string;
   }[];
 };
-<<<<<<< Updated upstream
-=======
 
 export type SliderData = {
   categories: Category[];
@@ -207,4 +174,3 @@ export type DealsData = {
     type: string;
   }[];
 };
->>>>>>> Stashed changes
