@@ -2,7 +2,7 @@ export default [
   {
     image:
       "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/theme/icons/icon-3.svg",
-    title: "Free Dilivery",
+    title: "freeDilvery",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
     link: "/about-us",
@@ -10,7 +10,7 @@ export default [
   {
     image:
       "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/theme/icons/icon-2.svg",
-    title: "Wide Assortment",
+    title: "wideAssortment",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
     link: "/about-us",
@@ -18,7 +18,7 @@ export default [
   {
     image:
       "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/theme/icons/icon-1.svg",
-    title: "Best Prices & Offers",
+    title: "bestPrice",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr",
     link: "/about-us",
@@ -26,7 +26,7 @@ export default [
   {
     image:
       "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/theme/icons/icon-6.svg",
-    title: "Great Daily Deal",
+    title: "greatDailyDeals",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr",
     link: "/about-us",
@@ -34,7 +34,7 @@ export default [
   {
     image:
       "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/theme/icons/icon-5.svg",
-    title: "100% Satisfaction",
+    title: "statisfication",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr",
     link: "/about-us",
@@ -42,7 +42,7 @@ export default [
   {
     image:
       "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/theme/icons/icon-4.svg",
-    title: "100% Money Back",
+    title: "moneyBack",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr",
     link: "/about-us",

@@ -1,4 +1,5 @@
 import { groupedTranslations, trans } from "@mongez/localization";
+import AboutUsTranslation from "shared/localization/aboutUs.json";
 import bannersTranslation from "shared/localization/banners.json";
 import dashboardTraslations from "shared/localization/dashboard.json";
 import headerTranslation from "shared/localization/header.json";
@@ -53,10 +54,15 @@ groupedTranslations({
     en: "Submit Review",
     ar: "أضافة تعلبق",
   },
+  readMore: {
+    en: "Read More",
+    ar: "اقرأ المزيد",
+  },
   ...productsTranslation,
   ...sectionsTranslation,
   ...bannersTranslation,
   ...headerTranslation,
   ...TermsAndConditionsTranslation,
   ...dashboardTraslations,
+  ...AboutUsTranslation,
 });

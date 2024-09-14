@@ -2,6 +2,8 @@ import Breadcrumb from "src/apps/front-office/design-system/layouts/Breadcrumb";
 
 import HeaderPage from "./components/HeaderPage";
 
+import { trans } from "@mongez/localization";
+import URLS from "src/apps/front-office/utils/urls";
 import AboutOurServiceSection from "./sections/AboutOurServiceSection"; // 3#
 import AboutProvideSection from "./sections/AboutProvideSection"; // 2#
 import AboutStatsSection from "./sections/AboutStatsSection"; // 5#
@@ -18,7 +20,7 @@ export default function AboutUsPage() {
           <Breadcrumb
             navItems={[
               { name: "Pages" },
-              { name: "About Us", url: "/about-us" },
+              { name: "About Us", url: URLS.pages.aboutUs },
             ]}
             attributes={{
               className: "justify-end items-end py-4 my-0",
@@ -34,7 +36,7 @@ export default function AboutUsPage() {
           </div>
 
           <div className="body-t-2">
-            <HeaderPage title="What we provide" />
+            <HeaderPage title={trans("provideSectionTitle")} />
 
             <AboutProvideSection />
           </div>
@@ -51,7 +53,7 @@ export default function AboutUsPage() {
 
           <div className="body-t-6">
             <div className="container">
-              <HeaderPage title="Our Team" />
+              <HeaderPage title={trans("Our Teams")} />
 
               <AboutTeamsSection />
             </div>
