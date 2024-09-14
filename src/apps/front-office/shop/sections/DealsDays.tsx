@@ -1,14 +1,14 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { ShoppingCart } from "lucide-react";
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 import Stars from "../../design-system/components/Stars";
 import { Button } from "../../design-system/components/ui/button";
 import { getLocalizedValue } from "../../utils/localization";
 import { shopDataAtom } from "../atoms/shop-data.atom";
 
 export type DealsDaysProps = {
-  // props go here
+  children?: React.ReactNode;
 };
 function DealsDays(props: DealsDaysProps, ref: any) {
   const mockData = shopDataAtom.use("products").slice(0, 4);
