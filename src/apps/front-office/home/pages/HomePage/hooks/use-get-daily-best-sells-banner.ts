@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useOnce } from "@mongez/react-hooks";
+import { useState } from "react";
 import { Banner } from "src/apps/front-office/utils/types";
 import { getHome } from "../../../services/home-service";
 
@@ -7,10 +8,12 @@ export function useGetDailyBestSellsBanner() {
   const [error, setError] = useState<string>("");
   const [banner, setBanner] = useState<Banner | undefined>(undefined);
 
-  useEffect(() => {
+  useOnce(() => {
     getHome()
       .then(response => {
-        const banner = response.data.rows[4].columns[0].module.banner!;
+        console.log(response);
+
+        // const banner = response.data.rows[4].columns[0].module.banner!;
         setBanner(banner);
         setloading(false);
       })
@@ -18,7 +21,7 @@ export function useGetDailyBestSellsBanner() {
         console.log(error);
         setError(error.message);
       });
-  }, []);
+  });
 
   return { loading, error, banner };
 }

@@ -2,8 +2,8 @@ import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import Stars from "apps/front-office/design-system/components/Stars";
 import { Button } from "apps/front-office/design-system/components/ui/button";
-import { Product } from "apps/front-office/utils/types";
 import { ShoppingCart } from "lucide-react";
+import { Product } from "src/apps/front-office/shop/utils/types";
 import PreviewProducts from "../PreviewProducts";
 
 export type ProductCardProps = {

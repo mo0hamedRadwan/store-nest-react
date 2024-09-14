@@ -1,6 +1,6 @@
-import { Category } from "apps/front-office/utils/types";
 import { useEffect, useState } from "react";
 import { getCategories } from "src/apps/front-office/home/services/home-service";
+import { Category } from "src/apps/front-office/shop/utils/types";
 
 export function useFeaturedCategories() {
   const [categories, setCategories] = useState<Category[]>([]);

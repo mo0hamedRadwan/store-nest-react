@@ -1,7 +1,7 @@
 import endpoint from "shared/endpoint";
 
 import { apiKey, appClientId } from "shared/flags";
-import { Product } from "../../utils/types";
+import { Product } from "../utils/types";
 
 /**
  * @route GET /products?wf=true

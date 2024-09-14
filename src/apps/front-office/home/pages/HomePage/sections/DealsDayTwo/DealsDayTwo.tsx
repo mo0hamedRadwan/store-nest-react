@@ -1,4 +1,4 @@
-import { Column } from "src/apps/front-office/utils/types";
+import { Column } from "src/apps/front-office/home/utils/types";
 import TopSelling from "./TopSelling";
 
 type DealsDayTwoPropsType = {

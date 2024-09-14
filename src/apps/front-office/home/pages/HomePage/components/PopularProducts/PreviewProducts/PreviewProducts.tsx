@@ -1,7 +1,7 @@
 import { Link } from "@mongez/react-router";
 import CustomDialog from "apps/front-office/home/hooks/useModel";
-import { Product } from "apps/front-office/utils/types";
 import { EyeIcon, HeartIcon, Link2Icon } from "lucide-react";
+import { Product } from "src/apps/front-office/shop/utils/types";
 import PreviewProductDetails from "./PreviewProductDetails";
 
 export type PreviewProductsProps = {

@@ -1,5 +1,5 @@
 import { trans } from "@mongez/localization";
-import { Product } from "apps/front-office/utils/types";
+import { Product } from "../../../utils/types";
 import ProductActionsBtns from "./components/ProductActionsBtns";
 import ProductOptions from "./components/ProductOptions/ProductOptions";
 import ProductQuantity from "./components/ProductQuantity";

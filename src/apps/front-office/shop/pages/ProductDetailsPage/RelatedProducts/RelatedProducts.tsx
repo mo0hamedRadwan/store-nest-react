@@ -1,7 +1,7 @@
 import ProductCard from "apps/front-office/home/pages/HomePage/components/PopularProducts/ProductCard";
-import { Product } from "apps/front-office/utils/types";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Product } from "../../../utils/types";
 
 export type RelatedProductsProps = {
   products: Product[];

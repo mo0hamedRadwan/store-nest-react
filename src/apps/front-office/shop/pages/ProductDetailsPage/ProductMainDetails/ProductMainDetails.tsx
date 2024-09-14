@@ -1,4 +1,4 @@
-import { Product } from "apps/front-office/utils/types";
+import { Product } from "../../../utils/types";
 import ProductDescription from "../ProductDescription";
 import ProductDetails from "../ProductDetails";
 import ProductGallery from "../ProductGallery";

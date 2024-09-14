@@ -1,6 +1,6 @@
 // Import the correct types
 
-import { Product } from "src/apps/front-office/utils/types";
+import { Product } from "../../utils/types";
 
 type CategoryItemProps = {
   img: string;

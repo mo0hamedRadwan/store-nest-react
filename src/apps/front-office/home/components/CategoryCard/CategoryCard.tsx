@@ -5,7 +5,7 @@ import {
   CardContent,
 } from "apps/front-office/design-system/components/ui/card";
 import URLS from "apps/front-office/utils/urls";
-import { Category } from "src/apps/front-office/utils/types";
+import { Category } from "src/apps/front-office/shop/utils/types";
 import { SwiperSlide } from "swiper/react";
 
 interface CategoryCardProps {
@@ -49,7 +49,7 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
               </Link>
             </p>
             <span className="text-slate-400 text-base font-normal my-1">
-              {item.totalProducts || 0} {trans("Items")}
+              {item.products || 0} {trans("Items")}
             </span>
           </CardContent>
         </Card>

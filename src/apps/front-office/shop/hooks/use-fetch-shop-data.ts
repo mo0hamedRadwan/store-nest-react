@@ -1,7 +1,7 @@
-import { Product } from "apps/front-office/utils/types";
 import { useEffect, useState } from "react";
 import { shopDataAtom } from "../atoms/shop-data.atom";
 import { getShopPageData } from "../services/shop-service";
+import { Product } from "../utils/types";
 
 export type ShopData = {
   products: Product[];

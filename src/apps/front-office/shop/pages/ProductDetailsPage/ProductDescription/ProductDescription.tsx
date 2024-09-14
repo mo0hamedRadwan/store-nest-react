@@ -12,7 +12,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "app/design-system/components/ui/tabs";
-import { Product } from "apps/front-office/utils/types";
+import { Product } from "../../../utils/types";
 import ProductReviews from "../ProductReviews";
 import ProductReviewForm from "../ProductReviews/components/ProductReviewForm";
 

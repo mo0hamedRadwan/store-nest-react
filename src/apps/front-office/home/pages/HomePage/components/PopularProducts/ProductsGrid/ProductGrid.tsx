@@ -1,5 +1,5 @@
-import { Product } from "apps/front-office/utils/types";
 import PaginatedItems from "src/apps/front-office/design-system/components/PaginatedItems";
+import { Product } from "src/apps/front-office/shop/utils/types";
 
 export type ProductGridProps = {
   products: Product[];
