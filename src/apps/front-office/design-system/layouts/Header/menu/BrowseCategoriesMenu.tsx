@@ -10,7 +10,7 @@ const BrowseCategoriesMenu = () => {
 
   return (
     <div
-      className={`absolute top-20 w-[500px] p-10 z-10 rounded-xl bg-white duration-300 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]`}>
+      className={`absolute top-20 w-[500px] p-10 z-20 rounded-xl bg-white duration-300 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]`}>
       <div className="flex flex-col">
         <ul className="flex flex-row flex-wrap gap-5">
           {categories.map((category, index) => {

@@ -1,4 +1,4 @@
-import { Category } from "apps/front-office/utils/types";
+import { Category } from "apps/front-office/shop/utils/types";
 import { useEffect, useState } from "react";
 import { getCategories } from "src/apps/front-office/home/services/home-service";
 

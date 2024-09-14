@@ -9,7 +9,7 @@ type CategoryItemProps = {
 export default function CategoryItem({ img, name }: CategoryItemProps) {
 =======
 
-import { Product } from "src/apps/front-office/utils/types";
+import { Product } from "src/apps/front-office/shop/utils/types";
 
 type CategoryItemProps = {
   img: string;

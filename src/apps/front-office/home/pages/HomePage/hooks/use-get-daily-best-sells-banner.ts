@@ -12,8 +12,8 @@ export function useGetDailyBestSellsBanner() {
 >>>>>>> Stashed changes
   useEffect(() => {
     getHome()
-      .then(response => {
-        const banner = response.data.rows[4].columns[0].module.banner!;
+      .then(rows => {
+        const banner = rows[4].columns[0].module.banner!;
         setBanner(banner);
         setloading(false);
       })

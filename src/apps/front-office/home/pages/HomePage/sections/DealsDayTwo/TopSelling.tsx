@@ -1,7 +1,7 @@
 import TopSellingCard from "apps/front-office/design-system/components/TopSelling/TopSellingCard";
 import TopSellingHead from "apps/front-office/design-system/components/TopSelling/TopSellingHead";
 import { useEffect, useState } from "react";
-import { Product } from "src/apps/front-office/utils/types";
+import { Product } from "src/apps/front-office/shop/utils/types";
 import { getTopsellingHttpsList } from "./topselling-http-service";
 
 export default function TopSelling({ moduleName }) {
