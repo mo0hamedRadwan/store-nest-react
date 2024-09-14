@@ -40,8 +40,10 @@ const BottomHeader = () => {
           )}
         </Button>
         {openCategoriesMenu && <BrowseCategoriesMenu />}
-        <ul className="flex text-secondary font-bold items-center gap-x-6 xl:gap-x-8">
+        <ul className="flex text-secondary text-xs font-bold items-center gap-x-6 xl:gap-x-8">
           <li className="text-base hover:text-primary cursor-pointer">
+        <ul className="flex items-center gap-x-6 xl:gap-x-8">
+          <li className="text-base font-bold hover:text-primary-default cursor-pointer">
             <i className="bx bxs-hot text-primary"></i>
             <span className={`mx-2 ${isLTR() ? "xl:mr-5" : "xl-ml-5"}`}>
               {trans("deals")}

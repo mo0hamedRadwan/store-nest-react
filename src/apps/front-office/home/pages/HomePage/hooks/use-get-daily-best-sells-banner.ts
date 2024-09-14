@@ -6,7 +6,10 @@ export function useGetDailyBestSellsBanner() {
   const [loading, setloading] = useState(false);
   const [error, setError] = useState<string>("");
   const [banner, setBanner] = useState<Banner | undefined>(undefined);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   useEffect(() => {
     getHome()
       .then(rows => {

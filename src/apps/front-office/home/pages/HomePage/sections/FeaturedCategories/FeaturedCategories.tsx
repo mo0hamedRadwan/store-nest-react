@@ -1,4 +1,6 @@
 import CategoryCard from "apps/front-office/home/components/CategoryCard";
+import FeaturedCategoriesBanner from "apps/front-office/home/components/FeaturedCategoriesBanner";
+import { useFeaturedCategories } from "src/shared/hooks/useFeaturedCategories";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,6 +12,20 @@ import "./style.css";
 type FeaturedCategoriesPropsType = {
   module: Module;
 };
+
+export default function FeaturedCategories({
+  module,
+}: FeaturedCategoriesPropsType) {
+  const { categories, isLoading } = useFeaturedCategories();
+  // console.log(JSON.stringify(sliderData.categories[0]), isLoading, error);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
 export default function FeaturedCategories({
   module,
@@ -55,7 +71,7 @@ export default function FeaturedCategories({
             //   slidesPerView: 15, // For screens >= 1536px
             // },
           }}
-          className="w-full h-full">
+          className="w-full">
           {module.categories.map((item, index) => (
             <SwiperSlide key={index}>
               <CategoryCard item={item} index={index} />

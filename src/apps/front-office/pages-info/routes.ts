@@ -1,10 +1,9 @@
 import { publicRoutes } from "apps/front-office/utils/router";
-import URLS from "apps/front-office/utils/urls";
-import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
+import PagesInfoPage from "./pages/PagesInfoPage";
 
 publicRoutes([
   {
-    path: URLS.pages.termsConditions,
-    component: TermsAndConditionsPage,
+    path: URLS.pagesInfo,
+    component: PagesInfoPage,
   },
 ]);
