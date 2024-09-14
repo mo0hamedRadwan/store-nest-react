@@ -1,5 +1,5 @@
 import endpoint from "src/shared/endpoint";
-<<<<<<< Updated upstream
+
 import { Row } from "../utils/types";
 
 export function getFooterData() {
@@ -11,8 +11,6 @@ export async function getHome(): Promise<Row[]> {
 
   return response.data.rows;
 }
-
-=======
 
 // const currentLanguage = getCurrentLocaleCode();
 
@@ -83,15 +81,6 @@ export async function getHome(): Promise<Row[]> {
 //   };
 // }
 
-export function getFooterData() {
-  return endpoint.get("/settings");
-}
-
-export function getHome() {
-  return endpoint.get("/home");
-}
-
->>>>>>> Stashed changes
 export function getCategories(params?: any) {
   return endpoint.get(`/categories`, {
     params,

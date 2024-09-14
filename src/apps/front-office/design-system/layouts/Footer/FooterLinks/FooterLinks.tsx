@@ -5,7 +5,7 @@ import URLS from "app/utils/urls";
 
 const companyLinks = [
   {
-    route: URLS.aboutUS,
+    route: URLS.pages.aboutUs,
     text: "aboutUs",
   },
   {
@@ -65,13 +65,15 @@ export function FooterLinksSection({
   links,
 }: FooterLinksSectionProps) {
   return (
-    <div className="flex flex-col flex-1">
-      <h4 className="font-bold text-2xl capitalize">{trans(heading)}</h4>
-      <ul className="flex flex-col list-none cursor-pointer">
+    <div className="flex flex-col text-specialColor-secondary">
+      <h4 className="font-bold leading-[1.2] text-2xl capitalize mt-[15px] mb-5 font-custom">
+        {trans(heading)}
+      </h4>
+      <ul className="flex flex-col list-none cursor-pointer min-w-[170px]">
         {links.map((link, index) => (
           <li
             key={index}
-            className="py-3 hover:translate-x-3 hover:text-primary hover:duration-300 transition-all">
+            className="py-3 text-[15px] hover:translate-x-3 hover:text-priceNowColor hover:duration-300 ease-linear transition-all">
             <Link to={link.route}>{trans(link.text)}</Link>
           </li>
         ))}

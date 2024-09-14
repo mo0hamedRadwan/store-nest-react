@@ -9,26 +9,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.css";
 
 type SliderPropsType = {
-<<<<<<< Updated upstream
   banners: Banner[];
-=======
-  sliderData: Banner[];
->>>>>>> Stashed changes
+
   isLoading: boolean;
   error?: string;
 };
 
-<<<<<<< Updated upstream
 export default function Slider({ banners, isLoading, error }: SliderPropsType) {
   // const { banners, isLoading, error } = useSlider();
-=======
-export default function Slider({
-  sliderData,
-  isLoading,
-  error,
-}: SliderPropsType) {
-  // const { sliderData, isLoading, error } = useSlider();
->>>>>>> Stashed changes
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
@@ -60,11 +49,7 @@ export default function Slider({
           <SwiperSlide key={banner.id}>
             <div className="relative flex items-center justify-center py-6 rounded-3xl">
               <img
-<<<<<<< Updated upstream
                 src={banner.image.url}
-=======
-                src={slide.image.url}
->>>>>>> Stashed changes
                 className="object-fit lg:bg-cover bg-center bg-no-repeat rounded-3xl w-full h-[200px]  lg:h-full lg:min-h-[350px]"
               />
             </div>

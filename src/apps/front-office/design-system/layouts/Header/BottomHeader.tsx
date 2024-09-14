@@ -20,11 +20,7 @@ const BottomHeader = () => {
         ${windowScroll >= 150 && "sticky top-0 z-50"}`}>
       <div className="flex justify-between items-center gap-x-8">
         <Button
-<<<<<<< Updated upstream
           className="bg-primary hover:bg-main-700 active:bg-main-700 border-none outline-none focus-visible:ring-0 h-11"
-=======
-          className="bg-primary-default hover:bg-main-700 active:bg-main-700 border-none outline-none focus-visible:ring-0"
->>>>>>> Stashed changes
           onClick={() => setOpenCategoriesMenu(!openCategoriesMenu)}>
           <i className="bx bx-category"></i>
           <span className="mx-2 text-sm">{`${trans("browse")} ${trans("allCategories")}`}</span>
@@ -35,13 +31,9 @@ const BottomHeader = () => {
           )}
         </Button>
         {openCategoriesMenu && <BrowseCategoriesMenu />}
-<<<<<<< Updated upstream
+
         <ul className="flex text-secondary text-xs font-bold items-center gap-x-6 xl:gap-x-8">
           <li className="text-base hover:text-primary cursor-pointer">
-=======
-        <ul className="flex items-center gap-x-6 xl:gap-x-8">
-          <li className="text-base font-bold hover:text-primary-default cursor-pointer">
->>>>>>> Stashed changes
             <i className="bx bxs-hot text-primary"></i>
             <span className={`mx-2 ${isLTR() ? "xl:mr-8" : "xl-ml-8"}`}>
               {trans("deals")}
@@ -50,11 +42,7 @@ const BottomHeader = () => {
           {bottomHeaderNavbarItems.map(item => (
             <li
               key={item.label}
-<<<<<<< Updated upstream
               className={`hover:text-primary cursor-pointer group ${activeNavItem === item.label ? "text-primary" : ""}`}>
-=======
-              className={`text-base font-bold hover:text-primary-default cursor-pointer group py-5 ${activeNavItem === item.label ? "text-primary" : ""}`}>
->>>>>>> Stashed changes
               {item.label === "megaMenu" ? (
                 <div className="">
                   <span>{trans(item.label)}</span>

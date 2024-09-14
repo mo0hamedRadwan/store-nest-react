@@ -1,7 +1,5 @@
-<<<<<<< Updated upstream
 /* eslint-disable unused-imports/no-unused-vars */
-=======
->>>>>>> Stashed changes
+
 import { useEffect, useState } from "react";
 
 export function useGetDeals() {
