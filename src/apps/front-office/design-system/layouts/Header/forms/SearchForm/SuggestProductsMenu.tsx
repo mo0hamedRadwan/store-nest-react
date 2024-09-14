@@ -1,5 +1,5 @@
 import { Link } from "@mongez/react-router";
-import { Product } from "src/apps/front-office/utils/types";
+import { Product } from "src/apps/front-office/shop/utils/types";
 
 type SuggestProductsMenuPropsType = {
   suggestProducts: Product[];

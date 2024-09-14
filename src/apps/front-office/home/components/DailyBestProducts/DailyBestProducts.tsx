@@ -11,7 +11,7 @@ import {
   currentDirection,
   currentLocaleCode,
 } from "apps/front-office/utils/helpers";
-import { Product as ProductType } from "src/apps/front-office/utils/types";
+import { Product as ProductType } from "src/apps/front-office/shop/utils/types";
 import { showProductQuickView } from "../../atoms/product-quick-view";
 
 type DailyBestSellsProps = {

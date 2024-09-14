@@ -1,6 +1,6 @@
 import Module from "module";
 import endpoint from "shared/endpoint";
-import { Column, Row } from "src/apps/front-office/utils/types";
+import { Column, Row } from "src/apps/front-office/home/utils/types";
 
 export type TopData = {
   rows: Row[];

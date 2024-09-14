@@ -2,7 +2,7 @@ import { atom } from "@mongez/react-atom";
 
 import { currentLocaleCode } from "../../utils/helpers";
 import { getLocalizedValue } from "../../utils/localization";
-import { Product } from "../../utils/types";
+import { Product } from "../../shop/utils/types";
 
 const only = ["top-selling", "recently-added", "top-rated"];
 
