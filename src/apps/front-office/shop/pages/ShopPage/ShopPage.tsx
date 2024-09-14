@@ -18,7 +18,6 @@ function ShopPage() {
           <ProductsContainer />
           <DealsDays />
         </div>
-
         {/* Right Side - Sidebar */}
         <div className="basis-full lg:basis-[20%] mt-8 lg:mt-0">
           <div className="sticky top-0">
