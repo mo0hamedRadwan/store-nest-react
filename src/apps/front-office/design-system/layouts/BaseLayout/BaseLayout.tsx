@@ -15,7 +15,11 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
       {/* <Portal containerId="root">
         <QuickView />
       </Portal> */}
+<<<<<<< Updated upstream
       <main className="relative">{children}</main>
+=======
+      <main className="container">{children}</main>
+>>>>>>> Stashed changes
       <Footer />
     </>
   );

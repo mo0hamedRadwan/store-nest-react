@@ -49,7 +49,11 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
               </Link>
             </p>
             <span className="text-slate-400 text-base font-normal my-1">
+<<<<<<< Updated upstream
               {item.totalProducts || 0} {trans("Items")}
+=======
+              {item.products?.length} {trans("Items")}
+>>>>>>> Stashed changes
             </span>
           </CardContent>
         </Card>

@@ -7,7 +7,7 @@ if (current("localeCode") === "ar") {
     "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap",
   );
 } else {
-  // load Cairo font from google for Arabic language
+  // load Quicksand font from google for Englich language
   googleFont(
     "https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap",
   );

@@ -13,8 +13,11 @@ export default function useFetchDailyBannerData() {
     error: errorBanner,
     banner,
   } = useGetDailyBestSellsBanner();
+<<<<<<< Updated upstream
 
   console.log("BANNER", banner);
+=======
+>>>>>>> Stashed changes
 
   useEffect(() => {
     const fetchData = async () => {
