@@ -11,7 +11,7 @@ export default function CategorySidebar() {
   const categoryImages = [image1, image2, image3, image4, image5];
 
   const { categories, isLoading, error } = useFetchShopCategories();
-  const categoriesItems = categories.slice(4, 8);
+  const categoriesItems = categories.slice(3, 8);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
