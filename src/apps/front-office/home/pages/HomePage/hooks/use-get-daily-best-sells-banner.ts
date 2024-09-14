@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Banner } from "src/apps/front-office/utils/types";
 import { getHome } from "../../../services/home-service";
 
