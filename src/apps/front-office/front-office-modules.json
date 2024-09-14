@@ -18,6 +18,8 @@
     },
     {
       "entry": ["/about-us", "/privacy-policy", "/terms-conditions"],
+
+      "name": "pages-info"
       "name": "informative-pages"
     },
     {
