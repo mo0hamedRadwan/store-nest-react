@@ -1,7 +1,7 @@
 import { trans } from "@mongez/localization";
 import { useEvent } from "@mongez/react-hooks";
 import { popularProductsAtom } from "apps/front-office/home/atoms/popular-products-atom";
-import { Product } from "apps/front-office/utils/types";
+import { Product } from "apps/front-office/shop/utils/types";
 import { useState } from "react";
 
 export type PopularProductsTabsProps = {

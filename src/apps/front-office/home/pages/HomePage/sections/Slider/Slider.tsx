@@ -10,14 +10,12 @@ import "./slider.css";
 
 type SliderPropsType = {
   banners: Banner[];
-
   isLoading: boolean;
   error?: string;
 };
 
 export default function Slider({ banners, isLoading, error }: SliderPropsType) {
   // const { banners, isLoading, error } = useSlider();
-
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 

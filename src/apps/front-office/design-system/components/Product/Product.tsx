@@ -1,4 +1,4 @@
-import { Product as ProductType } from "src/apps/front-office/utils/types";
+import { Product as ProductType } from "src/apps/front-office/shop/utils/types";
 import ProductContent from "./ProductContent";
 import ProductDiscount from "./ProductDiscount";
 import ProductImage from "./ProductImage";
