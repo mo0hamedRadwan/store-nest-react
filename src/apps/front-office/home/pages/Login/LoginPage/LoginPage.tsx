@@ -46,11 +46,16 @@ export default function LoginPage() {
                 name="username"
                 className="w-full px-4 py-2 border border-rateColor rounded-lg focus:outline-none focus:border-priceNowColor h-16"
                 placeholder={trans("username")}
+                required
+                minLength={14}
               />
               <PasswordInput
                 name="password"
                 className="w-full px-4 py-2 border border-rateColor rounded-lg focus:outline-none focus:border-priceNowColor h-16"
                 placeholder={trans("password")}
+                required
+                minLength={6}
+                maxLength={16}
               />
               <div className="flex items-center justify-between !mb-[50px]">
                 <label className="flex items-center text-sm ">

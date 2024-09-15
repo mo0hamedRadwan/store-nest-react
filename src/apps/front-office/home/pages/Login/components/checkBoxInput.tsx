@@ -1,12 +1,7 @@
-import {
-  FormControlProps,
-  requiredRule,
-  useFormControl,
-} from "@mongez/react-form";
+import { FormControlProps, useFormControl } from "@mongez/react-form";
 
 export default function CheckBoxInput(props: FormControlProps) {
   const { value, changeValue, id, error } = useFormControl({
-    rules: [requiredRule],
     ...props,
   });
 
