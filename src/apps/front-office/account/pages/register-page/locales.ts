@@ -1,6 +1,82 @@
 import { groupedTranslations } from "@mongez/localization";
 
 groupedTranslations({
+  registerTitle: {
+    en: "Register online-store",
+    ar: "سجل في المتجر الإلكتروني",
+  },
+  registerDescription: {
+    en: "Create a new account on online store. Sign up to access exclusive features and start using our services.",
+    ar: "قم بإنشاء حساب جديد على المتجر الإلكتروني. قم بالتسجيل للوصول إلى الميزات الحصرية والبدء في استخدام خدماتنا.",
+  },
+  headRegister: {
+    en: "Create an Account",
+    ar: "إنشاء حساب",
+  },
+  alreadyHaveAccount: {
+    en: "Already have an account?",
+    ar: "هل لديك حساب بالفعل؟",
+  },
+  login: {
+    en: "Login",
+    ar: "تسجيل الدخول",
+  },
+  namePlaceHolder: {
+    en: "Username",
+    ar: "اسم المستخدم",
+  },
+  emailPlaceHolder: {
+    en: "Email",
+    ar: "بريد إلكتروني",
+  },
+  passwordPlaceHolder: {
+    en: "Password",
+    ar: "كلمة المرور",
+  },
+  confirmPasswordPlaceHolder: {
+    en: "Confirm Password",
+    ar: "تأكيد كلمة المرور",
+  },
+  radioFirstChoose: {
+    en: "I am a customer",
+    ar: "انا عميل",
+  },
+  radioSecondChoose: {
+    en: "I am a vendor",
+    ar: "انا بائع",
+  },
+  checkBoxPrivacy: {
+    en: "I agree to terms & Policy.",
+    ar: "أوافق على الشروط والسياسة.",
+  },
+  learnMor: {
+    en: "Learn more",
+    ar: "تعلم أكثر",
+  },
+  buttonSubmit: {
+    en: "Submit & Register",
+    ar: "إرسال وتسجيل",
+  },
+  note: {
+    en: "Note",
+    ar: "ملحوظة",
+  },
+  noteDescription: {
+    en: "Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy",
+    ar: "سيتم استخدام بياناتك الشخصية لدعم تجربتك في جميع أنحاء هذا الموقع، ولإدارة الوصول إلى حسابك، ولأغراض أخرى موصوفة في سياسة الخصوصية الخاصة بنا",
+  },
+  facebook: {
+    en: "Continue with Facebook",
+    ar: "الدخول باستحدام الفيسبوك",
+  },
+  google: {
+    en: "Continue with Google",
+    ar: "الدخول باستخدام جوجل",
+  },
+  apple: {
+    en: "Continue with Apple",
+    ar: "الدخول باستخدام Apple",
+  },
   required: {
     en: "This input is required",
     ar: "هذا الحقل مطلوب",
@@ -8,10 +84,6 @@ groupedTranslations({
   invalidEmailAddress: {
     en: "Invalid Email Address",
     ar: "بريد الكتروني خاطئ",
-  },
-  url: {
-    en: "Invalid URL",
-    ar: "رابط غير صحيح",
   },
   min: {
     en: "Value can not be lower than 8",
@@ -25,38 +97,4 @@ groupedTranslations({
     en: "Password must match",
     ar: "يجب ان يطابق كلمه المرور",
   },
-  length: {
-    en: "This input should have :length characters",
-    ar: "حروف الحقل يجب ان تساوي :length",
-  },
-  minLength: {
-    en: "This input can not be less than :length characters",
-    ar: "هذا الحقل يجب ألا يقل عن :length حرف",
-  },
-  maxLength: {
-    en: "This input can not be greater than :length characters",
-    ar: "هذا الحقل يجب ألا يزيد عن :length حرف",
-  },
-  pattern: {
-    en: "This input is not matching with the :pattern",
-    ar: "هذا الحقل غير مطابق :pattern",
-  },
-  number: {
-    en: "This input accepts only numbers",
-    ar: "هذا الحقل لا يقبل غير أرقام فقط",
-  },
-  integer: {
-    en: "This input accepts only integer digits",
-    ar: "هذا الحقل لا يقبل غير أرقام صحيحة",
-  },
-  float: {
-    en: "This input accepts only integer or float digits",
-    ar: "هذا الحقل لا يقبل غير أرقام صحيحة او عشرية",
-  },
-  alphabet: {
-    en: "This input accepts only alphabets",
-    ar: "هذا الحقل لا يقبل غير أحرف فقط",
-  },
 });
-
-// groupedTranslations("validation", validationTranslation);

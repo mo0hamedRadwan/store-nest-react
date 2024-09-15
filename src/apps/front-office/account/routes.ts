@@ -7,10 +7,9 @@ import MyAddressessPage from "./pages/MyAddressessPage";
 import TrackOrderPage from "./pages/TrackOrderPage";
 import RegisterPage from "./pages/register-page/RegisterPage";
 
-reverseGuardedRoutes([ 
+reverseGuardedRoutes([
   // login routes
-  {path:URLS.auth.register
-    ,component:RegisterPage}
+  { path: URLS.auth.register, component: RegisterPage },
 ]);
 
 // i will change it to guardedRoutes

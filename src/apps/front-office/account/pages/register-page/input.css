@@ -3,9 +3,11 @@
 }
 
 .check-label {
-  @apply text-sm cursor-pointer font-semibold relative text-[#292b2c] before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:top-[2px] before:-left-6 before:border before:border-[#908f8f] before:border-solid
+  @apply text-sm cursor-pointer font-semibold relative text-[#292b2c]
+  before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:top-[2px] before:-left-6 before:border before:border-[#908f8f] before:border-solid
   after:content-[''] after:h-[10px] after:w-[10px] after:rounded-full after:absolute after:top-[6px] after:-left-[21px] after:opacity-0;
 }
+
 input[type="radio"]:checked + .check-label::after {
   opacity: 1;
   background-color: #3bb77e;

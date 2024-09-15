@@ -19,7 +19,7 @@ export default function RadioInput({
         id={inputId}
         checked={isSelected}
         onChange={changeValue}
-        className="hidden"
+        className="hidden "
       />
       <label htmlFor={inputId} className="check-label">
         {children}

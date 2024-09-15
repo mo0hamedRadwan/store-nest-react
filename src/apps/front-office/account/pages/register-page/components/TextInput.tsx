@@ -33,9 +33,7 @@ export default function TextInput(props: FormControlProps) {
         {...otherProps}
       />
       {error && (
-        <span className="text-red-500 text-[13px] -mt-3">
-          {getErrorMessage()}
-        </span>
+        <p className="text-red-500 text-[13px] -mt-3">{getErrorMessage()}</p>
       )}
     </>
   );
