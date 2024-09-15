@@ -1,7 +1,6 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
 import Banner from "src/apps/front-office/design-system/components/Banner";
-import TopSelling from "src/apps/front-office/home/pages/HomePage/sections/DealsDayTwo/TopSelling";
 import CategorySidebar from "./components/CategorySidebar";
 import FilterSide from "./components/FilterSide";
 import ProductsContainer from "./components/ProductsContainer";

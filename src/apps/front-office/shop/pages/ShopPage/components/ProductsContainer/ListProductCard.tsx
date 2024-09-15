@@ -27,7 +27,7 @@ export default function ListProductCard({ product }: ListMealCardProps) {
       </div>
       <div className="basis-3/4 pt-8 relative">
         <Link to={"/"}>
-          <h2 className="font-bold">{product.name}</h2>{" "}
+          <h2 className="font-bold">{product.name}</h2>
         </Link>
         <Stars ratings={product.rating} />
         <p className="font-light mt-1 line-clamp-3">
