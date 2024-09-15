@@ -46,10 +46,10 @@ export default function Slider({ banners }: SliderPropsType) {
             </div>
           </SwiperSlide>
         ))}
-        <div className="swiper-pagination absolute !bottom-8 left-1/2  transform -translate-x-1/2 z-10"></div>
+        <div className="swiper-pagination absolute !bottom-8 !left-1/2  transform -translate-x-1/2 z-10 flex items-center justify-center gap-1"></div>
       </Swiper>
-      <div className="swiper-button-prev absolute top-1/2 !left-7 z-10 w-10 h-10 rounded-full bg-white opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary"></div>
-      <div className="swiper-button-next absolute top-1/2 !right-7 z-10 w-10 h-10 rounded-full bg-white opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary"></div>
+      <div className="swiper-button-prev absolute top-1/2 !left-10 z-10 w-10 h-10 rounded-full bg-white opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary"></div>
+      <div className="swiper-button-next absolute top-1/2 !right-10 z-10 w-10 h-10 rounded-full bg-white opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 hover:bg-primary"></div>
     </div>
   );
 }

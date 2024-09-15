@@ -1,6 +1,6 @@
 import { atom } from "@mongez/react-atom";
 import { getCategories } from "apps/front-office/home/services/home-service";
-import { Category } from "src/apps/front-office/utils/types";
+import { Category } from "src/apps/front-office/shop/utils/types";
 
 type CategoriesAtomDataType = {
   isLoading: boolean;

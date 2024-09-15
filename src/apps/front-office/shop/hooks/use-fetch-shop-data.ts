@@ -1,4 +1,4 @@
-import { Product } from "apps/front-office/utils/types";
+import { Product } from "apps/front-office/shop/utils/types";
 import { useEffect, useState } from "react";
 import { shopDataAtom } from "../atoms/shop-data.atom";
 import { getShopPageData } from "../services/shop-service";

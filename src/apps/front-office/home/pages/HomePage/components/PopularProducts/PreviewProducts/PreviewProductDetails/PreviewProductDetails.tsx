@@ -3,7 +3,7 @@ import { Link } from "@mongez/react-router";
 import Stars from "apps/front-office/design-system/components/Stars";
 import { Badge } from "apps/front-office/design-system/components/ui/badge";
 import { Button } from "apps/front-office/design-system/components/ui/button";
-import { Product } from "apps/front-office/utils/types";
+import { Product } from "apps/front-office/shop/utils/types";
 import { ChevronDown, ChevronUp, ShoppingCart } from "lucide-react";
 
 export type PreviewProductDetailsProps = {
