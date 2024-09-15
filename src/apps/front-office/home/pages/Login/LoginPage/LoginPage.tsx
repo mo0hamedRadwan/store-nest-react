@@ -1,66 +1,76 @@
+import { trans } from "@mongez/localization";
+import { Form } from "@mongez/react-form";
+import { Link } from "@mongez/react-router";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
+import Footer from "src/apps/front-office/design-system/layouts/Footer";
+import Header from "src/apps/front-office/design-system/layouts/Header";
+import EmailInput from "../components/EmailInput";
+import PasswordInput from "../components/PasswordInput";
+import CheckBoxInput from "../components/checkBoxInput";
 
-type LoginPageProps = {
-  prop?: string;
-};
+export default function LoginPage() {
+  const handleSubmit = ({ values, form }) => {
+    console.log("submit", JSON.stringify(values), form);
+  };
 
-export default function LoginPage(prop: LoginPageProps) {
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <div className="w-full max-w-[900px] flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden">
-        {/* Image (hidden on small screens) */}
-        <div className="hidden lg:block w-1/2">
-          <img
-            className="h-full w-full object-contain"
-            src="/images/login/login-1.png"
-            alt="Woman working on laptop"
-          />
-        </div>
+    <>
+      <Header />
+      <div className="min-h-screen flex justify-center items-center">
+        <div className="w-full max-w-[900px] flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden">
+          {/* Image (hidden on small screens) */}
+          <div className="hidden lg:block w-1/2">
+            <img
+              className="h-full w-full object-contain rounded-[15px]"
+              src="/images/login/login-1.png"
+              alt="Woman working on laptop"
+            />
+          </div>
 
-        {/* Form */}
-        <div className="w-full lg:w-1/2 p-8">
-          <h1 className="text-6xl text-mainColor font-semibold mb-4">Login</h1>
-          <p className="text-sm text-gray-600 mb-5">
-            Don&apos;t have an account?{" "}
-            <a href="#" className="text-green-500">
-              Create here
-            </a>
-          </p>
+          {/* Form */}
+          <div className="w-full lg:w-1/2 p-8">
+            <h1 className="text-6xl text-mainColor font-semibold mb-4">
+              {trans("login")}
+            </h1>
+            <p className="text-base text-[#7E7E7E] font-normal leading-6 mb-5">
+              {trans("register")}
+              <Link
+                to={`/register`}
+                className="cursor-pointer text-priceNowColor font-semibold duration-300 hover:text-[#FDC040] ml-1">
+                {trans("createHere")}
+              </Link>
+            </p>
 
-          <form className="space-y-4">
-            <div>
-              <input
-                type="text"
-                id="username"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 h-16"
-                placeholder="Username or Email *"
+            <Form className="space-y-4" onSubmit={handleSubmit}>
+              <EmailInput
+                name="username"
+                className="w-full px-4 py-2 border border-rateColor rounded-lg focus:outline-none focus:border-priceNowColor h-16"
+                placeholder={trans("username")}
               />
-            </div>
-
-            <div>
-              <input
-                type="password"
-                id="password"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 h-16"
-                placeholder="Your password *"
+              <PasswordInput
+                name="password"
+                className="w-full px-4 py-2 border border-rateColor rounded-lg focus:outline-none focus:border-priceNowColor h-16"
+                placeholder={trans("password")}
               />
-            </div>
-
-            <div className="flex items-center justify-between !mb-[50px]">
-              <label className="flex items-center text-sm text-gray-600">
-                <input type="checkbox" className="mr-2" />
-                Remember me
-              </label>
-              <a href="#" className="text-sm text-rateColor">
-                Forgot password?
-              </a>
-            </div>
-            <Button className="bg-mainColor hover:bg-primary text-white !px-10 !py-[15px]">
-              Log in
-            </Button>
-          </form>
+              <div className="flex items-center justify-between !mb-[50px]">
+                <label className="flex items-center text-sm ">
+                  <CheckBoxInput name="rememberMe" />
+                  <span className="text-sm !ml-2">{trans("rememberMe")}</span>
+                </label>
+                <Link
+                  to={`/forget-password`}
+                  className="text-sm cursor-pointer text-rateColor font-semibold duration-300">
+                  {trans("forgetPassword")}
+                </Link>
+              </div>
+              <Button className="bg-mainColor hover:bg-primary text-white !px-10 !py-[15px]">
+                {trans("loginButton")}
+              </Button>
+            </Form>
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

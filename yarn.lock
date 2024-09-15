@@ -558,10 +558,10 @@
   dependencies:
     "@mongez/atom" "^1.0.0"
 
-"@mongez/react-form@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@mongez/react-form/-/react-form-3.0.8.tgz#f72f15109a11e019742c8c5210b00b1aab33309a"
-  integrity sha512-aFbBFTzOcJK8m+3rv9g17SR8WcUTOuvhSahvv9In4ZeEk1g1z7suoRyJ7HZSAXB2bxmmLaAyPSoWKOjiqN4d2Q==
+"@mongez/react-form@^3.0.12":
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/@mongez/react-form/-/react-form-3.0.12.tgz#ca2d3bd03395ca0744ced5a81397e1a3f261cc7e"
+  integrity sha512-fCM13afg+xNJFEQpL3UVK8pq2lSUaqn/Zd88wXZijJgEe595eBdPLJd27Zj3BHmjHI4QaasNsO9r7tl/Y8Vn+Q==
   dependencies:
     "@mongez/events" "2.1.0"
     "@mongez/localization" "^3.0.0"

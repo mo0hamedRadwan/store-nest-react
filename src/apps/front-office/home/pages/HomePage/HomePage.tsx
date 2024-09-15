@@ -130,6 +130,7 @@ export default function HomePage() {
         <Header title="Deals Of The Day" linkText="All Deals" linkHref="#" />
         <DealList deals={data1.slice(0, 4)} timeCards={deals} />
       </SectionWrapper> */}
+      {/* <LoginPage /> */}
     </>
   );
 }
