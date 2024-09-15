@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import React from "react";
 function _AboutStatsSection() {
   return (
@@ -6,23 +7,25 @@ function _AboutStatsSection() {
       <div className="relative text-white hidden md:grid md:grid-cols-2 lg:grid-cols-5 z-50">
         <div className="box-info my-8 text-center">
           <div className="rate text-7xl font-bold">+0</div>
-          <p className="text-2xl font-semibold">Glorious years</p>
+          <p className="text-2xl font-semibold">{trans("Glorious years")}</p>
         </div>
         <div className="box-info my-8 text-center">
           <div className="rate text-7xl font-bold">+0</div>
-          <p className="text-2xl font-semibold">Happy customers</p>
+          <p className="text-2xl font-semibold">{trans("Happy customers")}</p>
         </div>
         <div className="box-info my-8 text-center">
           <div className="rate text-7xl font-bold">+0</div>
-          <p className="text-2xl font-semibold">Successful projects</p>
+          <p className="text-2xl font-semibold">
+            {trans("Successful projects")}
+          </p>
         </div>
         <div className="box-info my-8 text-center">
           <div className="rate text-7xl font-bold">+0</div>
-          <p className="text-2xl font-semibold">Professional team</p>
+          <p className="text-2xl font-semibold">{trans("Professional team")}</p>
         </div>
         <div className="box-info my-8 text-center hidden lg:block">
           <div className="rate text-7xl font-bold">+0</div>
-          <p className="text-2xl font-semibold">Global presence</p>
+          <p className="text-2xl font-semibold">{trans("Global presence")}</p>
         </div>
       </div>
     </div>

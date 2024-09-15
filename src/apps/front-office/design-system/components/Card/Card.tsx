@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import React from "react";
 
 export type CardProps = {
@@ -25,7 +26,7 @@ function _Card({ image, title, description, link }: CardProps) {
         </div>
         <div className="card-link">
           <a href={link} className="text-primary font-semibold">
-            Read more
+            {trans("readMore")}
           </a>
         </div>
       </div>

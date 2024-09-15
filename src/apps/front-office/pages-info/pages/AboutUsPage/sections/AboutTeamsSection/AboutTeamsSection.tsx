@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { Youtube } from "lucide-react";
 import React from "react";
@@ -6,10 +7,14 @@ function _AboutTeamsSection() {
   return (
     <section className="flex flex-col lg:flex-row">
       <div className="section-info basis-4/12 mb-8">
-        <h4 className="text-2xl capitalize text-primary my-4">Our Team</h4>
-        <h2 className="text-5xl font-bold my-4">Meet Our Expert Team</h2>
+        <h4 className="text-2xl capitalize text-primary my-4">
+          {trans("Our Teams")}
+        </h4>
+        <h2 className="text-5xl font-bold my-4">
+          {trans("Meet Our Expert Team")}
+        </h2>
 
-        <div className="section-content">
+        <div className="section-content p-4">
           <p className="text-muted-foreground my-4">
             Proin ullamcorper pretium orci. Donec necscele risque leo. Nam massa
             dolor imperdiet neccon sequata congue idsem. Maecenas malesuada
@@ -24,7 +29,7 @@ function _AboutTeamsSection() {
         </div>
 
         <button className="capitalize w-fit px-6 py-3 bg-primary text-primary-foreground font-semibold border-none hover:bg-secondary transition-colors">
-          view all memebers
+          {trans("view all memebers")}
         </button>
       </div>
 
