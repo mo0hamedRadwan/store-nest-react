@@ -1,7 +1,5 @@
 import ProductCard from "src/apps/front-office/home/pages/HomePage/components/PopularProducts/ProductCard";
-import useFetchShopData from "src/apps/front-office/shop/hooks/use-fetch-shop-data";
-import Paginator from "src/apps/front-office/shop/pages/ShopPage/components/Paginator";
-import Loader from "../ui/Indicators/Indicators";
+import { Product } from "src/apps/front-office/shop/utils";
 
 function Items({ currentItems }) {
   return (
@@ -14,22 +12,12 @@ function Items({ currentItems }) {
   );
 }
 
-function PaginatedItems() {
-  const { data, loading, pagination } = useFetchShopData();
+function PaginatedItems({ products }: { products: Product[] }) {
+  // const { data, loading, pagination } = useFetchShopData();
 
   return (
     <>
-      {loading && (
-        <>
-          <Loader />
-        </>
-      )}
-      {!loading && (
-        <>
-          <Items currentItems={data} />
-          <Paginator pagination={pagination} />
-        </>
-      )}
+      <Items currentItems={products} />
     </>
   );
 }

@@ -17,7 +17,7 @@ export default function CategorySidebar() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="p-7 rounded-lg flex flex-col relative border border-solid shadow-gray-300">
+    <div className="min-w-[250px] p-7 rounded-lg flex flex-col relative border border-solid shadow-gray-300">
       <h5 className="mb-8 border-b font-bold border-[#ececec] text-[24px] pb-6 relative after:content-[''] after:bg-[#BCE3C9] after:h-0.5 after:w-20 after:absolute after:left-0 after:rtl:right-0 after:bottom-0">
         Category
       </h5>

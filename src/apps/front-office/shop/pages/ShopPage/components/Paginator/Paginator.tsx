@@ -1,5 +1,4 @@
 import { Link } from "@mongez/react-router";
-import { useState } from "react";
 import {
   Pagination,
   PaginationContent,
@@ -15,10 +14,15 @@ import URLS from "src/apps/front-office/utils/urls";
 
 export type PaginatorProps = {
   pagination: PaginationInfo;
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
 };
 
-export default function Paginator({ pagination }: PaginatorProps) {
-  const [currentPage] = useState(pagination.page);
+export default function Paginator({
+  pagination,
+  currentPage,
+  setCurrentPage,
+}: PaginatorProps) {
   const totalPages = pagination.pages;
 
   if (totalPages < 2) return null;
@@ -30,7 +34,9 @@ export default function Paginator({ pagination }: PaginatorProps) {
       <PaginationContent>
         <PaginationItem>
           {currentPage > 1 ? (
-            <Link to={`${URLS.shop.list}?page=${currentPage - 1}`}>
+            <Link
+              to={`${URLS.shop.list}?page=${currentPage - 1}`}
+              onClick={() => setCurrentPage(currentPage - 1)}>
               <PaginationPrevious className="rounded-full" />
             </Link>
           ) : (
@@ -40,7 +46,9 @@ export default function Paginator({ pagination }: PaginatorProps) {
 
         {pages.map(page => (
           <PaginationItem key={page}>
-            <Link to={`${URLS.shop.list}?page=${page}`}>
+            <Link
+              to={`${URLS.shop.list}?page=${page}`}
+              onClick={() => setCurrentPage(page)}>
               <PaginationLink
                 isActive={page === currentPage}
                 className="rounded-full ]">
@@ -58,7 +66,9 @@ export default function Paginator({ pagination }: PaginatorProps) {
 
         <PaginationItem>
           {currentPage < totalPages ? (
-            <Link to={`${URLS.shop.list}?page=${currentPage + 1}`}>
+            <Link
+              to={`${URLS.shop.list}?page=${currentPage + 1}`}
+              onClick={() => setCurrentPage(currentPage + 1)}>
               <PaginationNext className="rounded-full " />
             </Link>
           ) : (
