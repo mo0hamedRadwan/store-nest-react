@@ -1,4 +1,9 @@
 {
+  "title": {
+    "en": "About Us",
+    "ar": "معلومات عنا"
+  },
+
   "welcome": {
     "en": "Welcome to Nest",
     "ar": "مرحبا بكم في Nest"
