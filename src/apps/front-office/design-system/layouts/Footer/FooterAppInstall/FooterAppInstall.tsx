@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { appleIcon, googleIcon, paymentMethod } from "assets/footerImages";
 
@@ -5,10 +6,10 @@ export default function FooterAppInstall() {
   return (
     <div className="flex flex-col text-specialColor-secondary flex-wrap lg:pt-0 ">
       <h4 className="font-bold leading-[1.2] text-2xl capitalize mt-[15px] mb-5 font-custom">
-        Install App
+        {trans("installApp")}
       </h4>
       <p className="mb-[5px] text-[15px] font-normal leading-6 font-lato">
-        From App Store or Google Play
+      {trans("installAppContentOne")}
       </p>
       <div className="flex mt-[25px] mb-[33px] cursor-pointer">
         <Link
@@ -24,6 +25,7 @@ export default function FooterAppInstall() {
       </div>
       <p className="mb-5 font-normal leading-6 text-[15px] font-lato">
         Secured Payment Gateways
+        {trans("installAppContentTwo")}
       </p>
       <img src={paymentMethod} alt="payment-method" />
     </div>
