@@ -4,11 +4,11 @@ import Stars from "apps/front-office/design-system/components/Stars";
 import { Product } from "apps/front-office/shop/utils/types";
 import { ShoppingBag } from "lucide-react";
 
-export type ListMealCardProps = {
+export type ListProductCardProps = {
   product: Product;
 };
 
-export default function ListProductCard({ product }: ListMealCardProps) {
+export default function ListProductCard({ product }: ListProductCardProps) {
   const isOnSale = product.salePrice ? true : false;
 
   return (

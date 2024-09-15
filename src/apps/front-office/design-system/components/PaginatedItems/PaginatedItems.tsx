@@ -13,8 +13,6 @@ function Items({ currentItems }) {
 }
 
 function PaginatedItems({ products }: { products: Product[] }) {
-  // const { data, loading, pagination } = useFetchShopData();
-
   return (
     <>
       <Items currentItems={products} />

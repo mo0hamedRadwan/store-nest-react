@@ -1,6 +1,5 @@
 import Banner from "src/apps/front-office/design-system/components/Banner";
 
-import TopSelling from "src/apps/front-office/home/pages/HomePage/sections/DealsDayTwo/TopSelling";
 import CategorySidebar from "src/apps/front-office/shop/pages/ShopPage/components/CategorySidebar";
 import GoverningLaw from "../../components/GoverningLaw";
 import Restrictions from "../../components/Restrictions";
@@ -21,7 +20,7 @@ export default function TermsAndConditionsPage() {
         <SearchInput />
         <div className="relative flex flex-col gap-10">
           <CategorySidebar />
-          <TopSelling moduleName="trending products" />
+          {/* <TopSelling moduleName="trending products" /> */}
         </div>
         <div className="hidden lg:block">
           <Banner

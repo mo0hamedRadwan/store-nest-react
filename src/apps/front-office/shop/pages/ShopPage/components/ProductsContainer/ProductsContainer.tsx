@@ -4,7 +4,7 @@ import { useState } from "react";
 import Loader from "src/apps/front-office/design-system/components/ui/Indicators/Indicators";
 import useFetchShopData from "src/apps/front-office/shop/hooks/use-fetch-shop-data";
 import Paginator from "../Paginator";
-import MealsList from "./ProductssList";
+import ProductsList from "./ProductssList";
 
 export default function ProductsContainer() {
   const displayMode = shopDisplayModeAtom.useValue();
@@ -28,7 +28,7 @@ export default function ProductsContainer() {
     );
   }
 
-  const Container = displayMode === "grid" ? ProductsGrid : MealsList;
+  const Container = displayMode === "grid" ? ProductsGrid : ProductsList;
 
   return (
     <>

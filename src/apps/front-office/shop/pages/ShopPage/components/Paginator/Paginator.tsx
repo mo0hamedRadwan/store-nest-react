@@ -37,7 +37,7 @@ export default function Paginator({
             <Link
               to={`${URLS.shop.list}?page=${currentPage - 1}`}
               onClick={() => setCurrentPage(currentPage - 1)}>
-              <PaginationPrevious className="rounded-full" />
+              <PaginationPrevious className="rounded-full " />
             </Link>
           ) : (
             <PaginationPrevious aria-disabled="true" className="rounded-full" />
@@ -51,7 +51,7 @@ export default function Paginator({
               onClick={() => setCurrentPage(page)}>
               <PaginationLink
                 isActive={page === currentPage}
-                className="rounded-full ]">
+                className="rounded-full w-10 h-10 ">
                 {page}
               </PaginationLink>
             </Link>
@@ -69,7 +69,7 @@ export default function Paginator({
             <Link
               to={`${URLS.shop.list}?page=${currentPage + 1}`}
               onClick={() => setCurrentPage(currentPage + 1)}>
-              <PaginationNext className="rounded-full " />
+              <PaginationNext className="rounded-full" />
             </Link>
           ) : (
             <PaginationNext aria-disabled="true" className="rounded-full" />
