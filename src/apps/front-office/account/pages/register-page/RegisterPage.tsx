@@ -1,11 +1,12 @@
 import { trans } from "@mongez/localization";
 import { Form } from "@mongez/react-form";
 import Helmet from "@mongez/react-helmet";
-import { Link } from "@mongez/react-router";
+import { Link, navigateBack } from "@mongez/react-router";
 import { BookOpen } from "lucide-react";
 import Footer from "src/apps/front-office/design-system/layouts/Footer/Footer";
 import Header from "src/apps/front-office/design-system/layouts/Header/Header";
 import endpoint from "src/shared/endpoint";
+//import { useCreateAccount } from "../../hooks";
 import CheckboxInput from "./components/CheckboxInput";
 import EmailInput from "./components/EmailInput";
 import HeadOfRegister from "./components/HeadOfRegister";
@@ -18,16 +19,18 @@ import "./input.css";
 import "./locales";
 
 export default function RegisterPage() {
+  //const createAccount = useCreateAccount();
   const submitForm = async ({ values }) => {
-    console.log(values);
-
     try {
       await endpoint.post("/register", values);
+      navigateBack();
     } catch (error) {
       console.log(error);
     }
   };
-
+  // const submitForm=({values,form})=>{
+  //   createAccount({values,form})
+  // }
   return (
     <>
       <Helmet
