@@ -9,18 +9,18 @@ const socialIcons = [
 export default function FooterSocialMedia() {
   return (
     <div className="hidden md:block text-center lg:text-left">
-      <div className="flex justify-center lg:justify-start  mb-2">
-        <h6 className="text-muted-foreground font-bold text-[16px] flex items-center whitespace-nowrap">
+      <div className="flex justify-center lg:justify-start">
+        <h6 className="text-specialColor-secondary font-custom mr-[15px] font-bold text-[16px] flex items-center leading-[1.2] whitespace-nowrap">
           Follow Us
         </h6>
         {socialIcons.map(({ iconClass, alt }) => (
           <i
             key={alt}
-            className={`${iconClass} ml-2 w-[30px] h-[30px] bg-primary flex justify-center items-center rounded-full cursor-pointer text-white`}
+            className={`${iconClass} mr-2 w-[30px] h-[30px] bg-priceNowColor flex justify-center items-center rounded-full cursor-pointer text-white`}
             aria-label={alt}></i>
         ))}
       </div>
-      <p className="text-muted-foreground text-[14px]">
+      <p className="text-specialColor-primary leading-6 font-normal text-[14px] font-lato">
         Up to 15% discount on your first subscribe
       </p>
     </div>

@@ -2,9 +2,9 @@ import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import Breadcrumb from "apps/front-office/design-system/layouts/Breadcrumb";
 
-export type ShopBannerProps = {
-  // props go here
-};
+// export type ShopBannerProps = {
+//   // props go here
+// };
 
 export default function ShopBanner() {
   return (
