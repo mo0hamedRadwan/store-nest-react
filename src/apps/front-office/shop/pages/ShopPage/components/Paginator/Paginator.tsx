@@ -1,3 +1,5 @@
+import { Link } from "@mongez/react-router";
+import { useState } from "react";
 import {
   Pagination,
   PaginationContent,
@@ -7,31 +9,63 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "src/apps/front-office/design-system/components/ui/pagination";
+import { createArray } from "src/apps/front-office/shop/utils";
+import { PaginationInfo } from "src/apps/front-office/utils/types";
+import URLS from "src/apps/front-office/utils/urls";
 
 export type PaginatorProps = {
-  children?: React.ReactNode;
+  pagination: PaginationInfo;
 };
-export default function Paginator({ children }: PaginatorProps) {
-  console.log(children);
+
+export default function Paginator({ pagination }: PaginatorProps) {
+  const [currentPage] = useState(pagination.page);
+  const totalPages = pagination.pages;
+
+  if (totalPages < 2) return null;
+
+  const pages = createArray(totalPages);
 
   return (
-    <>
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="#" />
+    <Pagination>
+      <PaginationContent>
+        <PaginationItem>
+          {currentPage > 1 ? (
+            <Link to={`${URLS.shop.list}?page=${currentPage - 1}`}>
+              <PaginationPrevious className="rounded-full" />
+            </Link>
+          ) : (
+            <PaginationPrevious aria-disabled="true" className="rounded-full" />
+          )}
+        </PaginationItem>
+
+        {pages.map(page => (
+          <PaginationItem key={page}>
+            <Link to={`${URLS.shop.list}?page=${page}`}>
+              <PaginationLink
+                isActive={page === currentPage}
+                className="rounded-full ]">
+                {page}
+              </PaginationLink>
+            </Link>
           </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">1</PaginationLink>
-          </PaginationItem>
+        ))}
+
+        {currentPage < totalPages && totalPages > 2 && (
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
-    </>
+        )}
+
+        <PaginationItem>
+          {currentPage < totalPages ? (
+            <Link to={`${URLS.shop.list}?page=${currentPage + 1}`}>
+              <PaginationNext className="rounded-full " />
+            </Link>
+          ) : (
+            <PaginationNext aria-disabled="true" className="rounded-full" />
+          )}
+        </PaginationItem>
+      </PaginationContent>
+    </Pagination>
   );
 }

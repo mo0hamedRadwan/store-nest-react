@@ -1,7 +1,8 @@
+import { useOnce } from "@mongez/react-hooks";
+import { queryString } from "@mongez/react-router";
 import { Product } from "apps/front-office/shop/utils/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getProducts } from "../../home/services/home-service";
-import { shopDataAtom } from "../atoms/shop-data.atom";
 
 export type ShopData = {
   products: Product[];
@@ -28,43 +29,27 @@ export type ShopData = {
 };
 
 const useFetchShopData = () => {
-  const [data, setData] = useState<ShopData>({
-    products: [],
-    filters: [],
-    sortOptions: [],
-    breadcrumbs: [],
-    paginationInfo: {
-      limit: 0,
-      page: 0,
-      pages: 0,
-      result: 0,
-      total: 0,
-    },
-  });
+  const [currentItems, setCurrentItems] = useState<Product[]>([]);
+  const [pagination, setPagination] = useState<any>({});
+  const [loading, setIsLoading] = useState(true);
+  const [error, setError] = useState<any>(null);
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const fetch = async query => {
-    setLoading(true);
-
-    getProducts(query)
+  useOnce(() => {
+    getProducts({
+      ...queryString.all(),
+      limit: 20,
+    })
       .then(response => {
-        shopDataAtom.update(response.data);
-        setData(response.data);
-        setLoading(false);
+        setCurrentItems(response.data.products);
+        setPagination(response.data.paginationInfo);
+
+        setIsLoading(false);
       })
       .catch(error => {
         setError(error);
-        setLoading(false);
       });
-  };
-
-  useEffect(() => {
-    fetch("");
-  }, []);
-
-  return { data, loading, error, fetch };
+  });
+  return { loading, error, data: currentItems, pagination };
 };
 
 export default useFetchShopData;
