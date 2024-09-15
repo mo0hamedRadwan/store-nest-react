@@ -1,6 +1,6 @@
 "use client";
 
-import CategorySidebar from "src/apps/front-office/shop/components/CategorySidebar";
+import CategorySidebar from "src/apps/front-office/shop/pages/ShopPage/components/CategorySidebar";
 import Content from "./Content";
 
 export default function PrivacyPage() {
