@@ -3,7 +3,8 @@ import { shopDisplayModeAtom } from "apps/front-office/shop/atoms/shop-display-m
 import MealsList from "./ProductssList";
 
 import useFetchShopData from "apps/front-office/shop/hooks/use-fetch-shop-data";
-import { shopDataAtom } from "../../../atoms/shop-data.atom";
+import Loader from "src/apps/front-office/design-system/Indicators/Loader";
+import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
 
 export default function ProductsContainer() {
   const { data, loading, error, fetch } = useFetchShopData();
@@ -11,7 +12,7 @@ export default function ProductsContainer() {
   shopDataAtom.change("fetch", fetch);
 
   if (loading) {
-    return <h1 className="text-5xl text-priamry text-center">Loading...</h1>;
+    return <Loader />;
   }
 
   if (error) {

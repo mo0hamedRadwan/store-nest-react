@@ -1,18 +1,18 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { ShoppingCart } from "lucide-react";
-import { forwardRef } from "react";
-import Stars from "../../design-system/components/Stars";
-import { Button } from "../../design-system/components/ui/button";
-import { getLocalizedValue } from "../../utils/localization";
-import { shopDataAtom } from "../atoms/shop-data.atom";
+import React, { forwardRef } from "react";
+import Stars from "src/apps/front-office/design-system/components/Stars";
+import { Button } from "src/apps/front-office/design-system/components/ui/button";
+import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
+import { getLocalizedValue } from "src/apps/front-office/utils/localization";
 
 export type DealsDaysProps = {
-  // props go here
+  children?: React.ReactNode;
 };
 function DealsDays(props: DealsDaysProps, ref: any) {
   const mockData = shopDataAtom.use("products").slice(0, 4);
-
+  mockData.length = 3;
   return (
     <div className="py-10" ref={ref}>
       <h2 className="text-4xl font-bold">Deals Of The Day</h2>

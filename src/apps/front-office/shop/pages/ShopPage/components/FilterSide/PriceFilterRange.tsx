@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
-import { shopDataAtom } from "../../atoms/shop-data.atom";
+import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
 
 const PriceRangeSlider = () => {
   const fetch = shopDataAtom.get("fetch");
