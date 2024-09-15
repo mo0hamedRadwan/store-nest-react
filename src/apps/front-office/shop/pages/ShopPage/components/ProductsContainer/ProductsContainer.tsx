@@ -4,12 +4,10 @@ import MealsList from "./ProductssList";
 
 import useFetchShopData from "apps/front-office/shop/hooks/use-fetch-shop-data";
 import Loader from "src/apps/front-office/design-system/Indicators/Loader";
-import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
 
 export default function ProductsContainer() {
-  const { data, loading, error, fetch } = useFetchShopData();
+  const { data, loading, error } = useFetchShopData();
   const displayMode = shopDisplayModeAtom.useValue();
-  shopDataAtom.change("fetch", fetch);
 
   if (loading) {
     return <Loader />;
@@ -27,5 +25,5 @@ export default function ProductsContainer() {
 
   const Container = displayMode === "grid" ? ProductsGrid : MealsList;
 
-  return <Container products={data.products} />;
+  return <Container products={data} />;
 }

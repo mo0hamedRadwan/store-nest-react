@@ -1,3 +1,5 @@
+import { trans } from "@mongez/localization";
+import Helmet from "@mongez/react-helmet";
 import Banner from "src/apps/front-office/design-system/components/Banner";
 import TopSelling from "src/apps/front-office/home/pages/HomePage/sections/DealsDayTwo/TopSelling";
 import CategorySidebar from "./components/CategorySidebar";
@@ -9,16 +11,15 @@ import ShopBanner from "./components/ShopBanner";
 
 function ShopPage() {
   return (
-    <div>
+    <>
+      <Helmet title={trans("shop")} />
       <ShopBanner />
       <div className="flex flex-col md:flex-row md:gap-8 my-6 md:my-12">
-        {/* Left Side - Main Content */}
         <div className="basis-full lg:basis-4/5 mt-5 md:mt-0">
           <ViewDisplayMode />
           <ProductsContainer />
           <DealsDays />
         </div>
-        {/* Right Side - Sidebar */}
         <div className="basis-full lg:basis-[20%] mt-8 lg:mt-0">
           <div className="sticky top-0">
             <CategorySidebar />
@@ -37,7 +38,7 @@ function ShopPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
