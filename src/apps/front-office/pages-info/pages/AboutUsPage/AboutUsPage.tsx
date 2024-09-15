@@ -1,9 +1,9 @@
-import Breadcrumb from "src/apps/front-office/design-system/layouts/Breadcrumb";
-
-import HeaderPage from "./components/HeaderPage";
-
 import { trans } from "@mongez/localization";
 import URLS from "src/apps/front-office/utils/urls";
+
+import Breadcrumb from "src/apps/front-office/design-system/layouts/Breadcrumb";
+import HeaderPage from "./components/HeaderPage";
+
 import AboutOurServiceSection from "./sections/AboutOurServiceSection"; // 3#
 import AboutProvideSection from "./sections/AboutProvideSection"; // 2#
 import AboutStatsSection from "./sections/AboutStatsSection"; // 5#
@@ -36,7 +36,7 @@ export default function AboutUsPage() {
           </div>
 
           <div className="body-t-2">
-            <HeaderPage title={trans("provideSectionTitle")} />
+            <HeaderPage title={trans("about-us.provideSectionTitle")} />
 
             <AboutProvideSection />
           </div>
@@ -53,7 +53,7 @@ export default function AboutUsPage() {
 
           <div className="body-t-6">
             <div className="container">
-              <HeaderPage title={trans("Our Teams")} />
+              <HeaderPage title={trans("about-us.ourTeams")} />
 
               <AboutTeamsSection />
             </div>

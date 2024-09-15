@@ -10,7 +10,7 @@ function _AboutProvideSection() {
         <div className="" key={index}>
           <Card
             image={item.image}
-            title={trans(item.title)}
+            title={trans(`about-us.${item.title}`)} // need to ask about this
             description={item.description}
             link={item.link}
           />
