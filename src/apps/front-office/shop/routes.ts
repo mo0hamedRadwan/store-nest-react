@@ -8,5 +8,8 @@ publicRoutes([
     path: URLS.shop.list,
     component: ShopPage,
   },
-  { path: URLS.shop.viewProductRoute, component: ProductPage },
+  {
+    path: URLS.shop.viewProductRoute,
+    component: ProductPage,
+  },
 ]);

@@ -63,7 +63,7 @@ export default function SearchForm() {
 
   return (
     <form
-      className="hidden lg:flex items-center border border-primary rounded-lg p-2"
+      className="hidden lg:flex items-center border border-primary-default rounded-lg p-2"
       onSubmit={handleSearch}>
       <div
         className="relative w-[190px] hidden xl:flex justify-center items-center"

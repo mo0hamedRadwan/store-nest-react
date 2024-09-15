@@ -7,14 +7,10 @@ export type LoaderProps = {
 };
 export default function Loader({ size = 50, className = "" }: LoaderProps) {
   return (
-    <>
-      <div
-        className={cn("flex justify-center items-center h-screen", className)}>
-        <div className="animate-spin">
-          <LoaderCircle size={size} className="text-primary" />
-        </div>
+    <div className={cn("flex justify-center items-center h-screen", className)}>
+      <div className="animate-spin">
+        <LoaderCircle size={size} className="text-primary" />
       </div>
-      );
-    </>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import { atom } from "@mongez/react-atom";
-import { Product } from "../../utils/types";
+import { Product } from "../../shop/utils/types";
 
 type ProductQuickViewType = {
   visible: boolean;

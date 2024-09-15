@@ -1,5 +1,5 @@
 import ProductCard from "apps/front-office/home/pages/HomePage/components/PopularProducts/ProductCard";
-import { Product } from "apps/front-office/utils/types";
+import { Product } from "apps/front-office/shop/utils/types";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 

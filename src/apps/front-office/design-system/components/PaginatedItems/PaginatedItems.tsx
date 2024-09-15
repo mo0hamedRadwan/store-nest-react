@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import ProductCard from "src/apps/front-office/home/pages/HomePage/components/PopularProducts/ProductCard";
 import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
-import { Product } from "src/apps/front-office/utils/types";
+import { Product } from "src/apps/front-office/shop/utils/types";
 
 function Items({ currentItems }) {
   return (

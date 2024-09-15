@@ -9,17 +9,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.css";
 
 type SliderPropsType = {
-  sliderData: Banner[];
+  banners: Banner[];
   isLoading: boolean;
   error?: string;
 };
 
-export default function Slider({
-  sliderData,
-  isLoading,
-  error,
-}: SliderPropsType) {
-  // const { sliderData, isLoading, error } = useSlider();
+export default function Slider({ banners, isLoading, error }: SliderPropsType) {
+  // const { banners, isLoading, error } = useSlider();
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
@@ -47,11 +43,11 @@ export default function Slider({
           bulletActiveClass: "swiper-pagination-bullet-active",
         }}
         className="rounded-3xl">
-        {sliderData.map(slide => (
-          <SwiperSlide key={slide.id}>
+        {banners.map(banner => (
+          <SwiperSlide key={banner.id}>
             <div className="relative flex items-center justify-center py-6 rounded-3xl">
               <img
-                src={slide.image.url}
+                src={banner.image.url}
                 className="object-fit lg:bg-cover bg-center bg-no-repeat rounded-3xl w-full h-[200px]  lg:h-full lg:min-h-[350px]"
               />
             </div>

@@ -58,6 +58,7 @@ export type Row = {
 export type Meta = {
   appendAppName: boolean;
 };
+
 export type Image = {
   extension: string;
   hash: string;
@@ -69,15 +70,6 @@ export type Image = {
   size: number;
   url: string;
   width: number;
-};
-export type CreatedAt = {
-  format: string;
-  timestamp: number;
-  offset: number;
-  humanTime: string;
-  text: string;
-  date?: string;
-  time?: string;
 };
 
 export type UpdatedAt = {
@@ -119,7 +111,6 @@ export type Discount = {
 export type Product = {
   id: number;
   category: Category;
-  createdAt: CreatedAt;
   description: string;
   discount: Discount;
   hasDiscount: boolean;
@@ -142,6 +133,10 @@ export type Product = {
   sortOrder: number;
   type: string;
   rating: number;
+  timeCards?: {
+    time: number;
+    type: string;
+  }[];
 };
 
 export type SliderData = {
