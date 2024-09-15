@@ -23,7 +23,7 @@ function ShopPage() {
           <div className="sticky top-0">
             <CategorySidebar />
             <FilterSide />
-            <TopSelling moduleName="trending products" />
+            {/* <TopSelling moduleName="trending products" /> */}
             <Banner
               imageUrl="https://nest-frontend-v6.netlify.app/assets/imgs/banner/banner-11.png"
               title="Organic"
