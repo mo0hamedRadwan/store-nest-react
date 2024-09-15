@@ -2,10 +2,10 @@ import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { ShoppingCart } from "lucide-react";
 import React, { forwardRef } from "react";
-import Stars from "../../design-system/components/Stars";
-import { Button } from "../../design-system/components/ui/button";
-import { getLocalizedValue } from "../../utils/localization";
-import { shopDataAtom } from "../atoms/shop-data.atom";
+import Stars from "src/apps/front-office/design-system/components/Stars";
+import { Button } from "src/apps/front-office/design-system/components/ui/button";
+import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
+import { getLocalizedValue } from "src/apps/front-office/utils/localization";
 
 export type DealsDaysProps = {
   children?: React.ReactNode;

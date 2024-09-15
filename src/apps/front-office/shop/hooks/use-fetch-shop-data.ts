@@ -1,7 +1,7 @@
 import { Product } from "apps/front-office/shop/utils/types";
 import { useEffect, useState } from "react";
+import { getProducts } from "../../home/services/home-service";
 import { shopDataAtom } from "../atoms/shop-data.atom";
-import { getShopPageData } from "../services/shop-service";
 
 export type ShopData = {
   products: Product[];
@@ -48,7 +48,7 @@ const useFetchShopData = () => {
   const fetch = async query => {
     setLoading(true);
 
-    getShopPageData(query)
+    getProducts(query)
       .then(response => {
         shopDataAtom.update(response.data);
         setData(response.data);

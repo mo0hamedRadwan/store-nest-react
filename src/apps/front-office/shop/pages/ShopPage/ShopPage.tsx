@@ -1,11 +1,11 @@
 import Banner from "src/apps/front-office/design-system/components/Banner";
 import TopSelling from "src/apps/front-office/home/pages/HomePage/sections/DealsDayTwo/TopSelling";
-import CategorySidebar from "../../components/CategorySidebar";
-import FilterSide from "../../components/FilterSide";
-import DealsDays from "../../sections/DealsDays";
-import ProductsContainer from "../components/ProductsContainer";
-import ViewDisplayMode from "../components/ProductsContainer/ViewDisplayMode";
-import ShopBanner from "../components/shopBanner/ShopBanner";
+import CategorySidebar from "./components/CategorySidebar";
+import FilterSide from "./components/FilterSide";
+import ProductsContainer from "./components/ProductsContainer";
+import ViewDisplayMode from "./components/ProductsContainer/ViewDisplayMode";
+import DealsDays from "./components/sections/DealsDays";
+import ShopBanner from "./components/ShopBanner";
 
 function ShopPage() {
   return (

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import ReactPaginate from "react-paginate";
 import ProductCard from "src/apps/front-office/home/pages/HomePage/components/PopularProducts/ProductCard";
-import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
+import Paginator from "src/apps/front-office/shop/pages/ShopPage/components/Paginator";
 import { Product } from "src/apps/front-office/shop/utils/types";
 
 function Items({ currentItems }) {
@@ -16,26 +15,21 @@ function Items({ currentItems }) {
 }
 
 function PaginatedItems({ items }) {
-  // We start with an empty list of items.
   const [currentItems, setCurrentItems] = useState<Product[] | null>(null);
-
-  const { pages: pageCount } = shopDataAtom.use("paginationInfo");
-
-  const fetch = shopDataAtom.get("fetch");
-
+  // const { pages: pageCount } = shopDataAtom.use("paginationInfo");
+  // const fetch = shopDataAtom.get("fetch");
+  // const pageInfo = shopDataAtom.use("paginationInfo").page - 1;
   useEffect(() => {
     setCurrentItems(items);
   }, [items]);
-
-  // Invoke when user click to request another page.
-  const handlePageClick = event => {
-    fetch("page=" + (event.selected + 1));
-  };
+  // const handlePageClick = event => {
+  //   fetch("page=" + (event.selected + 1));
+  // };
 
   return (
     <>
       <Items currentItems={currentItems} />
-      <ReactPaginate
+      {/* <ReactPaginate
         forcePage={shopDataAtom.use("paginationInfo").page - 1}
         activeLinkClassName="!bg-primary !text-white !font-bold rounded-full"
         nextLabel=">"
@@ -55,7 +49,8 @@ function PaginatedItems({ items }) {
         breakLinkClassName="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200"
         activeClassName="bg-primary text-white"
         renderOnZeroPageCount={null}
-      />
+      /> */}
+      <Paginator />
     </>
   );
 }

@@ -4,7 +4,7 @@ import MealsList from "./ProductssList";
 
 import useFetchShopData from "apps/front-office/shop/hooks/use-fetch-shop-data";
 import Loader from "src/apps/front-office/design-system/Indicators/Loader";
-import { shopDataAtom } from "../../../atoms/shop-data.atom";
+import { shopDataAtom } from "src/apps/front-office/shop/atoms/shop-data.atom";
 
 export default function ProductsContainer() {
   const { data, loading, error, fetch } = useFetchShopData();
