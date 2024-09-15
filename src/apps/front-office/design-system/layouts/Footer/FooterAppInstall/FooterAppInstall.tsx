@@ -7,7 +7,7 @@ export default function FooterAppInstall() {
       <h4 className="font-bold leading-[1.2] text-2xl capitalize mt-[15px] mb-5 font-custom">
         Install App
       </h4>
-      <p className="mb-[5px] text-[15px] font-normal leading-6">
+      <p className="mb-[5px] text-[15px] font-normal leading-6 font-lato">
         From App Store or Google Play
       </p>
       <div className="flex mt-[25px] mb-[33px] cursor-pointer">
@@ -22,7 +22,7 @@ export default function FooterAppInstall() {
           <img src={googleIcon} alt="google-icon" className="max-w-[120px]" />
         </Link>
       </div>
-      <p className="mb-5 font-normal leading-6 text-[15px]">
+      <p className="mb-5 font-normal leading-6 text-[15px] font-lato">
         Secured Payment Gateways
       </p>
       <img src={paymentMethod} alt="payment-method" />

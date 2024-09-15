@@ -31,12 +31,12 @@ export default function FooterContactInfo() {
     : [];
 
   return (
-    <div className="flex flex-col text-specialColor-secondary w-full md:w-auto items-start mb-6 md:mb-0">
+    <div className="flex flex-col text-specialColor-secondary w-full md:w-auto items-start mb-6 md:mb-0 ">
       <div className="flex flex-col items-start mb-[30px] ">
         <Link href="/">
           <img src={logoUrl || ""} alt="logo" />
         </Link>
-        <p className="py-4 text-[17px] font-normal leading-6">
+        <p className="py-4 text-[17px] font-normal leading-6 font-lato">
           Awesome grocery store website template
         </p>
       </div>
@@ -48,8 +48,8 @@ export default function FooterContactInfo() {
             <i
               className={`${iconClass} text-xl mr-2 text-priceNowColor`}
               aria-label={label}></i>
-            <h4 className="font-semibold">{label}:</h4>
-            <span className="px-2">{value}</span>
+            <h4 className="font-semibold font-lato">{label}:</h4>
+            <span className="px-2 font-lato">{value}</span>
           </li>
         ))}
       </ul>

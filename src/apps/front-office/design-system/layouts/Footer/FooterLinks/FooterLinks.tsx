@@ -69,12 +69,14 @@ export function FooterLinksSection({
       <h4 className="font-bold leading-[1.2] text-2xl capitalize mt-[15px] mb-5 font-custom">
         {trans(heading)}
       </h4>
-      <ul className="flex flex-col list-none cursor-pointer min-w-[170px]">
+      <ul className="flex flex-col list-none cursor-pointer min-w-[170px] font-lato">
         {links.map((link, index) => (
           <li
             key={index}
-            className="py-3 text-[15px] hover:translate-x-3 hover:text-priceNowColor hover:duration-300 ease-linear transition-all">
-            <Link to={link.route}>{trans(link.text)}</Link>
+            className="py-3 text-[15px] hover:translate-x-3 hover:text-priceNowColor hover:duration-300 ease-linear transition-all font-lato">
+            <Link to={link.route} className="font-lato">
+              {trans(link.text)}
+            </Link>
           </li>
         ))}
       </ul>
