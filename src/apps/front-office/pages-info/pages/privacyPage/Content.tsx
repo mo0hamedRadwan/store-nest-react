@@ -2,15 +2,15 @@ export default function Content() {
   return (
     <div>
       <div className="mb-[30px]">
-      <h1 className="text-[40px] font-bold">Privacy Policy</h1>
-      <div className="flex gap-2">
-        <p>
-          By <span className="text-primary">Jonh</span>
-        </p>
-        <p>9 April 2020</p>
-        <p>8 mins read</p>
-        <p>29k Views</p>
-      </div>
+        <h1 className="text-[40px] font-bold">Privacy Policy</h1>
+        <div className="flex gap-2">
+          <p>
+            By <span className="text-primary">Jonh</span>
+          </p>
+          <p>9 April 2020</p>
+          <p>8 mins read</p>
+          <p>29k Views</p>
+        </div>
       </div>
       <h2 className="mb-[26px] text-[24px] font-bold">
         Welcome to AliThemes’s Privacy Policy
@@ -371,7 +371,9 @@ export default function Content() {
           visit a different Site. Read more about your options in our cookie
           policy.
         </li>
-        <h2 className=" mb-[26px] text-[24px] font-bold">Information about children</h2>
+        <h2 className=" mb-[26px] text-[24px] font-bold">
+          Information about children
+        </h2>
         <li>
           Our Sites are not suitable for children under the age of 16 years, so
           if you are under 16 we ask that you do not use our Sites or give us
@@ -431,7 +433,9 @@ export default function Content() {
           changes, where required. A copy of the latest version of this policy
           will always be available on this page.
         </li>
-        <h2 className=" mb-[26px] text-[24px] font-bold">How you can contact us</h2>
+        <h2 className=" mb-[26px] text-[24px] font-bold">
+          How you can contact us
+        </h2>
         <li>
           If you have any questions about our privacy practices or the way in
           which we have been managing your personal information, please contact

@@ -1,10 +1,9 @@
 "use client";
 
 import CategorySidebar from "src/apps/front-office/shop/components/CategorySidebar";
-import Content from "./Content";
-import SearchInput from "../../components/SearchInput";
 import TrendingProducts from "src/apps/front-office/shop/pages/components/TrendingProducts";
-import productImg12 from "../../../../../shared/assets/images/topselling/thumbnail-12.jpg";
+import SearchInput from "../../components/SearchInput";
+import Content from "./Content";
 
 export default function PrivacyPage() {
   return (
@@ -13,14 +12,14 @@ export default function PrivacyPage() {
         <Content />
       </div>
       <div className="w-[311px]">
-      <div className="flex flex-col !w-[311px]">
-        <SearchInput/>
-        <CategorySidebar />
-        <div className="sticky">
-        <TrendingProducts/>
+        <div className="flex flex-col !w-[311px]">
+          <SearchInput />
+          <CategorySidebar />
+          <div className="sticky">
+            <TrendingProducts />
+          </div>
+          {/* <image src={productImg12} width={500} alt='product'/> */}
         </div>
-        {/* <image src={productImg12} width={500} alt='product'/> */}
-      </div>
       </div>
     </div>
   );
