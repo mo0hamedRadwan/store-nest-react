@@ -28,7 +28,8 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
         backgroundColor: backgroundColors[index % backgroundColors.length],
         height: "180px", // Set a fixed height for the entire card
         width: "135px",
-      }}>
+      }}
+      className="hover:border hover:border-primary hover:shadow-[rgba(0,_0,_0,_0.2)_0px_5px_5px]  duration-150 group">
       <CardContent className="flex flex-col items-center justify-center p-5">
         <Link to={`${URLS.home}/${item.slug}`}>
           <img
@@ -41,11 +42,11 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
         <Link
           to={`${URLS.home}/${item.slug}`}
           className="flex flex-col justify-center text-center">
-          <span className="text-slate-800 font-bold leading-relaxed text-sm md:text-md">
+          <span className="text-secondary group-hover:text-primary font-bold leading-relaxed text-sm md:text-md duration-200">
             {itemName}
           </span>
           <span className="text-slate-400 text-base font-normal my-1">
-            {item.totalProducts || 0} {trans("Items")}
+            {item?.totalProducts || 0} {trans("Items")}
           </span>
         </Link>
       </CardContent>

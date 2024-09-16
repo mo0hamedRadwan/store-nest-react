@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       screens: {
-        xs: "375px",
+        // xs: "375px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
@@ -62,6 +62,7 @@ export default {
       },
       fontFamily: {
         custom: ["Quicksand", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
       keyframes: {
         "bounce-up": {

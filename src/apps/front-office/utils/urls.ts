@@ -1,6 +1,6 @@
 // append urls here, DO NOT remove this line
 
-import { Category, Product } from "../shop/utils/types";
+import { Category, Product } from "../utils/types";
 
 const URLS = {
   pagesInfo: "/pages-info",
