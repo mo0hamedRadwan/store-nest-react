@@ -9,10 +9,8 @@ import { Button } from "src/apps/front-office/design-system/components/ui/button
 import Breadcrumb from "src/apps/front-office/design-system/layouts/Breadcrumb";
 import URLS from "src/apps/front-office/utils/urls";
 
-export type RestPasswordProps = {
-  // props go here
-};
-export default function RestPassword(props: RestPasswordProps) {
+
+export default function RestPassword() {
   return (
     <section className="w-full text-secondary">
       <Helmet title={trans("about-us.title")} />
