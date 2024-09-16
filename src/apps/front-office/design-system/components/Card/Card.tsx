@@ -25,7 +25,11 @@ function _Card({ image, title, description, link }: CardProps) {
           <p>{description}</p>
         </div>
         <div className="card-link">
-          <a href={link} className="text-primary font-semibold">
+          <a
+            href={link}
+            className="text-primary font-semibold"
+            target="_blank"
+            rel="noreferrer">
             {trans("readMore")}
           </a>
         </div>

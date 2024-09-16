@@ -1,9 +1,10 @@
-import Breadcrumb from "src/apps/front-office/design-system/layouts/Breadcrumb";
-
-import HeaderPage from "./components/HeaderPage";
-
 import { trans } from "@mongez/localization";
 import URLS from "src/apps/front-office/utils/urls";
+
+import Breadcrumb from "src/apps/front-office/design-system/layouts/Breadcrumb";
+import HeaderPage from "./components/HeaderPage";
+
+import Helmet from "@mongez/react-helmet";
 import AboutOurServiceSection from "./sections/AboutOurServiceSection"; // 3#
 import AboutProvideSection from "./sections/AboutProvideSection"; // 2#
 import AboutStatsSection from "./sections/AboutStatsSection"; // 5#
@@ -14,6 +15,7 @@ import AboutWelcomeSection from "./sections/AboutWelcomeSection"; // 1#
 export default function AboutUsPage() {
   return (
     <section className="w-full text-secondary">
+      <Helmet title={trans("about-us.title")} />
       <div className="breadcrump relative">
         <div className="absolute w-full border-b-2 border-b-gray-200 top-full"></div>
         <div className="nav-links w-full">
@@ -36,7 +38,7 @@ export default function AboutUsPage() {
           </div>
 
           <div className="body-t-2">
-            <HeaderPage title={trans("provideSectionTitle")} />
+            <HeaderPage title={trans("about-us.provideSectionTitle")} />
 
             <AboutProvideSection />
           </div>
@@ -53,7 +55,7 @@ export default function AboutUsPage() {
 
           <div className="body-t-6">
             <div className="container">
-              <HeaderPage title={trans("Our Teams")} />
+              <HeaderPage title={trans("about-us.ourTeams")} />
 
               <AboutTeamsSection />
             </div>

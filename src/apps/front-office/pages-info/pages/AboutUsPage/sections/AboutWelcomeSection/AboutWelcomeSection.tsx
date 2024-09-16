@@ -16,12 +16,14 @@ function _AboutWelcomeSection() {
     <div className="flex gap-4 max-lg:flex-col">
       <div className="body-t-1-right basis-full">
         <img
-          src="https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-1.png"
+          src="/public/images/about-us/about-1.png"
           className="w-full rounded-3xl"
         />
       </div>
       <div className="body-t-1-left p-10 basis-full">
-        <h2 className="text-4xl font-bold my-10">{trans("welcome")}</h2>
+        <h2 className="text-4xl font-bold my-10">
+          {trans("about-us.welcome")}
+        </h2>
 
         <p className="text-muted-foreground my-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -47,12 +49,11 @@ function _AboutWelcomeSection() {
               lang={currentLocaleCode()}
               dir={currentDirection()}>
               {[
-                "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-2.png",
-                "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-4.png",
-                "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-2.png",
-                "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-4.png",
-                "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-3.png",
-                "https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-4.png",
+                "/public/images/about-us/about-2.png",
+                "/public/images/about-us/about-3.png",
+                "/public/images/about-us/about-4.png",
+                "/public/images/about-us/about-2.png",
+                "/public/images/about-us/about-4.png",
               ].map(image => (
                 <>
                   <CarouselItem className="w-full me-2 xs:basis-1/2 md:basis-1/3 aspect-square">
