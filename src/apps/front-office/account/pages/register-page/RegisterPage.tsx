@@ -13,7 +13,7 @@ import HeadOfRegister from "./components/HeadOfRegister";
 import PasswordInput from "./components/PasswordInput";
 import RadioGroup from "./components/RadioGroup";
 import RadioInput from "./components/RadioInput";
-import SocialLogin from "./components/SocialLogin";
+import SocialLogin from "./components/social-login/SocialLogin";
 import TextInput from "./components/TextInput";
 import "./input.css";
 import "./locales";
