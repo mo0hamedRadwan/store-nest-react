@@ -1,7 +1,5 @@
 import apple from "assets/images/logo-register/logo-apple.svg";
 import facebook from "assets/images/logo-register/logo-facebook.svg";
-import "./../../input.css";
-import "./../../locales";
 
 import { trans } from "@mongez/localization";
 import { GoogleOAuthProvider } from "@react-oauth/google";

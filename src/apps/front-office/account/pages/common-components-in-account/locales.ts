@@ -1,13 +1,21 @@
 import { groupedTranslations } from "@mongez/localization";
 
 groupedTranslations({
-  registerTitle: {
-    en: "Register online-store",
+  registerTitleHelmet: {
+    en: "Register | online-store",
     ar: "سجل في المتجر الإلكتروني",
   },
-  registerDescription: {
+  registerDescriptionHelmet: {
     en: "Create a new account on online store. Sign up to access exclusive features and start using our services.",
     ar: "قم بإنشاء حساب جديد على المتجر الإلكتروني. قم بالتسجيل للوصول إلى الميزات الحصرية والبدء في استخدام خدماتنا.",
+  },
+  forgetTitleHelmet:{
+    en:"Forget Password | online-store",
+    ar:"نسيت كلمه المرور | المتجر الالكترونى"
+  },
+  forgetDescriptionHelmet:{
+    en:"Reset your password and regain access to your account.",
+    ar:"قم بإعادة تعيين كلمة المرور الخاصة بك واستعادة الوصول إلى حسابك."
   },
   headRegister: {
     en: "Create an Account",
@@ -28,6 +36,10 @@ groupedTranslations({
   emailPlaceHolder: {
     en: "Email",
     ar: "بريد إلكتروني",
+  },
+  nameOrEmailPlaceHolder: {
+   en:"Username or Email",
+   ar:"اسم المستخدم أو البريد الإلكتروني"
   },
   passwordPlaceHolder: {
     en: "Password",
@@ -77,6 +89,18 @@ groupedTranslations({
     en: "Continue with Apple",
     ar: "الدخول باستخدام Apple",
   },
+  forgetTitle:{
+    en:"Forgot your password?",
+    ar:"نسيت كلمة السر؟"
+  },
+  forgetDescription:{
+    en:"Not to worry, we got you! Let’s get you a new password. Please enter your email address or your Username.",
+    ar:"لا تقلق، لقد قمنا بمساعدتك! دعنا نوفر لك كلمة مرور جديدة. الرجاء إدخال عنوان بريدك الإلكتروني أو اسم المستخدم الخاص بك."
+  },
+  forgetButton:{
+    en:"Reset Password",
+    ar:"إعادة تعيين كلمة المرور"
+  },
   required: {
     en: "This input is required",
     ar: "هذا الحقل مطلوب",
@@ -89,12 +113,9 @@ groupedTranslations({
     en: "Value can not be lower than 8",
     ar: "8 القيمة يجب أن لا تقل عن",
   },
-  max: {
-    en: "Value can not be greater than 16",
-    ar: "القيمة يجب أن لا تزيد عن 16",
-  },
   matchPassword: {
     en: "Password must match",
     ar: "يجب ان يطابق كلمه المرور",
   },
+
 });
