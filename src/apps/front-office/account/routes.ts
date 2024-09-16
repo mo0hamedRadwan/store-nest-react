@@ -4,8 +4,8 @@ import AccountDashboardPage from "./pages/AccountDashboardPage";
 import AccountDetailsPage from "./pages/AccountDetailsPage";
 import AccountOrderPage from "./pages/AccountOrdersPage";
 import MyAddressessPage from "./pages/MyAddressessPage";
-import TrackOrderPage from "./pages/TrackOrderPage";
 import ResetPassword from "./pages/RestPassword";
+import TrackOrderPage from "./pages/TrackOrderPage";
 
 reverseGuardedRoutes([
   // login routes
@@ -36,5 +36,5 @@ publicRoutes([
   {
     path: URLS.account.resetPassword,
     component: ResetPassword,
-  }
+  },
 ]);
