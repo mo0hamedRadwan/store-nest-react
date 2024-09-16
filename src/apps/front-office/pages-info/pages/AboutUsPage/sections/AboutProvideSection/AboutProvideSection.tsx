@@ -1,3 +1,4 @@
+import { trans } from "@mongez/localization";
 import Card from "design-system/components/Card";
 import React from "react";
 import provide_mock from "../../../../mocks/we-provide.mock";
@@ -9,7 +10,7 @@ function _AboutProvideSection() {
         <div className="" key={index}>
           <Card
             image={item.image}
-            title={item.title}
+            title={trans(`about-us.${item.title}`)} // need to ask about this
             description={item.description}
             link={item.link}
           />

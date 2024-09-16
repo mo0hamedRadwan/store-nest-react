@@ -2694,5 +2694,17 @@
   "templateName": {
     "en": "HTML Ecommerce Template",
     "ar": " HTML قالب التجارة الإلكترونية "
+  },
+  "installApp": {
+    "en": "Install App",
+    "ar": "تثبيت التطبيق"
+  },
+  "installAppContentOne": {
+    "en": "From App Store or Google Play",
+    "ar": "من متجر التطبيقات أو متجر جوجل بلاي"
+  },
+  "installAppContentTwo": {
+    "en": "Secured Payment Gateways",
+    "ar": "بوابات الدفع الآمنة"
   }
 }
