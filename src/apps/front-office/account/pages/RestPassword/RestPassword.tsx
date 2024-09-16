@@ -5,10 +5,8 @@ import { Form } from "@mongez/react-form";
 import Helmet from "@mongez/react-helmet";
 import PasswordInput from "src/apps/front-office/design-system/components/form/PasswordInput";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
-
 import Breadcrumb from "src/apps/front-office/design-system/layouts/Breadcrumb";
 import URLS from "src/apps/front-office/utils/urls";
-
 
 export default function RestPassword() {
   return (
