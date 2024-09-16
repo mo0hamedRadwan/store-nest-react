@@ -1,6 +1,7 @@
 export default function Content() {
   return (
     <div>
+      <div className="mb-[30px]">
       <h1 className="text-[40px] font-bold">Privacy Policy</h1>
       <div className="flex gap-2">
         <p>
@@ -10,7 +11,8 @@ export default function Content() {
         <p>8 mins read</p>
         <p>29k Views</p>
       </div>
-      <h2 className="text-[24px] font-bold">
+      </div>
+      <h2 className="mb-[26px] text-[24px] font-bold">
         Welcome to AliThemes’s Privacy Policy
       </h2>
       <ol className="list-decimal pl-4">
@@ -34,7 +36,7 @@ export default function Content() {
           separately available and seeks consent to them separately to this
           policy.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           The type of personal information we collect
         </h2>
         <li>
@@ -53,7 +55,7 @@ export default function Content() {
           job applications (such as, your CV, the application form itself, cover
           letter and interview notes).
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           How we collect personal information
         </h2>
         <li>
@@ -88,7 +90,7 @@ export default function Content() {
           carry out AliThemes Verify and delete it after the completion of this
           process.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           Personal information we collect about you from others
         </h2>
         <li>
@@ -126,7 +128,7 @@ export default function Content() {
             made available on our Sites.
           </li>
         </ol>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           How we use personal information
         </h2>
         <li>We will use your personal information:</li>
@@ -210,7 +212,7 @@ export default function Content() {
             law, or law enforcement authorities conducting an investigation.
           </li>
         </ol>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           When we disclose your personal information
         </h2>
         <li>
@@ -274,7 +276,7 @@ export default function Content() {
             authorities, to do so.
           </li>
         </ol>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           Where we transfer and/or store your personal information
         </h2>
         <li>
@@ -288,7 +290,7 @@ export default function Content() {
           and service providers who we believe maintain an acceptable standard
           of data security compliance.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           How we keep your personal information secure
         </h2>
         <li>
@@ -300,7 +302,7 @@ export default function Content() {
           authentication, two-factor authentication, and data encryption where
           appropriate.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           How you can access your personal information
         </h2>
         <li>
@@ -312,7 +314,7 @@ export default function Content() {
           access or correction request, contact our privacy champion using the
           contact details at the end of this policy.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           Marketing Choices regarding your personal information
         </h2>
         <li>
@@ -331,7 +333,7 @@ export default function Content() {
           choose to reject cookies some parts of our Sites may not work properly
           in your case.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           Cookies (not the type you eat!) and web analytics
         </h2>
         <li>
@@ -369,7 +371,7 @@ export default function Content() {
           visit a different Site. Read more about your options in our cookie
           policy.
         </li>
-        <h2 className="text-[24px] font-bold">Information about children</h2>
+        <h2 className=" mb-[26px] text-[24px] font-bold">Information about children</h2>
         <li>
           Our Sites are not suitable for children under the age of 16 years, so
           if you are under 16 we ask that you do not use our Sites or give us
@@ -380,7 +382,7 @@ export default function Content() {
           the responsibility of parents or guardians to monitor their children’s
           use of our Sites.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           Information you make public or give to others
         </h2>
         <li>
@@ -398,7 +400,7 @@ export default function Content() {
           site to understand its information management practices as this
           privacy policy will not apply.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           How long we keep your personal information
         </h2>
         <li>
@@ -416,7 +418,7 @@ export default function Content() {
           service and take other actions permitted by law. The information we
           retain will be handled in accordance with this Privacy Policy.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           When we need to update this policy
         </h2>
         <li>
@@ -429,7 +431,7 @@ export default function Content() {
           changes, where required. A copy of the latest version of this policy
           will always be available on this page.
         </li>
-        <h2 className="text-[24px] font-bold">How you can contact us</h2>
+        <h2 className=" mb-[26px] text-[24px] font-bold">How you can contact us</h2>
         <li>
           If you have any questions about our privacy practices or the way in
           which we have been managing your personal information, please contact
@@ -442,7 +444,7 @@ export default function Content() {
           personal information is used and how to best manage it!
         </li>
       </ol>
-      <h2 className="text-[24px] font-bold">
+      <h2 className=" mb-[26px] text-[24px] font-bold">
         If you’re a user or visitor in the European Economic Area these rights
         also apply to you:
       </h2>
@@ -452,7 +454,7 @@ export default function Content() {
           General Data Protection Regulation 2016/679 (the “GDPR”), we are a
           ‘data controller’ of your personal information.
         </li>
-        <h2 className="text-[24px] font-bold">
+        <h2 className=" mb-[26px] text-[24px] font-bold">
           How you can access your personal information
         </h2>
         <li>
