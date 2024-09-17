@@ -1,5 +1,4 @@
 import { useRadioInput } from "@mongez/react-form";
-import "./../input.css";
 export default function RadioInput({
   value,
   children,

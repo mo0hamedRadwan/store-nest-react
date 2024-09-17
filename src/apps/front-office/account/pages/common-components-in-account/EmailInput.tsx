@@ -1,17 +1,14 @@
 import { trans } from "@mongez/localization";
 import {
+  emailRule,
   FormControlProps,
-  matchRule,
-  maxLengthRule,
   minLengthRule,
   requiredRule,
   useFormControl,
 } from "@mongez/react-form";
-import "./../input.css";
-import "./../locales";
-export default function PasswordInput(props: FormControlProps) {
+export default function EmailInput(props: FormControlProps) {
   const { value, changeValue, id, error, otherProps } = useFormControl({
-    rules: [requiredRule, minLengthRule, maxLengthRule, matchRule],
+    rules: [requiredRule, minLengthRule, emailRule],
     ...props,
   });
   const getErrorMessage = () => {
@@ -20,12 +17,8 @@ export default function PasswordInput(props: FormControlProps) {
     switch (error) {
       case "validation.required":
         return trans("required");
-      case "validation.minLength":
-        return trans("min");
-      case "validation.maxLength":
-        return trans("max");
-      case "validation.match":
-        return trans("matchPassword");
+      case "validation.email":
+        return trans("invalidEmailAddress");
       default:
         return trans("required");
     }

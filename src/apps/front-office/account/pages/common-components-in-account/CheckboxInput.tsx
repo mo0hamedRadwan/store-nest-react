@@ -8,7 +8,7 @@ export default function CheckboxInput(props: FormControlProps) {
   const { checked, setChecked, id, error } = useFormControl({
     rules: [requiredRule],
     ...props,
-    type: "checkbox", // must be explicitly set to checkbox
+    type: "checkbox",
   });
 
   return (
@@ -22,16 +22,6 @@ export default function CheckboxInput(props: FormControlProps) {
         id={id}
         className={`hidden ${error ? "notChecked" : ""}`}
       />
-      {/* <Checkbox
-        // onChange={e => {
-        //   setChecked(e.target.checked);
-        // }}
-        checked={checked}
-        onChange={_ => {
-          setChecked(checked);
-        }}
-        id={id}
-      /> */}
     </>
   );
 }

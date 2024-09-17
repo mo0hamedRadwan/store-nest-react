@@ -5,21 +5,20 @@ import { Link, navigateBack } from "@mongez/react-router";
 import { BookOpen } from "lucide-react";
 import Footer from "src/apps/front-office/design-system/layouts/Footer/Footer";
 import Header from "src/apps/front-office/design-system/layouts/Header/Header";
+import URLS from "src/apps/front-office/utils/urls";
 import endpoint from "src/shared/endpoint";
-//import { useCreateAccount } from "../../hooks";
-import CheckboxInput from "./components/CheckboxInput";
-import EmailInput from "./components/EmailInput";
+import CheckboxInput from "../common-components-in-account/CheckboxInput";
+import EmailInput from "../common-components-in-account/EmailInput";
+import PasswordInput from "../common-components-in-account/PasswordInput";
+import RadioGroup from "../common-components-in-account/RadioGroup";
+import RadioInput from "../common-components-in-account/RadioInput";
+import TextInput from "../common-components-in-account/TextInput";
+import "./../common-components-in-account/input.css";
+import "./../common-components-in-account/locales";
 import HeadOfRegister from "./components/HeadOfRegister";
-import PasswordInput from "./components/PasswordInput";
-import RadioGroup from "./components/RadioGroup";
-import RadioInput from "./components/RadioInput";
 import SocialLogin from "./components/social-login/SocialLogin";
-import TextInput from "./components/TextInput";
-import "./input.css";
-import "./locales";
 
 export default function RegisterPage() {
-  //const createAccount = useCreateAccount();
   const submitForm = async ({ values }) => {
     try {
       await endpoint.post("/register", values);
@@ -28,16 +27,13 @@ export default function RegisterPage() {
       console.log(error);
     }
   };
-  // const submitForm=({values,form})=>{
-  //   createAccount({values,form})
-  // }
   return (
     <>
       <Helmet
-        title={trans("registerTitle")}
+        title={trans("registerTitleHelmet")}
         appendAppName={false}
         keywords={["online", "store", "متجر"]}
-        description={trans("registerDescription")}
+        description={trans("registerDescriptionHelmet")}
       />
       <Header />
       <div className="container lg:w-5/6 xl:w-4/6 grid gap-7 grid-cols-4 my-20">
@@ -61,7 +57,6 @@ export default function RegisterPage() {
               name="password"
               placeholder={trans("passwordPlaceHolder")}
               minLength={8}
-              maxLength={16}
               required
             />
             <PasswordInput
@@ -70,7 +65,6 @@ export default function RegisterPage() {
               placeholder={trans("confirmPasswordPlaceHolder")}
               match="password"
               minLength={8}
-              maxLength={16}
               required
             />
             <RadioGroup name="typeUser" defaultValue="vendor">
@@ -95,7 +89,7 @@ export default function RegisterPage() {
               <div className="flex gap-1 text-[13px] items-center">
                 <BookOpen className="text-[#B6B6B6] w-[18px] h-[18px]" />
                 <Link
-                  to={`/page-privacy-policy`}
+                  to={URLS.pages.privacyPolicy}
                   className="cursor-pointer text-[#3BB77E] font-semibold duration-300 hover:text-[#FDC040]">
                   {trans("learnMor")}
                 </Link>

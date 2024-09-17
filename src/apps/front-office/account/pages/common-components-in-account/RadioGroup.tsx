@@ -7,7 +7,7 @@ import {
 
 type RadioGroupProps = FormControlProps & {
   children: React.ReactNode;
-  defaultValue?: any; // Add defaultValue as a prop
+  defaultValue?: any;
 };
 
 export default function RadioGroup({

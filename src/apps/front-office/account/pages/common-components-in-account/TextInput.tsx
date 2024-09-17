@@ -4,8 +4,6 @@ import {
   requiredRule,
   useFormControl,
 } from "@mongez/react-form";
-import "./../input.css";
-import "./../locales";
 export default function TextInput(props: FormControlProps) {
   const { value, changeValue, id, error, otherProps } = useFormControl({
     rules: [requiredRule],
