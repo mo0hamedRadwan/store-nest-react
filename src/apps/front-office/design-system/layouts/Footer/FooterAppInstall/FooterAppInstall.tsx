@@ -24,7 +24,6 @@ export default function FooterAppInstall() {
         </Link>
       </div>
       <p className="mb-5 font-normal leading-6 text-[15px] font-lato">
-        Secured Payment Gateways
         {trans("installAppContentTwo")}
       </p>
       <img src={paymentMethod} alt="payment-method" />
