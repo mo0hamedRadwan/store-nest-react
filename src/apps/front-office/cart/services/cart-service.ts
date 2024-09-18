@@ -1,17 +1,26 @@
 import endpoint from "shared/endpoint";
 
 /**
- * Get Carts list
+ * Get cart details
  */
-export function getCartsList(params: any = {}) {
-  return endpoint.get("/cart", {
-    params,
-  });
+export function getCart() {
+  return endpoint.get("/cart");
 }
 
 /**
- * Get cart details
+ * Add product to cart
  */
-export function getCart(id: string | number) {
-  return endpoint.get("/cart/" + id);
+export function addToCart(product: number, quantity = 1) {
+  return endpoint.post("/cart", { product, quantity });
+}
+
+export function updateCart(item: number, quantity: number) {
+  return endpoint.put("/cart/items/" + item, { quantity });
+}
+
+/**
+ * Remove item from cart
+ */
+export function removeFromCart(item: number) {
+  return endpoint.delete("/cart/items/" + item);
 }

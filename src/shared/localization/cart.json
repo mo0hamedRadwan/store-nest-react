@@ -1,0 +1,50 @@
+{
+  "continueShopping": {
+    "en": "Continue Shopping",
+    "ar": "استمرار التسوق"
+  },
+  "emptyCart": {
+    "en": "Empty Cart",
+    "ar": "السلة فارغة"
+  },
+  "cartEmptyDescription": {
+    "en": "Your cart is empty",
+    "ar": "السلة فارغة ...  "
+  },
+  "shippingCosts": {
+    "en": "Shipping costs are calculated during checkout.",
+    "ar": "يتم احتساب تكاليف الشحن أثناء انهاء الطلب."
+  },
+  "proceedToCheckout": {
+    "en": "Proceed to checkout",
+    "ar": "انهاء الطلب"
+  },
+  "cartTotals": {
+    "en": "Cart Totals",
+    "ar": "المجموع الكلى"
+  },
+  "subtotal": {
+    "en": "Subtotal",
+    "ar": "المجموع الفرعي"
+  },
+  "ProductThumbnail": {
+    "en": "Product Thumbnail",
+    "ar": "الصورة المصغرة للمنتج"
+  },
+  "unitPrice": {
+    "en": "Unit Price",
+    "ar": "سعر الوحدة"
+  },
+  "shipping": {
+    "en": "Shipping",
+    "ar": "الشحن"
+  },
+  "couponCode": {
+    "en": "Enter Coupon Code",
+    "ar": "ادخل كود القسيمة"
+  },
+  "applyCoupon": {
+    "en": "Apply coupon",
+    "ar": "تطبيق القسيمة"
+  }
+}

@@ -8,7 +8,11 @@ const URLS = {
   catalog: "/catalog",
   home: "/",
   compare: "/compare",
-  checkout: "/checkout",
+  checkout: {
+    page: "/checkout",
+    success: "/checkout/success/:id",
+    failed: "/checkout/failed",
+  },
   account: {
     dashboard: "/account/dashboard",
     orders: "/account/orders",
