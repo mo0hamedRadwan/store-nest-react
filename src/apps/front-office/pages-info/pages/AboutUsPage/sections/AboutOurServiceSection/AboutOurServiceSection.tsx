@@ -5,11 +5,11 @@ function _AboutOurServiceSection() {
     <div className="container grid grid-cols-1 lg:grid-cols-2">
       <div className="info-l text-left p-10">
         <h4 className="text-2xl capitalize font-semibold text-gray-400 my-4">
-          {trans("ourPerformance")}
+          {trans("about-us.ourPerformance")}
         </h4>
 
         <h2 className="text-5xl font-bold my-8">
-          {trans("Your Partner for e-commerce grocery solution")}
+          {trans("about-us.yourPartnerForECommerceGrocerySolution")}
         </h2>
 
         <p className="text-muted-foreground leading-7 font-medium">
@@ -24,7 +24,7 @@ function _AboutOurServiceSection() {
         </p>
       </div>
       <div className="image-r">
-        <img src="https://nest-frontend-rtl-v6.vercel.app/assets/imgs/page/about-5.png" />
+        <img src="/public/images/about-us/about-5.png" />
       </div>
     </div>
   );

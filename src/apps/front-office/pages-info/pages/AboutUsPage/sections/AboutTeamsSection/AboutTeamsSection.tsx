@@ -5,13 +5,13 @@ import React from "react";
 import TeamMember from "../../components/TeamMember";
 function _AboutTeamsSection() {
   return (
-    <section className="flex flex-col lg:flex-row">
+    <section className="flex flex-col lg:flex-row py-10">
       <div className="section-info basis-4/12 mb-8">
         <h4 className="text-2xl capitalize text-primary my-4">
-          {trans("Our Teams")}
+          {trans("about-us.ourTeams")}
         </h4>
         <h2 className="text-5xl font-bold my-4">
-          {trans("Meet Our Expert Team")}
+          {trans("about-us.meetOurExpertTeam")}
         </h2>
 
         <div className="section-content p-4">
@@ -29,20 +29,20 @@ function _AboutTeamsSection() {
         </div>
 
         <button className="capitalize w-fit px-6 py-3 bg-primary text-primary-foreground font-semibold border-none hover:bg-secondary transition-colors">
-          {trans("view all memebers")}
+          {trans("about-us.viewAllMemebers")}
         </button>
       </div>
 
       <div className="teams grid grid-cols-1 md:grid-cols-2 gap-7 grow basis-8/12">
         <TeamMember
           name="H. Merinda"
-          image="https://nest-frontend-v6.vercel.app/assets/imgs/page/about-8.png"
+          image="/public/images/about-us/about-8.png"
           position="CEO & Co-Founder"
           socialLinks={[TwitterLogoIcon, InstagramLogoIcon, Youtube]}
         />
         <TeamMember
           name="Diego Maradona"
-          image="https://nest-frontend-v6.vercel.app/assets/imgs/page/about-6.png"
+          image="/public/images/about-us/about-6.png"
           position="CEO & Co-Founder"
           socialLinks={[TwitterLogoIcon, InstagramLogoIcon, Youtube]}
         />

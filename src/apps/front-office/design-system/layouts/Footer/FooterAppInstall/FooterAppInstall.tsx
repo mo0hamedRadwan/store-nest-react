@@ -9,7 +9,7 @@ export default function FooterAppInstall() {
         {trans("installApp")}
       </h4>
       <p className="mb-[5px] text-[15px] font-normal leading-6 font-lato">
-      {trans("installAppContentOne")}
+        {trans("installAppContentOne")}
       </p>
       <div className="flex mt-[25px] mb-[33px] cursor-pointer">
         <Link
@@ -24,7 +24,6 @@ export default function FooterAppInstall() {
         </Link>
       </div>
       <p className="mb-5 font-normal leading-6 text-[15px] font-lato">
-        Secured Payment Gateways
         {trans("installAppContentTwo")}
       </p>
       <img src={paymentMethod} alt="payment-method" />

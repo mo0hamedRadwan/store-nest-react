@@ -4,10 +4,14 @@ import AccountDashboardPage from "./pages/AccountDashboardPage";
 import AccountDetailsPage from "./pages/AccountDetailsPage";
 import AccountOrderPage from "./pages/AccountOrdersPage";
 import MyAddressessPage from "./pages/MyAddressessPage";
+import ResetPassword from "./pages/RestPassword";
 import TrackOrderPage from "./pages/TrackOrderPage";
-
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import ForgetPasswordPage from "./pages/ForgetPasswordPage/ForgetPasswordPage";
 reverseGuardedRoutes([
   // login routes
+  { path: URLS.auth.register, component: RegisterPage },
+  {path:URLS.auth.forgetPassword,component:ForgetPasswordPage},
 ]);
 
 // i will change it to guardedRoutes
@@ -31,5 +35,9 @@ publicRoutes([
   {
     path: URLS.account.details,
     component: AccountDetailsPage,
+  },
+  {
+    path: URLS.account.resetPassword,
+    component: ResetPassword,
   },
 ]);
