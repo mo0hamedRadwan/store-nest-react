@@ -1,4 +1,5 @@
 import ShopBanner from "../components/shopBanner/ShopBanner";
+import WishlistPage from "../WishlistPage";
 
 function ShopPage() {
   // const sidebarRef = useRef<HTMLDivElement>(null);
