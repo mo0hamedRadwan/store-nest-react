@@ -14,5 +14,4 @@ export async function getTopsellingHttpsList(): Promise<TopData> {
     rows: response.data.rows,
     columns: response.data.columns,
   };
-
 }
