@@ -13,7 +13,7 @@ import WishlistItem from "../../components/WishlistItem";
 export default function WishlistPage() {
   return (
     <>
-      <Helmet title="Seeds of Change Organic Quinoa, Brown" />
+      <Helmet title="Browse your wishlist to view the products you wish to purchase." />
       <Breadcrumb className="border-b border-gray-200 py-5">
         <div className="container">
           <BreadcrumbList>
@@ -39,11 +39,12 @@ export default function WishlistPage() {
       <main className="mt-[50px] mb-[30px] px-3">
         <div className="mb-[50px]">
           <h1 className="mb-[10px] text-5xl font-custom font-bold text-specialColor-secondary leading-[1.2]">
-            Your Wishlist
+            {trans("wishlist")}
           </h1>
           <h6 className="text-specialColor-primary text-[16px] font-custom font-bold leading-[1.2]">
-            There are <span className="text-priceNowColor">5</span> products in
-            this list
+            {trans("wishlistContentOne")}
+            <span className="text-priceNowColor px-1">5</span>
+            {trans("wishlistContentTwo")}
           </h6>
         </div>
         <div>

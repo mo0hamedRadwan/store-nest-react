@@ -6,6 +6,7 @@ import mainTranslation from "shared/localization/index.json";
 import productsTranslation from "shared/localization/products.json";
 import sectionsTranslation from "shared/localization/sections.json";
 import TermsAndConditionsTranslation from "shared/localization/terms.json";
+import wishlistTranslation from "shared/localization/wishlist.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -63,4 +64,5 @@ groupedTranslations({
   ...headerTranslation,
   ...TermsAndConditionsTranslation,
   ...dashboardTraslations,
+  ...wishlistTranslation,
 });
