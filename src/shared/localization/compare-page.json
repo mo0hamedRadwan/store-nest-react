@@ -1,0 +1,56 @@
+{
+  "title": {
+    "en": "Compare Products",
+    "ar": "مقارنة المنتجات"
+  },
+
+  "subtitle": {
+    "en": "You have :count products in your comparison list",
+    "ar": "لديك :count منتجات في قائمة المقارنة الخاصة بك"
+  },
+
+  "image": {
+    "en": "Preview",
+    "ar": "معاينة"
+  },
+
+  "name": {
+    "en": "Name",
+    "ar": "الاسم"
+  },
+
+  "price": {
+    "en": "Price",
+    "ar": "السعر"
+  },
+
+  "rating": {
+    "en": "Rating",
+    "ar": "التقييم"
+  },
+
+  "description": {
+    "en": "Description",
+    "ar": "الوصف"
+  },
+
+  "stackStatus": {
+    "en": "Stack Status",
+    "ar": "حالة الكومة"
+  },
+
+  "weight": {
+    "en": "Weight",
+    "ar": "الوزن"
+  },
+
+  "dimensions": {
+    "en": "Dimensions",
+    "ar": "الأبعاد"
+  },
+
+  "noProducts": {
+    "en": "No products to compare",
+    "ar": "لا توجد منتجات للمقارنة"
+  }
+}

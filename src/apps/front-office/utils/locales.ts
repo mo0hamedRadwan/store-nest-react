@@ -57,6 +57,10 @@ groupedTranslations({
     en: "Read More",
     ar: "اقرأ المزيد",
   },
+  page: {
+    en: "Page",
+    ar: "صفحة",
+  },
   ...productsTranslation,
   ...sectionsTranslation,
   ...bannersTranslation,

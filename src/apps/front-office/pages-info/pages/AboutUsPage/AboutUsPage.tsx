@@ -22,8 +22,8 @@ export default function AboutUsPage() {
           <div className="nav-links w-full">
             <Breadcrumb
               navItems={[
-                { name: "Pages" },
-                { name: "About Us", url: URLS.pages.aboutUs },
+                { name: trans("page") },
+                { name: trans("about-us.title"), url: URLS.pages.aboutUs },
               ]}
               attributes={{
                 className: "justify-end items-end py-4 my-0",

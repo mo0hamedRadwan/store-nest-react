@@ -3,7 +3,7 @@ export enum StackStatus {
   OutStock = "Out Of Stock",
 }
 
-export default [
+const compareProductsMock = [
   {
     image: "/images/compare/compare-1.jpg",
     name: "J.Crew Mercantile Women's Short",
@@ -47,3 +47,5 @@ export default [
   weight: number;
   dimensions: string;
 }[];
+
+export default compareProductsMock;

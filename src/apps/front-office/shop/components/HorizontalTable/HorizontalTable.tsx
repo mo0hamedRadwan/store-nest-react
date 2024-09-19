@@ -15,7 +15,7 @@ export type TableProps = {
   };
 };
 
-export default function HorizonalTable({
+export default function HorizontalTable({
   columnsAside,
   data,
   render = {},
@@ -37,6 +37,17 @@ export default function HorizonalTable({
             ))}
           </tr>
         ))}
+
+        <tr className="flex flex-col md:table-row border-b-1 border-gray-200">
+          <th className="text-left p-7">Actions</th>
+          {data.map((_, index) => (
+            <td
+              key={index}
+              className="p-4 text-center text-xl font-bold cursor-pointer hover:text-red-500">
+              <button className="text-primary">Remove</button>
+            </td>
+          ))}
+        </tr>
       </tbody>
     </table>
   );
