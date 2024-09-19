@@ -49,11 +49,11 @@ function _AboutWelcomeSection() {
               lang={currentLocaleCode()}
               dir={currentDirection()}>
               {[
-                "/public/images/about-us/about-2.png",
-                "/public/images/about-us/about-3.png",
-                "/public/images/about-us/about-4.png",
-                "/public/images/about-us/about-2.png",
-                "/public/images/about-us/about-4.png",
+                "/images/about-us/about-2.png",
+                "/images/about-us/about-3.png",
+                "/images/about-us/about-4.png",
+                "/images/about-us/about-2.png",
+                "/images/about-us/about-4.png",
               ].map(image => (
                 <>
                   <CarouselItem className="w-full me-2 xs:basis-1/2 md:basis-1/3 aspect-square">
