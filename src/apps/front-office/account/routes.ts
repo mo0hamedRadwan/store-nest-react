@@ -1,4 +1,4 @@
-import LoginPage from "../home/pages/Login/LoginPage";
+import LoginPage from "./pages/Login/LoginPage";
 import { publicRoutes, reverseGuardedRoutes } from "../utils/router";
 import URLS from "../utils/urls";
 import AccountDashboardPage from "./pages/AccountDashboardPage";
