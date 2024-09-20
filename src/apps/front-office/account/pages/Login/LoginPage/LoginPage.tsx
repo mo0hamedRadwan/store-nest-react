@@ -7,15 +7,18 @@ import Header from "src/apps/front-office/design-system/layouts/Header";
 import EmailInput from "../components/EmailInput";
 import PasswordInput from "../components/PasswordInput";
 import CheckBoxInput from "../components/checkBoxInput";
+import BaseLayout from "src/apps/front-office/design-system/layouts/BaseLayout";
+import Helmet from "@mongez/react-helmet";
+import URLS from "src/apps/front-office/utils/urls";
+import { useLogin } from "../../../hooks";
 
 export default function LoginPage() {
-  const handleSubmit = ({ values, form }) => {
-    console.log("submit", JSON.stringify(values), form);
-  };
+  const handleSubmit = useLogin();
 
   return (
     <>
-      <Header />
+      <Helmet title={trans("login")} />
+      <BaseLayout>
       <div className="min-h-screen flex justify-center items-center">
         <div className="w-full max-w-[900px] flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden">
           {/* Image (hidden on small screens) */}
@@ -43,9 +46,9 @@ export default function LoginPage() {
 
             <Form className="space-y-4" onSubmit={handleSubmit}>
               <EmailInput
-                name="username"
+                name="email"
                 className="w-full px-4 py-2 border border-rateColor rounded-lg focus:outline-none focus:border-priceNowColor h-16"
-                placeholder={trans("username")}
+                placeholder={trans("email")}
                 required
                 minLength={14}
               />
@@ -63,7 +66,7 @@ export default function LoginPage() {
                   <span className="text-sm !ml-2">{trans("rememberMe")}</span>
                 </label>
                 <Link
-                  to={`/forget-password`}
+                  to={URLS.auth.forgetPassword}
                   className="text-sm cursor-pointer text-rateColor font-semibold duration-300">
                   {trans("forgetPassword")}
                 </Link>
@@ -75,7 +78,7 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      </BaseLayout>
     </>
   );
 }
