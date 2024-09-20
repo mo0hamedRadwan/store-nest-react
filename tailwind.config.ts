@@ -31,6 +31,10 @@ export default {
         priceNowColor: "#3BB77E",
         priceOldColor: "#adadad",
         shopCategoryColor: "#BCE3C9",
+        specialColor: {
+          primary: "#7E7E7E",
+          secondary: "#253D4E",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -43,7 +47,7 @@ export default {
           DEFAULT: "hsl(var(--black-soft-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#253D4E",
           foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
@@ -68,6 +72,9 @@ export default {
             transform: "translateY(-5px)",
           },
         },
+      },
+      boxShadow: {
+        lg: "5px 5px 15px rgba(0, 0, 0, 0.05)",
       },
       animation: {
         "bounce-up": "bounce-up 0.5s cubic-bezier(0.71, 1.7, 0.77, 1.24)",

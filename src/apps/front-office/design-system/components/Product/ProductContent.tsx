@@ -1,8 +1,8 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import { ShoppingCart } from "lucide-react";
+import { Product } from "src/apps/front-office/shop/utils/types";
 import { getLocalizedValue } from "src/apps/front-office/utils/localization";
-import { Product } from "src/apps/front-office/utils/types";
 import ProgressBar from "../../Indicators/ProgressBar";
 import Rating from "../Rating";
 
@@ -55,7 +55,7 @@ export default function ProductContent({
         <ProgressBar />
 
         <div className="product-sold-text text-sm">
-          {trans("sold")}: {purchase.minQuantity}/{stock?.available}
+          {trans("sold")}: {purchase?.minQuantity}/{stock?.available}
         </div>
       </div>
 

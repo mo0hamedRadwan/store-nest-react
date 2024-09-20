@@ -12,10 +12,9 @@ export const useSlider = () => {
   useOnce(() => {
     // setIsLoading(true);
     getHome()
-      .then(response => {
-        console.log(response.data.rows[0].columns[0].module.slider);
-        const sliderBanners =
-          response.data.rows[0].columns[0].module.slider?.banners;
+      .then(rows => {
+        console.log(rows[0].columns[0].module.slider);
+        const sliderBanners = rows[0].columns[0].module.slider?.banners;
         // const processedData = sliderBanners?.map(banner => ({
         //   id: banner.id,
         //   image: banner.image[0].url || "",

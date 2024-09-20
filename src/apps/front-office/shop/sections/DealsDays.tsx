@@ -12,7 +12,6 @@ export type DealsDaysProps = {
 };
 function DealsDays(props: DealsDaysProps, ref: any) {
   const mockData = shopDataAtom.use("products").slice(0, 4);
-  console.log(mockData);
 
   return (
     <div className="py-10" ref={ref}>

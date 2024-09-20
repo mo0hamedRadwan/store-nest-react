@@ -14,6 +14,8 @@ export default function useFetchDailyBannerData() {
     banner,
   } = useGetDailyBestSellsBanner();
 
+  console.log("BANNER", banner);
+
   useEffect(() => {
     const fetchData = async () => {
       dailyBestSellsAtom.change("loading", true);

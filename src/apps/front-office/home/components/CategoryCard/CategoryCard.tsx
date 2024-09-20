@@ -5,8 +5,7 @@ import {
   CardContent,
 } from "apps/front-office/design-system/components/ui/card";
 import URLS from "apps/front-office/utils/urls";
-import { Category } from "src/apps/front-office/utils/types";
-import { SwiperSlide } from "swiper/react";
+import { Category } from "src/apps/front-office/shop/utils/types";
 
 interface CategoryCardProps {
   index: number;
@@ -24,37 +23,33 @@ const CategoryCard = ({ index, item }: CategoryCardProps) => {
   const itemImage = item.image?.url || "/images/featured-categories/kiwi.png"; // Fallback to a default image if the image URL is missing
 
   return (
-    <SwiperSlide key={index}>
-      <div className="p-1">
-        <Card
-          style={{
-            backgroundColor: backgroundColors[index % backgroundColors.length],
-            height: "200px", // Set a fixed height for the entire card
-          }}>
-          <CardContent className="flex flex-col items-center justify-center p-6 h-full">
-            <figure>
-              <Link to={`${URLS.home}/${item.slug}`}>
-                <img
-                  src={itemImage}
-                  alt={itemName}
-                  style={{ maxHeight: "150px", objectFit: "contain" }} // Adjust image height
-                />
-              </Link>
-            </figure>
-            <p>
-              <Link
-                to={`${URLS.home}/${item.slug}`}
-                className=" text-slate-800 font-bold leading-relaxed text-sm md:text-md">
-                {itemName}
-              </Link>
-            </p>
-            <span className="text-slate-400 text-base font-normal my-1">
-              {item.products?.length} {trans("Items")}
-            </span>
-          </CardContent>
-        </Card>
-      </div>
-    </SwiperSlide>
+    <Card
+      style={{
+        backgroundColor: backgroundColors[index % backgroundColors.length],
+        height: "180px", // Set a fixed height for the entire card
+        width: "135px",
+      }}>
+      <CardContent className="flex flex-col items-center justify-center p-5">
+        <Link to={`${URLS.home}/${item.slug}`}>
+          <img
+            src={itemImage}
+            alt={itemName}
+            className="w-20 h-20 object-contain"
+            // style={{ maxHeight: "150px", objectFit: "contain" }} // Adjust image height
+          />
+        </Link>
+        <Link
+          to={`${URLS.home}/${item.slug}`}
+          className="flex flex-col justify-center text-center">
+          <span className="text-slate-800 font-bold leading-relaxed text-sm md:text-md">
+            {itemName}
+          </span>
+          <span className="text-slate-400 text-base font-normal my-1">
+            {item.totalProducts || 0} {trans("Items")}
+          </span>
+        </Link>
+      </CardContent>
+    </Card>
   );
 };
 

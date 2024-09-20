@@ -9,6 +9,7 @@ import useFetchDailyBannerData from "src/apps/front-office/home/hooks/use-fetch-
 
 export default function DailyBestSellsSection() {
   const { data, loading } = useFetchDailyBannerData();
+  console.log("DATA", data);
 
   return (
     <section className="best-daily-products">

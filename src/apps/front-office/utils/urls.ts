@@ -1,6 +1,6 @@
 // append urls here, DO NOT remove this line
 
-import { Category, Product } from "./types";
+import { Category, Product } from "../shop/utils/types";
 
 const URLS = {
   pagesInfo: "/pages-info",
@@ -9,7 +9,14 @@ const URLS = {
   compare: "/compare",
   cart: "/cart",
   checkout: "/checkout",
-  account: "/account",
+  account: {
+    dashboard: "/account/dashboard",
+    orders: "/account/orders",
+    trackOrder: "account/track-order",
+    addresses: "/account/addresses",
+    details: "/account/details",
+    logout: "/account/logout",
+  },
   wishlist: "/wishlist",
   addresses: "/addresses",
   orders: "/orders",
@@ -45,6 +52,7 @@ const URLS = {
   pages: {
     aboutUs: "/about-us",
     termsConditions: "/terms-conditions",
+    contactUs: "/contact-us",
     privacyPolicy: "/privacy-policy",
     viewRoute: "/pages/:slug",
     view: (page: any) => `/pages/${page.id}/${page.slug}`,
