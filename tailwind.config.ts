@@ -62,6 +62,7 @@ export default {
       },
       fontFamily: {
         custom: ["Quicksand", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
       keyframes: {
         "bounce-up": {
