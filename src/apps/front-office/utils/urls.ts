@@ -3,12 +3,16 @@
 import { Category, Product } from "../shop/utils/types";
 
 const URLS = {
+  cart: "/cart",
   pagesInfo: "/pages-info",
   catalog: "/catalog",
   home: "/",
   compare: "/compare",
-  cart: "/cart",
-  checkout: "/checkout",
+  checkout: {
+    page: "/checkout",
+    success: "/checkout/success/:id",
+    failed: "/checkout/failed",
+  },
   account: {
     dashboard: "/account/dashboard",
     orders: "/account/orders",

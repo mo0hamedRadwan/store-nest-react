@@ -174,3 +174,17 @@ export type DealsData = {
     type: string;
   }[];
 };
+
+type Total = {
+  discount: number;
+  originalPrice: number;
+  subtotal: number;
+};
+export type CartItem = {
+  id: number;
+  Product: Product;
+  price: number;
+  salePrice: number;
+  quantity: number;
+  total: Total;
+};
