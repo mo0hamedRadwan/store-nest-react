@@ -11,5 +11,5 @@ export const modulesMap: ModulesListMap = {
   slider: SliderModule,
   categories: FeaturedCategories,
   products: TopProductsModule,
-  popularProducts: PopularProducts,
+  categoriesTabs: PopularProducts,
 };

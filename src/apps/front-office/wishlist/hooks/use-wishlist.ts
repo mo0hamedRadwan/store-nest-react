@@ -2,10 +2,13 @@ import { trans } from "@mongez/localization";
 import { useOnce } from "@mongez/react-hooks";
 import { useState } from "react";
 import { toast } from "../../design-system/components/ui/use-toast";
-import { addToWishlist } from "../../home/services/home-service";
 import { Product } from "../../utils/types";
 import { wishListAtom } from "../atoms/wishlist-atom";
-import { getWishlist, removeFromWishlist } from "../services/wishlist-service";
+import {
+  addToWishlist,
+  getWishlist,
+  removeFromWishlist,
+} from "../services/wishlist-service";
 
 export function useWishlist() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -47,7 +50,7 @@ export function useWishlist() {
       .finally(() => setIsLoading(false));
   };
 
-  const addWishlist = (productId: number | string) => {
+  const addWishlist = (productId: string) => {
     setIsLoading(true);
     addToWishlist(productId)
       .then(response => {
