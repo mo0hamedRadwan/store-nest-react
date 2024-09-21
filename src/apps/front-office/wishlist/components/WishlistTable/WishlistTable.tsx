@@ -5,9 +5,9 @@ import {
   TableHeader,
   TableRow,
 } from "src/apps/front-office/design-system/components/ui/table";
-import StyledCheckBox from "../../../shop/components/FilterSide/StyledCheckBox";
 
 import { trans } from "@mongez/localization";
+import StyledCheckBox from "src/apps/front-office/shop/pages/ShopPage/components/FilterSide/StyledCheckBox";
 import { Product } from "src/apps/front-office/utils/types";
 import WishlistItem from "../WishlistItem";
 export type WishlistTableProps = {

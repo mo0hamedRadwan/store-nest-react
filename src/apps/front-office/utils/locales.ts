@@ -10,7 +10,6 @@ import sectionsTranslation from "shared/localization/sections.json";
 import TermsAndConditionsTranslation from "shared/localization/terms.json";
 import wishlistTranslation from "shared/localization/wishlist.json";
 
-
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
 
