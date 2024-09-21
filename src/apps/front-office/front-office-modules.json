@@ -36,6 +36,10 @@
     {
       "entry": ["/cart"],
       "name": "cart"
+    },
+    {
+      "entry": ["/wishlist"],
+      "name": "wishlist"
     }
   ]
 }

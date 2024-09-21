@@ -3,6 +3,7 @@
 import { Category, Product } from "../shop/utils/types";
 
 const URLS = {
+  wishlist: "/wishlist",
   cart: "/cart",
   pagesInfo: "/pages-info",
   catalog: "/catalog",

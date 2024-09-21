@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "src/apps/front-office/design-system/components/ui/table";
-import StyledCheckBox from "../FilterSide/StyledCheckBox";
+import StyledCheckBox from "../../../shop/components/FilterSide/StyledCheckBox";
 
 import { trans } from "@mongez/localization";
 

@@ -5,12 +5,22 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
+  BreadcrumbPage,
   BreadcrumbSeparator,
 } from "apps/front-office/design-system/components/ui/breadcrumb";
+import React from "react";
+import { NavItems } from "src/apps/front-office/shop/pages/ProductDetailsPage/ProductPage";
 import URLS from "src/apps/front-office/utils/urls";
-import WishlistItem from "../../components/WishlistItem";
+import WishlistItem from "../WishlistItem";
 
-export default function WishlistPage() {
+export default function WishlistTable() {
+  const navItems: NavItems = [
+    {
+      name: trans("shop"),
+      url: URLS.shop.viewCategoryRoute,
+    },
+    { name: trans("wishlist"), url: URLS.wishlist },
+  ];
   return (
     <>
       <Helmet title="Browse your wishlist to view the products you wish to purchase." />
@@ -21,7 +31,7 @@ export default function WishlistPage() {
               <BreadcrumbLink href={URLS.home}>{trans("home")}</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
-            {/* {navItems?.map((item, index) => (
+            {navItems?.map((item, index) => (
               <React.Fragment key={index}>
                 <BreadcrumbItem>
                   {item.url ? (
@@ -32,7 +42,7 @@ export default function WishlistPage() {
                 </BreadcrumbItem>
                 {index < navItems.length - 1 && <BreadcrumbSeparator />}
               </React.Fragment>
-            ))} */}
+            ))}
           </BreadcrumbList>
         </div>
       </Breadcrumb>
