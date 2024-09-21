@@ -8,7 +8,9 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "apps/front-office/design-system/components/ui/breadcrumb";
+import { HeartPulseIcon } from "lucide-react";
 import React from "react";
+import EmptyComponent from "src/apps/front-office/design-system/components/EmptyComponent";
 import Error from "src/apps/front-office/design-system/components/Error";
 import Loader from "src/apps/front-office/design-system/components/ui/Indicators/Indicators";
 import { NavItems } from "src/apps/front-office/shop/pages/ProductDetailsPage/ProductPage";
@@ -16,6 +18,12 @@ import URLS from "src/apps/front-office/utils/urls";
 import { wishListAtom } from "../../atoms/wishlist-atom";
 import WishlistItem from "../../components/WishlistTable";
 import { useWishlist } from "../../hooks/use-wishlist";
+
+const emptyWishListInfo = {
+  title: trans("emptyWishlist"),
+  description: trans("wishlistEmptyDescription"),
+  icon: <HeartPulseIcon size="150" />,
+};
 function _WishlistPage() {
   const { error, products, isLoading, setProducts } = useWishlist();
 
@@ -64,23 +72,30 @@ function _WishlistPage() {
           </BreadcrumbList>
         </div>
       </Breadcrumb>
-      <main className="mt-[50px] mb-[30px] px-3 ">
-        <div className="mb-[50px]">
-          <h1 className="mb-[10px] text-5xl font-custom font-bold text-specialColor-secondary leading-[1.2]">
-            {trans("wishlist")}
-          </h1>
-          <h6 className="text-specialColor-primary text-[16px] font-custom font-bold leading-[1.2]">
-            {trans("wishlistContentOne")}
-            <span className="text-priceNowColor px-1">
-              {wishListAtom.value}
-            </span>
-            {trans("wishlistContentTwo")}
-          </h6>
-        </div>
-        <div>
-          <WishlistItem products={products} removeProduct={removeMealHandler} />
-        </div>
-      </main>
+      {products.length > 0 ? (
+        <main className="mt-[50px] mb-[30px] px-3 ">
+          <div className="mb-[50px]">
+            <h1 className="mb-[10px] text-5xl font-custom font-bold text-specialColor-secondary leading-[1.2]">
+              {trans("wishlist")}
+            </h1>
+            <h6 className="text-specialColor-primary text-[16px] font-custom font-bold leading-[1.2]">
+              {trans("wishlistContentOne")}
+              <span className="text-priceNowColor px-1">
+                {wishListAtom.value}
+              </span>
+              {trans("wishlistContentTwo")}
+            </h6>
+          </div>
+          <div>
+            <WishlistItem
+              products={products}
+              removeProduct={removeMealHandler}
+            />
+          </div>
+        </main>
+      ) : (
+        <EmptyComponent {...emptyWishListInfo} />
+      )}
     </>
   );
 }

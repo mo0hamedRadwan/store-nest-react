@@ -30,5 +30,13 @@
   "wishlistContentTwo": {
     "en": "products in this list",
     "ar": "المنتجات في هذه القائمة"
+  },
+  "emptyWishlist": {
+    "en": "Your wishlist is empty",
+    "ar": "قائمتك فارغة"
+  },
+  "wishlistEmptyDescription": {
+    "en": "Add products to your wishlist",
+    "ar": "اضف المنتجات الى قائمتك"
   }
 }
