@@ -36,7 +36,7 @@ export default function WishlistPage() {
           </BreadcrumbList>
         </div>
       </Breadcrumb>
-      <main className="mt-[50px] mb-[30px] px-3">
+      <main className="mt-[50px] mb-[30px] px-3 ">
         <div className="mb-[50px]">
           <h1 className="mb-[10px] text-5xl font-custom font-bold text-specialColor-secondary leading-[1.2]">
             {trans("wishlist")}
