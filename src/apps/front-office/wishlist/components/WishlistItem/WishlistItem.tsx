@@ -125,12 +125,18 @@ export default function WishlistItem({
 
         {/* Action only visible on medium and larger screens */}
         <TableCell className="hidden md:table-cell w-[10%] py-[15px] text-center">
-          <Button
-            onClick={() => addProductToCart(product.id, 1)}
-            variant={"default"}
-            className="text-xs leading-[1.5] font-bold tracking-[0.5px] font-custom inline-block">
-            {trans("addToCart")}
-          </Button>
+          {product.inStock ? (
+            <Button
+              onClick={() => addProductToCart(product.id, 1)}
+              variant={"default"}
+              className="text-xs leading-[1.5] font-bold tracking-[0.5px] font-custom inline-block">
+              {trans("addToCart")}
+            </Button>
+          ) : (
+            <Button className="text-xs leading-[1.5] font-bold tracking-[0.5px] font-custom inline-block">
+              {trans("shopNow")}
+            </Button>
+          )}
         </TableCell>
 
         {/* Remove */}
