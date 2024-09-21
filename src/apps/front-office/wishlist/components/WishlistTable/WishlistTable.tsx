@@ -1,66 +1,63 @@
-import { trans } from "@mongez/localization";
-import Helmet from "@mongez/react-helmet";
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "apps/front-office/design-system/components/ui/breadcrumb";
-import React from "react";
-import { NavItems } from "src/apps/front-office/shop/pages/ProductDetailsPage/ProductPage";
-import URLS from "src/apps/front-office/utils/urls";
-import WishlistItem from "../WishlistItem";
+  Table,
+  TableBody,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "src/apps/front-office/design-system/components/ui/table";
+import StyledCheckBox from "../../../shop/components/FilterSide/StyledCheckBox";
 
-export default function WishlistTable() {
-  const navItems: NavItems = [
-    {
-      name: trans("shop"),
-      url: URLS.shop.viewCategoryRoute,
-    },
-    { name: trans("wishlist"), url: URLS.wishlist },
-  ];
+import { trans } from "@mongez/localization";
+import { Product } from "src/apps/front-office/utils/types";
+import WishlistItem from "../WishlistItem";
+export type WishlistTableProps = {
+  products: Product[];
+  removeProduct: (productId: number | string) => void;
+};
+
+export default function WishlistTable({
+  products,
+  removeProduct,
+}: WishlistTableProps) {
   return (
-    <>
-      <Helmet title="Browse your wishlist to view the products you wish to purchase." />
-      <Breadcrumb className="border-b border-gray-200 py-5">
-        <div className="container">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href={URLS.home}>{trans("home")}</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            {navItems?.map((item, index) => (
-              <React.Fragment key={index}>
-                <BreadcrumbItem>
-                  {item.url ? (
-                    <BreadcrumbLink href={item.url}>{item.name}</BreadcrumbLink>
-                  ) : (
-                    <BreadcrumbPage>{item.name}</BreadcrumbPage>
-                  )}
-                </BreadcrumbItem>
-                {index < navItems.length - 1 && <BreadcrumbSeparator />}
-              </React.Fragment>
-            ))}
-          </BreadcrumbList>
-        </div>
-      </Breadcrumb>
-      <main className="mt-[50px] mb-[30px] px-3 ">
-        <div className="mb-[50px]">
-          <h1 className="mb-[10px] text-5xl font-custom font-bold text-specialColor-secondary leading-[1.2]">
-            {trans("wishlist")}
-          </h1>
-          <h6 className="text-specialColor-primary text-[16px] font-custom font-bold leading-[1.2]">
-            {trans("wishlistContentOne")}
-            <span className="text-priceNowColor px-1">5</span>
-            {trans("wishlistContentTwo")}
-          </h6>
-        </div>
-        <div>
-          <WishlistItem />
-        </div>
-      </main>
-    </>
+    <div className="max-w-[1145px]">
+      {/* Ensure table is scrollable on small screens */}
+      <Table className="border border-solid border-[#e9ecef] table-auto w-full">
+        <TableHeader className="bg-[#ececec]">
+          <TableRow className="font-custom text-[17px] font-bold text-specialColor-secondary">
+            <TableHead className="w-1/2 md:w-[40%] md:py-[18px]">
+              <div className="flex items-center gap-2">
+                <div className="cursor-pointer">
+                  <StyledCheckBox checked={false} />
+                </div>
+                {trans("product")}
+              </div>
+            </TableHead>
+            {/* Hide these columns on smaller screens */}
+            <TableHead className="hidden md:table-cell w-[10%] md:py-[18px] text-center">
+              {trans("price")}
+            </TableHead>
+            <TableHead className="hidden md:table-cell w-[15%] md:py-[18px] text-center">
+              {trans("stockStatus")}
+            </TableHead>
+            <TableHead className="hidden md:table-cell w-[15%] md:py-[18px] text-center">
+              {trans("action")}
+            </TableHead>
+            <TableHead className="hidden md:table-cell w-[10%] text-center">
+              {trans("remove")}
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {products.map(product => (
+            <WishlistItem
+              key={product.id}
+              product={product}
+              removeProduct={removeProduct}
+            />
+          ))}
+        </TableBody>
+      </Table>
+    </div>
   );
 }
