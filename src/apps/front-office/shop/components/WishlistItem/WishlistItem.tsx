@@ -47,7 +47,7 @@ export default function WishlistItem() {
   };
 
   return (
-    <div className="max-w-[1145px]">
+    <div className="max-w-[1145px] overflow-hidden">
       {/* Ensure table is scrollable on small screens */}
       <Table className="border border-solid border-[#e9ecef] table-auto w-full">
         <TableHeader className="bg-[#ececec]">
