@@ -24,7 +24,7 @@ function _AboutOurServiceSection() {
         </p>
       </div>
       <div className="image-r">
-        <img src="/public/images/about-us/about-5.png" />
+        <img src="/images/about-us/about-5.png" />
       </div>
     </div>
   );

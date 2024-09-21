@@ -14,54 +14,56 @@ import AboutWelcomeSection from "./sections/AboutWelcomeSection"; // 1#
 
 export default function AboutUsPage() {
   return (
-    <section className="w-full text-secondary">
+    <>
       <Helmet title={trans("about-us.title")} />
-      <div className="breadcrump relative">
-        <div className="absolute w-full border-b-2 border-b-gray-200 top-full"></div>
-        <div className="nav-links w-full">
-          <Breadcrumb
-            navItems={[
-              { name: "Pages" },
-              { name: "About Us", url: URLS.pages.aboutUs },
-            ]}
-            attributes={{
-              className: "justify-end items-end py-4 my-0",
-            }}
-          />
+      <section className="w-full text-secondary">
+        <div className="breadcrump relative">
+          <div className="absolute w-full border-b-2 border-b-gray-200 top-full"></div>
+          <div className="nav-links w-full">
+            <Breadcrumb
+              navItems={[
+                { name: trans("page") },
+                { name: trans("about-us.title"), url: URLS.pages.aboutUs },
+              ]}
+              attributes={{
+                className: "justify-end items-end py-4 my-0",
+              }}
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="my-10">
-        <main className="about-body">
-          <div className="body-t-1 px-10 py-4">
-            <AboutWelcomeSection />
-          </div>
-
-          <div className="body-t-2">
-            <HeaderPage title={trans("about-us.provideSectionTitle")} />
-
-            <AboutProvideSection />
-          </div>
-
-          <div className="body-t-3">
-            <AboutOurServiceSection />
-          </div>
-
-          <div className="body-t-4 my-4">
-            <AboutUsSection />
-          </div>
-
-          <AboutStatsSection />
-
-          <div className="body-t-6">
-            <div className="container">
-              <HeaderPage title={trans("about-us.ourTeams")} />
-
-              <AboutTeamsSection />
+        <div className="my-10">
+          <main className="about-body">
+            <div className="body-t-1 px-10 py-4">
+              <AboutWelcomeSection />
             </div>
-          </div>
-        </main>
-      </div>
-    </section>
+
+            <div className="body-t-2">
+              <HeaderPage title={trans("about-us.provideSectionTitle")} />
+
+              <AboutProvideSection />
+            </div>
+
+            <div className="body-t-3">
+              <AboutOurServiceSection />
+            </div>
+
+            <div className="body-t-4 my-4">
+              <AboutUsSection />
+            </div>
+
+            <AboutStatsSection />
+
+            <div className="body-t-6">
+              <div className="container">
+                <HeaderPage title={trans("about-us.ourTeams")} />
+
+                <AboutTeamsSection />
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+    </>
   );
 }
