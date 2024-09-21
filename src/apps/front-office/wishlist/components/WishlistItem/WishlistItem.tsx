@@ -7,7 +7,7 @@ import {
   TableCell,
   TableRow,
 } from "src/apps/front-office/design-system/components/ui/table";
-import StyledCheckBox from "src/apps/front-office/shop/components/FilterSide/StyledCheckBox";
+import StyledCheckBox from "src/apps/front-office/shop/pages/ShopPage/components/FilterSide/StyledCheckBox";
 import { Product } from "src/apps/front-office/utils/types";
 import { useWishlist } from "../../hooks/use-wishlist";
 const data = [
