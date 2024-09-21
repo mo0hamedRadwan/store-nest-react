@@ -1,0 +1,34 @@
+{
+  "product": {
+    "en": "Product",
+    "ar": "المنتج"
+  },
+  "price": {
+    "en": "Price",
+    "ar": "السعر"
+  },
+  "stockStatus": {
+    "en": "Stock Status",
+    "ar": "حالة المخزون"
+  },
+  "action": {
+    "en": "Action",
+    "ar": "إجراء"
+  },
+  "remove": {
+    "en": "Remove",
+    "ar": "مسح"
+  },
+  "wishlist": {
+    "en": "Your Wishlist",
+    "ar": "قائمة مشترياتك"
+  },
+  "wishlistContentOne": {
+    "en": "There are",
+    "ar": "يوجد"
+  },
+  "wishlistContentTwo": {
+    "en": "products in this list",
+    "ar": "المنتجات في هذه القائمة"
+  }
+}
