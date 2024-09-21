@@ -188,3 +188,10 @@ export type CartItem = {
   quantity: number;
   total: Total;
 };
+export type PaginationInfo = {
+  limit: number;
+  page: number;
+  total: number;
+  pages: number;
+  results: number;
+};
