@@ -13,9 +13,7 @@ import React from "react";
 import EmptyComponent from "src/apps/front-office/design-system/components/EmptyComponent";
 import { NavItems } from "src/apps/front-office/shop/pages/ProductDetailsPage/ProductPage";
 import URLS from "src/apps/front-office/utils/urls";
-import { useFetch } from "src/shared/hooks/use-fetch";
 import { cartAtom } from "../../atoms/cart-atom";
-import { getCart } from "../../services/cart-service";
 import CartProductsTable from "./components/CartProductsTable";
 import CartTotals from "./components/CartTotals";
 
