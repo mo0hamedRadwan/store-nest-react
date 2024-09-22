@@ -1,0 +1,111 @@
+{
+  "title": {
+    "en": "About Us",
+    "ar": "معلومات عنا"
+  },
+
+  "welcome": {
+    "en": "Welcome to Nest",
+    "ar": "مرحبا بكم في Nest"
+  },
+
+  "provideSectionTitle": {
+    "en": "What we provide",
+    "ar": "ماذا نقدم"
+  },
+
+  "freeDilvery": {
+    "en": "Free Delivery",
+    "ar": "توصيل مجاني"
+  },
+
+  "wideAssortment": {
+    "en": "Free Dilivery",
+    "ar": "تشكيلة واسعة"
+  },
+
+  "bestPrice": {
+    "en": "Best Price & Offers",
+    "ar": "أفضل الأسعار والعروض"
+  },
+
+  "moneyBack": {
+    "en": "Money Back Guarantee",
+    "ar": "ضمان استرجاع الأموال"
+  },
+
+  "statisfication": {
+    "en": "100% Satisfaction",
+    "ar": "رضا 100%"
+  },
+
+  "greatDailyDeals": {
+    "en": "Great Daily Deals Discount",
+    "ar": "عروض يومية رائعة"
+  },
+
+  "ourPerformance": {
+    "en": "Our Performance",
+    "ar": "أدائنا"
+  },
+
+  "yourPartnerForECommerceGrocerySolution": {
+    "en": "Your Partner for e-commerce grocery solution",
+    "ar": "شريكك في حلول التجارة الإلكترونية للبقالة"
+  },
+
+  "whoWeAre": {
+    "en": "Who we are",
+    "ar": "من نحن"
+  },
+
+  "ourMission": {
+    "en": "Our mission",
+    "ar": "مهمتنا"
+  },
+
+  "ourHistory": {
+    "en": "Our history",
+    "ar": "تاريخنا"
+  },
+
+  "gloriousYears": {
+    "en": "Glorious years",
+    "ar": "سنوات مجيدة"
+  },
+
+  "happyCustomers": {
+    "en": "Happy customers",
+    "ar": "عملاء سعداء"
+  },
+
+  "successfulProjects": {
+    "en": "Successful projects",
+    "ar": "مشاريع ناجحة"
+  },
+
+  "globalPresence": {
+    "en": "Global presence",
+    "ar": "وجود عالمي"
+  },
+
+  "professionalTeam": {
+    "en": "Professional team",
+    "ar": "فريق محترف"
+  },
+
+  "ourTeams": {
+    "en": "Our Teams",
+    "ar": "فريقنا"
+  },
+
+  "meetOurExpertTeam": {
+    "en": "Meet Our Expert Team",
+    "ar": "تعرف على فريقنا المتخصص"
+  },
+
+  "viewAllMemebers": {
+    "en": "View All Memebers",
+    "ar": "عرض جميع الأعضاء"
+  }
+}

@@ -40,7 +40,6 @@ export default function HomePage() {
   if (error) {
     return <Error error={error} />;
   }
-
   return (
     <>
       <Helmet title={trans("home")} appendAppName={false} />
@@ -60,6 +59,7 @@ export default function HomePage() {
         <Header title="Deals Of The Day" linkText="All Deals" linkHref="#" />
         <DealList deals={data1.slice(0, 4)} timeCards={deals} />
       </SectionWrapper> */}
+
       {rows}
     </>
   );

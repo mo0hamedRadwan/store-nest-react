@@ -3,9 +3,9 @@ import { Button } from "apps/front-office/design-system/components/ui/button";
 import { Input } from "apps/front-office/design-system/components/ui/input";
 import { Textarea } from "apps/front-office/design-system/components/ui/textarea";
 
-export type ProductReviewFormProps = {
-  // props go here
-};
+// export type ProductReviewFormProps = {
+//   // props go here
+// };
 export default function ProductReviewForm() {
   return (
     <>
