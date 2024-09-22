@@ -3,8 +3,11 @@ import endpoint from "shared/endpoint";
 /**
  * Get cart details
  */
-export function getCart() {
-  return endpoint.get("/cart");
+export async function getCart() {
+  const response = await endpoint.get("/products");
+  // return endpoint.get("/cart");
+  console.log("data", response.data.products);
+  return response.data.product;
 }
 
 /**
