@@ -6,6 +6,7 @@ import AccountDetailsPage from "./pages/AccountDetailsPage";
 import AccountOrderPage from "./pages/AccountOrdersPage";
 import MyAddressessPage from "./pages/MyAddressessPage";
 import TrackOrderPage from "./pages/TrackOrderPage";
+import ContactUs from "../home/pages/ContactUs";
 
 
 reverseGuardedRoutes([
@@ -37,5 +38,9 @@ publicRoutes([
   {
     path: URLS.account.details,
     component: AccountDetailsPage,
+  },
+  {
+    path: URLS.pages.contactUs,
+    component: ContactUs,
   },
 ]);

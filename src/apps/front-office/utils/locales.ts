@@ -7,6 +7,8 @@ import loginTranslation from "shared/localization/login.json";
 import productsTranslation from "shared/localization/products.json";
 import sectionsTranslation from "shared/localization/sections.json";
 import TermsAndConditionsTranslation from "shared/localization/terms.json";
+import contactUsTranslation from "shared/localization/contact.json";
+
 
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
@@ -62,4 +64,5 @@ groupedTranslations({
   ...loginTranslation,
   ...TermsAndConditionsTranslation,
   ...dashboardTraslations,
+  ...contactUsTranslation,
 });
