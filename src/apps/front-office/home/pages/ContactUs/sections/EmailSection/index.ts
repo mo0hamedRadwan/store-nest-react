@@ -1,1 +1,1 @@
-export { default } from "./EmailSection"
+export { default } from "./EmailSection";

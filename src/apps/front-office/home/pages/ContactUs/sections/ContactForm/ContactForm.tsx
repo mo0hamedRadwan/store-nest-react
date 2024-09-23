@@ -10,14 +10,18 @@ export default function ContactForm() {
   const { control } = useForm();
   return (
     <section className="my-10">
-      <h5 className="text-2xl text-priceNowColor font-black mb-10">{trans("Contact form")}</h5>
+      <h5 className="text-2xl text-priceNowColor font-black mb-10">
+        {trans("Contact form")}
+      </h5>
       <div className="w-full flex flex-col lg:flex-row overflow-hidden">
         <div className="w-full lg:w-2/3 mr-8">
           <h1 className="text-5xl text-mainColor stroke-primary font-extrabold mb-4">
             {trans("Drop Us a Line")}
           </h1>
           <p className="text-sm text-specialColor-primary font-normal leading-6 mb-5">
-            {trans("Your email address will not be published. Required fields are marked *")}
+            {trans(
+              "Your email address will not be published. Required fields are marked *",
+            )}
           </p>
 
           <Form className="space-y-4" control={control}>
@@ -37,7 +41,8 @@ export default function ContactForm() {
               <PhoneInput
                 name="phone"
                 className="w-full rounded-lg focus:outline-none focus:border-priceNowColor h-16"
-                placeholder={trans("Phone")} />
+                placeholder={trans("Phone")}
+              />
               <TextInput
                 name="subject"
                 className="w-full rounded-lg focus:outline-none focus:border-priceNowColor h-16"
@@ -63,6 +68,5 @@ export default function ContactForm() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

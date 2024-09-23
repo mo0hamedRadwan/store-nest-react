@@ -1,13 +1,12 @@
-import LoginPage from "./pages/Login/LoginPage";
+import ContactUs from "../home/pages/ContactUs";
 import { publicRoutes, reverseGuardedRoutes } from "../utils/router";
 import URLS from "../utils/urls";
 import AccountDashboardPage from "./pages/AccountDashboardPage";
 import AccountDetailsPage from "./pages/AccountDetailsPage";
 import AccountOrderPage from "./pages/AccountOrdersPage";
+import LoginPage from "./pages/Login/LoginPage";
 import MyAddressessPage from "./pages/MyAddressessPage";
 import TrackOrderPage from "./pages/TrackOrderPage";
-import ContactUs from "../home/pages/ContactUs";
-
 
 reverseGuardedRoutes([
   // login routes
