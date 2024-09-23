@@ -55,6 +55,14 @@ groupedTranslations({
     en: "Submit Review",
     ar: "أضافة تعلبق",
   },
+  readMore: {
+    en: "Read More",
+    ar: "اقرأ المزيد",
+  },
+  page: {
+    en: "Page",
+    ar: "صفحة",
+  },
   ...productsTranslation,
   ...sectionsTranslation,
   ...bannersTranslation,

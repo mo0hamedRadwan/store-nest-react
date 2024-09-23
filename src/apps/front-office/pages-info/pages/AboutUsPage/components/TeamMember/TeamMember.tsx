@@ -13,12 +13,12 @@ function _TeamMember({
   socialLinks,
 }: TeamMemberProps) {
   return (
-    <div className="team-member relative">
+    <div className="team-member group relative">
       <div className="member-image">
         <img className="w-full rounded-xl" src={image} />
       </div>
 
-      <div className="member-info text-center rounded-xl py-8 bg-white -translate-y-1/2 w-5/6 mx-auto shadow-lg">
+      <div className="member-info text-center rounded-xl py-8 bg-white -translate-y-1/2  w-5/6 mx-auto shadow-lg group-hover:-translate-y-full group-hover:w-full transition-all ease-in-out duration-300">
         <h6 className="member-name text-2xl font-bold">{name}</h6>
         <p className="member-position mb-8">{position}</p>
         <div className="social-links flex items-center w-fit mx-auto">
