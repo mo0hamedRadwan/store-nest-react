@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       screens: {
-        xs: "375px",
+        // xs: "375px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
@@ -79,6 +79,9 @@ export default {
       },
       animation: {
         "bounce-up": "bounce-up 0.5s cubic-bezier(0.71, 1.7, 0.77, 1.24)",
+      },
+      backgroundImage: {
+        pannerImg: "url('/images/contact-us/banner1.png')",
       },
     },
   },

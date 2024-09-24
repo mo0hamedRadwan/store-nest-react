@@ -2,7 +2,7 @@ import { trans } from "@mongez/localization";
 import React from "react";
 function _AboutStatsSection() {
   return (
-    <div className="relative p-10 body-t-5 bg-[url('/public/images/about-us/about-9.png')] bg-cover bg-center">
+    <div className="relative p-10 body-t-5 bg-[url('/images/about-us/about-9.png')] bg-cover bg-center">
       <div className="overlay bg-[#4B675A] absolute inset-0 opacity-80"></div>
       <div className="relative text-white hidden md:grid md:grid-cols-2 lg:grid-cols-5 z-50">
         <div className="box-info my-8 text-center">
