@@ -11,9 +11,11 @@ import {
 import { ShoppingBag } from "lucide-react";
 import React from "react";
 import EmptyComponent from "src/apps/front-office/design-system/components/EmptyComponent";
+import Loader from "src/apps/front-office/design-system/components/ui/Indicators/Indicators";
 import { NavItems } from "src/apps/front-office/shop/pages/ProductDetailsPage/ProductPage";
 import URLS from "src/apps/front-office/utils/urls";
 import { cartAtom } from "../../atoms/cart-atom";
+import { useCart } from "../../hooks/use-cart";
 import CartProductsTable from "./components/CartProductsTable";
 import CartTotals from "./components/CartTotals";
 
@@ -24,6 +26,7 @@ const emptyCartInfo = {
 };
 
 function _CartPage() {
+  const { isLoading } = useCart();
   const cart = cartAtom.useValue();
 
   const navItems: NavItems = [
@@ -33,6 +36,10 @@ function _CartPage() {
     },
     { name: trans("cart"), url: URLS.cart },
   ];
+
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <>
       <Helmet title={trans("cart")} />

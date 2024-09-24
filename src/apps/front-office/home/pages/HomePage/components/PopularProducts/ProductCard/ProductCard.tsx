@@ -5,6 +5,7 @@ import { Button } from "apps/front-office/design-system/components/ui/button";
 import { Product } from "apps/front-office/shop/utils/types";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "src/apps/front-office/cart/hooks/use-cart";
+import Loader from "src/apps/front-office/design-system/components/ui/Indicators/Indicators";
 import PreviewProducts from "../PreviewProducts";
 
 export type ProductCardProps = {
@@ -14,17 +15,10 @@ export type ProductCardProps = {
 export default function ProductCard({ product }: ProductCardProps) {
   const isOnSale = product.salePrice ? true : false;
 
-  const { handleAddToCart } = useCart();
+  const { addProductToCart, isLoading } = useCart();
 
-  async function addProductToCart(id: number, arg1: number) {
-    const product = { id, quantity: arg1 };
-
-    try {
-      handleAddToCart(product.id, product.quantity);
-      console.log("Product added to cart:", product);
-    } catch (error) {
-      console.error("Failed to add to cart:", error);
-    }
+  if (isLoading) {
+    return <Loader />;
   }
 
   return (

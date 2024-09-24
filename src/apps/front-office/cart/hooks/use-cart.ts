@@ -23,7 +23,7 @@ export function useCart() {
     getCart()
       .then(response => {
         setCartItems(response.data.cart);
-        cartAtom.update(response.data.cart.item);
+        cartAtom.update(response.data.cart);
       })
       .catch(err => {
         setError(
@@ -36,51 +36,37 @@ export function useCart() {
   });
 
   // Add product to cart
-  const handleAddToCart = (productId: number, quantity: number = 1) => {
+  const addProductToCart = (productId: number, quantity: number = 1) => {
     setIsLoading(true);
     addToCart(productId, quantity)
-      .then(response => {
-        setCartItems(response.data.cart);
-        cartAtom.update(response.data.cart.items);
-        toast(trans("addedToCart"));
-      })
-      .catch(() => {
+      .then(res => {
+        console.log(res);
+
         toast(trans("addToCartError"));
       })
-      .finally(() => setIsLoading(false));
-  };
-
-  // Update product quantity in cart
-  const handleUpdateCart = (itemId: number, quantity: number) => {
-    setIsLoading(true);
-    updateCart(itemId, quantity)
-      .then(response => {
-        console.log(response);
-        setCartItems(prevItems =>
-          prevItems.map(item =>
-            item.id === itemId ? { ...item, quantity } : item,
-          ),
-        );
-        toast(trans("cartUpdated"));
-      })
       .catch(() => {
-        toast(trans("updateCartError"));
+        toast(trans("somethingWentWrong"));
       })
       .finally(() => setIsLoading(false));
   };
 
   // Remove product from cart
-  const handleRemoveFromCart = (itemId: number) => {
-    setIsLoading(true);
-    removeFromCart(itemId)
-      .then(response => {
-        console.log(response);
+  const removeItemFromCart = (id: number) => {
+    removeFromCart(id).catch(response => {
+      toast(response.data.error);
+    });
+  };
 
-        setCartItems(prevItems => prevItems.filter(item => item.id !== itemId));
-        toast(trans("removedFromCart"));
+  // Update product quantity in cart
+  const updateCartItem = (id: number, amount: number) => {
+    setIsLoading(true);
+
+    updateCart(id, amount)
+      .then(({ data }) => {
+        console.log(data);
       })
-      .catch(() => {
-        toast(trans("removeFromCartError"));
+      .catch(error => {
+        console.log(error);
       })
       .finally(() => setIsLoading(false));
   };
@@ -89,8 +75,8 @@ export function useCart() {
     cartItems,
     isLoading,
     error,
-    handleAddToCart,
-    handleUpdateCart,
-    handleRemoveFromCart,
+    addProductToCart,
+    updateCartItem,
+    removeItemFromCart,
   };
 }
