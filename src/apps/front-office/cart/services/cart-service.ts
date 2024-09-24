@@ -3,9 +3,11 @@ import endpoint from "shared/endpoint";
 /**
  * Get cart details
  */
+i
 export async function getCart() {
   const response = await endpoint.get("/cart");
   return response.data.cart;
+
 }
 
 /**

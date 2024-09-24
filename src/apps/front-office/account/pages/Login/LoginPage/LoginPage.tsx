@@ -36,7 +36,9 @@ export default function LoginPage() {
               <p className="text-base text-[#7E7E7E] font-normal leading-6 mb-5">
                 {trans("register")}
                 <Link
-                  to={`/register`}
+
+                  to={URLS.auth.register}
+
                   className="cursor-pointer text-priceNowColor font-semibold duration-300 hover:text-[#FDC040] ml-1">
                   {trans("createHere")}
                 </Link>
@@ -56,7 +58,7 @@ export default function LoginPage() {
                   placeholder={trans("password")}
                   required
                   minLength={6}
-                  maxLength={16}
+
                 />
                 <div className="flex items-center justify-between !mb-[50px]">
                   <label className="flex items-center text-sm ">

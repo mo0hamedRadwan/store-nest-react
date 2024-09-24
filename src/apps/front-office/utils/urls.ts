@@ -3,6 +3,8 @@
 import { Category, Product } from "../shop/utils/types";
 
 const URLS = {
+
+  wishlist: "/wishlist",
   cart: "/cart",
   pagesInfo: "/pages-info",
   catalog: "/catalog",
@@ -22,7 +24,6 @@ const URLS = {
     logout: "/account/logout",
     resetPassword: "/account/reset-password",
   },
-  wishlist: "/wishlist",
   addresses: "/addresses",
   orders: "/orders",
   venders: "/venders",

@@ -71,6 +71,8 @@ groupedTranslations({
   ...loginTranslation,
   ...TermsAndConditionsTranslation,
   ...dashboardTraslations,
-  ...cart,
+
   ...wishlistTranslation,
+  ...cart,
+
 });
