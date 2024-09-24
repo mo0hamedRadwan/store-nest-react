@@ -7,6 +7,10 @@ import CartProductsTableItem from "../CartProductsTableItem";
 export default function CartProductsTable() {
   const items = cartAtom.use("items");
 
+  console.log("dana", items);
+
+
+
   return (
     <div className="cart-products-table max-lg:mb-8 max-sm:mb-5">
       <table className="table-auto w-full bg-white ltr:text-left rtl:text-right text-[15px] font-bold capitalize max-md:text-[12px] border border-[#ececec]">
