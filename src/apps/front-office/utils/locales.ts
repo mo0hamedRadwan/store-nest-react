@@ -4,6 +4,7 @@ import cart from "shared/localization/cart.json";
 import dashboardTraslations from "shared/localization/dashboard.json";
 import headerTranslation from "shared/localization/header.json";
 import mainTranslation from "shared/localization/index.json";
+import loginTranslation from "shared/localization/login.json";
 import productsTranslation from "shared/localization/products.json";
 import sectionsTranslation from "shared/localization/sections.json";
 import TermsAndConditionsTranslation from "shared/localization/terms.json";
@@ -59,10 +60,15 @@ groupedTranslations({
     en: "Read More",
     ar: "اقرأ المزيد",
   },
+  page: {
+    en: "Page",
+    ar: "صفحة",
+  },
   ...productsTranslation,
   ...sectionsTranslation,
   ...bannersTranslation,
   ...headerTranslation,
+  ...loginTranslation,
   ...TermsAndConditionsTranslation,
   ...dashboardTraslations,
   ...cart,

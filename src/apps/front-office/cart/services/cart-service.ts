@@ -4,10 +4,8 @@ import endpoint from "shared/endpoint";
  * Get cart details
  */
 export async function getCart() {
-  const response = await endpoint.get("/products");
-  // return endpoint.get("/cart");
-  console.log("data", response.data.products);
-  return response.data.product;
+  const response = await endpoint.get("/cart");
+  return response.data.cart;
 }
 
 /**

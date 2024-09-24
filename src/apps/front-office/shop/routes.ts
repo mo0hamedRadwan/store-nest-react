@@ -1,8 +1,8 @@
 import { publicRoutes } from "apps/front-office/utils/router";
 import URLS from "apps/front-office/utils/urls";
+import ComparePage from "./pages/ComparePage";
 import ProductPage from "./pages/ProductDetailsPage/ProductPage";
 import ShopPage from "./pages/ShopPage";
-import WishlistPage from "./pages/WishlistPage";
 
 publicRoutes([
   {
@@ -14,7 +14,7 @@ publicRoutes([
     component: ProductPage,
   },
   {
-    path: URLS.wishlist,
-    component: WishlistPage,
+    path: URLS.compare,
+    component: ComparePage,
   },
 ]);

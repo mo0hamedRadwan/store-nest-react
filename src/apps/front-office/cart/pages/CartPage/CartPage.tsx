@@ -24,9 +24,6 @@ const emptyCartInfo = {
 };
 
 function _CartPage() {
-  // const { data, error, isLoading } = useFetch(getCart);
-  // console.log(data);
-
   const cart = cartAtom.useValue();
 
   const navItems: NavItems = [
