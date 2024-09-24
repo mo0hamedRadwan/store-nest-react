@@ -56,9 +56,11 @@ export function useCreateAccount() {
     register(values)
       .then(() => {
         goBack();
+        console.log("Success");
       })
       .catch(() => {
         form.submitting(false);
+        console.log("Error");
       });
   };
 

@@ -36,13 +36,13 @@ function _AboutTeamsSection() {
       <div className="teams grid grid-cols-1 md:grid-cols-2 gap-7 grow basis-8/12">
         <TeamMember
           name="H. Merinda"
-          image="/public/images/about-us/about-8.png"
+          image="/images/about-us/about-8.png"
           position="CEO & Co-Founder"
           socialLinks={[TwitterLogoIcon, InstagramLogoIcon, Youtube]}
         />
         <TeamMember
           name="Diego Maradona"
-          image="/public/images/about-us/about-6.png"
+          image="/images/about-us/about-6.png"
           position="CEO & Co-Founder"
           socialLinks={[TwitterLogoIcon, InstagramLogoIcon, Youtube]}
         />

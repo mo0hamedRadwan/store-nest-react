@@ -16,6 +16,7 @@ const URLS = {
     addresses: "/account/addresses",
     details: "/account/details",
     logout: "/account/logout",
+    resetPassword: "/account/reset-password",
   },
   wishlist: "/wishlist",
   addresses: "/addresses",
