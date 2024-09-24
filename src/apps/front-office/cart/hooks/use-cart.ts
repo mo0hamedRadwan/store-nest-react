@@ -23,7 +23,7 @@ export function useCart() {
     getCart()
       .then(response => {
         setCartItems(response.data.cart);
-        cartAtom.update(response.data.cart);
+        cartAtom.update(response.data.cart.items);
       })
       .catch(err => {
         setError(
@@ -41,7 +41,6 @@ export function useCart() {
     addToCart(productId, quantity)
       .then(res => {
         console.log(res);
-
         toast(trans("addToCartError"));
       })
       .catch(() => {
