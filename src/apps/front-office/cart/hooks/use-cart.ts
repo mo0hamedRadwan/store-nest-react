@@ -17,8 +17,7 @@ export function useCart() {
   const addProductToCart = (productId: number, quantity: number = 1) => {
     setIsLoading(true);
     addToCart(productId, quantity)
-      .then(res => {
-        console.log(res);
+      .then(() => {
         toast(trans("addToCartError"));
       })
       .catch(() => {
