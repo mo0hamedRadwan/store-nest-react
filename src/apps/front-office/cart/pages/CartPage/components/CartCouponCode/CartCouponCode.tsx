@@ -1,10 +1,10 @@
 import { trans } from "@mongez/localization";
-import { Form } from "react-hook-form";
+import { Form } from "@mongez/react-form";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
 
 export default function CartCouponCode() {
   return (
-    <Form className="coupon flex float-left max-sm:flex max-sm:flex-col max-sm:p-8 max-sm:border-2 max-sm:border-dashed max-sm:border-[#e5e5e5]">
+    <Form className="coupon flex flex-col space-y-3 items-center justify-center float-left max-sm:flex max-sm:flex-col max-sm:p-8 max-sm:border-2 max-sm:border-dashed max-sm:border-[#e5e5e5]">
       <span className="sm:text-md lg:text-2xl text-[#253D4E] font-bold mb-3 max-sm:mb-5">
         {trans("applyCoupon")}
       </span>

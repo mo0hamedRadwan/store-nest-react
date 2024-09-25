@@ -74,5 +74,4 @@ groupedTranslations({
 
   ...wishlistTranslation,
   ...cart,
-
 });

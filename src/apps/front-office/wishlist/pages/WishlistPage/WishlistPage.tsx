@@ -27,8 +27,7 @@ const emptyWishListInfo = {
 function _WishlistPage() {
   const { error, products, isLoading, setProducts } = useWishlist();
 
-  // Remove Meal From Wishlist
-  const removeMealHandler = (productId: number | string) => {
+  const removeProductHandler = (productId: number | string) => {
     const updatedWishlist = products.filter(
       product => product.id !== productId,
     );
@@ -89,7 +88,7 @@ function _WishlistPage() {
           <div>
             <WishlistItem
               products={products}
-              removeProduct={removeMealHandler}
+              removeProduct={removeProductHandler}
             />
           </div>
         </main>

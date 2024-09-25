@@ -14,7 +14,6 @@ export default function useFetchFooterData() {
     getFooterData()
       .then(response => {
         const { contact, general } = response.data.settings;
-        console.log(response.data);
 
         const logoUrl = general?.logo?.url || URLS.home;
         setFooterData({ contact, logoUrl });

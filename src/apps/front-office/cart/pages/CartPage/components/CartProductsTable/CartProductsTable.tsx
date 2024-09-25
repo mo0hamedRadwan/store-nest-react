@@ -1,16 +1,15 @@
 import { trans } from "@mongez/localization";
-import { cartAtom } from "apps/front-office/cart/atoms/cart-atom";
 import { AiOutlineClose } from "react-icons/ai";
+import { CartItem } from "src/apps/front-office/utils/types";
 import CartCouponCode from "../CartCouponCode";
 import CartProductsTableItem from "../CartProductsTableItem";
 
-export default function CartProductsTable() {
-  const items = cartAtom.use("items");
-
-  console.log("dana", items);
-
-
-
+type CartProductsTableProps = {
+  cartItems: CartItem[]; // replace with actual CartItem type
+};
+export default function CartProductsTable({
+  cartItems,
+}: CartProductsTableProps) {
   return (
     <div className="cart-products-table max-lg:mb-8 max-sm:mb-5">
       <table className="table-auto w-full bg-white ltr:text-left rtl:text-right text-[15px] font-bold capitalize max-md:text-[12px] border border-[#ececec]">
@@ -37,15 +36,21 @@ export default function CartProductsTable() {
           </tr>
         </thead>
         <tbody>
-          {items.map((item: any) => (
-            <CartProductsTableItem key={item.id} item={item} />
-          ))}
+          {cartItems?.length > 0 ? (
+            cartItems.map((item: any) => (
+              <CartProductsTableItem key={item.id} item={item} />
+            ))
+          ) : (
+            <tr>
+              <td colSpan={6}>{trans("emptyCart")}</td>
+            </tr>
+          )}
         </tbody>
         <tfoot>
           <tr className="actions">
             <td
               colSpan={6}
-              className="pt-8 pb-0 max-sm:flex max-sm:flex-col-reverse max-sm:pt-5">
+              className="pt-8 pb-0 max-sm:flex  max-sm:flex-col-reverse max-sm:pt-5 ">
               <CartCouponCode />
             </td>
           </tr>

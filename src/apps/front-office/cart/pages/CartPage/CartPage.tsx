@@ -12,16 +12,12 @@ import { ShoppingBag } from "lucide-react";
 import React from "react";
 import EmptyComponent from "src/apps/front-office/design-system/components/EmptyComponent";
 
+import Error from "src/apps/front-office/design-system/components/Error";
 import Loader from "src/apps/front-office/design-system/components/ui/Indicators/Indicators";
 import { NavItems } from "src/apps/front-office/shop/pages/ProductDetailsPage/ProductPage";
 import URLS from "src/apps/front-office/utils/urls";
 import { cartAtom } from "../../atoms/cart-atom";
-import { useCart } from "../../hooks/use-cart";
-
-import { NavItems } from "src/apps/front-office/shop/pages/ProductDetailsPage/ProductPage";
-import URLS from "src/apps/front-office/utils/urls";
-import { cartAtom } from "../../atoms/cart-atom";
-
+import { useCartLoader } from "../../hooks/use-cart";
 import CartProductsTable from "./components/CartProductsTable";
 import CartTotals from "./components/CartTotals";
 
@@ -30,24 +26,23 @@ const emptyCartInfo = {
   description: trans("cartEmptyDescription"),
   icon: <ShoppingBag size="150" />,
 };
-
+const navItems: NavItems = [
+  {
+    name: trans("shop"),
+    url: URLS.shop.viewCategoryRoute,
+  },
+  { name: trans("cart"), url: URLS.cart },
+];
 function _CartPage() {
-
-  const { isLoading } = useCart();
-
+  const { isLoading, error } = useCartLoader();
   const cart = cartAtom.useValue();
 
-  const navItems: NavItems = [
-    {
-      name: trans("shop"),
-      url: URLS.shop.viewCategoryRoute,
-    },
-    { name: trans("cart"), url: URLS.cart },
-  ];
-      
+  if (error) return <Error error={error} />;
+
   if (isLoading) {
     return <Loader />;
   }
+
   return (
     <>
       <Helmet title={trans("cart")} />
@@ -78,10 +73,10 @@ function _CartPage() {
           <div className="container">
             <div className="flex justify-between flex-wrap">
               <div className="w-[calc(70%-40px)] max-xl:w-[calc(65%-30px)] max-lg:w-[100%]">
-                <CartProductsTable />
+                <CartProductsTable cartItems={cart.items || []} />
               </div>
               <div className="w-[30%] max-xl:w-[35%] max-lg:w-[100%]">
-                <CartTotals cartItems={cart.items} />
+                <CartTotals cartItems={cart.items || []} />
               </div>
             </div>
           </div>

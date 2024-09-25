@@ -177,17 +177,41 @@ export type DealsData = {
 
 type Total = {
   discount: number;
-  originalPrice: number;
-  subtotal: number;
+  finalPrice: number;
+  price: number;
+  salePrice: number;
 };
 export type CartItem = {
   id: number;
-  Product: Product;
-  price: number;
+  product: Product;
   salePrice: number;
   quantity: number;
   total: Total;
 };
+
+export type Cart = {
+  id: number;
+  coupon?: {
+    code: string;
+    value: number;
+  };
+  items: CartItem[];
+  totals: {
+    price: number;
+    discount: number;
+    salePrice: number;
+    subtotal: number;
+    tax: number;
+    shippingFees: number;
+    paymentFees: number;
+    quantity: number;
+    coupon: number;
+    finalPrice: number;
+    commission: number;
+    additionalPrice: number;
+  };
+};
+
 export type PaginationInfo = {
   limit: number;
   page: number;

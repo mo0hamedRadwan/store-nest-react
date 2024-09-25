@@ -3,7 +3,6 @@ import { trans } from "@mongez/localization";
 import { useOnce } from "@mongez/react-hooks";
 import { useState } from "react";
 import { toast } from "../../design-system/components/ui/use-toast";
-import { CartItem } from "../../utils/types";
 import { cartAtom } from "../atoms/cart-atom";
 import {
   addToCart,
@@ -13,29 +12,8 @@ import {
 } from "../services/cart-service";
 
 export function useCart() {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Fetch cart details once on mount
-  useOnce(() => {
-    setIsLoading(true);
-    getCart()
-      .then(response => {
-        setCartItems(response.data.cart);
-        cartAtom.update(response.data.cart.items);
-      })
-      .catch(err => {
-        setError(
-          err.response?.data?.error ||
-            err.message ||
-            trans("somethingWentWrong"),
-        );
-      })
-      .finally(() => setIsLoading(false));
-  });
-
-  // Add product to cart
   const addProductToCart = (productId: number, quantity: number = 1) => {
     setIsLoading(true);
     addToCart(productId, quantity)
@@ -49,14 +27,12 @@ export function useCart() {
       .finally(() => setIsLoading(false));
   };
 
-  // Remove product from cart
   const removeItemFromCart = (id: number) => {
     removeFromCart(id).catch(response => {
       toast(response.data.error);
     });
   };
 
-  // Update product quantity in cart
   const updateCartItem = (id: number, amount: number) => {
     setIsLoading(true);
 
@@ -66,16 +42,43 @@ export function useCart() {
       })
       .catch(error => {
         console.log(error);
+        setError(error);
+        toast(trans("somethingWentWrong"));
       })
       .finally(() => setIsLoading(false));
   };
 
   return {
-    cartItems,
     isLoading,
     error,
     addProductToCart,
     updateCartItem,
     removeItemFromCart,
+  };
+}
+export function useCartLoader() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useOnce(() => {
+    getCart()
+      .then(response => {
+        cartAtom.update(response.data.cart);
+        console.log(response.data.cart);
+        setIsLoading(false);
+      })
+      .catch(error => {
+        setError(
+          error.response?.data?.error ||
+            error.message ||
+            trans("somethingWentWrong"),
+        );
+      })
+      .finally(() => setIsLoading(false));
+  });
+
+  return {
+    isLoading,
+    error,
   };
 }
