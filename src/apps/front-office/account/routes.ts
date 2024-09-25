@@ -1,16 +1,14 @@
-import ContactUs from "../home/pages/ContactUs";
 import { publicRoutes, reverseGuardedRoutes } from "../utils/router";
 import URLS from "../utils/urls";
 import AccountDashboardPage from "./pages/AccountDashboardPage";
 import AccountDetailsPage from "./pages/AccountDetailsPage";
 import AccountOrderPage from "./pages/AccountOrdersPage";
-import LoginPage from "./pages/Login/LoginPage";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage/ForgetPasswordPage";
+import LoginPage from "./pages/Login/LoginPage";
 import MyAddressessPage from "./pages/MyAddressessPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ResetPassword from "./pages/RestPassword";
 import TrackOrderPage from "./pages/TrackOrderPage";
-
 
 reverseGuardedRoutes([
   // login routes
@@ -43,10 +41,6 @@ publicRoutes([
   {
     path: URLS.account.details,
     component: AccountDetailsPage,
-  },
-  {
-    path: URLS.pages.contactUs,
-    component: ContactUs,
   },
   {
     path: URLS.account.resetPassword,

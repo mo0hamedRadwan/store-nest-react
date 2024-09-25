@@ -1,13 +1,26 @@
 import { trans } from "@mongez/localization";
-import { Form, useForm } from "react-hook-form";
+import { Form } from "@mongez/react-form";
+import { navigateTo } from "@mongez/react-router";
 import EmailInput from "src/apps/front-office/design-system/components/form/EmailInput";
 import PhoneInput from "src/apps/front-office/design-system/components/form/PhoneInput";
 import TextArea from "src/apps/front-office/design-system/components/form/TextArea";
 import TextInput from "src/apps/front-office/design-system/components/form/TextInput";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
-
+import URLS from "src/apps/front-office/utils/urls";
+import endpoint from "src/shared/endpoint";
 export default function ContactForm() {
-  const { control } = useForm();
+  const submitForm = async ({ values }) => {
+    console.log(values);
+    try {
+      const res = await endpoint.post("/contact", values);
+      if (res.data.success) {
+        console.log("Response:", res);
+        navigateTo(URLS.home);
+      }
+    } catch (error) {
+      console.log(`error: ${error}`);
+    }
+  };
   return (
     <section className="my-10">
       <h5 className="text-2xl text-priceNowColor font-black mb-10">
@@ -24,7 +37,7 @@ export default function ContactForm() {
             )}
           </p>
 
-          <Form className="space-y-4" control={control}>
+          <Form className="space-y-4" onSubmit={submitForm}>
             <div className="flex w-full gap-6">
               <TextInput
                 name="name"
