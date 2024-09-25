@@ -1,13 +1,16 @@
 import { trans } from "@mongez/localization";
-import { Form, useForm } from "react-hook-form";
-import EmailInput from "src/apps/front-office/design-system/components/form/EmailInput";
-import PhoneInput from "src/apps/front-office/design-system/components/form/PhoneInput";
-import TextArea from "src/apps/front-office/design-system/components/form/TextArea";
-import TextInput from "src/apps/front-office/design-system/components/form/TextInput";
+import { Form, FormSubmitOptions } from "@mongez/react-form";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
+import EmailInput from "../../Components/EmailInput";
+import PhoneInput from "../../Components/PhoneInput";
+import TextArea from "../../Components/TextArea";
+import TextInput from "../../Components/TextInput";
 
 export default function ContactForm() {
-  const { control } = useForm();
+  const handleSubmit: (options: FormSubmitOptions) => void = options => {
+    // return options;
+  };
+
   return (
     <section className="my-10">
       <h5 className="text-2xl text-priceNowColor font-black mb-10">
@@ -24,7 +27,7 @@ export default function ContactForm() {
             )}
           </p>
 
-          <Form className="space-y-4" control={control}>
+          <Form className="space-y-4" onSubmit={handleSubmit}>
             <div className="flex w-full gap-6">
               <TextInput
                 name="name"
