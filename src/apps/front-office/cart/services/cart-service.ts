@@ -16,12 +16,12 @@ export function addToCart(product: number, quantity = 1) {
 }
 
 export function updateCart(item: number, quantity: number) {
-  return endpoint.put("/cart/items/" + item, { quantity });
+  return endpoint.put("/cart/" + item, { quantity });
 }
 
 /**
  * Remove item from cart
  */
-export function removeFromCart(item: number) {
-  return endpoint.delete("/cart/items/" + item);
+export function removeFromCart(itemId: string) {
+  return endpoint.delete(`/cart/${itemId}`);
 }

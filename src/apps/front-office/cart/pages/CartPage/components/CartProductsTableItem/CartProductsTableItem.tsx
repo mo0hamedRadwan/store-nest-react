@@ -13,6 +13,7 @@ export default function CartProductsTableItem({
   item,
 }: CartProductsTableItemProps) {
   const { removeItemFromCart } = useCart();
+  console.log(item);
 
   return (
     <tr className="border-b max-sm:block max-sm:pl-[100px] max-sm:relative">

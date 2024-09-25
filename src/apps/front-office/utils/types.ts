@@ -182,7 +182,7 @@ type Total = {
   salePrice: number;
 };
 export type CartItem = {
-  id: number;
+  id: string;
   product: Product;
   salePrice: number;
   quantity: number;

@@ -27,10 +27,17 @@ export function useCart() {
       .finally(() => setIsLoading(false));
   };
 
-  const removeItemFromCart = (id: number) => {
-    removeFromCart(id).catch(response => {
-      toast(response.data.error);
-    });
+  const removeItemFromCart = (itemId: string) => {
+    setIsLoading(true);
+    removeFromCart(itemId)
+      .then(response => {
+        cartAtom.update(response.data.cart);
+        toast(trans("removeFromCartError"));
+      })
+      .catch(() => {
+        toast(trans("somethingWentWrong"));
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const updateCartItem = (id: number, amount: number) => {
@@ -64,7 +71,6 @@ export function useCartLoader() {
     getCart()
       .then(response => {
         cartAtom.update(response.data.cart);
-        console.log(response.data.cart);
         setIsLoading(false);
       })
       .catch(error => {
