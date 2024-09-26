@@ -40,12 +40,20 @@ export default function RegisterPage() {
         <div className="col-span-4 md:col-span-3 lg:col-span-2 ms-3 lg:ms-0">
           <HeadOfRegister />
           <Form onSubmit={submitForm} className="flex flex-col gap-2">
-            <TextInput
-              type="text"
-              name="userName"
-              placeholder={trans("namePlaceHolder")}
-              required
-            />
+            <div className="flex gap-3">
+              <TextInput
+                type="text"
+                name="firstName"
+                placeholder={trans("firstNamePlaceHolder")}
+                required
+              />
+              <TextInput
+                type="text"
+                name="lastName"
+                placeholder={trans("lastNamePlaceHolder")}
+                required
+              />
+            </div>
             <EmailInput
               type="email"
               name="email"

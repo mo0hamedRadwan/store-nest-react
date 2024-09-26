@@ -20,9 +20,9 @@ export default function TextInput(props: FormControlProps) {
     }
   };
   return (
-    <>
+    <div className="w-full">
       <input
-        className={`Input border-[#ececec] ${error && "border-red-300"}`}
+        className={`Input w-full border-[#ececec] ${error && "border-red-300"}`}
         value={value}
         id={id}
         onChange={e => {
@@ -31,8 +31,8 @@ export default function TextInput(props: FormControlProps) {
         {...otherProps}
       />
       {error && (
-        <p className="text-red-500 text-[13px] -mt-3">{getErrorMessage()}</p>
+        <p className="text-red-500 text-[13px] -mt-2">{getErrorMessage()}</p>
       )}
-    </>
+    </div>
   );
 }
