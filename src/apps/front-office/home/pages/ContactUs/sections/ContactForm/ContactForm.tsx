@@ -7,7 +7,7 @@ import TextArea from "../../Components/TextArea";
 import TextInput from "../../Components/TextInput";
 
 export default function ContactForm() {
-  const handleSubmit: (options: FormSubmitOptions) => void = options => {
+  const handleSubmit: (options: FormSubmitOptions) => void = _options => {
     // return options;
   };
 
