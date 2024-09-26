@@ -35,7 +35,6 @@ const categoriesAtom = atom<CategoriesAtomDataType, CategoriesActionsType>({
       })
         .then(response => {
           const categories = response.data.categories;
-          console.log(categories);
           categoriesAtom.merge({
             isLoading: false,
             originalCategories: categories,
