@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const useHover = <T extends HTMLElement>() => {
+export const useHover = <T extends HTMLElement>() => {
   const ref = useRef<T>(null);
   const [hover, setHover] = useState<boolean>(false);
 
@@ -10,8 +10,9 @@ const useHover = <T extends HTMLElement>() => {
   useEffect(() => {
     const element = ref.current;
 
-    if (!element)
+    if (!element) {
       throw new Error("useHover hook didn't hold `ref` for element!");
+    }
 
     element.addEventListener("mouseover", onMouseOver);
     element.addEventListener("mouseleave", onMouseLeft);
@@ -27,5 +28,3 @@ const useHover = <T extends HTMLElement>() => {
     isHover: hover,
   };
 };
-
-export default useHover;

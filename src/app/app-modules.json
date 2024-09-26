@@ -1,0 +1,48 @@
+{
+  "path": "/",
+  "name": "front-office",
+  "modules": [
+    {
+      "entry": [
+        "/account",
+        "/login",
+        "/register",
+        "/forget-password",
+        "/rest-password"
+      ],
+      "name": "account"
+    },
+    {
+      "entry": ["/404"],
+      "name": "404"
+    },
+    {
+      "entry": ["/"],
+      "name": "home"
+    },
+    {
+      "entry": ["/about-us", "/privacy-policy", "/terms-conditions"],
+      "name": "pages-info"
+    },
+    {
+      "entry": ["/products", "shop", "/compare"],
+      "name": "shop"
+    },
+    {
+      "entry": ["/catalog"],
+      "name": "catalog"
+    },
+    {
+      "entry": ["/cart"],
+      "name": "cart"
+    },
+    {
+      "entry": ["/contact-us"],
+      "name": "contact-us"
+    },
+    {
+      "entry": ["/wishlist"],
+      "name": "wishlist"
+    }
+  ]
+}

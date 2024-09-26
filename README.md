@@ -5,24 +5,34 @@
 ## Module Structure
 
 ```
-|-- module
-    |-- components
-    |-- pages
-        |-- PageName
-            |-- index.tsx
-            |-- PageName.tsx
-            |-- PrivatePageComponent.tsx
-    |-- services
-    |-- routes.ts
-    |-- provider.ts
-    |-- utils
-        |-- locales.ts
-        |-- flags.ts
-        |-- types.ts
-    |-- hooks
-        |-- index.ts
-    |-- atoms
-        |-- index.ts
-        |-- product-atom.ts
-    |-- middleware
+|-- moduleName
+|   |-- atoms
+|   |   |-- atom-name.ts
+|   |   |-- index.ts
+|   |-- components
+|   |   |-- AnyReusableComponent.tsx
+|   |   |-- index.ts
+|   |-- pages
+|   |   |-- PageComponent
+|   |   |   |-- components
+|   |   |   |   |-- PrivatePageComponent.tsx
+|   |   |   |-- PageComponent.tsx
+|   |   |   |-- index.ts
+|   |-- services
+|   |   |-- auth.service.ts
+|   |-- hooks
+|   |   |-- use-hook-name.ts
+|   |   |-- index.ts
+|   |-- types
+|   |   |-- product.entity.ts
+|   |   |-- class.contract.ts
+|   |   |-- index.ts
+|   |-- utils
+|   |   |-- helpers.ts
+|   |   |-- some-helper-class.ts
+|   |   |-- some-helper-function.ts
+|   |   |-- flags.ts
+|   |   |-- types.ts
+|   |-- main.ts
+|   |-- routes.ts
 ```
