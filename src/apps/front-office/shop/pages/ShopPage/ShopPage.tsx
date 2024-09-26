@@ -1,6 +1,8 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
+import { useEffect } from "react";
 import Banner from "src/apps/front-office/design-system/components/Banner";
+import { shopAtom } from "../../atoms/shopAtom";
 import CategorySidebar from "./components/CategorySidebar";
 import FilterSide from "./components/FilterSide";
 import ProductsContainer from "./components/ProductsContainer";
@@ -9,6 +11,11 @@ import DealsDays from "./components/sections/DealsDays";
 import ShopBanner from "./components/ShopBanner";
 
 function ShopPage() {
+  useEffect(() => {
+    shopAtom.getProducts();
+    shopAtom.getCategories();
+  }, []);
+
   return (
     <>
       <Helmet title={trans("shop")} />
@@ -29,7 +36,7 @@ function ShopPage() {
               title="Organic"
               Subtitle={() => (
                 <>
-                  Save 17% on <span className="text-primary">Organic</span>{" "}
+                  Save 17% on <span className="text-primary">Organic</span>
                   Juice
                 </>
               )}

@@ -1,19 +1,16 @@
 // Import images
-import image1 from "assets/images/shop-category/category-1.svg";
-import image2 from "assets/images/shop-category/category-2.svg";
-import image3 from "assets/images/shop-category/category-3.svg";
-import image4 from "assets/images/shop-category/category-4.svg";
-import image5 from "assets/images/shop-category/category-5.svg";
-import useFetchShopCategories from "shared/hooks/useFetchShopCategories";
+import { shopAtom } from "src/apps/front-office/shop/atoms/shopAtom";
 import CategoryItem from "./CategoryItem";
 
 export default function CategorySidebar() {
-  const categoryImages = [image1, image2, image3, image4, image5];
+  // const categoryImages = [image1, image2, image3, image4, image5];
 
-  const { categories, isLoading, error } = useFetchShopCategories();
+  // const { categories, isLoading, error } = useFetchShopCategories();
+  const categories = shopAtom.get("categories");
+  const { loadingCategories: loading, error } = shopAtom.useValue();
   const categoriesItems = categories.slice(3, 8);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
@@ -22,12 +19,8 @@ export default function CategorySidebar() {
         Category
       </h5>
       <ul className="group">
-        {categoriesItems.map((item, index) => (
-          <CategoryItem
-            key={item.id}
-            name={item.name}
-            img={categoryImages[index]}
-          />
+        {categoriesItems.map(category => (
+          <CategoryItem key={category.id} category={category} />
         ))}
       </ul>
     </div>
