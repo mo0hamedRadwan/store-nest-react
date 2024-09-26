@@ -1,5 +1,7 @@
+import { queryString } from "@mongez/react-router";
 import { useState } from "react";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
+import { shopAtom } from "src/apps/front-office/shop/atoms/shopAtom";
 
 const PriceRangeSlider = () => {
   const [minPrice, setMinPrice] = useState(500);
@@ -27,7 +29,13 @@ const PriceRangeSlider = () => {
 
   const submitHandler = () => e => {
     e.preventDefault();
-    fetch(`minPrice=${minPrice}&maxPrice=${maxPrice}`);
+    const query = queryString.toQueryString({
+      ...queryString.all(),
+      minPrice,
+      maxPrice,
+    });
+    queryString.update(query);
+    shopAtom.getProducts();
   };
 
   return (

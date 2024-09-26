@@ -1,16 +1,13 @@
 import { trans } from "@mongez/localization";
 import { Form } from "@mongez/react-form";
+import Helmet from "@mongez/react-helmet";
 import { Link } from "@mongez/react-router";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
-import Footer from "src/apps/front-office/design-system/layouts/Footer";
-import Header from "src/apps/front-office/design-system/layouts/Header";
+import URLS from "src/apps/front-office/utils/urls";
+import { useLogin } from "../../../hooks";
 import EmailInput from "../components/EmailInput";
 import PasswordInput from "../components/PasswordInput";
 import CheckBoxInput from "../components/checkBoxInput";
-import BaseLayout from "src/apps/front-office/design-system/layouts/BaseLayout";
-import Helmet from "@mongez/react-helmet";
-import URLS from "src/apps/front-office/utils/urls";
-import { useLogin } from "../../../hooks";
 
 export default function LoginPage() {
   const handleSubmit = useLogin();
@@ -18,7 +15,6 @@ export default function LoginPage() {
   return (
     <>
       <Helmet title={trans("login")} />
-      <BaseLayout>
       <div className="min-h-screen flex justify-center items-center">
         <div className="w-full max-w-[900px] flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden">
           {/* Image (hidden on small screens) */}
@@ -58,7 +54,7 @@ export default function LoginPage() {
                 placeholder={trans("password")}
                 required
                 minLength={6}
-                maxLength={16}
+                // maxLength={16}
               />
               <div className="flex items-center justify-between !mb-[50px]">
                 <label className="flex items-center text-sm ">
@@ -78,7 +74,6 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      </BaseLayout>
     </>
   );
 }

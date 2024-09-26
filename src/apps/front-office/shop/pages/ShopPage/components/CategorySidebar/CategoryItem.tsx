@@ -1,21 +1,35 @@
 // Import the correct types
 
+import { queryString } from "@mongez/react-router";
+import { shopAtom } from "src/apps/front-office/shop/atoms/shopAtom";
+import { Category } from "src/apps/front-office/utils/types";
+
 type CategoryItemProps = {
-  img: string;
-  name: string;
+  category: Category;
 };
 
-export default function CategoryItem({ img, name }: CategoryItemProps) {
+export default function CategoryItem({ category }: CategoryItemProps) {
+  const filterByCategory = () => {
+    const query = queryString.toQueryString({
+      category: category.name,
+    });
+    queryString.update(query);
+    shopAtom.getProducts({
+      category: category.id,
+    });
+  };
   return (
-    <li className="flex items-center border border-solid border-[#F2F3F4] rounded mb-3 px-[18px] py-2 justify-between  text-mainColor leading-8 cursor-pointer hover:text-primary hover:border-light hover:shadow-md transition-all delay-200">
+    <li
+      onClick={() => filterByCategory()}
+      className="flex items-center border border-solid border-[#F2F3F4] rounded mb-3 px-[18px] py-2 justify-between  text-mainColor leading-8 cursor-pointer hover:text-primary hover:border-light hover:shadow-md transition-all delay-200">
       <div className="flex items-center p-0  text-mainColor hover:text-primary text-sm min-w-[30px] mr-3 gap-4">
-        <img src={img} alt={name} className="w-[30px] h-[30px]" />
-        <span className="text-sm font-medium">{name}</span>
+        <img
+          src={category.image?.url}
+          alt={category.name}
+          className="w-[30px] h-[30px]"
+        />
+        <span className="text-sm font-medium">{category.name}</span>
       </div>
-      <div></div>
-      <span className="w-[24px] h-[24px] rounded-2xl bg-[#BCE3C9] text-[13px] text-mainColor flex items-center justify-center">
-        20
-      </span>
     </li>
   );
 }

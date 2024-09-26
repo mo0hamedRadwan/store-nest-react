@@ -10,7 +10,7 @@ export const middleHeaderActions = [
   { name: "compare", href: URLS.compare, iconName: "git-compare" },
   { name: "wishlist", href: URLS.wishlist, iconName: "heart" },
   { name: "cart", href: URLS.cart, iconName: "cart" },
-  { name: "myAccount", href: URLS.account, iconName: "user" },
+  { name: "myAccount", href: URLS.account.dashboard, iconName: "user" },
 ];
 
 export const navbarIcons = [
@@ -36,7 +36,7 @@ export const socialMediaLinks = [
 
 // Account menu
 export const accountMenu = [
-  { name: "myAccount", link: URLS.account },
+  { name: "myAccount", link: URLS.account.dashboard },
   { name: "addresses", link: URLS.addresses },
   { name: "orders", link: URLS.orders },
   { name: "wishlist", link: URLS.wishlist },

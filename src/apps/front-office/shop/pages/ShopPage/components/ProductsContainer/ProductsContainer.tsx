@@ -1,18 +1,26 @@
 import ProductsGrid from "apps/front-office/home/pages/HomePage/components/PopularProducts/ProductsGrid";
-import { shopDisplayModeAtom } from "apps/front-office/shop/atoms/shop-display-mode-atom";
-import { useState } from "react";
 import Loader from "src/apps/front-office/design-system/components/ui/Indicators/Indicators";
-import useFetchShopData from "src/apps/front-office/shop/hooks/use-fetch-shop-data";
+import { shopDisplayModeAtom } from "src/apps/front-office/shop/atoms/shop-display-mode-atom";
+import { shopAtom } from "src/apps/front-office/shop/atoms/shopAtom";
 import Paginator from "../Paginator";
 import ProductsList from "./ProductssList";
 
 export default function ProductsContainer() {
   const displayMode = shopDisplayModeAtom.useValue();
-  const [currentPage, setCurrentPage] = useState(1);
-  const { products, error, loading, pagination } =
-    useFetchShopData(currentPage);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const { products, error, loading, pagination } =
+  // useFetchShopData(currentPage);
+  const {
+    loadingProducts: loading,
+    error,
+    products,
+    totalPages,
+    currentPage,
+  } = shopAtom.useValue();
 
-  console.log(currentPage, products);
+  // useEffect(() => {
+  //   shopAtom.getProducts();
+  // }, [currentPage]);
 
   if (loading) {
     return <Loader />;
@@ -33,11 +41,7 @@ export default function ProductsContainer() {
   return (
     <>
       <Container products={products} />
-      <Paginator
-        pagination={pagination}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
+      <Paginator totalPages={totalPages} currentPage={currentPage} />
     </>
   );
 }

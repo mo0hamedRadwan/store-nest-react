@@ -3,8 +3,6 @@ import { Form } from "@mongez/react-form";
 import Helmet from "@mongez/react-helmet";
 import { Link, navigateBack } from "@mongez/react-router";
 import { BookOpen } from "lucide-react";
-import Footer from "src/apps/front-office/design-system/layouts/Footer/Footer";
-import Header from "src/apps/front-office/design-system/layouts/Header/Header";
 import URLS from "src/apps/front-office/utils/urls";
 import endpoint from "src/shared/endpoint";
 import CheckboxInput from "../common-components-in-account/CheckboxInput";
@@ -20,8 +18,15 @@ import SocialLogin from "./components/social-login/SocialLogin";
 
 export default function RegisterPage() {
   const submitForm = async ({ values }) => {
+    const user = {
+      firstName: values.userName,
+      lastName: values.userName,
+      email: values.email,
+      password: values.password,
+      confirmPassword: values.confirmPassword,
+    };
     try {
-      await endpoint.post("/register", values);
+      await endpoint.post("/register", user);
       navigateBack();
     } catch (error) {
       console.log(error);
@@ -35,7 +40,6 @@ export default function RegisterPage() {
         keywords={["online", "store", "متجر"]}
         description={trans("registerDescriptionHelmet")}
       />
-      <Header />
       <div className="container lg:w-5/6 xl:w-4/6 grid gap-7 grid-cols-4 my-20">
         <div className="col-span-4 md:col-span-3 lg:col-span-2 ms-3 lg:ms-0">
           <HeadOfRegister />
@@ -106,7 +110,6 @@ export default function RegisterPage() {
         </div>
         <SocialLogin />
       </div>
-      <Footer />
     </>
   );
 }

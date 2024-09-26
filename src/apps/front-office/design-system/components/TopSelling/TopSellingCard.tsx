@@ -1,4 +1,5 @@
-import { Star, StarHalf } from "lucide-react";
+import { toCurrency } from "../../utils/currency";
+import Rating from "../Rating";
 
 export type topSellingCardType = {
   productImageTop?: string;
@@ -15,7 +16,7 @@ export default function TopSellingCard({
   priceOld,
 }: topSellingCardType) {
   return (
-    <div className="flex items-center gap-5 mb-7 cursor-pointer relative group hover:-translate-y-2 duration-700 small-to-medium:block small-to-medium:m-auto">
+    <div className="flex gap-5 mb-7 cursor-pointer relative group hover:-translate-y-2 duration-700 small-to-medium:block small-to-medium:m-auto">
       <div className="w-[100px] h-[100px]">
         <img
           className="w-full h-full rounded-xl"
@@ -23,34 +24,21 @@ export default function TopSellingCard({
           alt="not Found"
         />
       </div>
-      <div>
-        <h6 className="font-[700] text-sm text-[#253D4E] leading-5 group-hover:text-[#3BB77E] duration-500">
-          {productName}
-        </h6>
-        <div className="hidden xl:flex gap-1">
-          <ul className="flex items-center">
-            <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
-            </li>
-            <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
-            </li>
-            <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
-            </li>
-            <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
-            </li>
-            <li>
-              <StarHalf className="w-4" fill="#fcc43c" stroke="transparent" />
-            </li>
-          </ul>
-          <span className="text-rateColor">(4.0)</span>
+      <div className="flex flex-col justify-between gap-y-3">
+        <div>
+          <h6 className="font-bold text-sm xl:text-base leading-5 text-[#253D4E] group-hover:text-[#3BB77E] duration-500 line-clamp-2">
+            {productName}
+          </h6>
+          <div className="flex">
+            <Rating rate={Math.floor(Math.random() * 5 + 1)} />
+          </div>
         </div>
         <div className="flex gap-2 mt-1">
-          <h3 className="text-lg font-medium text-[#3BB77E]">{salePrice}$</h3>
-          <h5 className="text-sm font-medium mt-1 line-through text-[#adadad]">
-            {priceOld}$
+          <h3 className="text-lg font-bold text-[#3BB77E]">
+            {toCurrency(salePrice!)}
+          </h3>
+          <h5 className="text-sm font-bold mt-1 line-through text-[#adadad]">
+            {priceOld && toCurrency(priceOld)}
           </h5>
         </div>
       </div>
