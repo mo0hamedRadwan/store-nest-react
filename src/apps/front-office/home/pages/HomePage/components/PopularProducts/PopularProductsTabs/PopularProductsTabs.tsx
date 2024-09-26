@@ -1,21 +1,20 @@
-import { trans } from "@mongez/localization";
 import { useEvent } from "@mongez/react-hooks";
 import { popularProductsAtom } from "apps/front-office/home/atoms/popular-products-atom";
 import { Product } from "apps/front-office/shop/utils/types";
 import { useState } from "react";
 
 export type PopularProductsTabsProps = {
-  children: React.ReactNode;
+  moduleName: string;
 };
 
-export default function PopularProductsTabs() {
+export default function PopularProductsTabs({
+  moduleName,
+}: PopularProductsTabsProps) {
   const tabs = popularProductsAtom.get("tabs");
 
   return (
     <div className="container py-3 px-0 flex flex-col md:flex-row items-center justify-between">
-      <h3 className="font-bold text-3xl text-[#253D4E]">
-        {trans("popularProducts")}
-      </h3>
+      <h3 className="font-bold text-3xl text-[#253D4E]">{moduleName}</h3>
       <ul className="flex flex-wrap items-center justify-center md:justify-end gap-2 md:gap-4 mt-3 md:mt-0 w-full md:w-auto">
         <Tab tab={{ id: 0, name: "All" }} />
         {tabs.length > 0 ? (

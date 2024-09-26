@@ -1,5 +1,6 @@
 import { groupedTranslations, trans } from "@mongez/localization";
 import bannersTranslation from "shared/localization/banners.json";
+import cart from "shared/localization/cart.json";
 import dashboardTraslations from "shared/localization/dashboard.json";
 import headerTranslation from "shared/localization/header.json";
 import mainTranslation from "shared/localization/index.json";
@@ -7,7 +8,7 @@ import loginTranslation from "shared/localization/login.json";
 import productsTranslation from "shared/localization/products.json";
 import sectionsTranslation from "shared/localization/sections.json";
 import TermsAndConditionsTranslation from "shared/localization/terms.json";
-
+import wishlistTranslation from "shared/localization/wishlist.json";
 
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
@@ -70,4 +71,7 @@ groupedTranslations({
   ...loginTranslation,
   ...TermsAndConditionsTranslation,
   ...dashboardTraslations,
+
+  ...wishlistTranslation,
+  ...cart,
 });
