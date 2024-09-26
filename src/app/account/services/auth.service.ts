@@ -1,31 +1,38 @@
+import { GuestData, RegisterData, UserData } from "app/account/utils/types";
 import endpoint from "shared/endpoint";
 
 /**
  * Get Guest token
  */
-export function getGuestToken() {
-  return endpoint.post("/login/guests");
+export async function getGuestToken(): Promise<GuestData> {
+  const response = await endpoint.post("/login/guests");
+
+  return response.data.user;
 }
 
 /**
  * Perform login
  */
-export function login(data: any) {
-  return endpoint.post("/login", data);
+export async function login(data: any): Promise<UserData> {
+  const response = await endpoint.post("/login", data);
+
+  return response.data.user;
 }
 
 /**
  * Create new account
  */
-export function register(data: any) {
-  return endpoint.post("/register", data);
+export async function register(data: RegisterData): Promise<void> {
+  await endpoint.post("/register", data);
 }
 
 /**
  * Get current user data
  */
-export function getMe() {
-  return endpoint.get("/me");
+export async function getMe(): Promise<UserData> {
+  const response = await endpoint.get("/me");
+
+  return response.data.user;
 }
 
 /**
