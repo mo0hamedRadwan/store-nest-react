@@ -4,6 +4,8 @@ import Stars from "apps/front-office/design-system/components/Stars";
 import { Button } from "apps/front-office/design-system/components/ui/button";
 import { Product } from "apps/front-office/shop/utils/types";
 import { ShoppingCart } from "lucide-react";
+import { useCart } from "src/apps/front-office/cart/hooks/use-cart";
+import Loader from "src/apps/front-office/design-system/components/ui/Indicators/Indicators";
 import PreviewProducts from "../PreviewProducts";
 
 export type ProductCardProps = {
@@ -13,11 +15,10 @@ export type ProductCardProps = {
 export default function ProductCard({ product }: ProductCardProps) {
   const isOnSale = product.salePrice ? true : false;
 
-  function addProductToCart(id: number, arg1: number) {
-    // this function is not implemented yet, waiting for atom to be implemented
-    const product = { id, quantity: arg1 };
-    console.log(product);
-    throw new Error("Function not implemented.");
+  const { addProductToCart, isLoading } = useCart();
+
+  if (isLoading) {
+    return <Loader />;
   }
 
   return (
