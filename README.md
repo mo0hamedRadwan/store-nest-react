@@ -42,3 +42,14 @@
 Every logic must be encapsulated inside a `hook`, make as much as possible reusable components and dumb components (stateless components).
 
 ## Use atoms to handle state management and re-renders
+
+Use atoms as much as you could to avoid any unnecessary re-renders, and to handle the state management.
+
+## TODO
+
+- Fix eslint errors: Done
+- Rebuild tailwind config
+- Rebuild form components
+- Rebuild buttons
+- Rebuild links
+- Reorganizing the localization
