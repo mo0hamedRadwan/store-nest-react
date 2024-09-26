@@ -1,9 +1,9 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
-import { isLTR } from "shared/utils/helpers";
-import { URLS } from "shared/utils";
 import { ArrowBigLeft, ArrowBigRight, HomeIcon } from "lucide-react";
 import React from "react";
+import { URLS } from "shared/utils";
+import { isLTR } from "shared/utils/helpers";
 import styles from "./_Breadcrumb.module.scss";
 
 export type BreadcrumbProps = {

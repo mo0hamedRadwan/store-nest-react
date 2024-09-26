@@ -1,6 +1,6 @@
 import { trans } from "@mongez/localization";
-import { Button } from "design-system/components/ui/button";
 import { shopDisplayModeAtom } from "app/shop/atoms/shop-display-mode-atom";
+import { Button } from "design-system/components/ui/button";
 import { FilterIcon, Grid2X2, List } from "lucide-react";
 
 export default function ViewDisplayMode() {

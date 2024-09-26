@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "rm -rf ./node_modules/.vite && unlink yarn.lock && yarn update && yarn install && yarn start",
     "update": "npx ncu -u",
-    "lint": "npx eslint .",
+    "lint": "npx eslint ./src",
     "fix": "npx eslint --fix ./src",
     "format": "npx prettier --write ./src --config ./.prettierrc.json",
     "start": "vite --host",

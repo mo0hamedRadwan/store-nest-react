@@ -1,6 +1,6 @@
 import { trans } from "@mongez/localization";
-import { MapPin } from "lucide-react";
 import { Button } from "design-system/components/ui/button";
+import { MapPin } from "lucide-react";
 
 export default function Locations() {
   const locationItems = [

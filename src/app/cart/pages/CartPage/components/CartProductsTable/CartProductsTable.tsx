@@ -1,6 +1,6 @@
 import { trans } from "@mongez/localization";
-import { AiOutlineClose } from "react-icons/ai";
 import { CartItem } from "app/utils/types";
+import { AiOutlineClose } from "react-icons/ai";
 import CartCouponCode from "../CartCouponCode";
 import CartProductsTableItem from "../CartProductsTableItem";
 

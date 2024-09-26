@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { Banner } from "app/utils/types";
+import { useEffect, useState } from "react";
 import { getHome } from "../../../services/home-service";
 
 export function useGetDailyBestSellsBanner() {

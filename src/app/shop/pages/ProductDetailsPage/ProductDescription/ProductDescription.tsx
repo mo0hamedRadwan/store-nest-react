@@ -1,4 +1,5 @@
 import { trans } from "@mongez/localization";
+import { Product } from "app/shop/utils/types";
 import {
   Table,
   TableBody,
@@ -12,7 +13,6 @@ import {
   TabsList,
   TabsTrigger,
 } from "design-system/components/ui/tabs";
-import { Product } from "app/shop/utils/types";
 import ProductReviews from "../ProductReviews";
 import ProductReviewForm from "../ProductReviews/components/ProductReviewForm";
 

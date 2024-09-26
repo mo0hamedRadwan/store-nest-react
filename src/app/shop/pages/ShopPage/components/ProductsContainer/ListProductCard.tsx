@@ -1,7 +1,7 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
-import Stars from "design-system/components/Stars";
 import { Product } from "app/shop/utils/types";
+import Stars from "design-system/components/Stars";
 import { ShoppingBag } from "lucide-react";
 
 export type ListProductCardProps = {

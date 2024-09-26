@@ -1,6 +1,6 @@
+import { Column, Row } from "app/home/utils/types";
 import Module from "module";
 import endpoint from "shared/endpoint";
-import { Column, Row } from "app/home/utils/types";
 
 export type TopData = {
   rows: Row[];

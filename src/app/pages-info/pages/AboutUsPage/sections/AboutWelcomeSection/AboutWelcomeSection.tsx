@@ -1,5 +1,4 @@
 import { trans } from "@mongez/localization";
-import React from "react";
 import {
   Carousel,
   CarouselContent,
@@ -7,10 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "design-system/components/ui/carousel";
-import {
-  currentDirection,
-  currentLocaleCode,
-} from "shared/utils/helpers";
+import React from "react";
+import { currentDirection, currentLocaleCode } from "shared/utils/helpers";
 function _AboutWelcomeSection() {
   return (
     <div className="flex gap-4 max-lg:flex-col">

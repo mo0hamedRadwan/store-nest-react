@@ -1,6 +1,6 @@
+import { Product } from "app/shop/utils/types";
 import TopSellingCard from "design-system/components/TopSelling/TopSellingCard";
 import TopSellingHead from "design-system/components/TopSelling/TopSellingHead";
-import { Product } from "app/shop/utils/types";
 
 type TopSellingPropsType = {
   moduleName: string;

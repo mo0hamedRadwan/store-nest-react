@@ -1,7 +1,7 @@
 import { queryString } from "@mongez/react-router";
-import { useState } from "react";
-import { Button } from "design-system/components/ui/button";
 import { shopAtom } from "app/shop/atoms/shopAtom";
+import { Button } from "design-system/components/ui/button";
+import { useState } from "react";
 
 const PriceRangeSlider = () => {
   const [minPrice, setMinPrice] = useState(500);

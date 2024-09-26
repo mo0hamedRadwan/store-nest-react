@@ -1,6 +1,6 @@
 import router, { Route } from "@mongez/react-router";
-import BaseLayout from "layouts/BaseLayout";
 import { Guardian, ReverseGuardian } from "app/account/middleware";
+import BaseLayout from "layouts/BaseLayout";
 // import AccountLayout from "../design-system/layouts/AccountLayout";
 
 /**

@@ -1,9 +1,9 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
-import { cn } from "design-system/utils";
-import Rating from "design-system/components/Rating";
-import Breadcrumb from "layouts/BaseLayout/components/Breadcrumb";
 import HorizonalTable from "app/shop/components/HorizontalTable";
+import Rating from "design-system/components/Rating";
+import { cn } from "design-system/utils";
+import Breadcrumb from "layouts/BaseLayout/components/Breadcrumb";
 import { URLS } from "shared/utils";
 import compareProducts, { StackStatus } from "../mocks/compare-products";
 

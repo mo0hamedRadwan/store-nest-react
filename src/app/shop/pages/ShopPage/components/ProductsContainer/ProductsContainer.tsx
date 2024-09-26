@@ -1,7 +1,7 @@
 import ProductsGrid from "app/home/pages/HomePage/components/PopularProducts/ProductsGrid";
-import Loader from "design-system/components/ui/Indicators/Indicators";
 import { shopDisplayModeAtom } from "app/shop/atoms/shop-display-mode-atom";
 import { shopAtom } from "app/shop/atoms/shopAtom";
+import Loader from "design-system/components/ui/Indicators/Indicators";
 import Paginator from "../Paginator";
 import ProductsList from "./ProductssList";
 

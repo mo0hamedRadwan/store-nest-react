@@ -1,11 +1,8 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
-import {
-  Card,
-  CardContent,
-} from "design-system/components/ui/card";
-import { URLS } from "shared/utils";
 import { Category } from "app/shop/utils/types";
+import { Card, CardContent } from "design-system/components/ui/card";
+import { URLS } from "shared/utils";
 
 interface CategoryCardProps {
   index: number;

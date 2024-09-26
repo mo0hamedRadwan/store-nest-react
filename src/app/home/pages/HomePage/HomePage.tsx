@@ -1,9 +1,9 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
 import Error from "design-system/components/Error";
+import Loader from "design-system/Indicators/Loader";
 import { useMemo } from "react";
 import { useFetch } from "shared/hooks/use-fetch";
-import Loader from "design-system/Indicators/Loader";
 import { getHome } from "../../services/home-service";
 import { modulesMap } from "../../utils/flags";
 import "./HomePage.css";

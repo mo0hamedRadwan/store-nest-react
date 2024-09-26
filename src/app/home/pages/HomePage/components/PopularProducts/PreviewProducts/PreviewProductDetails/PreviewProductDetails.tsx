@@ -1,9 +1,9 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
+import { Product } from "app/shop/utils/types";
 import Stars from "design-system/components/Stars";
 import { Badge } from "design-system/components/ui/badge";
 import { Button } from "design-system/components/ui/button";
-import { Product } from "app/shop/utils/types";
 import { ChevronDown, ChevronUp, ShoppingCart } from "lucide-react";
 
 export type PreviewProductDetailsProps = {

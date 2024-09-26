@@ -1,11 +1,11 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
+import { useCart } from "app/cart/hooks/use-cart";
+import { Product } from "app/shop/utils/types";
 import Stars from "design-system/components/Stars";
 import { Button } from "design-system/components/ui/button";
-import { Product } from "app/shop/utils/types";
-import { ShoppingCart } from "lucide-react";
-import { useCart } from "app/cart/hooks/use-cart";
 import Loader from "design-system/components/ui/Indicators/Indicators";
+import { ShoppingCart } from "lucide-react";
 import PreviewProducts from "../PreviewProducts";
 
 export type ProductCardProps = {

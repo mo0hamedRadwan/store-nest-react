@@ -1,4 +1,6 @@
 import { queryString } from "@mongez/react-router";
+import { shopAtom } from "app/shop/atoms/shopAtom";
+import { createArray } from "app/shop/utils";
 import {
   Pagination,
   PaginationContent,
@@ -8,8 +10,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "design-system/components/ui/pagination";
-import { shopAtom } from "app/shop/atoms/shopAtom";
-import { createArray } from "app/shop/utils";
 
 export type PaginatorProps = {
   totalPages: number;

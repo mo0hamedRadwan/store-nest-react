@@ -1,5 +1,6 @@
 import { trans } from "@mongez/localization";
 import Helmet from "@mongez/react-helmet";
+import EmptyComponent from "design-system/components/EmptyComponent";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,11 +11,10 @@ import {
 } from "design-system/components/ui/breadcrumb";
 import { ShoppingBag } from "lucide-react";
 import React from "react";
-import EmptyComponent from "design-system/components/EmptyComponent";
 
+import { NavItems } from "app/shop/pages/ProductDetailsPage/ProductPage";
 import Error from "design-system/components/Error";
 import Loader from "design-system/components/ui/Indicators/Indicators";
-import { NavItems } from "app/shop/pages/ProductDetailsPage/ProductPage";
 import { URLS } from "shared/utils";
 import { cartAtom } from "../../atoms/cart-atom";
 import { useCartLoader } from "../../hooks/use-cart";

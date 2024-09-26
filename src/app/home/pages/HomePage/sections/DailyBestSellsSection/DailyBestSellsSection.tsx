@@ -1,11 +1,11 @@
 import { trans } from "@mongez/localization";
 
-import SectionHeader from "design-system/components/SectionHeader";
 import DailyBestBanner from "app/home/components/DailyBestBanner";
 import DailyBestFilter from "app/home/components/DailyBestFilter";
 import DailyBestProducts from "app/home/components/DailyBestProducts";
-import Loader from "design-system/Indicators/Loader";
 import useFetchDailyBannerData from "app/home/hooks/use-fetch-daily-data";
+import SectionHeader from "design-system/components/SectionHeader";
+import Loader from "design-system/Indicators/Loader";
 
 export default function DailyBestSellsSection() {
   const { data, loading } = useFetchDailyBannerData();

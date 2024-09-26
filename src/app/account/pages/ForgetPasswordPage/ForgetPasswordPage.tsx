@@ -2,15 +2,15 @@ import { trans } from "@mongez/localization";
 import { Form } from "@mongez/react-form";
 import Helmet from "@mongez/react-helmet";
 import { Link, navigateTo } from "@mongez/react-router";
-import { BookOpen } from "lucide-react";
 import Footer from "layouts/BaseLayout/components/Footer/Footer";
 import Header from "layouts/BaseLayout/components/Header/Header";
+import { BookOpen } from "lucide-react";
 import { URLS } from "shared/utils";
 import endpoint from "src/shared/endpoint";
 import CheckboxInput from "../common-components-in-account/CheckboxInput";
+import "../common-components-in-account/locales";
 import TextInput from "../common-components-in-account/TextInput";
 import "./../common-components-in-account/input.css";
-import "../common-components-in-account/locales";
 import HeadOfForgetPassword from "./HeadOfForgetPassword";
 export default function ForgetPasswordPage() {
   const handleSubmit = async ({ values }) => {

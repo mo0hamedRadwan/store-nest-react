@@ -35,7 +35,7 @@ groupedTranslations({
   },
   lastNamePlaceHolder: {
     en: "Last Name",
-    ar: "الاسم الاخير"
+    ar: "الاسم الاخير",
   },
   emailPlaceHolder: {
     en: "Email",

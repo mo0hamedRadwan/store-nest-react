@@ -1,7 +1,7 @@
 import { Link } from "@mongez/react-router";
+import { DealsData } from "app/utils/types";
 import { FaShoppingCart } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
-import { DealsData } from "app/utils/types";
 
 const DealCard = ({
   images,

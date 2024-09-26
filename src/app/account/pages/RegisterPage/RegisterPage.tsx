@@ -7,12 +7,12 @@ import { URLS } from "shared/utils";
 import endpoint from "src/shared/endpoint";
 import CheckboxInput from "../common-components-in-account/CheckboxInput";
 import EmailInput from "../common-components-in-account/EmailInput";
+import "../common-components-in-account/locales";
 import PasswordInput from "../common-components-in-account/PasswordInput";
 import RadioGroup from "../common-components-in-account/RadioGroup";
 import RadioInput from "../common-components-in-account/RadioInput";
 import TextInput from "../common-components-in-account/TextInput";
 import "./../common-components-in-account/input.css";
-import "../common-components-in-account/locales";
 import HeadOfRegister from "./components/HeadOfRegister";
 import SocialLogin from "./components/social-login/SocialLogin";
 

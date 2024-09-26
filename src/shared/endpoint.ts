@@ -1,8 +1,8 @@
 import Endpoint, { setCurrentEndpoint } from "@mongez/http";
 import { getCurrentLocaleCode } from "@mongez/localization";
 import { refresh } from "@mongez/react-router";
-import { AxiosResponse } from "axios";
 import user from "app/account/user";
+import { AxiosResponse } from "axios";
 import { apiBaseUrl, apiClient } from "./flags";
 
 const endpoint = new Endpoint({

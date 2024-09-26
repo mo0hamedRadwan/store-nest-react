@@ -6,8 +6,8 @@ import { ApplicationConfigurations, setAppConfigurations } from "@mongez/react";
 import { setHelmetConfigurations } from "@mongez/react-helmet";
 import { jsxConverter } from "@mongez/react-localization";
 import { setRouterConfigurations } from "@mongez/react-router";
-import { localeCodesList } from "shared/utils/localization";
 import { defaultLocaleCode, fallbackLocaleCode } from "shared/flags";
+import { localeCodesList } from "shared/utils/localization";
 import { routerConfigurations } from "./router-configurations";
 
 // @mongez/react-helmet configurations

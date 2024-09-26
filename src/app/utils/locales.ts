@@ -1,4 +1,8 @@
-import { groupedTranslations, trans } from "@mongez/localization";
+import { extend, groupedTranslations } from "@mongez/localization";
+import {
+  arValidationTranslation,
+  enValidationTranslation,
+} from "@mongez/react-form";
 import bannersTranslation from "shared/localization/banners.json";
 import contactUsTranslation from "shared/localization/contact.json";
 import dashboardTraslations from "shared/localization/dashboard.json";
@@ -12,10 +16,8 @@ import TermsAndConditionsTranslation from "shared/localization/terms.json";
 // DO NOT IMPORT IT IF THE PROJECT IS NOT LARGE
 groupedTranslations(mainTranslation);
 
-// useful for Arabic language, if not needed you can remove it
-export function the(key: string) {
-  return trans("the", { key: trans(key) });
-}
+extend("en", { validation: enValidationTranslation });
+extend("ar", { validation: arValidationTranslation });
 
 // Add only common localization
 groupedTranslations({

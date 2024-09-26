@@ -4,8 +4,8 @@ import router, {
   navigateTo,
   refresh,
 } from "@mongez/react-router";
-import { URLS } from "shared/utils";
 import React from "react";
+import { URLS } from "shared/utils";
 import { resetPasswordAtom } from "../atoms";
 import {
   forgetPassword,

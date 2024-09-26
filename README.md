@@ -36,3 +36,9 @@
 |   |-- main.ts
 |   |-- routes.ts
 ```
+
+## How components Should work
+
+Every logic must be encapsulated inside a `hook`, make as much as possible reusable components and dumb components (stateless components).
+
+## Use atoms to handle state management and re-renders

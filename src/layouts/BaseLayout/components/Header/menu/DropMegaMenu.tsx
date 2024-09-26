@@ -1,8 +1,8 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
+import bannerMenu from "assets/images/banner-menu.png";
 import { Button } from "design-system/components/ui/button";
 import { URLS } from "shared/utils";
-import bannerMenu from "assets/images/banner-menu.png";
 import { megaDropMenu } from "../constant/bottomHeaderData";
 
 const DropMegaMenu = () => {
