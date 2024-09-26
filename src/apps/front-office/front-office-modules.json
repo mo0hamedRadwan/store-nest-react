@@ -32,6 +32,14 @@
     {
       "entry": ["/catalog"],
       "name": "catalog"
+    },
+    {
+      "entry": ["/cart"],
+      "name": "cart"
+    },
+    {
+      "entry": ["/wishlist"],
+      "name": "wishlist"
     }
   ]
 }

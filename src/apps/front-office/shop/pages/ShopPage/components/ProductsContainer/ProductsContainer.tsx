@@ -12,8 +12,6 @@ export default function ProductsContainer() {
   const { products, error, loading, pagination } =
     useFetchShopData(currentPage);
 
-  console.log(currentPage, products);
-
   if (loading) {
     return <Loader />;
   }
