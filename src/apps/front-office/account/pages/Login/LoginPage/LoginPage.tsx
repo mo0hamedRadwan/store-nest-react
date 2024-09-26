@@ -1,7 +1,6 @@
 import { trans } from "@mongez/localization";
 import { Form } from "@mongez/react-form";
 import Helmet from "@mongez/react-helmet";
-import Helmet from "@mongez/react-helmet";
 import { Link } from "@mongez/react-router";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
 import URLS from "src/apps/front-office/utils/urls";
