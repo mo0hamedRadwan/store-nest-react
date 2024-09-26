@@ -9,6 +9,7 @@ export type Category = {
   slug?: string;
   products?: Product[];
   image?: Image;
+  totalProducts?: number;
 };
 
 export type Module = {
@@ -173,6 +174,43 @@ export type DealsData = {
     time: number;
     type: string;
   }[];
+};
+
+type Total = {
+  discount: number;
+  finalPrice: number;
+  price: number;
+  salePrice: number;
+};
+export type CartItem = {
+  id: string;
+  product: Product;
+  salePrice: number;
+  quantity: number;
+  total: Total;
+};
+
+export type Cart = {
+  id: number;
+  coupon?: {
+    code: string;
+    value: number;
+  };
+  items: CartItem[];
+  totals: {
+    price: number;
+    discount: number;
+    salePrice: number;
+    subtotal: number;
+    tax: number;
+    shippingFees: number;
+    paymentFees: number;
+    quantity: number;
+    coupon: number;
+    finalPrice: number;
+    commission: number;
+    additionalPrice: number;
+  };
 };
 
 export type PaginationInfo = {

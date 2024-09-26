@@ -1,16 +1,29 @@
 import { trans } from "@mongez/localization";
 import { Form, FormSubmitOptions } from "@mongez/react-form";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
+import { navigateTo } from "@mongez/react-router";
+
 import EmailInput from "../../Components/EmailInput";
 import PhoneInput from "../../Components/PhoneInput";
 import TextArea from "../../Components/TextArea";
 import TextInput from "../../Components/TextInput";
+import URLS from "src/apps/front-office/utils/urls";
+import endpoint from "src/shared/endpoint";
 
 export default function ContactForm() {
-  const handleSubmit: (options: FormSubmitOptions) => void = _options => {
-    // return options;
-  };
 
+  const handleSubmit = async ({ values }) => {
+    console.log(values);
+    try {
+      const res = await endpoint.post("/contact", values);
+      if (res.data.success) {
+        console.log("Response:", res);
+        navigateTo(URLS.home);
+      }
+    } catch (error) {
+      console.log(`error: ${error}`);
+    }
+  };
   return (
     <section className="my-10">
       <h5 className="text-2xl text-priceNowColor font-black mb-10">

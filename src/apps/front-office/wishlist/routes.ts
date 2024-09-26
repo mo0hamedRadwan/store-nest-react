@@ -1,10 +1,10 @@
 import { publicRoutes } from "apps/front-office/utils/router";
 import URLS from "apps/front-office/utils/urls";
-import ShopPage from "../shop/pages/ShopPage";
+import WishlistPage from "./pages/WishlistPage";
 
 publicRoutes([
   {
-    path: URLS.shop.list,
-    component: ShopPage,
+    path: URLS.wishlist,
+    component: WishlistPage,
   },
 ]);

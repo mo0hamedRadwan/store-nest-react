@@ -30,9 +30,11 @@ const categoriesAtom = atom<CategoriesAtomDataType, CategoriesActionsType>({
     setCategories: () => {
       // Fetch categories from server or API and return them here
       categoriesAtom.change("isLoading", true);
-      getCategories()
-        .then(data => {
-          const categories = data.data.categories;
+      getCategories({
+        limit: 30,
+      })
+        .then(response => {
+          const categories = response.data.categories;
           categoriesAtom.merge({
             isLoading: false,
             originalCategories: categories,

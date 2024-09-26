@@ -2,6 +2,7 @@ import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import logo from "assets/images/logo.svg";
 import { useState } from "react";
+import user from "src/apps/front-office/account/user";
 import URLS from "src/apps/front-office/utils/urls";
 import { useWindowScroll } from "../../hooks";
 import { middleHeaderActions, navbarIcons } from "./constant/middleHeaderData";
@@ -12,7 +13,7 @@ import NavigationMenu from "./menu/NavigationMenu";
 
 const MiddleHeader = () => {
   // to handle login user
-  const [isLogin, setIsLogin] = useState(false);
+  // const [isLogin, setIsLogin] = useState();
   const [openNavMenu, setOpenNavMenu] = useState<boolean>(false);
 
   const windowScroll = useWindowScroll();
@@ -48,20 +49,22 @@ const MiddleHeader = () => {
           return (
             <li
               key={action.name}
-              className="relative pb-4 flex flex-col items-center group">
-              {action.name === "myAccount" && isLogin && <AccountMenu />}
-              {action.name === "Cart" && isLogin && <CartMenu />}
-              {action.name !== "myAccount" && isLogin && (
+              className="relative pb-2 flex flex-col items-center group">
+              {action.name === "myAccount" && user.isLoggedIn() && (
+                <AccountMenu />
+              )}
+              {action.name === "cart" && <CartMenu />}
+              {action.name !== "myAccount" && (
                 <span className="w-5 h-5 flex items-center justify-center absolute -top-1 left-3 bg-primary text-white text-xs font-bold rounded-full">
                   5
                 </span>
               )}
 
-              {action.name === "myAccount" && !isLogin ? (
-                <>
-                  <span
-                    className="text-2xl cursor-pointer"
-                    onClick={() => setIsLogin(!isLogin)}>
+              {action.name === "myAccount" && !user.isLoggedIn() ? (
+                <Link
+                  to={URLS.auth.login}
+                  className="flex flex-col items-center">
+                  <span className="text-2xl cursor-pointer">
                     <i className="bx bx-door-open"></i>
                   </span>
                   <span className="ml-1 text-slate-500 hover:text-black">
@@ -74,7 +77,7 @@ const MiddleHeader = () => {
                       {trans("login")}
                     </Link>
                   </span> */}
-                </>
+                </Link>
               ) : (
                 <>
                   <i className={`bx bx-${action.iconName} text-2xl`}></i>

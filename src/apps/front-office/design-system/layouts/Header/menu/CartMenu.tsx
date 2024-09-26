@@ -8,7 +8,7 @@ const CartMenu = () => {
     0,
   );
   return (
-    <div className="hidden group-hover:block absolute top-10 -left-[250px] w-[320px] bg-white z-10 rounded-lg p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="hidden group-hover:block absolute top-16 -left-[250px] w-[320px] bg-white z-10 rounded-lg p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <ul className="flex flex-col gap-y-4 mb-5">
         {cartMenu.map((item, index) => (
           <li key={index} className="flex justify-between items-start gap-x-3">

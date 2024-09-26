@@ -29,9 +29,13 @@ groupedTranslations({
     en: "Login",
     ar: "تسجيل الدخول",
   },
-  namePlaceHolder: {
-    en: "Username",
-    ar: "اسم المستخدم",
+  firstNamePlaceHolder: {
+    en: "First Name",
+    ar: "الاسم الاول",
+  },
+  lastNamePlaceHolder: {
+    en: "Last Name",
+    ar: "الاسم الاخير"
   },
   emailPlaceHolder: {
     en: "Email",
