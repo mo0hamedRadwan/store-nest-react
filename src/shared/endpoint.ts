@@ -1,9 +1,12 @@
+import { RunTimeDriver } from "@mongez/cache";
 import Endpoint, { setCurrentEndpoint } from "@mongez/http";
 import { getCurrentLocaleCode } from "@mongez/localization";
 import { refresh } from "@mongez/react-router";
 import user from "app/account/user";
 import { AxiosResponse } from "axios";
 import { apiBaseUrl, apiClient } from "./flags";
+
+export const runtimeDriver = new RunTimeDriver();
 
 const endpoint = new Endpoint({
   putToPost: false,

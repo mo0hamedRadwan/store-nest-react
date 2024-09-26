@@ -1,4 +1,4 @@
-import "./definitions";
+import "./definitions.d.ts";
 import "./initial-config";
 
 // keep the previous line to be empty to ignore the import sort as `initial-config` must be imported first

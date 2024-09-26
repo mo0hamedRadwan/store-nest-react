@@ -1,6 +1,6 @@
 import { Product } from "app/shop/utils";
 import { PaginationInfo } from "app/utils/types";
-import endpoint from "shared/endpoint";
+import endpoint, { runtimeDriver } from "shared/endpoint";
 
 type ProductSearchParams = {
   q?: string;
@@ -19,6 +19,11 @@ export async function getProducts(params?: ProductSearchParams): Promise<{
 }> {
   const response = await endpoint.get(`/products`, {
     params,
+    cache: true,
+    cacheOptions: {
+      ttl: 60, // 60 seconds
+      driver: runtimeDriver,
+    },
   });
 
   return {

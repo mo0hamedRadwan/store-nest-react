@@ -1,6 +1,6 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
-import { appleIcon, googleIcon, paymentMethod } from "src/assets/footerImages";
+import { appleIcon, googleIcon, paymentMethod } from "assets/footerImages";
 
 export default function FooterAppInstall() {
   return (

@@ -6,7 +6,7 @@ import Footer from "layouts/BaseLayout/components/Footer/Footer";
 import Header from "layouts/BaseLayout/components/Header/Header";
 import { BookOpen } from "lucide-react";
 import { URLS } from "shared/utils";
-import endpoint from "src/shared/endpoint";
+import endpoint from "shared/endpoint";
 import CheckboxInput from "../common-components-in-account/CheckboxInput";
 import "../common-components-in-account/locales";
 import TextInput from "../common-components-in-account/TextInput";

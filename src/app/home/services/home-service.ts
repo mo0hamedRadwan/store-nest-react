@@ -1,4 +1,4 @@
-import endpoint from "src/shared/endpoint";
+import endpoint from "shared/endpoint";
 import { Row } from "../utils/types";
 
 export function getFooterData() {

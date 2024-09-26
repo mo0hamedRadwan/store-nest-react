@@ -11,22 +11,25 @@ import SuggestProductsMenu from "./SuggestProductsMenu";
 
 export default function SearchForm() {
   const [showSuggestProductsMenu, setShowSuggestProductsMenu] = useState(false);
-  const { products, isLoading, filter } = useHeaderSuggestProducts();
+  const { products, isLoading, filter, clear } = useHeaderSuggestProducts();
 
   const suggestProductsMenuRef = useClickOutside(() =>
     setShowSuggestProductsMenu(false),
   );
 
   const handleInputProductChange = e => {
-    const value = e.target.value;
+    const value = e.target.value.trim();
     searchHeaderAtom.change("q", value);
-    filter();
+
+    if (!value) {
+      clear();
+    } else {
+      filter();
+    }
   };
 
   useEffect(() => {
-    if (isLoading || products.length > 0) {
-      setShowSuggestProductsMenu(true);
-    }
+    setShowSuggestProductsMenu(isLoading || products.length > 0);
   }, [products, isLoading]);
 
   const handleSearch = () => {

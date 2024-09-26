@@ -4,7 +4,7 @@ import Helmet from "@mongez/react-helmet";
 import { Link, navigateBack } from "@mongez/react-router";
 import { BookOpen } from "lucide-react";
 import { URLS } from "shared/utils";
-import endpoint from "src/shared/endpoint";
+import endpoint from "shared/endpoint";
 import CheckboxInput from "../common-components-in-account/CheckboxInput";
 import EmailInput from "../common-components-in-account/EmailInput";
 import "../common-components-in-account/locales";

@@ -4,7 +4,7 @@ import { navigateTo } from "@mongez/react-router";
 import { Button } from "design-system/components/ui/button";
 
 import { URLS } from "shared/utils";
-import endpoint from "src/shared/endpoint";
+import endpoint from "shared/endpoint";
 import EmailInput from "../../Components/EmailInput";
 import PhoneInput from "../../Components/PhoneInput";
 import TextArea from "../../Components/TextArea";

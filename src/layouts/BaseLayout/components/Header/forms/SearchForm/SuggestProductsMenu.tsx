@@ -9,7 +9,7 @@ export default function SuggestProductsMenu({
   suggestProducts,
 }: SuggestProductsMenuPropsType) {
   return (
-    <ul className="absolute top-10 w-full h-60 p-2 overflow-y-scroll bg-white z-10  shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <ul className="absolute top-10 w-full max-h-60 p-2 overflow-y-auto bg-white z-10 shadow-md">
       {suggestProducts.map(product => (
         <li
           key={product.id}

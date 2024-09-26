@@ -18,6 +18,8 @@ export default function CategoryMenu() {
     Category | undefined
   >();
 
+  categoriesAtom.load();
+
   useEffect(() => {
     if (allCategories.length === 0) return;
 
@@ -39,6 +41,8 @@ export default function CategoryMenu() {
     setSelectedCategory(selectedCategory);
 
     searchHeaderAtom.change("category", selectedCategory?.id);
+
+    setShowCategoryMenu(false);
   };
 
   return (

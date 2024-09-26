@@ -1,4 +1,4 @@
-import endpoint from "src/shared/endpoint";
+import endpoint from "shared/endpoint";
 
 export function getOrders() {
   return endpoint.get("/orders");

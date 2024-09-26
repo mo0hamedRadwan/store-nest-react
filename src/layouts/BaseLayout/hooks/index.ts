@@ -13,7 +13,7 @@ export function useHeaderSuggestProducts() {
     error?: string;
   }>({
     products: [],
-    isLoading: true,
+    isLoading: false,
     error: undefined,
   });
 
@@ -39,5 +39,12 @@ export function useHeaderSuggestProducts() {
     products: state.products,
     isLoading: state.isLoading,
     error: state.error,
+    clear: () => {
+      setState({
+        products: [],
+        isLoading: false,
+        error: undefined,
+      });
+    },
   };
 }
