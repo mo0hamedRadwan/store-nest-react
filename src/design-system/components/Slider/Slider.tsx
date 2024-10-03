@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./slider.css";
+import "./slider.scss";
 
 type SliderPropsType = {
   banners: Banner[];
@@ -13,7 +13,7 @@ type SliderPropsType = {
 
 export default function Slider({ banners }: SliderPropsType) {
   return (
-    <div className="relative group">
+    <div className="relative group slider-wrapper">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         loop={true}

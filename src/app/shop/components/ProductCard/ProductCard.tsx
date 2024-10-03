@@ -1,26 +1,87 @@
-import { Product as ProductType } from "app/shop/utils/types";
-import ProductContent from "./ProductContent";
-import ProductDiscount from "./ProductDiscount";
-import ProductImage from "./ProductImage";
+import { trans } from "@mongez/localization";
+import { Link } from "@mongez/react-router";
+import { useCart } from "app/cart/hooks";
+import { ProductProps } from "app/shop/utils/types";
+import Stars from "design-system/components/Stars";
+import { Button } from "design-system/components/ui/button";
+import { ShoppingCart } from "lucide-react";
+import { URLS } from "shared/utils";
+import { ProductCardActions } from "./ProductCardActions";
 
-export type ProductProps = {
-  product: ProductType;
-  className?: string;
-};
+export function ProductCard({ product }: ProductProps) {
+  const isOnSale = !!product.salePrice;
 
-export default function ProductCard({ product, className = "" }: ProductProps) {
+  const { addProductToCart } = useCart();
+
   return (
-    <div
-      className={`product relative w-full max-w-56 overflow-hidden shadow-gray-300 p-4 shadow-sm ${className}`}>
-      {/* What is best render component conditionally or within component check, if not discount return null? */}
-      <ProductDiscount
-        category={product?.category}
-        discount={product?.discount?.percentage}
-      />
-      <ProductImage images={product?.images} />
-      <ProductContent product={product} />
-    </div>
+    <>
+      <div className=" group rounded-[15px] border border-[#ececec] relative overflow-hidden hover:border-light hover:shadow-md transition duration-500 max-h-[465px] max-w-[298px]">
+        <div>
+          {isOnSale ? (
+            <div className="absolute z-10 top-0 left-0 font-normal bg-[#67bcee] text-[#fff] rounded-tl-[12px] rounded-br-[25px]  px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
+              {trans("sale")}
+            </div>
+          ) : (
+            <div className="absolute z-10 top-0 left-0 font-normal bg-primary text-[#fff] rounded-tl-[12px] rounded-br-[25px] px-[20px] pt-[9px] pb-[10px] text-[13px] leading-none">
+              {trans("new")}
+            </div>
+          )}
+        </div>
+        <div className="relative p-[25px] pb-0">
+          <div className="overflow-hidden flex items-center justify-center cursor-pointer rounded-3xl ">
+            <img
+              src={product.images[0]?.url + "?w=200&h=200"}
+              alt={product.name}
+              className="max-w-60 max-h-60 group-hover:scale-110 z-10 rounded-full transition ease-in duration-500"
+            />
+          </div>
+          <ProductCardActions product={product} />
+        </div>
+        <div className="px-[20px] pt-[20px] pb-[20px]">
+          <span className="flex text-[#adadad] text-[12px] mb-[5px] hover:text-primary cursor-pointer">
+            {product.category.name}
+          </span>
+          <h2>
+            <Link
+              to={URLS.shop.viewProduct(product)}
+              className="font-bold text-base inline-block text-[#253D4E] hover:text-primary transition duration-500">
+              {product.name}
+            </Link>
+          </h2>
+          {/* Stars */}
+          <div className="flex items-center gap-2 mt-1">
+            <Stars ratings={product.rating || 0} />
+            <span className="text-[#B6B6B6] text-[14px] ">
+              ({product.rating || 0})
+            </span>
+          </div>
+
+          <div className="mt-[15px] flex items-center justify-between gap-4">
+            <div className="flex items-center justify-center gap-2">
+              {isOnSale && (
+                <span className="inline-block self-start text-primary font-bold text-lg">
+                  ${product.salePrice}
+                </span>
+              )}
+              <span
+                className={`font-bold ${
+                  isOnSale
+                    ? "text-[#adadad] line-through text-sm"
+                    : "text-primary text-xl"
+                }`}>
+                ${product.price}
+              </span>
+            </div>
+            <Button
+              size={"sm"}
+              variant={"cart"}
+              onClick={() => addProductToCart(product.id, 1)}>
+              <ShoppingCart size={15}></ShoppingCart>
+              {trans("addToCart")}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-
-// small issue `rest.className`

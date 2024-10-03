@@ -1,16 +1,13 @@
 import { Link } from "@mongez/react-router";
 import CustomDialog from "app/home/hooks/useModel";
-import { Product } from "app/shop/utils/types";
+import { ProductProps } from "app/shop/utils/types";
 import { useWishlist } from "app/wishlist/hooks";
 import { EyeIcon, HeartIcon, Link2Icon } from "lucide-react";
-import PreviewProductDetails from "./PreviewProductDetails";
+import { PreviewProductDetails } from "./PreviewProductDetails";
 
-export type PreviewProductsProps = {
-  product: Product;
-};
-
-export default function PreviewProducts({ product }: PreviewProductsProps) {
+export function ProductCardActions({ product }: ProductProps) {
   const { addWishlist } = useWishlist();
+
   return (
     <>
       <div className="absolute inset-0 z-10 flex items-center justify-center bg-opacity-10 rounded-3xl transition-all duration-300 opacity-0 group-hover:opacity-100">

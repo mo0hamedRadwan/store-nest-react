@@ -1,18 +1,13 @@
 import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
-import { Product } from "app/shop/utils/types";
+import { ProductProps } from "app/shop/utils/types";
 import Stars from "design-system/components/Stars";
 import { Badge } from "design-system/components/ui/badge";
 import { Button } from "design-system/components/ui/button";
 import { ChevronDown, ChevronUp, ShoppingCart } from "lucide-react";
+import { price } from "shared/utils";
 
-export type PreviewProductDetailsProps = {
-  product: Product;
-};
-
-export default function PreviewProductDetails({
-  product,
-}: PreviewProductDetailsProps) {
+export function PreviewProductDetails({ product }: ProductProps) {
   const isOnSale = !!product.salePrice; // Simplified boolean check
 
   return (
@@ -55,7 +50,7 @@ export default function PreviewProductDetails({
         <div className="flex items-center gap-2 mt-4 mb-6">
           {isOnSale && (
             <span className="text-primary font-bold text-[58px]">
-              ${product.salePrice}
+              {price(product.salePrice)}
             </span>
           )}
           <span
@@ -64,7 +59,7 @@ export default function PreviewProductDetails({
                 ? "text-[#adadad] line-through text-[22px]"
                 : "text-primary text-[58px]"
             }`}>
-            ${product.price}
+            {price(product.price)}
           </span>
         </div>
         {/* Quantity and Add to Cart Button */}

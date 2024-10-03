@@ -1,5 +1,5 @@
 import { trans } from "@mongez/localization";
-import { Product } from "app/shop/utils/types";
+import { productAtom } from "app/shop/atoms/product.atom";
 import {
   Table,
   TableBody,
@@ -16,12 +16,8 @@ import {
 import ProductReviews from "../ProductReviews";
 import ProductReviewForm from "../ProductReviews/components/ProductReviewForm";
 
-export type ProductDescriptionProps = {
-  product: Product;
-};
-export default function ProductDescription({
-  product,
-}: ProductDescriptionProps) {
+export default function ProductDescription() {
+  const product = productAtom.useValue();
   return (
     <Tabs
       defaultValue="description"

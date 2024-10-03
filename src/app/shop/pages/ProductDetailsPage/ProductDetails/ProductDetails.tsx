@@ -1,14 +1,11 @@
 import { trans } from "@mongez/localization";
-import { Product } from "app/shop/utils/types";
+import { productAtom } from "app/shop/atoms/product.atom";
 import ProductActionsBtns from "./components/ProductActionsBtns";
 import ProductOptions from "./components/ProductOptions/ProductOptions";
 import ProductQuantity from "./components/ProductQuantity";
 
-export type ProductDetailsProps = {
-  product: Product;
-};
-
-export default function ProductDetails({ product }: ProductDetailsProps) {
+export default function ProductDetails() {
+  const product = productAtom.useValue();
   return (
     <div className="product-details mb-4 w-full sm:w-1/2 md:pt-3 lg:pt-6">
       <h2 className="product-name text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-gray-700 capitalize mb-4">

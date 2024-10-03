@@ -3,8 +3,8 @@ import { Form } from "@mongez/react-form";
 import { navigateTo } from "@mongez/react-router";
 import { Button } from "design-system/components/ui/button";
 
-import { URLS } from "shared/utils";
 import endpoint from "shared/endpoint";
+import { URLS } from "shared/utils";
 import EmailInput from "../../Components/EmailInput";
 import PhoneInput from "../../Components/PhoneInput";
 import TextArea from "../../Components/TextArea";

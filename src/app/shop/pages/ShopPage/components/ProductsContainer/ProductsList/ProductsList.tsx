@@ -1,11 +1,11 @@
 import { Product } from "app/shop/utils/types";
 import ListProductCard from "../ListProductCard";
 
-export type ProductsListProps = {
+type ProductsListProps = {
   products: Product[];
 };
 
-export default function ProductsList({ products }: ProductsListProps) {
+export function ProductsList({ products }: ProductsListProps) {
   return (
     <div className="flex flex-col">
       {products.map(product => {

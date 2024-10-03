@@ -29,9 +29,11 @@ export const URLS = {
   shop: {
     list: "/products",
     viewCategoryRoute: "/category/:id",
-    viewCategory: (category: Category) => `/category/${category.id}`,
-    viewProductRoute: "products/:id",
-    viewProduct: (product: Product) => `/produucts/${product.id}`,
+    viewCategory: (category: Category) =>
+      `/category/${category.id}/${category.slug}`,
+    viewProductRoute: "products/:id/:slug",
+    viewProduct: (product: Product) =>
+      `/products/${product.id}/${product.slug}`,
   },
   product: {
     root: "/product",

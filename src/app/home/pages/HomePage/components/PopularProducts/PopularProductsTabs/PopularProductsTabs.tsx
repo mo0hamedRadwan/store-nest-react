@@ -1,27 +1,26 @@
+import { trans } from "@mongez/localization";
 import { useEvent } from "@mongez/react-hooks";
 import { popularProductsAtom } from "app/home/atoms/popular-products-atom";
 import { Product } from "app/shop/utils/types";
 import { useState } from "react";
 
 export type PopularProductsTabsProps = {
-  moduleName: string;
+  title: string;
 };
 
 export default function PopularProductsTabs({
-  moduleName,
+  title,
 }: PopularProductsTabsProps) {
-  const tabs = popularProductsAtom.get("tabs");
+  const tabs = popularProductsAtom.use("tabs");
 
   return (
     <div className="container py-3 px-0 flex flex-col md:flex-row items-center justify-between">
-      <h3 className="font-bold text-3xl text-[#253D4E]">{moduleName}</h3>
+      <h3 className="font-bold text-3xl text-[#253D4E]">{title}</h3>
       <ul className="flex flex-wrap items-center justify-center md:justify-end gap-2 md:gap-4 mt-3 md:mt-0 w-full md:w-auto">
-        <Tab tab={{ id: 0, name: "All" }} />
-        {tabs.length > 0 ? (
-          tabs.map(tab => <Tab key={tab.id} tab={tab} />)
-        ) : (
-          <li>No categories available</li>
-        )}
+        <Tab tab={{ id: 0, name: trans("all") }} />
+        {tabs.map(tab => (
+          <Tab key={tab.id} tab={tab} />
+        ))}
       </ul>
     </div>
   );

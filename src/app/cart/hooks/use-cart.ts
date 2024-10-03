@@ -1,8 +1,8 @@
 // src/apps/front-office/cart/hooks/useCart.ts
 import { trans } from "@mongez/localization";
 import { useOnce } from "@mongez/react-hooks";
+import { toast } from "design-system/components/ui/use-toast";
 import { useState } from "react";
-import { toast } from "../../../design-system/components/ui/use-toast";
 import { cartAtom } from "../atoms/cart-atom";
 import {
   addToCart,

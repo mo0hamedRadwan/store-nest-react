@@ -41,6 +41,7 @@ export const popularProductsAtom = atom<PopularProductsAtomOptions>({
       data.tabs = collectTabsData(data.products);
     }
 
+    // active tab 0 means all products
     if (data.activeTab === 0) {
       data.activeProducts = data.products;
     } else {

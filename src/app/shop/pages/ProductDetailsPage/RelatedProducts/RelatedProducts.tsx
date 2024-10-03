@@ -1,4 +1,4 @@
-import ProductCard from "app/home/pages/HomePage/components/PopularProducts/ProductCard";
+import { ProductCard } from "app/shop/components/ProductCard";
 import { Product } from "app/shop/utils/types";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export type RelatedProductsProps = {
   products: Product[];
 };
+
 export default function RelatedProducts({ products }: RelatedProductsProps) {
   return (
     <section className="related=products mb-8">

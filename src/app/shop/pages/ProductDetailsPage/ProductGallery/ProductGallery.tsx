@@ -1,14 +1,11 @@
-import { Image } from "app/utils/types";
+import { productAtom } from "app/shop/atoms/product.atom";
 import { useState } from "react";
 import { Autoplay, FreeMode, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductLightBox from "../ProductLightBox";
 
-export type ProductGallery = {
-  images: Image[];
-};
-
-export default function ProductGallery({ images }: ProductGallery) {
+export default function ProductGallery() {
+  const images = productAtom.get("images");
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   return (
