@@ -1,8 +1,8 @@
-import { publicRoutes } from "app/utils/router";
+import { guardedRoutes } from "app/utils/router";
 import { URLS } from "shared/utils";
 import WishlistPage from "./pages/WishlistPage";
 
-publicRoutes([
+guardedRoutes([
   {
     path: URLS.wishlist,
     component: WishlistPage,

@@ -1,5 +1,6 @@
 import { trans } from "@mongez/localization";
 import { useOnce } from "@mongez/react-hooks";
+import user from "app/account/user";
 import { Product } from "app/shop/utils";
 import { toast } from "design-system/components/ui/use-toast";
 import { useState } from "react";
@@ -11,11 +12,14 @@ import {
 } from "../services/wishlist-service";
 
 export function useWishlist() {
+  const isGuest = user.isGuest();
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<any>(false);
 
   useOnce(() => {
+    if (isGuest) return;
+
     setIsLoading(true);
     getWishlist()
       .then(response => {

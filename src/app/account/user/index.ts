@@ -22,7 +22,7 @@ class User extends BaseUser implements UserInterface {
    * Determine if current user is guest
    */
   public isGuest(): boolean {
-    return this.get("type") === "guest";
+    return this.get("userType") === "guest";
   }
 }
 

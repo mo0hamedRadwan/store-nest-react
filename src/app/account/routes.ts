@@ -1,5 +1,5 @@
 import { URLS } from "shared/utils";
-import { publicRoutes, reverseGuardedRoutes } from "../utils/router";
+import { guardedRoutes, reverseGuardedRoutes } from "../utils/router";
 import AccountDashboardPage from "./pages/AccountDashboardPage";
 import AccountDetailsPage from "./pages/AccountDetailsPage";
 import AccountOrderPage from "./pages/AccountOrdersPage";
@@ -21,7 +21,7 @@ reverseGuardedRoutes([
 ]);
 
 // i will change it to guardedRoutes
-publicRoutes([
+guardedRoutes([
   {
     path: URLS.account.dashboard,
     component: AccountDashboardPage,
